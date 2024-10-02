@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 417715231}
   m_Layer: 0
   m_Name: PowerSource
-  m_TagString: Untagged
+  m_TagString: power
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,7 +337,8 @@ GameObject:
   - component: {fileID: 572921053}
   - component: {fileID: 572921052}
   - component: {fileID: 572921055}
-  - component: {fileID: 572921054}
+  - component: {fileID: 572921056}
+  - component: {fileID: 572921057}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -372,19 +373,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &572921054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572921051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6713aaacca54b5f40af5abce5ba0f8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 0}
 --- !u!114 &572921055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +386,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tool: pihdit
+--- !u!114 &572921056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572921051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6713aaacca54b5f40af5abce5ba0f8a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 0}
+  toolCorrect: 0
+--- !u!114 &572921057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572921051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a02564fc4543d346b701eeae70cb2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: {fileID: 0}
+  correctTool: 0
+  actionCheck: {fileID: 0}
 --- !u!1 &723105051
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +428,7 @@ GameObject:
   - component: {fileID: 723105054}
   m_Layer: 0
   m_Name: WireNegativeAP
-  m_TagString: Untagged
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +548,7 @@ GameObject:
   - component: {fileID: 752504391}
   m_Layer: 0
   m_Name: WireNegativeAC
-  m_TagString: Untagged
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,7 +668,7 @@ GameObject:
   - component: {fileID: 911232601}
   m_Layer: 0
   m_Name: WirePositiveAC
-  m_TagString: Untagged
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,7 +788,7 @@ GameObject:
   - component: {fileID: 917953719}
   m_Layer: 0
   m_Name: Alarm
-  m_TagString: Untagged
+  m_TagString: alarm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,7 +1032,7 @@ GameObject:
   - component: {fileID: 1431270997}
   m_Layer: 0
   m_Name: WirePositiveAP
-  m_TagString: Untagged
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1205,7 +1222,7 @@ GameObject:
   - component: {fileID: 2125596607}
   m_Layer: 0
   m_Name: Charge
-  m_TagString: Untagged
+  m_TagString: charge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
