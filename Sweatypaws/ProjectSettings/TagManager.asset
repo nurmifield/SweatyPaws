@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Bomb
   - Wires
+  - wire
+  - alarm
+  - power
+  - charge
   layers:
   - Default
   - TransparentFX
