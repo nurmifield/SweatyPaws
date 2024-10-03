@@ -66,6 +66,22 @@ public class CheckOrder : MonoBehaviour
             Debug.Log(correctOrder.Length);
             bool correctMove=CheckCorretMove(actionCheck,correctOrder);
             Debug.Log("Toimintasi on laillista:" + correctMove);
+            if (correctMove)
+            {
+                //Tarkistetaan voitettiinko peli 
+                if (CountSectionsCleared(correctOrder)==correctOrder.Length)
+                {
+                    Debug.Log("VOITIT PELIN!");
+                }
+                else
+                    Debug.Log("PELI JATKUU!");
+            }
+            else
+            {
+                //Tarkistetaan onko peli ohi
+                GetComponent<CheckFailure>().sectionsCleared=CountSectionsCleared(correctOrder);
+                GetComponent<CheckFailure>().correctOrder = correctMove;
+            }
             actionCheck = null;
         }
     }
@@ -93,7 +109,7 @@ public class CheckOrder : MonoBehaviour
                     }
                     if (order[i].parts.Length == 0)
                     {
-                        Debug.Log("Käyty hönkimässä");
+                        Debug.Log("Vaihe "+ i + " suoritettu");
                         order[i].sectionCleared = true;
                     }
                 }
@@ -102,4 +118,17 @@ public class CheckOrder : MonoBehaviour
         }
         return correctMove;
     }
+    int CountSectionsCleared(MyCorrectOrder[] order)
+    {
+        int count = 0;
+        for(int i=0; i < order.Length; i++)
+        {
+            if (order[i].sectionCleared==true)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
