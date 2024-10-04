@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckFailure : MonoBehaviour
 {
+    
     public bool correctOrder = true;
     public int sectionsCleared = 0;
     public int MustBeCleared = 1;
@@ -16,6 +17,7 @@ public class CheckFailure : MonoBehaviour
             // Pelin lopetusta tänne
             if(sectionsCleared < MustBeCleared)
             {
+                GetComponent<GameOverScreen>().GameOverScreenManage();
                 Debug.Log("PELI LOPPUI RÄJÄHDIT");
             }
             else
@@ -25,4 +27,6 @@ public class CheckFailure : MonoBehaviour
             correctOrder = true;
         }
     }
+
+ 
 }
