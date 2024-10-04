@@ -9,23 +9,24 @@ public class CheckFailure : MonoBehaviour
     public int sectionsCleared = 0;
     public int MustBeCleared = 1;
 
-    // Update is called once per frame
-    void Update()
+
+    public void SetSections(int newSectionsCleared)
     {
-        if (!correctOrder)
+        sectionsCleared = newSectionsCleared;
+
+        if (sectionsCleared < MustBeCleared)
         {
-            // Pelin lopetusta tänne
-            if(sectionsCleared < MustBeCleared)
-            {
-                GetComponent<GameOverScreen>().GameOverScreenManage();
-                Debug.Log("PELI LOPPUI RÄJÄHDIT");
-            }
-            else
-            {
-                Debug.Log("PENALTYÄ , PELI EI KUITENKAAN LOPPUNUT!");
-            }
-            correctOrder = true;
+            // TÄSTÄ MENNÄÄN GAME OVER NÄKYMÄÄN
+            GetComponent<GameOverScreen>().GameOverScreenManage();
+            Debug.Log("PELI LOPPUI RÄJÄHDIT");
         }
+        else
+        {
+            // PISTEEN VÄHENNYSTÄ TÄNNE
+            Debug.Log("PENALTYÄ , PELI EI KUITENKAAN LOPPUNUT!");
+        }
+
+
     }
 
  

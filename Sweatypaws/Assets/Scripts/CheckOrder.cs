@@ -58,34 +58,27 @@ public class CheckOrder : MonoBehaviour
         correctOrder[4] = new MyCorrectOrder() { parts = new string[1] { alarm.name }, sectionCleared = false };
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetToolAndAction(bool correctTool , GameObject actionCheck)
     {
-        if (correctTool && actionCheck)
+        bool correctMove = CheckCorretMove(actionCheck, correctOrder);
+        if (correctMove)
         {
-            Debug.Log(correctOrder.Length);
-            bool correctMove=CheckCorretMove(actionCheck,correctOrder);
-            Debug.Log("Toimintasi on laillista:" + correctMove);
-            if (correctMove)
+            //Tarkistetaan voitettiinko peli 
+            if (CountSectionsCleared(correctOrder) == correctOrder.Length)
             {
-                //Tarkistetaan voitettiinko peli 
-                if (CountSectionsCleared(correctOrder)==correctOrder.Length)
-                {
-                    Debug.Log("VOITIT PELIN!");
-                }
-                else
-                    Debug.Log("PELI JATKUU!");
+                // TÄNNE PELIN VOITTO HOMMAT
+                Debug.Log("VOITIT PELIN!");
             }
             else
-            {
-                //Tarkistetaan onko peli ohi
-                GetComponent<CheckFailure>().sectionsCleared=CountSectionsCleared(correctOrder);
-                GetComponent<CheckFailure>().correctOrder = correctMove;
-            }
-            actionCheck = null;
+                // PELI JATKUU ETEENPÄIN
+                Debug.Log("PELI JATKUU!");
+        }
+        else
+        {
+            //Tarkistetaan onko peli ohi
+            GetComponent<CheckFailure>().SetSections(CountSectionsCleared(correctOrder));
         }
     }
-    
     bool CheckCorretMove(GameObject action, MyCorrectOrder[] order)
     {
         bool correctMove = false;

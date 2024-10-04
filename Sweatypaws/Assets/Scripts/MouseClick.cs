@@ -16,7 +16,7 @@ public class MouseClick : MonoBehaviour
             //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null)
             {
-                GetComponent<CheckCorrectTool>().action = hit.collider.gameObject;
+                GetComponent<CheckCorrectTool>().SetAction(hit.collider.gameObject);
                 
             }
         }

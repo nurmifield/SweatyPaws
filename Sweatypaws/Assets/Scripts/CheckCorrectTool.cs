@@ -5,12 +5,6 @@ using System.Globalization;
 using UnityEngine;
 
 
-public class MyObject
-{
-    public string bombPart;
-    public string correctTool;
-    public bool defused;
-}
 
 
 
@@ -24,24 +18,12 @@ public class CheckCorrectTool : MonoBehaviour
 {
     
     public GameObject action;
-    public MyObject[] objects = new MyObject[7];
     public ToolNeeded[] correctTools= new ToolNeeded[4];
     public bool toolCorrect;
 
     // Start is called before the first frame update
     void Start()
     {
-      
-        /*
-        objects[0] = new MyObject() { bombPart = alarm.name, correctTool = "tassu", defused = false };
-        objects[1] = new MyObject() { bombPart = powerSource.name, correctTool = "tassu", defused = false };
-        objects[2] = new MyObject() { bombPart = charge.name, correctTool = "tassu", defused = false };
-        objects[3] = new MyObject() { bombPart = wirePositiveAP.name, correctTool = "pihdit", defused = false };
-        objects[4] = new MyObject() { bombPart = wireNegativeAP.name, correctTool = "pihdit", defused = false };
-        objects[5] = new MyObject() { bombPart = wirePositiveAC.name, correctTool = "pihdit", defused = false };
-        objects[6] = new MyObject() { bombPart = wireNegativeAC.name, correctTool = "pihdit", defused = false };
-        */
-       
 
         correctTools[0] = new ToolNeeded() { tool = "tassu", part = "alarm" };
         correctTools[1] = new ToolNeeded() { tool = "tassu", part = "power" };
@@ -50,18 +32,10 @@ public class CheckCorrectTool : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetAction(GameObject newAction)
     {
-        if (action)
-        {
-            toolCorrect = CheckTool(correctTools, action);
-            GetComponent<CheckOrder>().actionCheck = action;
-            GetComponent<CheckOrder>().correctTool=toolCorrect;
-            Debug.Log("Työkalusi on: " + toolCorrect);
-            action = null;
-        }
-        
+        toolCorrect = CheckTool(correctTools, newAction);
+        GetComponent<CheckOrder>().SetToolAndAction(toolCorrect,newAction);
     }
 
     bool CheckTool(ToolNeeded[] tool , GameObject action )
