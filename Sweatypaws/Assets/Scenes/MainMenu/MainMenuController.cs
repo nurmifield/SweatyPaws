@@ -65,6 +65,7 @@ public class MainMenuController : MonoBehaviour
     {
         isSoundOn = !isSoundOn;
         AudioListener.volume = isSoundOn ? 1 : 0;  // Set volume based on the sound state
+         Debug.Log("Sound Toggled: " + (isSoundOn ? "On" : "Off"));  // Debug message
         UpdateSoundButtonText();  // Update the button text
     }
 
