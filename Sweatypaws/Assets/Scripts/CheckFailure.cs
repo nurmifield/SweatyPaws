@@ -23,6 +23,7 @@ public class CheckFailure : MonoBehaviour
         else
         {
             // PISTEEN VÄHENNYSTÄ TÄNNE
+            GetComponent<Score>().MinusScore();
             Debug.Log("PENALTYÄ , PELI EI KUITENKAAN LOPPUNUT!");
         }
 

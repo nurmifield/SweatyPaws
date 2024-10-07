@@ -32,7 +32,7 @@ public class CheckOrder : MonoBehaviour
     public GameObject action;
     public bool correctTool = false;
     public GameObject actionCheck;
-
+ 
     GameObject alarm;
     GameObject powerSource;
     GameObject charge;
@@ -99,6 +99,7 @@ public class CheckOrder : MonoBehaviour
                         order[i].RemovePart(order[i].parts[ii]);
                         correctMove = true;
                         action.SetActive(false);
+                        GetComponent<Score>().AddScore();
                         Debug.Log("parts pituus" + order[i].parts.Length);
                     }
                     if (order[i].parts.Length == 0)

@@ -27,7 +27,7 @@ public class MainMenuController : MonoBehaviour
     // Load the game scene to start the game
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene");  // Replace with your actual game scene name
+        SceneManager.LoadScene("Game");  // Replace with your actual game scene name
     }
 
     // Show the Settings Panel
