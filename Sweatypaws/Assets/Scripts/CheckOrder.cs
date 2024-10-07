@@ -67,6 +67,7 @@ public class CheckOrder : MonoBehaviour
             if (CountSectionsCleared(correctOrder) == correctOrder.Length)
             {
                 // TÄNNE PELIN VOITTO HOMMAT
+                GetComponent<GameOverScreen>().YouWinScreenManage();
                 Debug.Log("VOITIT PELIN!");
             }
             else
