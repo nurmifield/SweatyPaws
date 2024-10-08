@@ -11,11 +11,13 @@ public class Score : MonoBehaviour
     public int addScore = 10;
 
     public Text scoreText;
+    public Text youWinScoreText;
     // Start is called before the first frame update
     public void AddScore()
     {
         score += addScore;
         scoreText.text = "Score: " + score.ToString();
+        youWinScoreText.text = "Score: " + score.ToString();
     }
 
     public void MinusScore()
@@ -28,6 +30,7 @@ public class Score : MonoBehaviour
             score = 0;
         }
         scoreText.text ="Score: " +  score.ToString();
+        youWinScoreText.text = "Score: " + score.ToString();
     }
     public int GetScore()
     {
