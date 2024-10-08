@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;  // For handling UI components
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class MenuController : MonoBehaviour
     {
         // Ensure the game starts unpaused and only the menu panel is active
         Time.timeScale = 1f;
-        menuPanel.SetActive(true);   // Show the main menu at the start
+        menuPanel.SetActive(false);   // Show the main menu at the start
         optionsPanel.SetActive(false); // Hide the options panel at the start
     }
 
@@ -29,7 +30,11 @@ public class MenuController : MonoBehaviour
         optionsPanel.SetActive(true);  // Show the options menu
        
     }
-
+    public void OpenSettings()
+    {
+        menuPanel.SetActive(true);
+        optionsPanel.SetActive(false);
+    }
     // Go back to the main menu from options
     public void BackToMenu()
     {
@@ -54,4 +59,11 @@ public class MenuController : MonoBehaviour
     {
         Debug.Log("Music toggled");
     }
+
+    
+     public void MainMenuScene()
+    {
+       SceneManager.LoadScene("MainMenu");
+    }
+
 }
