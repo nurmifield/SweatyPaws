@@ -7,10 +7,15 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
 
-
+    public GameObject menupanel;
     // Update is called once per frame
     void Update()
     {
+        if (menupanel.activeSelf)
+        {
+            return;
+        }
+
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
