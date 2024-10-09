@@ -8,6 +8,7 @@ public class GameOverScreen : MonoBehaviour
     public GameObject gameOverObject;
     public GameObject youWinObject;
     public GameObject guiObject;
+    public Timer timer;
 
     void Start()
     {
@@ -17,13 +18,14 @@ public class GameOverScreen : MonoBehaviour
 
     public void GameOverScreenManage()
     {
-        
+        timer.Stoptimer(true);
         guiObject.SetActive(false);
         gameOverObject.SetActive(true);
     }
 
     public void YouWinScreenManage()
     {
+        timer.Stoptimer(true);
         guiObject.SetActive(false);
         youWinObject.SetActive(true);
     }

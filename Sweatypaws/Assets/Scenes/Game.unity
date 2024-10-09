@@ -669,6 +669,7 @@ MonoBehaviour:
   gameOverObject: {fileID: 1598708019}
   youWinObject: {fileID: 607082879}
   guiObject: {fileID: 1252451376}
+  timer: {fileID: 1252451377}
 --- !u!114 &551772999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,6 +1865,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1349975203}
   remainingTime: 60
+  menupanel: {fileID: 159272205}
+  gameOverObject: {fileID: 0}
+  youWinObject: {fileID: 0}
+  gameEnds: 0
 --- !u!114 &1252451378
 MonoBehaviour:
   m_ObjectHideFlags: 0
