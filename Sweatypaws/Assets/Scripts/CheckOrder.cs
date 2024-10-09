@@ -60,7 +60,8 @@ public class CheckOrder : MonoBehaviour
 
     public void SetToolAndAction(bool correctTool , GameObject actionCheck)
     {
-        bool correctMove = CheckCorretMove(actionCheck, correctOrder);
+        Debug.Log("Pelaaja käyttää oikeata työkalua: "+correctTool);
+        bool correctMove = CheckCorretMove(actionCheck, correctOrder,correctTool);
         if (correctMove)
         {
             //Tarkistetaan voitettiinko peli 
@@ -80,7 +81,7 @@ public class CheckOrder : MonoBehaviour
             GetComponent<CheckFailure>().SetSections(CountSectionsCleared(correctOrder));
         }
     }
-    bool CheckCorretMove(GameObject action, MyCorrectOrder[] order)
+    bool CheckCorretMove(GameObject action, MyCorrectOrder[] order, bool correctTool)
     {
         bool correctMove = false;
         bool firstSection = false;
@@ -94,13 +95,18 @@ public class CheckOrder : MonoBehaviour
                 
                 for (int ii = 0; ii < order[i].parts.Length; ii++)
                 {
-                    if (action.name == order[i].parts[ii])
+                    if (action.name == order[i].parts[ii] && correctTool)
                     {
                         order[i].RemovePart(order[i].parts[ii]);
                         correctMove = true;
                         action.SetActive(false);
                         GetComponent<Score>().AddScore();
                         Debug.Log("parts pituus" + order[i].parts.Length);
+                    }else if (action.name == order[i].parts[ii] && !correctTool)
+                    {
+                        GetComponent<Score>().MinusScore();
+                        correctMove = true;
+                        Debug.Log("Väärä työkalu oikea osa PENALTYÄ");
                     }
                     if (order[i].parts.Length == 0)
                     {

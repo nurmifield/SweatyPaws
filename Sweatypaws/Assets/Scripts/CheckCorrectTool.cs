@@ -47,6 +47,7 @@ public class CheckCorrectTool : MonoBehaviour
         {
             if (action.tag== tool[i].part && playerTool == tool[i].tool)
             {
+                Debug.Log(" PELAAJA k‰ytt‰‰‰ "+playerTool);
                 correctTool = true;
             }
         }
