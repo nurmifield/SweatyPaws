@@ -7,6 +7,10 @@ TagManager:
   - Bomb
   - Wires
   - Tool
+  - power
+  - alarm
+  - charge
+  - wire
   layers:
   - Default
   - TransparentFX
@@ -43,4 +47,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HandButton
+    uniqueID: 1618913529
+    locked: 0
+  - name: Nappivalinta
+    uniqueID: 1752744009
     locked: 0
