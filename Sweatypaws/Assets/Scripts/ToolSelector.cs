@@ -57,16 +57,7 @@ public class ToolSelector : MonoBehaviour
 
     private void HighlightButton(Button button)
     {
-        /*if (currentSelectedButton != null)
-        {
-            DeselectButton(currentSelectedButton);
-        }*/
-
         currentSelectedButton = button;
         EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
-    /*private void DeselectButton(Button button)
-    {
-
-    }*/
 }
