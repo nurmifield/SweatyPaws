@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ToolSelector : MonoBehaviour
@@ -12,6 +14,7 @@ public class ToolSelector : MonoBehaviour
     public Button TweezerButton;
     public Button HandButton;
     public Button LiquidNitrogenButton;
+    private Button currentSelectedButton;
 
     private Player player;
 
@@ -19,7 +22,6 @@ public class ToolSelector : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
 
-        // Add listeners to detect when a button is pressed
         PliersButton.onClick.AddListener(() => SelectTool("pihdit"));
         ScrewdriverButton.onClick.AddListener(() => SelectTool("Screwdriver"));
         TweezerButton.onClick.AddListener(() => SelectTool("Tweezer"));
@@ -40,5 +42,26 @@ public class ToolSelector : MonoBehaviour
         {
             Debug.LogError("Player Not Found!");
         }
+    }
+
+    public void OnButtonPressed(Button button)
+    {
+        SelectButton(button); 
+    }
+
+    private void SelectButton(Button button)
+    {
+        if (currentSelectedButton != null)
+        {
+            DeselectButton(currentSelectedButton);
+        }
+
+        currentSelectedButton = button;
+        EventSystem.current.SetSelectedGameObject(button.gameObject);
+    }
+
+    private void DeselectButton(Button button)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }
