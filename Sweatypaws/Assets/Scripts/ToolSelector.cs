@@ -15,6 +15,7 @@ public class ToolSelector : MonoBehaviour
     public Button HandButton;
     public Button LiquidNitrogenButton;
     private Button currentSelectedButton;
+    public bool Highlight = true;
 
     private Player player;
 
@@ -22,14 +23,22 @@ public class ToolSelector : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
 
-        PliersButton.onClick.AddListener(() => SelectTool("pihdit"));
-        ScrewdriverButton.onClick.AddListener(() => SelectTool("Screwdriver"));
-        TweezerButton.onClick.AddListener(() => SelectTool("Tweezer"));
-        HandButton.onClick.AddListener(() => SelectTool("tassu"));
-        LiquidNitrogenButton.onClick.AddListener(() => SelectTool("Liquid Nitrogen"));
+        PliersButton.onClick.AddListener(() => SelectTool(PliersButton, "pihdit"));
+        ScrewdriverButton.onClick.AddListener(() => SelectTool(ScrewdriverButton, "Screwdriver"));
+        TweezerButton.onClick.AddListener(() => SelectTool(TweezerButton, "Tweezer"));
+        HandButton.onClick.AddListener(() => SelectTool(HandButton, "tassu"));
+        LiquidNitrogenButton.onClick.AddListener(() => SelectTool(LiquidNitrogenButton, "Liquid Nitrogen"));
     }
 
-    void SelectTool(string toolName)
+    void Update()
+    {
+        if (currentSelectedButton != null && EventSystem.current.currentSelectedGameObject != currentSelectedButton.gameObject)
+        {
+            EventSystem.current.SetSelectedGameObject(currentSelectedButton.gameObject);
+        }
+    }
+
+    void SelectTool(Button button, string toolName)
     {
         string timestamp = System.DateTime.Now.ToString("HH:mm:ss.fff");
         Debug.Log("Selected tool: " + toolName + " at " + timestamp);
@@ -42,26 +51,22 @@ public class ToolSelector : MonoBehaviour
         {
             Debug.LogError("Player Not Found!");
         }
+
+        HighlightButton(button);
     }
 
-    public void OnButtonPressed(Button button)
+    private void HighlightButton(Button button)
     {
-        SelectButton(button); 
-    }
-
-    private void SelectButton(Button button)
-    {
-        if (currentSelectedButton != null)
+        /*if (currentSelectedButton != null)
         {
             DeselectButton(currentSelectedButton);
-        }
+        }*/
 
         currentSelectedButton = button;
         EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
-
-    private void DeselectButton(Button button)
+    /*private void DeselectButton(Button button)
     {
-        EventSystem.current.SetSelectedGameObject(null);
-    }
+
+    }*/
 }
