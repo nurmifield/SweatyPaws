@@ -75,4 +75,8 @@ public class ManualController : MonoBehaviour
         manualPanel.SetActive(false);  // Hide the manual panel
         Time.timeScale = 1f;           // Resume the game
     }
+
+
+
+    
 }
