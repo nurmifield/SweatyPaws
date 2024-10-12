@@ -8,6 +8,8 @@ public class CheckFailure : MonoBehaviour
     public bool correctOrder = true;
     public int sectionsCleared = 0;
     public int MustBeCleared = 1;
+    public Score score;
+    
 
 
     public void SetSections(int newSectionsCleared)
@@ -23,7 +25,7 @@ public class CheckFailure : MonoBehaviour
         else
         {
             // PISTEEN VÄHENNYSTÄ TÄNNE
-            GetComponent<Score>().MinusScore();
+            score.MinusScore();
             Debug.Log("PENALTYÄ , PELI EI KUITENKAAN LOPPUNUT!");
         }
 

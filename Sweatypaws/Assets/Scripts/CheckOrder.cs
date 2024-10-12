@@ -32,6 +32,7 @@ public class CheckOrder : MonoBehaviour
     public GameObject action;
     public bool correctTool = false;
     public GameObject actionCheck;
+    public Score score;
  
     GameObject alarm;
     GameObject powerSource;
@@ -100,11 +101,11 @@ public class CheckOrder : MonoBehaviour
                         order[i].RemovePart(order[i].parts[ii]);
                         correctMove = true;
                         action.SetActive(false);
-                        GetComponent<Score>().AddScore();
+                        score.AddScore();
                         Debug.Log("parts pituus" + order[i].parts.Length);
                     }else if (action.name == order[i].parts[ii] && !correctTool)
                     {
-                        GetComponent<Score>().MinusScore();
+                        score.MinusScore();
                         correctMove = true;
                         Debug.Log("Väärä työkalu oikea osa PENALTYÄ");
                     }
