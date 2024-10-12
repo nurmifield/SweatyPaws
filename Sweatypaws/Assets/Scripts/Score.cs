@@ -22,6 +22,7 @@ public class Score : MonoBehaviour
         youWinScoreText.text = "Score: " + score.ToString();
         GameObject popUpScoreText = Instantiate(floatingScore, new Vector2(720, 2041), Quaternion.identity,GetComponent<Canvas>().transform);
         popUpScoreText.GetComponent<TextMeshProUGUI>().text = "+" + addScore.ToString();
+        popUpScoreText.GetComponent<TextMeshProUGUI>().color = new Color(255 / 255f, 241 / 255f, 116 / 255f);
         Destroy(popUpScoreText, 1f);
     }
 
@@ -39,6 +40,7 @@ public class Score : MonoBehaviour
         GameObject popUpScoreText = Instantiate(floatingScore, new Vector2(720, 2041), Quaternion.identity, GetComponent<Canvas>().transform);
         Text popUpScore = popUpScoreText.GetComponent<Text>();
         popUpScoreText.GetComponent<TextMeshProUGUI>().text = "-"+minusScore.ToString();
+        popUpScoreText.GetComponent<TextMeshProUGUI>().color = new Color(240 / 255f, 163 / 255f, 183 / 255f);
         Destroy(popUpScoreText, 1f);
     }
     public int GetScore()
