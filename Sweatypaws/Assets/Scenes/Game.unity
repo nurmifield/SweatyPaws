@@ -2059,8 +2059,9 @@ MonoBehaviour:
   timerText: {fileID: 1349975203}
   remainingTime: 60
   menupanel: {fileID: 159272205}
-  gameOverObject: {fileID: 0}
+  gameOverObject: {fileID: 551772998}
   youWinObject: {fileID: 0}
+  GameOverScreen: {fileID: 0}
   gameEnds: 0
 --- !u!114 &1252451378
 MonoBehaviour:

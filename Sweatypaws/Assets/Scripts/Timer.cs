@@ -7,8 +7,9 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
     public GameObject menupanel;
-    public GameObject gameOverObject;
+    public GameOverScreen gameOverObject;
     public GameObject youWinObject;
+    public GameObject GameOverScreen;
     public bool gameEnds = false;
     // Update is called once per frame
     void Update()
@@ -27,6 +28,7 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             // GameOver();
             timerText.color = Color.red;
+            gameOverObject.GameOverScreenManage();
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
@@ -38,4 +40,6 @@ public class Timer : MonoBehaviour
     {
         gameEnds = newgameEnds;
     }
+
+
 }
