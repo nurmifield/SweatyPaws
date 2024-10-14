@@ -74,5 +74,24 @@
             "dialog":"That's just the painkillers, an old trick, the riot squad special. Now get up, we've got no time to lose!"
         }
         
+    ],
+    "scene_2":
+    [
+        {
+            "character_name":"HÖNÖ",
+            "dialog":"...uuurgh..HÖNÖ..."
+        },
+        {
+            "character_name":"TÖHÖ",
+            "dialog":"TÖHÖTIN TÖHÖTIN"
+        },
+        {
+            "character_name":"HÖNÖ",
+            "dialog":"...HÖNÖ...sir..."
+        },
+        {
+            "character_name":"TÖHÖ",
+            "dialog":"TÖHÖ TESTAA TÖTÖTÖTÖ."
+        }
     ]
 }
