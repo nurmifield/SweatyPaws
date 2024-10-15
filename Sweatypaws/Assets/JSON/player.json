@@ -1,0 +1,39 @@
+{
+        "level":0,
+        "dialogue_progress":
+        [
+            {
+                "dialogue_name":"scene_1",
+                "watched":false
+            },
+            {
+                "dialogue_name":"scene_2",
+                "watched":false
+            },
+            {
+                "dialogue_name":"scene_3",
+                "watched":false
+            }
+        ],
+        "level_progress":
+        [
+            
+                
+                {
+                    "level_name":"level_1",
+                    "complete":false,
+                    "score":0
+                },
+                {
+                    "level_name":"level_2",
+                    "complete":false,
+                    "score":0
+                },
+                {
+                    "level_name":"level_3",
+                    "complete":false,
+                    "score":0
+                }
+            
+        ]
+}
