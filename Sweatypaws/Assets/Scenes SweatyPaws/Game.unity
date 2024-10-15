@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &132525633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1639423162171850972, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+  m_PrefabInstance: {fileID: 564097757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &139322080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +580,7 @@ GameObject:
   - component: {fileID: 551772998}
   - component: {fileID: 551772999}
   - component: {fileID: 551773001}
+  - component: {fileID: 551773002}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -700,6 +706,21 @@ MonoBehaviour:
   optionsPanel: {fileID: 849684123}
   menuPanel: {fileID: 159272205}
   soundButtonText: {fileID: 1160191270}
+--- !u!114 &551773002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551772991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d97e71fd2995e74081e13c8451ca69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pages: []
+  manualPanel: {fileID: 132525633}
+  bookCoverPanel: {fileID: 660446580}
 --- !u!1001 &564097757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,8 +735,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856875655736687734, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1413641929475289970, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+      propertyPath: toolPanel
+      value: 
+      objectReference: {fileID: 1283965606}
+    - target: {fileID: 1413641929475289970, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+      propertyPath: scorePanel
+      value: 
+      objectReference: {fileID: 2021185115}
+    - target: {fileID: 1413641929475289970, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+      propertyPath: manualButton
+      value: 
+      objectReference: {fileID: 1154879611}
     - target: {fileID: 2885105421706964047, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -795,6 +828,14 @@ PrefabInstance:
     - target: {fileID: 2885105421706964047, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796153634156811503, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490758879492969055, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1319,6 +1360,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607082879}
   m_CullTransparentMesh: 1
+--- !u!1 &660446580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3796153634156811503, guid: e4320a8a548199d4b8f89dfb65eb9883, type: 3}
+  m_PrefabInstance: {fileID: 564097757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &834871949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1469,7 @@ GameObject:
   - component: {fileID: 936281890}
   - component: {fileID: 936281889}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1835,7 +1881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643756512737437870, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4538480520845917835, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1929,8 +1975,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
+  m_sharedMaterial: {fileID: -742395149822115394, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2219,7 +2265,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154879614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 551773002}
+        m_TargetAssemblyTypeName: ManualController, Assembly-CSharp
+        m_MethodName: ShowBookCover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154879614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,6 +2473,11 @@ MonoBehaviour:
   scoreText: {fileID: 2021185116}
   youWinScoreText: {fileID: 1493065354}
   floatingScore: {fileID: 5879284856325757346, guid: 8f67b2719a49e434d9395b18a95f4d1a, type: 3}
+--- !u!1 &1283965606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9051949539329449622, guid: bc2d28a5a683b43479c8e7be16e23802, type: 3}
+  m_PrefabInstance: {fileID: 588069307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1349975202 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6072156230678009511, guid: 85916880df92a194098b59e0380cb509, type: 3}
@@ -2467,8 +2530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 430.1, y: 1081}
-  m_SizeDelta: {x: 153.5, y: 106.0229}
+  m_AnchoredPosition: {x: 376.7183, y: 1081}
+  m_SizeDelta: {x: 260.2634, y: 106.0229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401777180
 MonoBehaviour:

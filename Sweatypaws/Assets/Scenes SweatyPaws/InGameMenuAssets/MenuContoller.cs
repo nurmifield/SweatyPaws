@@ -54,6 +54,8 @@ public class MenuController : MonoBehaviour
         soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
     }
 
+    
+
     // Toggle music (replace with your actual music management code)
     public void ToggleMusic()
     {

@@ -10,15 +10,18 @@ public class ManualController : MonoBehaviour
     public GameObject manualPanel;     // Reference to the manual panel (containing all pages)
     public GameObject bookCoverPanel;  // Reference to the book cover panel
 
+
+
     void Start()
     {
         // Ensure the game starts on the book cover screen
-        ShowBookCover();
+        //ShowBookCover();
     }
 
     // Show the book cover panel and hide everything else
     public void ShowBookCover()
     {
+       
         bookCoverPanel.SetActive(true);   // Show the book cover panel
         manualPanel.SetActive(false);     // Hide the manual
         Time.timeScale = 0f;              // Pause the game (if needed)
