@@ -1234,6 +1234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToolButtons
       objectReference: {fileID: 0}
+    - target: {fileID: 9051949539329449622, guid: bc2d28a5a683b43479c8e7be16e23802, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1831,7 +1835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643756512737437870, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4538480520845917835, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1841,6 +1845,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleSound
       objectReference: {fileID: 0}
+    - target: {fileID: 5453589384477034857, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
+    - target: {fileID: 5453589384477034857, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
+    - target: {fileID: 5453589384477034857, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155298203312182974, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    - target: {fileID: 7091708966291614714, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
