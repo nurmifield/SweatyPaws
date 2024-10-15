@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
     public GameObject menupanel;
+    public GameObject manualPanel;
     public GameOverScreen gameOverObject;
     public GameObject youWinObject;
     public GameObject GameOverScreen;
