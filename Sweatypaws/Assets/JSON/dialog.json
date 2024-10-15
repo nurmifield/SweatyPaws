@@ -3,75 +3,93 @@
     [
         {
             "character_name":"PICKLES",
-            "dialog":"...uuurgh..hmrg..."
+            "dialog":"...uuurgh..hmrg...",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Finally, something! Steve, got getthe car ready. Sergeant pickles, atattention!"
+            "dialog":"Finally, something! Steve, got getthe car ready. Sergeant pickles, atattention!",
+           "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"...mhh...sir..."
+            "dialog":"...mhh...sir...",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went titsup,you took one for the company have been in St.Hugbears for a fewweeks. At least you wore the suit, otherwise theywould have had to scrapeyou off the wall."
+            "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went titsup,you took one for the company have been in St.Hugbears for a fewweeks. At least you wore the suit, otherwise theywould have had to scrapeyou off the wall.",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Whose wall?..weeks?..I can't.."
+            "dialog":"Whose wall?..weeks?..I can't..",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Harumph, Jelly brain, figures..."
+            "dialog":"Harumph, Jelly brain, figures...",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"The wha-"
+            "dialog":"The wha-",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"It's a form of short term amnesia,common in our profession.You'llremember it all once you get backon the horse."
+            "dialog":"It's a form of short term amnesia,common in our profession.You'llremember it all once you get backon the horse.",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Our profession?..."
+            "dialog":"Our profession?...",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted youto the force myself! You're in thebomb squad, and the city is up thecreek with no paddle in sight."
+            "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted youto the force myself! You're in thebomb squad, and the city is up thecreek with no paddle in sight.",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"The what creek?"
+            "dialog":"The what creek?",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Shit's creek, concentrate man!First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti.Now,street div is finding bombs all across the city.The Mayor is shitting bricks and so is the commissioner."
+            "dialog":"Shit's creek, concentrate man!First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti.Now,street div is finding bombs all across the city.The Mayor is shitting bricks and so is the commissioner.",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Sounds bad, but why me? I'm sore all over and can remember hardly anything, where's the rest of the squad?"
+            "dialog":"Sounds bad, but why me? I'm sore all over and can remember hardly anything, where's the rest of the squad?",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Well, about that.. Seemingly, that idiot Toby let them all on leave at the same time, and they all went on Admiral Walrus's Booze Cruise. They're useless. It's you, me and Steve from the motor pool. We're the bomb squad now."
+            "dialog":"Well, about that.. Seemingly, that idiot Toby let them all on leave at the same time, and they all went on Admiral Walrus's Booze Cruise. They're useless. It's you, me and Steve from the motor pool. We're the bomb squad now.",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"But sir, Im sore all over.."
+            "dialog":"But sir, Im sore all over..",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"I've thought about that, here, have this cinnamon roll"
+            "dialog":"I've thought about that, here, have this cinnamon roll",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Its crunchy..."
+            "dialog":"Its crunchy...",
+            "character_image":"snuggles1normi.png"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"That's just the painkillers, an old trick, the riot squad special. Now get up, we've got no time to lose!"
+            "dialog":"That's just the painkillers, an old trick, the riot squad special. Now get up, we've got no time to lose!",
+            "character_image":"snuggles1normi.png"
         }
         
     ],
