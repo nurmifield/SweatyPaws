@@ -32,6 +32,8 @@ public class ManualController : MonoBehaviour
         toolsButtons.SetActive(false);     // Hide tools buttons panel
         settingsButton.SetActive(false);   // Hide settings button
         manualButton.SetActive(false);     // Hide manual button
+        Time.timeScale = 1f;
+
     }
 
     // Continue the game (hide the book cover)
@@ -113,4 +115,9 @@ public class ManualController : MonoBehaviour
         manualButton.SetActive(true);      // Show manual button
         Time.timeScale = 1f;               // Resume the game
     }
+
+
+
+
+    
 }
