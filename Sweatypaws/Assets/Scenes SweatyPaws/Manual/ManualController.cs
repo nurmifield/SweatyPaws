@@ -8,7 +8,7 @@ public class ManualController : MonoBehaviour
     private int currentPage = 0;       // Index to track the current page
 
     public GameObject manualPanel;     // Reference to the manual panel (containing all pages)
-    private GameObject bookCoverPanel;  // Reference to the book cover panel
+    public GameObject bookCoverPanel;  // Reference to the book cover panel
 
     // References for UI elements to hide
     public GameObject scoreText;       // Reference to the score text UI
@@ -20,7 +20,6 @@ public class ManualController : MonoBehaviour
     {
         // Ensure the game starts on the book cover screen
         Debug.Log("ManualController started. Ensure the book cover shows when opening the manual.");
-        bookCoverPanel=GameObject.Find("BookCoverPanel");
     }
 
     // Show the book cover panel and hide everything else
