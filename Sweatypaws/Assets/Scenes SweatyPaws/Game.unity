@@ -135,6 +135,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2449715607073735549, guid: 1e9f7936c87242f4b8dd0990896dc295, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449715607073735549, guid: 1e9f7936c87242f4b8dd0990896dc295, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017456501382528617, guid: 1e9f7936c87242f4b8dd0990896dc295, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5703218063346612415, guid: 1e9f7936c87242f4b8dd0990896dc295, type: 3}
       propertyPath: m_Name
       value: level_1_bomb
@@ -1973,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643756512737437870, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4538480520845917835, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
