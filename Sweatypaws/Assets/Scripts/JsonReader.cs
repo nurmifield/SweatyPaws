@@ -6,8 +6,8 @@ public class JsonReader : MonoBehaviour
 {
     public TextAsset jsonFile;
     public TextAsset jsonPlayerFile;
-    public DialogueList dialogueList = new DialogueList();
-    public Player player= new Player();
+    public DialogueList dialogueList;
+    public Player player;
 
 
     [System.Serializable]
@@ -20,8 +20,8 @@ public class JsonReader : MonoBehaviour
     [System.Serializable]
     public class DialogueList
     {
-        public DialogueParts[] scene_1;
-        public DialogueParts[] scene_2;
+        public DialogueParts[] dialogues;
+        
     }
     [System.Serializable]
     public class Player
@@ -47,9 +47,29 @@ public class JsonReader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
+        //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
         player=JsonUtility.FromJson<Player>(jsonPlayerFile.text);
+
+        string selectedDialogue = ExtractDialogueSet(jsonFile.text, player.dialogue_progress[player.level].dialogue_name);
+        dialogueList = JsonUtility.FromJson<DialogueList>(selectedDialogue);
+        //Debug.Log(selectedDialogue);
+
+        //Debug.Log(player.dialogue_progress[player.level].dialogue_name);
         
+    }
+
+    string ExtractDialogueSet(string jsonText, string dialogueSetName)
+    {
+        int startIndex = jsonText.IndexOf($"\"{dialogueSetName}\"");
+        if (startIndex != -1)
+        {
+            int startArray = jsonText.IndexOf("[", startIndex);
+            int endArray = jsonText.IndexOf("]", startArray) + 1;
+            string dialogueJson = jsonText.Substring(startArray, endArray - startArray);
+            return "{\"dialogues\":" + dialogueJson + "}";
+        }
+        Debug.LogError("Dialogue set not found: " + dialogueSetName);
+        return null;
     }
 
 }
