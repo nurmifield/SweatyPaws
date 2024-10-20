@@ -34,6 +34,7 @@ public class JsonReader : MonoBehaviour
     public class DialogueProgress
     {
         public string dialogue_name;
+        public int level_index;
         public bool watched;
     }
     [System.Serializable]

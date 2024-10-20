@@ -13,9 +13,16 @@ public class LevelMapManager : MonoBehaviour
         if (reader != null)
         {
             jsonReader = reader.GetComponent<JsonReader>();
-            if (jsonReader != null && jsonReader.player.dialogue_progress[jsonReader.player.level].watched == false)
+            if (jsonReader != null )
             {
-                Instantiate(dialogCanvas, new Vector2(0, 0), Quaternion.identity);
+                for (int i=0;i< jsonReader.player.dialogue_progress.Length;i++)
+                {
+                    if (jsonReader.player.dialogue_progress[i].level_index== jsonReader.player.level && jsonReader.player.dialogue_progress[i].watched == false )
+                    {
+                        Instantiate(dialogCanvas, new Vector2(0, 0), Quaternion.identity);
+                    }
+                }
+                
             }
 
         }

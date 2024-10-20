@@ -4,33 +4,37 @@
         [
             {
                 "dialogue_name":"scene_1",
+                "level_index":0,
                 "watched":false
             },
             {
                 "dialogue_name":"scene_2",
+                "level_index":1,
                 "watched":false
             },
             {
                 "dialogue_name":"scene_3",
+                "level_index":2,
                 "watched":false
             }
         ],
         "level_progress":
         [
-            
-                
                 {
                     "level_name":"level_1",
+                    "level_index":0,
                     "complete":false,
                     "score":0
                 },
                 {
                     "level_name":"level_2",
+                    "level_index":1,
                     "complete":false,
                     "score":0
                 },
                 {
                     "level_name":"level_3",
+                    "level_index":2,
                     "complete":false,
                     "score":0
                 }
