@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level_1_script : MonoBehaviour
 {
     public GameObject EpäiltykansioCanvas;
-    
+
     public void OpenCanvas()
     {
         if (EpäiltykansioCanvas != null)
