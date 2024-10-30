@@ -53,10 +53,28 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = currentDialogue.dialog;
 
             currentDialogueIndex++;
+            if (currentDialogueIndex==jsonReader.dialogueList.dialogues.Length)
+            {
+                GameObject dialogueCanvas = this.gameObject;
+                Transform dialogueWindow = dialogueCanvas.transform.Find("DialogueWindow");
+                GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
+                TextMeshProUGUI continueButtonTextObject = continueButtonObject.GetComponentInChildren<TextMeshProUGUI>();
+
+                continueButtonTextObject.text = "End";
+
+                continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
+                continueButton.onClick.AddListener(EndDialogue);
+            }
         }
         else
         {
-            Debug.Log("End of dialogue.");
+            Debug.Log("Ei dialogueita jäljellä");
+            Destroy(this.gameObject);
         }
+    }
+    public void EndDialogue()
+    {
+        Destroy(this.gameObject,1f);
+        Debug.Log("End of dialogue.");
     }
 }
