@@ -16,6 +16,7 @@ public class JsonReader : MonoBehaviour
         public string character_name;
         public string dialog;
         public string character_image;
+        public string background_image;
     }
     [System.Serializable]
     public class DialogueList

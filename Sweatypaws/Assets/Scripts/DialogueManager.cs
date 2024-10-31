@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     private JsonReader jsonReader;
     private TextMeshProUGUI characterName;
     private TextMeshProUGUI dialogue;
+    private UnityEngine.UI.Image characterImage;
+    private UnityEngine.UI.Image backgroundImage;
     private UnityEngine.UI.Button continueButton;
     private int currentDialogueIndex = 0;
     // Start is called before the first frame update
@@ -27,10 +29,16 @@ public class DialogueManager : MonoBehaviour
                 Transform dialogueWindow = dialogueCanvas.transform.Find("DialogueWindow");
                 GameObject speakerNameObject = dialogueWindow.Find("SpeakerName").gameObject;
                 GameObject dialogueObject = dialogueWindow.Find("DialogueText").gameObject;
+                Transform spreakerCharacter = dialogueCanvas.transform.Find("SpeakerCharacter");
+                Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
+                GameObject speakerCharacterObject = spreakerCharacter.gameObject;
+                GameObject dialogueBackgroundObject=dialogueBackgroun.gameObject;
                 GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
 
                 continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
                 continueButton.onClick.AddListener(DisplayNextDialogue);
+                characterImage= speakerCharacterObject.GetComponent<UnityEngine.UI.Image>();
+                backgroundImage = dialogueBackgroundObject.GetComponent<UnityEngine.UI.Image>();
 
                 characterName = speakerNameObject.GetComponent<TextMeshProUGUI>();
                 dialogue = dialogueObject.GetComponent<TextMeshProUGUI>();
@@ -50,7 +58,12 @@ public class DialogueManager : MonoBehaviour
         {
             DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndex];
             characterName.text = currentDialogue.character_name;
+            Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
+            Sprite newBackgroundSprite = Resources.Load<Sprite>(currentDialogue.background_image);
+            characterImage.sprite = newCharacterSprite;
+            backgroundImage.sprite = newBackgroundSprite;
             dialogue.text = currentDialogue.dialog;
+            Debug.Log(newCharacterSprite);
 
             currentDialogueIndex++;
             if (currentDialogueIndex==jsonReader.dialogueList.dialogues.Length)

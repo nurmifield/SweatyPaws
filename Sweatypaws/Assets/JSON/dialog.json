@@ -4,92 +4,207 @@
         {
             "character_name":"PICKLES",
             "dialog":"...uuurgh..hmrg...",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Finally, something! Steve, got getthe car ready. Sergeant pickles, atattention!",
-           "character_image":"snuggles1normi.png"
+           "character_image":"snuggles",
+           "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"...mhh...sir...",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went titsup,you took one for the company have been in St.Hugbears for a fewweeks. At least you wore the suit, otherwise theywould have had to scrapeyou off the wall.",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Whose wall?..weeks?..I can't..",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Harumph, Jelly brain, figures...",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"The wha-",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"It's a form of short term amnesia,common in our profession.You'llremember it all once you get backon the horse.",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Our profession?...",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted youto the force myself! You're in thebomb squad, and the city is up thecreek with no paddle in sight.",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"The what creek?",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Shit's creek, concentrate man!First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti.Now,street div is finding bombs all across the city.The Mayor is shitting bricks and so is the commissioner.",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Sounds bad, but why me? I'm sore all over and can remember hardly anything, where's the rest of the squad?",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Well, about that.. Seemingly, that idiot Toby let them all on leave at the same time, and they all went on Admiral Walrus's Booze Cruise. They're useless. It's you, me and Steve from the motor pool. We're the bomb squad now.",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"But sir, Im sore all over..",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"I've thought about that, here, have this cinnamon roll",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Its crunchy...",
-            "character_image":"snuggles1normi.png"
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"That's just the painkillers, an old trick, the riot squad special. Now get up, we've got no time to lose!",
-            "character_image":"snuggles1normi.png"
+            "character_image":"snuggles",
+            "background_image":"sairaalatausta1"
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Look at you, walking it off",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"PICKLES",
+            "dialog":"I guess..The van seems familiar..",
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Good, It's time to get down tobusiness. This here is Steve. Say hi, Steve",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"STEVE",
+            "dialog":"Hi Steve.",
+            "character_image":"steve",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Hrmph. Anyways, Van's ready, Just so, as there's already a situation on Sugarbear st.",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"PICKLES",
+            "dialog":"Sir, what if I freeze or panic? I don't think Steve can cover for me if I do.",
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"STEVE",
+            "dialog":"Hell no...sir.",
+            "character_image":"steve",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Think fast, Sergeant!",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"PICKLES",
+            "dialog":"Ow, what was that for?",
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"A test, sergeant.Stay sharp, you're heading into action. That there is the Manual I told you to write, as a training aid. Seems adequate, though your prose needs work. It's still in prototype, but it seems now is the time to test it. Bully for you, Sergeant.",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"PICKLES",
+            "dialog":"...",
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaala-ulkoa-tausta1"
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"I can see your conflicted, Sergeant. I know it seems desperate, an amnesiac, a grease monkey and an retired old fart, trying to stop all this. But now, truly, is time to shit or get off the pot. Pawston is scared out of its wits, we must help. The game's afoot, gentlemen, you must be ready.",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"PICKLES,STEVE",
+            "dialog":"Yes sir!",
+            "character_image":"Päähenkilö-sairaala",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Bully for you boys, now mount up and head to Sugarbear st. I'll stay with dispatch and feed you info as it comes in. All told, don't get captured.",
+            "character_image":"snuggles",
+            "background_image":"sairaala-ulkoa-tausta1"
+            
         }
         
     ],
