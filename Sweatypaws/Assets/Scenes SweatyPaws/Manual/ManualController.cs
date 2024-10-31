@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ManualController : MonoBehaviour
 {
+    private AudioSource audioSource;
     public GameObject[] pages;         // Array to store all pages of the manual
     private int currentPage = 0;       // Index to track the current page
 
@@ -32,7 +33,7 @@ public class ManualController : MonoBehaviour
         toolsButtons.SetActive(false);     // Hide tools buttons panel
         settingsButton.SetActive(false);   // Hide settings button
         manualButton.SetActive(false);     // Hide manual button
-        
+
 
     }
 
@@ -48,11 +49,19 @@ public class ManualController : MonoBehaviour
         Time.timeScale = 1f;               // Resume the game
     }
 
+    public void AudioOpen()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+    }
+
     // Open the manual (starting from the first page)
     public void OpenManual()
     {
         Debug.Log("Opening manual (book cover panel first).");
-        currentPage = 0;                   // Reset to the first page
+        currentPage = 0;                  // Reset to the first page
         bookCoverPanel.SetActive(false);    // Show the book cover panel
         manualPanel.SetActive(true);      // Hide the manual panel until book cover is closed
         scoreText.SetActive(false);        // Hide score text
@@ -65,6 +74,7 @@ public class ManualController : MonoBehaviour
     public void OpenFirstPageFromCover()
     {
         Debug.Log("Opening the first manual page.");
+        AudioOpen();
         currentPage = 0;                   // Reset to the first page
         bookCoverPanel.SetActive(false);   // Hide the book cover
         manualPanel.SetActive(true);       // Show the manual panel with pages
@@ -119,5 +129,5 @@ public class ManualController : MonoBehaviour
 
 
 
-    
+
 }
