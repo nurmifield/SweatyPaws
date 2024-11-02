@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         GameObject reader = GameObject.Find("Reader");
         if (reader != null)
         {
@@ -25,16 +26,21 @@ public class DialogueManager : MonoBehaviour
 
             if (jsonReader != null)
             {
+                //Canvas
                 GameObject dialogueCanvas = this.gameObject;
-                Transform dialogueWindow = dialogueCanvas.transform.Find("DialogueWindow");
+                Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
+                GameObject dialogueBackgroundObject = dialogueBackgroun.gameObject;
+                //DialogueGroup sis‰lt‰‰ character image ja dialogiWindowin
+                Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+                Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+                Transform spreakerCharacter = dialogueGroup.transform.Find("SpeakerCharacter");
+                //DialogueGroup objectit
                 GameObject speakerNameObject = dialogueWindow.Find("SpeakerName").gameObject;
                 GameObject dialogueObject = dialogueWindow.Find("DialogueText").gameObject;
-                Transform spreakerCharacter = dialogueCanvas.transform.Find("SpeakerCharacter");
-                Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
                 GameObject speakerCharacterObject = spreakerCharacter.gameObject;
-                GameObject dialogueBackgroundObject=dialogueBackgroun.gameObject;
                 GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
 
+                //Asetetaan arvot ja onclick sek‰ kutsutaan functiota
                 continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
                 continueButton.onClick.AddListener(DisplayNextDialogue);
                 characterImage= speakerCharacterObject.GetComponent<UnityEngine.UI.Image>();
@@ -69,7 +75,8 @@ public class DialogueManager : MonoBehaviour
             if (currentDialogueIndex==jsonReader.dialogueList.dialogues.Length)
             {
                 GameObject dialogueCanvas = this.gameObject;
-                Transform dialogueWindow = dialogueCanvas.transform.Find("DialogueWindow");
+                Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+                Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
                 GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
                 TextMeshProUGUI continueButtonTextObject = continueButtonObject.GetComponentInChildren<TextMeshProUGUI>();
 
@@ -87,6 +94,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void EndDialogue()
     {
+        PlayerManager.Instance.DialogCompleted(jsonReader.dialogueList.dialogueName);
         Destroy(this.gameObject,1f);
         Debug.Log("End of dialogue.");
     }

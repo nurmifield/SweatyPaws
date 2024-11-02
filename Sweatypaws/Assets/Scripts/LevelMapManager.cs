@@ -5,26 +5,18 @@ using UnityEngine;
 public class LevelMapManager : MonoBehaviour
 {
     public GameObject dialogCanvas;
-    private JsonReader jsonReader;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject reader = GameObject.Find("Reader");
-        if (reader != null)
-        {
-            jsonReader = reader.GetComponent<JsonReader>();
-            if (jsonReader != null )
-            {
-                for (int i=0;i< jsonReader.player.dialogue_progress.Length;i++)
+        var player= PlayerManager.Instance;
+   
+                for (int i=0;i< player.playerData.dialogue_progress.Count;i++)
                 {
-                    if (jsonReader.player.dialogue_progress[i].level_index== jsonReader.player.level && jsonReader.player.dialogue_progress[i].watched == false )
+                    if (player.playerData.dialogue_progress[i].dialogue_index== player.playerData.dialogue_level && player.playerData.dialogue_progress[i].watched == false && player.playerData.level== player.playerData.dialogue_progress[i].level_index )
                     {
-                        Instantiate(dialogCanvas, new Vector2(0, 0), Quaternion.identity);
+                       Instantiate(dialogCanvas, new Vector2(0, 0), Quaternion.identity);
+   
                     }
-                }
-                
-            }
-
-        }
+                } 
     }
 }
