@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 using TMPro;
 
 
+
 public class LevelButtonManagement : MonoBehaviour
 {
     public UnityEngine.UI.Button[] buttons;
+    public List<GameObject> groupedObjects;
  
 
     // Start is called before the first frame update
@@ -23,8 +25,31 @@ public class LevelButtonManagement : MonoBehaviour
                         Debug.Log("leveli: " + i);
                     }
                 }
+     }
+
+    public void CloseButton()
+    {
+  
+        GameObject canvas = GameObject.Find("EpäiltykansioCanvas");
+
+        foreach (GameObject group in groupedObjects)
+        {
+            if (group != null)
+            {
+                group.SetActive(false);
             }
         }
+    
+
+        if (canvas != null)
+        {
+            canvas.SetActive(false);
+        }
+       
+
+        
+    }
+}
 
         
     

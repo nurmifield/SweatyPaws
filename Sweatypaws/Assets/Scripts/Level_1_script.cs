@@ -11,6 +11,8 @@ public class Level_1_script : MonoBehaviour
         if (EpäiltykansioCanvas != null)
         {
             EpäiltykansioCanvas.SetActive(true);
+            Transform panelGroup = EpäiltykansioCanvas.transform.Find("LevelGroup1");
+            panelGroup.gameObject.SetActive(true);
         }
         else
         {
