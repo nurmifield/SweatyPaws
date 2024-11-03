@@ -58,7 +58,7 @@ public class PlayerManager : MonoBehaviour
             PlayerData newPlayerData= JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
             Debug.Log("Player data from:"+playerDataFilePath);
 
-            if (playerData.version < newPlayerData.version)
+            if (playerData.version < latestVersion)
             {
                 UpdatePlayerData(newPlayerData);
                 playerData.version = newPlayerData.version;
