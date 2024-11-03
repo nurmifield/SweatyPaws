@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 
 
@@ -11,11 +13,20 @@ public class LevelButtonManagement : MonoBehaviour
 {
     public UnityEngine.UI.Button[] buttons;
     public List<GameObject> groupedObjects;
- 
+    public LevelMapManager mapManager;
+    private JsonReader jsonReader;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject reader = GameObject.Find("Reader");
+        if (reader != null)
+        {
+            jsonReader = reader.GetComponent<JsonReader>();
+
+            if (jsonReader != null)
+            {
                 var player = PlayerManager.Instance;
                 for (int i = 0; i < buttons.Length; i++)
                 {
@@ -25,6 +36,8 @@ public class LevelButtonManagement : MonoBehaviour
                         Debug.Log("leveli: " + i);
                     }
                 }
+            }
+        }
      }
 
     public void CloseButton()
@@ -48,6 +61,21 @@ public class LevelButtonManagement : MonoBehaviour
        
 
         
+    }
+
+    public void StartLevel()
+    {
+        jsonReader.UpdateNewDialogueList();
+        if (mapManager.CheckDialogue())
+        {
+            mapManager.StartDialogChangeScene();
+        }
+        else
+        {
+            SceneManager.LoadScene("Game");
+        }
+        
+        //SceneManager.LoadScene("Game");
     }
 }
 

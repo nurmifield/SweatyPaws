@@ -10,6 +10,18 @@ public class PlayerManager : MonoBehaviour
     public PlayerData playerData;
     public TextAsset jsonPlayerFile;
     private int latestVersion = 1;
+    [SerializeField]
+    private string selectedLevel = "none";
+
+    public string GetSelectedLevel()
+    {
+        return selectedLevel;
+    }
+
+    public void SetSelectedLevel(string newSelectedLevel)
+    {
+        selectedLevel=newSelectedLevel;
+    }
 
     private string playerDataFilePath;
 
@@ -81,7 +93,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (!playerData.DialogueExist(newDialogue.dialogue_name))
             {
-                playerData.dialogue_progress.Add(new PlayerData.DialogueProgress(newDialogue.dialogue_name, newDialogue.dialogue_index, newDialogue.level_index));
+                playerData.dialogue_progress.Add(new PlayerData.DialogueProgress(newDialogue.dialogue_name, newDialogue.dialogue_index, newDialogue.level_index ,newDialogue.selected_level));
             }
         }
     }

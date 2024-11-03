@@ -27,18 +27,20 @@ public class JsonReader : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        var player = PlayerManager.Instance;
-        //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
-        string selectedDialogue = ExtractDialogueSet(jsonFile.text, player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name );
-        dialogueList = JsonUtility.FromJson<DialogueList>(selectedDialogue);
-        dialogueList.dialogueName = player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name;
 
-        //Debug.Log(selectedDialogue);
-
-        //Debug.Log(player.dialogue_progress[player.level].dialogue_name);
+        UpdateNewDialogueList();
         
     }
 
+
+    public void UpdateNewDialogueList()
+    {
+        var player = PlayerManager.Instance;
+        //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
+        string selectedDialogue = ExtractDialogueSet(jsonFile.text, player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name);
+        dialogueList = JsonUtility.FromJson<DialogueList>(selectedDialogue);
+        dialogueList.dialogueName = player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name;
+    }
     string ExtractDialogueSet(string jsonText, string dialogueSetName)
     {
         int startIndex = jsonText.IndexOf($"\"{dialogueSetName}\"");

@@ -28,13 +28,15 @@ public class PlayerData
         public string dialogue_name;
         public int dialogue_index;
         public int level_index;
+        public string selected_level;
         public bool watched;
 
-        public DialogueProgress(string dialogueName , int dialogueIndex , int levelIndex)
+        public DialogueProgress(string dialogueName , int dialogueIndex , int levelIndex,string selectedLevel)
         {
             this.dialogue_name = dialogueName;
             this.dialogue_index = dialogueIndex;
             this.level_index = levelIndex;
+            this.selected_level = selectedLevel;
             this.watched = false;
         }
     }
