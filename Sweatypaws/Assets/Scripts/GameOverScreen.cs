@@ -9,6 +9,7 @@ public class GameOverScreen : MonoBehaviour
     public GameObject youWinObject;
     public GameObject guiObject;
     public Timer timer;
+    public Score score;
 
     void Start()
     {
@@ -25,6 +26,8 @@ public class GameOverScreen : MonoBehaviour
 
     public void YouWinScreenManage()
     {
+        var player = PlayerManager.Instance;
+        player.LevelCompleted(player.GetSelectedLevel(),score.GetScore());
         timer.Stoptimer(true);
         guiObject.SetActive(false);
         youWinObject.SetActive(true);
@@ -34,10 +37,12 @@ public class GameOverScreen : MonoBehaviour
         StartCoroutine(Wait(1f));
         SceneManager.LoadScene("Game");
     }
-    public void MainMenuButton()
+    public void LevelSelectioButton()
     {
+        var player = PlayerManager.Instance;
+        player.SetSelectedLevel("none");
         StartCoroutine(Wait(1f));
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Map");
     }
 
     public IEnumerator Wait(float waitTime)

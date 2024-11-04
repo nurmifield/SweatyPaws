@@ -55,8 +55,12 @@ public class LevelMapManager : MonoBehaviour
         {
             if (player.playerData.dialogue_progress[i].dialogue_index == player.playerData.dialogue_level && player.playerData.dialogue_progress[i].watched == false && player.playerData.level == player.playerData.dialogue_progress[i].level_index)
             {
-               dialogueReady = true;
-               break;
+                if (player.playerData.dialogue_progress[i].selected_level == player.GetSelectedLevel())
+                {
+                    dialogueReady = true;
+                    break;
+                }
+               
 
             }
         }

@@ -8,27 +8,30 @@ using UnityEngine;
 
 
 
-public class ToolNeeded
-{
-    public string tool;
-    public string part;
 
-}
 public class CheckCorrectTool : MonoBehaviour
 {
     
     public GameObject action;
-    public ToolNeeded[] correctTools= new ToolNeeded[4];
+    public List<BombData.ToolNeeded> correctTools;
     public bool toolCorrect;
+    public JsonReader jsonReader;
 
     // Start is called before the first frame update
     void Start()
     {
+        {
+            GameObject reader = GameObject.Find("Reader");
+            if (reader != null)
+            {
+                jsonReader = reader.GetComponent<JsonReader>();
+                if (jsonReader != null)
+                {
+                    correctTools = jsonReader.bombData.level.tool_needed;
+                }
+            }
+        }
 
-        correctTools[0] = new ToolNeeded() { tool = "tassu", part = "alarm" };
-        correctTools[1] = new ToolNeeded() { tool = "tassu", part = "power" };
-        correctTools[2] = new ToolNeeded() { tool = "tassu", part = "charge" };
-        correctTools[3] = new ToolNeeded() { tool = "pihdit", part = "wire" };
 
     }
 
@@ -38,12 +41,12 @@ public class CheckCorrectTool : MonoBehaviour
         GetComponent<CheckOrder>().SetToolAndAction(toolCorrect,newAction);
     }
 
-    bool CheckTool(ToolNeeded[] tool , GameObject action )
+    bool CheckTool(List<BombData.ToolNeeded> tool , GameObject action )
     {
 
         string playerTool=GetComponent<Player>().tool;
         bool correctTool = false;
-        for (int i=0; i < tool.Length;i++)
+        for (int i=0; i < tool.Count;i++)
         {
             if (action.tag== tool[i].part && playerTool == tool[i].tool)
             {

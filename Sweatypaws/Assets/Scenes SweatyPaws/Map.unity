@@ -1819,9 +1819,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: e741a3f5a28549345b7c8b86a0d4feca, type: 3}
+  jsonBombFile: {fileID: 0}
   dialogueList:
     dialogueName: 
     dialogues: []
+  bombData:
+    level_name: 
+    level:
+      time: 0
+      must_be_cleared: 0
+      bomb_name: 
+      correct_order: []
+      tool_needed: []
 --- !u!1 &1258714926
 GameObject:
   m_ObjectHideFlags: 0

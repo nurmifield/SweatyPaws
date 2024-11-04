@@ -169,6 +169,9 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogueLoadScene()
     {
+        GameObject dialogueCanvas = this.gameObject;
+        SetDialogueIndex(0);
+        dialogueCanvas.SetActive(false);
         SceneManager.LoadScene("Game");
     }
 

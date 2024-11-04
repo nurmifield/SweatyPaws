@@ -5,58 +5,31 @@ using UnityEngine;
 
 
 
-public class MyCorrectOrder
-{
-    public string[] parts;  // Array of names
-    public bool sectionCleared;
 
-    // Method to remove a name from the array
-    public void RemovePart(string partToRemove)
-    {
-        // Create a list to dynamically handle the removal
-        List<string> tempPartList = new List<string>(parts); // Convert array to a list
-
-        // Remove the name from the list
-        if (tempPartList.Contains(partToRemove))
-        {
-            tempPartList.Remove(partToRemove);
-        }
-
-        // Convert the list back to an array
-        parts = tempPartList.ToArray();
-    }
-}
 public class CheckOrder : MonoBehaviour
 {
-    public MyCorrectOrder[] correctOrder = new MyCorrectOrder[5];
+    public List<BombData.CorrectOrder> correctOrder;
     public GameObject action;
     public bool correctTool = false;
     public GameObject actionCheck;
     public Score score;
+    public JsonReader jsonReader;
  
-    GameObject alarm;
-    GameObject powerSource;
-    GameObject charge;
-    GameObject wirePositiveAP;
-    GameObject wireNegativeAP;
-    GameObject wirePositiveAC;
-    GameObject wireNegativeAC;
+
     // Start is called before the first frame update
     void Start()
     {
-        alarm = GameObject.Find("Alarm");
-        powerSource = GameObject.Find("PowerSource");
-        charge = GameObject.Find("Charge");
-        wirePositiveAP = GameObject.Find("WirePositiveAP");
-        wireNegativeAP = GameObject.Find("WireNegativeAP");
-        wirePositiveAC = GameObject.Find("WirePositiveAC");
-        wireNegativeAC = GameObject.Find("WireNegativeAC");
-
-        correctOrder[0] = new MyCorrectOrder() {  parts = new string[2] { wirePositiveAC.name, wireNegativeAC.name }, sectionCleared = false };
-        correctOrder[1] = new MyCorrectOrder() { parts = new string[1] { charge.name }, sectionCleared = false };
-        correctOrder[2] = new MyCorrectOrder() { parts = new string[2] { wirePositiveAP.name, wireNegativeAP.name }, sectionCleared = false };
-        correctOrder[3] = new MyCorrectOrder() { parts = new string[1] { powerSource.name }, sectionCleared = false };
-        correctOrder[4] = new MyCorrectOrder() { parts = new string[1] { alarm.name }, sectionCleared = false };
+        {
+            GameObject reader = GameObject.Find("Reader");
+            if (reader != null)
+            {
+                jsonReader = reader.GetComponent<JsonReader>();
+                if (jsonReader != null)
+                {
+                    correctOrder = jsonReader.bombData.level.correct_order;
+                }
+            }
+        }
     }
 
     public void SetToolAndAction(bool correctTool , GameObject actionCheck)
@@ -66,7 +39,7 @@ public class CheckOrder : MonoBehaviour
         if (correctMove)
         {
             //Tarkistetaan voitettiinko peli 
-            if (CountSectionsCleared(correctOrder) == correctOrder.Length)
+            if (CountSectionsCleared(correctOrder) == correctOrder.Count)
             {
                 // TÄNNE PELIN VOITTO HOMMAT
                 GetComponent<GameOverScreen>().YouWinScreenManage();
@@ -82,15 +55,15 @@ public class CheckOrder : MonoBehaviour
             GetComponent<CheckFailure>().SetSections(CountSectionsCleared(correctOrder));
         }
     }
-    bool CheckCorretMove(GameObject action, MyCorrectOrder[] order, bool correctTool)
+    bool CheckCorretMove(GameObject action, List<BombData.CorrectOrder> order, bool correctTool)
     {
         bool correctMove = false;
         bool firstSection = false;
 
         //Debug.Log("Funkkarissa:" + order.Length);
-        for (int i = 0; i < order.Length; i++)
+        for (int i = 0; i < order.Count; i++)
         {
-            if (order[i].sectionCleared==false && firstSection==false)
+            if (order[i].section_cleared==false && firstSection==false)
             {
                 firstSection = true;
                 
@@ -112,7 +85,7 @@ public class CheckOrder : MonoBehaviour
                     if (order[i].parts.Length == 0)
                     {
                         Debug.Log("Vaihe "+ i + " suoritettu");
-                        order[i].sectionCleared = true;
+                        order[i].section_cleared = true;
                     }
                 }
                 
@@ -120,12 +93,12 @@ public class CheckOrder : MonoBehaviour
         }
         return correctMove;
     }
-    int CountSectionsCleared(MyCorrectOrder[] order)
+    int CountSectionsCleared(List<BombData.CorrectOrder> order)
     {
         int count = 0;
-        for(int i=0; i < order.Length; i++)
+        for(int i=0; i < order.Count; i++)
         {
-            if (order[i].sectionCleared==true)
+            if (order[i].section_cleared==true)
             {
                 count++;
             }

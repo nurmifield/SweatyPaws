@@ -7,9 +7,24 @@ public class CheckFailure : MonoBehaviour
     
     public bool correctOrder = true;
     public int sectionsCleared = 0;
-    public int MustBeCleared = 1;
+    public int MustBeCleared;
     public Score score;
-    
+    public JsonReader jsonReader;
+
+    void Start()
+    {
+        {
+            GameObject reader = GameObject.Find("Reader");
+            if (reader != null)
+            {
+                jsonReader = reader.GetComponent<JsonReader>();
+                if (jsonReader != null)
+                {
+                    MustBeCleared = jsonReader.bombData.level.must_be_cleared;
+                }
+            }
+        }
+    }
 
 
     public void SetSections(int newSectionsCleared)
