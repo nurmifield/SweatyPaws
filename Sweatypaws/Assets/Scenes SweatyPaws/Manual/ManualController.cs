@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class ManualController : MonoBehaviour
 {
     private AudioSource audioSource;
+    public AudioClip closeManualClip;
+    public AudioClip pageTurnClip;
     public GameObject[] pages;         // Array to store all pages of the manual
     private int currentPage = 0;       // Index to track the current page
 
@@ -20,6 +23,7 @@ public class ManualController : MonoBehaviour
     void Start()
     {
         // Ensure the game starts on the book cover screen
+        audioSource = GetComponent<AudioSource>();
         Debug.Log("ManualController started. Ensure the book cover shows when opening the manual.");
     }
 
@@ -49,10 +53,11 @@ public class ManualController : MonoBehaviour
         Time.timeScale = 1f;               // Resume the game
     }
 
-    public void AudioOpen()
+    public void PlayAudio(AudioClip clip)
     {
-        if (audioSource != null)
+        if (audioSource != null && clip != null)
         {
+            audioSource.clip = clip;
             audioSource.Play();
         }
     }
@@ -74,7 +79,7 @@ public class ManualController : MonoBehaviour
     public void OpenFirstPageFromCover()
     {
         Debug.Log("Opening the first manual page.");
-        AudioOpen();
+        PlayAudio(pageTurnClip);
         currentPage = 0;                   // Reset to the first page
         bookCoverPanel.SetActive(false);   // Hide the book cover
         manualPanel.SetActive(true);       // Show the manual panel with pages
@@ -89,6 +94,7 @@ public class ManualController : MonoBehaviour
             currentPage++;
             Debug.Log("Next page: " + currentPage);
             UpdatePage();
+            PlayAudio(pageTurnClip);
         }
     }
 
@@ -100,6 +106,7 @@ public class ManualController : MonoBehaviour
             currentPage--;
             Debug.Log("Previous page: " + currentPage);
             UpdatePage();
+            PlayAudio(pageTurnClip);
         }
     }
 
@@ -117,6 +124,7 @@ public class ManualController : MonoBehaviour
     public void CloseManual()
     {
         Debug.Log("Closing manual and resuming game.");
+        PlayAudio(closeManualClip);
         manualPanel.SetActive(false);      // Hide the manual panel
         bookCoverPanel.SetActive(false);   // Hide the book cover
         scoreText.SetActive(true);         // Show score text
@@ -125,9 +133,4 @@ public class ManualController : MonoBehaviour
         manualButton.SetActive(true);      // Show manual button
         Time.timeScale = 1f;               // Resume the game
     }
-
-
-
-
-
 }
