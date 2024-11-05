@@ -2839,11 +2839,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData:
+    version: 0
     level: 0
     dialogue_level: 0
     dialogue_progress: []
     level_progress: []
   jsonPlayerFile: {fileID: 4900000, guid: 615bad57471f4794583709d333f01467, type: 3}
+  selectedLevel: none
 --- !u!4 &1421068163
 Transform:
   m_ObjectHideFlags: 0
