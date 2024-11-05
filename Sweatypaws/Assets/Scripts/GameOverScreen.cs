@@ -34,6 +34,7 @@ public class GameOverScreen : MonoBehaviour
     }
     public void RestartButton()
     {
+        var player = PlayerManager.Instance;
         StartCoroutine(Wait(1f));
         SceneManager.LoadScene("Game");
     }

@@ -130,7 +130,6 @@ public class PlayerManager : MonoBehaviour
                 break;
             }
         }
-        SetSelectedLevel("none");
         SavePlayerData() ;
     }
  
