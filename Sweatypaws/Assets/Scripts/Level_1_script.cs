@@ -7,6 +7,8 @@ public class Level_1_script : MonoBehaviour
 {
     public GameObject EpäiltykansioCanvas;
     public GameObject[] pages;
+    public GameObject NextPageButton;
+    public GameObject PreviousPageButton;
     public AudioClip pageTurnClip;
     private int currentPage = 0;
     private AudioSource audioSource;
@@ -17,6 +19,7 @@ public class Level_1_script : MonoBehaviour
         {
             pages[i].SetActive(i == 0);
         }
+            UpdateButtonVisibility();
     }
 
     public void OpenCanvas()
@@ -45,6 +48,7 @@ public class Level_1_script : MonoBehaviour
             pages[currentPage].SetActive(true);
             Debug.Log("Next page: " + currentPage);
             PlayAudio(pageTurnClip);
+            UpdateButtonVisibility();
         }
         else
         {
@@ -61,6 +65,7 @@ public class Level_1_script : MonoBehaviour
             pages[currentPage].SetActive(true);   // Show previous page
             Debug.Log("Previous page: " + currentPage);
             PlayAudio(pageTurnClip);
+            UpdateButtonVisibility();
         }
         else
         {
@@ -74,6 +79,19 @@ public class Level_1_script : MonoBehaviour
         {
             audioSource.clip = clip;
             audioSource.Play();
+        }
+    }
+
+    private void UpdateButtonVisibility()
+    {
+        if (PreviousPageButton != null)
+        {
+            PreviousPageButton.SetActive(currentPage > 0);
+        }
+
+        if (NextPageButton != null)
+        {
+            NextPageButton.SetActive(currentPage < pages.Length - 1);
         }
     }
 }

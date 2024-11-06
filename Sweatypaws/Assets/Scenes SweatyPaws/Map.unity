@@ -517,7 +517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Next
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -1474,7 +1474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &873441579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1824,6 +1824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "Ep\xE4iltykansioCanvas": {fileID: 1465214021}
   pages: []
+  NextPageButton: {fileID: 0}
+  PreviousPageButton: {fileID: 0}
   pageTurnClip: {fileID: 0}
 --- !u!95 &1018495727
 Animator:
@@ -1942,7 +1944,7 @@ RectTransform:
   m_GameObject: {fileID: 1052102402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1429063, y: 1.1525067, z: 1.1525067}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1793634822}
@@ -1950,8 +1952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -408, y: 183}
-  m_SizeDelta: {x: 77, y: 44}
+  m_AnchoredPosition: {x: -505, y: 827}
+  m_SizeDelta: {x: 60.2, y: 137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052102404
 MonoBehaviour:
@@ -2024,13 +2026,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 150, y: 750, z: 0, w: 700}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 47c0c954e4a64b44e9b922888e31da13, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2913,8 +2915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407, y: 191}
-  m_SizeDelta: {x: 77, y: 44}
+  m_AnchoredPosition: {x: 502, y: 827}
+  m_SizeDelta: {x: 60.2, y: 137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436720357
 MonoBehaviour:
@@ -2987,13 +2989,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 750, z: 150, w: 700}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 13c1bdf9a8fc97c45a0cf4e8a0a501ff, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3215,6 +3217,8 @@ MonoBehaviour:
   pages:
   - {fileID: 1364719793}
   - {fileID: 873441578}
+  NextPageButton: {fileID: 1436720355}
+  PreviousPageButton: {fileID: 1052102402}
   pageTurnClip: {fileID: 8300000, guid: ca6dc169af6c6cf4e84aff33af412a8e, type: 3}
 --- !u!82 &1522902916
 AudioSource:
@@ -3473,7 +3477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
