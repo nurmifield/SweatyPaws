@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1349975203}
-  remainingTime: 60
+  remainingTime: 300
   menupanel: {fileID: 159272205}
   manualPanel: {fileID: 0}
   gameOverObject: {fileID: 551772998}
