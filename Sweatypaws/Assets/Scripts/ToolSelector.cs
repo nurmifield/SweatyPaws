@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class ToolSelector : MonoBehaviour
 {
+    public GameObject obj;
     public Button ScrewdriverButton;
     public Button PliersButton;
     public Button TweezerButton;
@@ -47,7 +48,18 @@ public class ToolSelector : MonoBehaviour
     void SelectTool(Button button, string toolName, int soundIndex)
     {
         string timestamp = System.DateTime.Now.ToString("HH:mm:ss.fff");
-        Debug.Log("Selected tool: " + toolName + " at " + timestamp);
+        obj = GameObject.FindWithTag("MenuPanel");
+
+            if (obj != null)
+            {
+                if (obj.activeSelf)
+                {
+                    Debug.Log("Paneeli on aktiivinen");
+                    return;
+                }
+            
+            }
+            Debug.Log("Selected tool: " + toolName + " at " + timestamp);
 
         if (player != null)
         {
