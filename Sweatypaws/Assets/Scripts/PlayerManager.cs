@@ -12,7 +12,17 @@ public class PlayerManager : MonoBehaviour
     private int latestVersion = 1;
     [SerializeField]
     private string selectedLevel = "none";
+    private bool existingUser = false;
 
+    public bool GetExistingUser()
+    {
+        return existingUser;
+    }
+
+    public void SetExistingUser(bool newExistingUser)
+    {
+        existingUser = newExistingUser;
+    }
     public string GetSelectedLevel()
     {
         return selectedLevel;
@@ -56,6 +66,7 @@ public class PlayerManager : MonoBehaviour
             string decryptedData = EncryptionHelper.Decrypt(encryptedData);
             playerData = JsonUtility.FromJson<PlayerData>(decryptedData);
             PlayerData newPlayerData= JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
+            SetExistingUser(true);
             Debug.Log("Player data from:"+playerDataFilePath);
 
             if (playerData.version < latestVersion)
@@ -75,9 +86,14 @@ public class PlayerManager : MonoBehaviour
         else
         {
             Debug.Log("No player data, Creating new player data");
-            playerData= JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
-            SavePlayerData();
+            NewGame();
         }
+    }
+
+    public void NewGame()
+    {
+        playerData = JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
+        SavePlayerData();
     }
     public void UpdatePlayerData(PlayerData newPlayerData)
     {
