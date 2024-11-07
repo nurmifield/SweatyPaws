@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public GameObject ToolButtons;
+    public GameObject ManualButton;
     public GameObject optionsPanel;  // Reference to the Options Panel
     public GameObject menuPanel;     // Reference to the Main Menu Panel
     public Text soundButtonText;     // Reference to the Text component of the sound button
@@ -20,7 +22,9 @@ public class MenuController : MonoBehaviour
     // Continue the game (hide the menu)
     public void ContinueGame()
     {
-        menuPanel.SetActive(false);  // Hide the main menu
+        menuPanel.SetActive(false);    // Hide the main menu
+        ToolButtons.SetActive(true);   // Show the tool buttons
+        ManualButton.SetActive(true);  // Show the manual button 
         Time.timeScale = 1f;         // Resume the game
     }
 
@@ -28,11 +32,12 @@ public class MenuController : MonoBehaviour
     public void OpenOptions()
     {
         optionsPanel.SetActive(true);  // Show the options menu
-       
     }
     public void OpenSettings()
     {
         menuPanel.SetActive(true);
+        ToolButtons.SetActive(false);
+        ManualButton.SetActive(false);
         optionsPanel.SetActive(false);
     }
     // Go back to the main menu from options
@@ -54,7 +59,7 @@ public class MenuController : MonoBehaviour
         soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
     }
 
-    
+
 
     // Toggle music (replace with your actual music management code)
     public void ToggleMusic()
@@ -62,10 +67,10 @@ public class MenuController : MonoBehaviour
         Debug.Log("Music toggled");
     }
 
-    
-     public void MainMenuScene()
+
+    public void MainMenuScene()
     {
-       SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

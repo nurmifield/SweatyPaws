@@ -19,6 +19,9 @@ public class MainMenuController : MonoBehaviour
         settingsPanel.SetActive(false);
         collectionPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        
+        var player = PlayerManager.Instance;
+        player.GetExistingUser();
 
         // Initialize the sound button text based on the sound state
         UpdateSoundButtonText();
