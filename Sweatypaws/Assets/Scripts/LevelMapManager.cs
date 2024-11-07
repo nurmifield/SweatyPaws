@@ -24,8 +24,9 @@ public class LevelMapManager : MonoBehaviour
             if (player.playerData.dialogue_progress[i].dialogue_index == player.playerData.dialogue_level && player.playerData.dialogue_progress[i].watched == false && player.playerData.level == player.playerData.dialogue_progress[i].level_index)
             {
                 
-                dialogCanvas.GetComponent<DialogueManager>().DisplayNextDialogue();
+                dialogCanvas.GetComponent<DialogueManager>().DisplayDialogue();
                 dialogCanvas.GetComponent<DialogueManager>().SetContinueButton(false);
+                dialogCanvas.GetComponent<DialogueManager>().SetPreviousButton(false);
 
             }
         }
@@ -40,8 +41,9 @@ public class LevelMapManager : MonoBehaviour
             if (player.playerData.dialogue_progress[i].dialogue_index == player.playerData.dialogue_level && player.playerData.dialogue_progress[i].watched == false && player.playerData.level == player.playerData.dialogue_progress[i].level_index)
             {
 
-                dialogCanvas.GetComponent<DialogueManager>().DisplayNextDialogueChangeScene();
+                dialogCanvas.GetComponent<DialogueManager>().DisplayDialogue();
                 dialogCanvas.GetComponent<DialogueManager>().SetContinueButton(true);
+                dialogCanvas.GetComponent<DialogueManager>().SetPreviousButton(true);
 
             }
         }

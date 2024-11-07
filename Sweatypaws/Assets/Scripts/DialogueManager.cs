@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,13 +16,18 @@ public class DialogueManager : MonoBehaviour
     private UnityEngine.UI.Image characterImage;
     private UnityEngine.UI.Image backgroundImage;
     private UnityEngine.UI.Button continueButton;
+    private UnityEngine.UI.Button previousButton;
     private int currentDialogueIndex = 0;
 
     public int GetDialogueIndex()
     {
         return currentDialogueIndex;
     }
-
+    public int GetPreviousDialogueIndex()
+    {
+        currentDialogueIndex--;
+        return currentDialogueIndex;
+    }
     public void SetDialogueIndex(int index)
     {
         currentDialogueIndex = index;
@@ -51,31 +57,50 @@ public class DialogueManager : MonoBehaviour
         }
         
     }
-    public void DisplayNextDialogue()
+
+    public void SetPreviousButton(bool loadScene)
     {
         GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
+        GameObject dialogueBackgroundObject = dialogueBackgroun.gameObject;
+        //DialogueGroup sis‰lt‰‰ character image ja dialogiWindowin
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        //DialogueGroup objectit
+        GameObject continueButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
+
+        //Asetetaan arvot ja onclick sek‰ kutsutaan functiota
+        continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
+        if (!loadScene)
+        {
+            continueButton.onClick.AddListener(DisplayPreviousDialogue);
+        }
+        else
+        {
+            continueButton.onClick.AddListener(DisplayPreviousDialogue);
+        }
+
+    }
+
+
+    public void DisplayDialogue()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        characterName = SetupCharacterNameComponent();
+        characterImage = SetupCharacterImageComponent();
+        backgroundImage = SetupBackgroundImageComponent();
+        dialogue = SetupDialogueComponent();
+
         GameObject reader = GameObject.Find("Reader");
         jsonReader = reader.GetComponent<JsonReader>();
         dialogueCanvas.SetActive(true);
-        Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
-        GameObject dialogueBackgroundObject = dialogueBackgroun.gameObject;
-        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
-        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
-        Transform spreakerCharacter = dialogueGroup.transform.Find("SpeakerCharacter");
-        GameObject speakerCharacterObject = spreakerCharacter.gameObject;
-        GameObject speakerNameObject = dialogueWindow.Find("SpeakerName").gameObject;
-        GameObject dialogueObject = dialogueWindow.Find("DialogueText").gameObject;
-        characterName = speakerNameObject.GetComponent<TextMeshProUGUI>();
-        characterImage = speakerCharacterObject.GetComponent<UnityEngine.UI.Image>();
-        backgroundImage = dialogueBackgroundObject.GetComponent<UnityEngine.UI.Image>();
-        dialogue = dialogueObject.GetComponent<TextMeshProUGUI>();
 
+        GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
+        previousButtonObject.SetActive(false);
 
-        int currentDialogueIndexNew=GetDialogueIndex();
-
-        if (currentDialogueIndexNew < jsonReader.dialogueList.dialogues.Length)
-        {
-            DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndex];
+        DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[0];
             characterName.text = currentDialogue.character_name;
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             Sprite newBackgroundSprite = Resources.Load<Sprite>(currentDialogue.background_image);
@@ -84,19 +109,87 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = currentDialogue.dialog;
             Debug.Log(newCharacterSprite);
 
-            currentDialogueIndexNew++;
-            SetDialogueIndex(currentDialogueIndexNew);
-            if (currentDialogueIndex==jsonReader.dialogueList.dialogues.Length)
-            {
-                
-                GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
+    }
 
 
-                continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
+    public void DisplayNextDialogue()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        characterName =SetupCharacterNameComponent();
+        characterImage=SetupCharacterImageComponent();
+        backgroundImage=SetupBackgroundImageComponent();
+        dialogue = SetupDialogueComponent();
 
-                continueButton.onClick.AddListener(EndDialogue);
-        
-            }
+        GameObject reader = GameObject.Find("Reader");
+        jsonReader = reader.GetComponent<JsonReader>();
+        dialogueCanvas.SetActive(true);
+
+        int currentDialogueIndexNew=GetDialogueIndex();
+        currentDialogueIndexNew++;
+        SetDialogueIndex(currentDialogueIndexNew);
+        Debug.Log(currentDialogueIndexNew);
+        if (currentDialogueIndexNew>0)
+        {    
+            GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
+            previousButtonObject.SetActive(true);
+        }
+
+        if (currentDialogueIndexNew < jsonReader.dialogueList.dialogues.Length)
+        {
+            DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndexNew];
+            characterName.text = currentDialogue.character_name;
+            Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
+            Sprite newBackgroundSprite = Resources.Load<Sprite>(currentDialogue.background_image);
+            characterImage.sprite = newCharacterSprite;
+            backgroundImage.sprite = newBackgroundSprite;
+            dialogue.text = currentDialogue.dialog;
+            Debug.Log(newCharacterSprite);
+            
+        }
+        else
+        {
+
+            Debug.Log("Ei dialogueita j‰ljell‰");
+            EndDialogue();
+        }
+    }
+
+    public void DisplayPreviousDialogue()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        characterName = SetupCharacterNameComponent();
+        characterImage = SetupCharacterImageComponent();
+        backgroundImage = SetupBackgroundImageComponent();
+        dialogue = SetupDialogueComponent();
+
+        GameObject reader = GameObject.Find("Reader");
+        jsonReader = reader.GetComponent<JsonReader>();
+        dialogueCanvas.SetActive(true);
+
+        int currentDialogueIndexNew = GetPreviousDialogueIndex();
+        SetDialogueIndex(currentDialogueIndexNew);
+        Debug.Log(currentDialogueIndexNew);
+        if (currentDialogueIndexNew<=0)
+        {
+            GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
+            previousButtonObject.SetActive(false);
+        }
+        if (currentDialogueIndexNew < jsonReader.dialogueList.dialogues.Length)
+        {
+            DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndexNew];
+            characterName.text = currentDialogue.character_name;
+            Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
+            Sprite newBackgroundSprite = Resources.Load<Sprite>(currentDialogue.background_image);
+            characterImage.sprite = newCharacterSprite;
+            backgroundImage.sprite = newBackgroundSprite;
+            dialogue.text = currentDialogue.dialog;
+            Debug.Log(newCharacterSprite);
+
+           
         }
         else
         {
@@ -108,28 +201,32 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextDialogueChangeScene()
     {
         GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        characterName = SetupCharacterNameComponent();
+        characterImage = SetupCharacterImageComponent();
+        backgroundImage = SetupBackgroundImageComponent();
+        dialogue = SetupDialogueComponent();
+
         GameObject reader = GameObject.Find("Reader");
         jsonReader = reader.GetComponent<JsonReader>();
         dialogueCanvas.SetActive(true);
-        Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
-        GameObject dialogueBackgroundObject = dialogueBackgroun.gameObject;
-        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
-        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
-        Transform spreakerCharacter = dialogueGroup.transform.Find("SpeakerCharacter");
-        GameObject speakerCharacterObject = spreakerCharacter.gameObject;
-        GameObject speakerNameObject = dialogueWindow.Find("SpeakerName").gameObject;
-        GameObject dialogueObject = dialogueWindow.Find("DialogueText").gameObject;
-        characterName = speakerNameObject.GetComponent<TextMeshProUGUI>();
-        characterImage = speakerCharacterObject.GetComponent<UnityEngine.UI.Image>();
-        backgroundImage = dialogueBackgroundObject.GetComponent<UnityEngine.UI.Image>();
-        dialogue = dialogueObject.GetComponent<TextMeshProUGUI>();
 
 
         int currentDialogueIndexNew = GetDialogueIndex();
+        currentDialogueIndexNew++;
+        SetDialogueIndex(currentDialogueIndexNew);
+
+        if (currentDialogueIndexNew > 0)
+        {
+            GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
+            previousButtonObject.SetActive(true);
+        }
+
 
         if (currentDialogueIndexNew < jsonReader.dialogueList.dialogues.Length)
         {
-            DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndex];
+            DialogueParts currentDialogue = jsonReader.dialogueList.dialogues[currentDialogueIndexNew];
             characterName.text = currentDialogue.character_name;
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             Sprite newBackgroundSprite = Resources.Load<Sprite>(currentDialogue.background_image);
@@ -138,34 +235,52 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = currentDialogue.dialog;
             Debug.Log(newCharacterSprite);
 
-            currentDialogueIndexNew++;
-            SetDialogueIndex(currentDialogueIndexNew);
-            if (currentDialogueIndex == jsonReader.dialogueList.dialogues.Length)
-            {
-
-                GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
-
-
-                continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
-
-                continueButton.onClick.AddListener(EndDialogueLoadScene);
-
-            }
+            
         }
         else
         {
             Debug.Log("Ei dialogueita j‰ljell‰");
-            dialogueCanvas.SetActive(false);
+            EndDialogueLoadScene();
         }
     }
 
+    public TextMeshProUGUI SetupCharacterNameComponent()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        GameObject speakerNameObject = dialogueWindow.Find("SpeakerName").gameObject;
+       return characterName = speakerNameObject.GetComponent<TextMeshProUGUI>();
+    }
+    public UnityEngine.UI.Image SetupCharacterImageComponent()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform spreakerCharacter = dialogueGroup.transform.Find("SpeakerCharacter");
+        GameObject speakerCharacterObject = spreakerCharacter.gameObject;
+        return characterImage = speakerCharacterObject.GetComponent<UnityEngine.UI.Image>();
+    }
+    public UnityEngine.UI.Image SetupBackgroundImageComponent()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueBackgroun = dialogueCanvas.transform.Find("DialogueBackground");
+        GameObject dialogueBackgroundObject = dialogueBackgroun.gameObject;
+        return backgroundImage = dialogueBackgroundObject.GetComponent<UnityEngine.UI.Image>();
+    }
 
-
-
+    public TextMeshProUGUI SetupDialogueComponent()
+    {
+        GameObject dialogueCanvas = this.gameObject;
+        Transform dialogueGroup = dialogueCanvas.transform.Find("DialogueGroup");
+        Transform dialogueWindow = dialogueGroup.transform.Find("DialogueWindow");
+        GameObject dialogueObject = dialogueWindow.Find("DialogueText").gameObject;
+        return dialogue = dialogueObject.GetComponent<TextMeshProUGUI>();
+    }
 
     public void EndDialogueLoadScene()
     {
         GameObject dialogueCanvas = this.gameObject;
+        PlayerManager.Instance.DialogCompleted(jsonReader.dialogueList.dialogueName);
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
         SceneManager.LoadScene("Game");
