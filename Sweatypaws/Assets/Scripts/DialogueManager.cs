@@ -90,9 +90,7 @@ public class DialogueManager : MonoBehaviour
             {
                 
                 GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
-                TextMeshProUGUI continueButtonTextObject = continueButtonObject.GetComponentInChildren<TextMeshProUGUI>();
 
-                continueButtonTextObject.text = "End";
 
                 continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
 
@@ -146,9 +144,7 @@ public class DialogueManager : MonoBehaviour
             {
 
                 GameObject continueButtonObject = dialogueWindow.Find("ContinueButton").gameObject;
-                TextMeshProUGUI continueButtonTextObject = continueButtonObject.GetComponentInChildren<TextMeshProUGUI>();
 
-                continueButtonTextObject.text = "Start level";
 
                 continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
 
