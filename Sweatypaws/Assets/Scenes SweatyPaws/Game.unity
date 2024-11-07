@@ -2428,7 +2428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431, y: -874}
+  m_AnchoredPosition: {x: -436, y: -874}
   m_SizeDelta: {x: 170, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1154879613
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9549a520834d63b42b39c50b688fe180, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d7887bb50034624c9fcd95303097812, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3449,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1903969574615358645, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2269127182700130694, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3457,6 +3461,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PreviousPage
       objectReference: {fileID: 0}
+    - target: {fileID: 2346821318927530986, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53e7747b922529d4c985348e1cf024a5, type: 3}
+    - target: {fileID: 2346821318927530986, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 1230
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346821318927530986, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346821318927530986, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346821318927530986, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2721902018237589705, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3464,6 +3488,30 @@ PrefabInstance:
     - target: {fileID: 2721902018237589705, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseManual
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 169
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092279823281537667, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1065
       objectReference: {fileID: 0}
     - target: {fileID: 4313315450931920475, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Name
@@ -3481,6 +3529,62 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextPage
       objectReference: {fileID: 0}
+    - target: {fileID: 4757887475145650802, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53e7747b922529d4c985348e1cf024a5, type: 3}
+    - target: {fileID: 4757887475145650802, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 1230
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757887475145650802, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757887475145650802, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757887475145650802, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1065
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479475603728877135, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479475603728877135, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 169
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479475603728877135, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479475603728877135, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479475603728877135, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1065
+      objectReference: {fileID: 0}
     - target: {fileID: 6661913690764619153, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3488,6 +3592,22 @@ PrefabInstance:
     - target: {fileID: 6661913690764619153, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PreviousPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343589535704166309, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53e7747b922529d4c985348e1cf024a5, type: 3}
+    - target: {fileID: 7343589535704166309, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 1230
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343589535704166309, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343589535704166309, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 7593472005629074709, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Color.a

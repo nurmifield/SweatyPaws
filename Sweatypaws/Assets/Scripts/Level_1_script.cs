@@ -19,6 +19,11 @@ public class Level_1_script : MonoBehaviour
         {
             pages[i].SetActive(i == 0);
         }
+
+        if  (EpäiltykansioCanvas != null)
+        {
+            EpäiltykansioCanvas.SetActive(false);
+        }
             UpdateButtonVisibility();
     }
 
