@@ -275,7 +275,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &59465983
 RectTransform:
@@ -713,7 +713,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &183597312
 RectTransform:
@@ -731,7 +731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 0.000015258789}
+  m_AnchoredPosition: {x: 14, y: 0.000061035156}
   m_SizeDelta: {x: 333.6414, y: 113.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183597313
@@ -1696,7 +1696,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!224 &726736659
 RectTransform:
@@ -1715,10 +1715,10 @@ RectTransform:
   - {fileID: 1016180655}
   m_Father: {fileID: 1340789160}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15.000122, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1080, y: 688.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &726736661
 CanvasRenderer:
@@ -1793,7 +1793,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &770389818
 RectTransform:
@@ -1811,7 +1811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6553, y: -0.00001049}
+  m_AnchoredPosition: {x: -0.0000038146973, y: 0.000004768789}
   m_SizeDelta: {x: 899.3474, y: 490.8731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770389819
@@ -1869,7 +1869,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &804062385
 RectTransform:
@@ -1887,11 +1887,11 @@ RectTransform:
   - {fileID: 183597312}
   m_Father: {fileID: 726736659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.6553, y: 85.005}
-  m_SizeDelta: {x: 794.2599, y: 170.0092}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -148}
+  m_SizeDelta: {x: 794.2599, y: 170.00922}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &804062386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,7 +2213,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1016180655
 RectTransform:
@@ -2230,11 +2230,11 @@ RectTransform:
   - {fileID: 59465983}
   m_Father: {fileID: 726736659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 544.6553, y: 1064.3447}
-  m_SizeDelta: {x: 794.2599, y: 170.0092}
-  m_Pivot: {x: 0.49999994, y: 0.49999997}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.000061035156, y: -370}
+  m_SizeDelta: {x: 794.2599, y: 170.00922}
+  m_Pivot: {x: 0.49999994, y: 1}
 --- !u!114 &1016180656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3364,7 +3364,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1692865740
 MonoBehaviour:
@@ -3830,7 +3830,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &2008618538
 RectTransform:
