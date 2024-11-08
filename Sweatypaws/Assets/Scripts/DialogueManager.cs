@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     private UnityEngine.UI.Image backgroundImage;
     private UnityEngine.UI.Button continueButton;
     private UnityEngine.UI.Button previousButton;
+    public LoadingScene loadingScreen;
     private int currentDialogueIndex = 0;
 
     public int GetDialogueIndex()
@@ -283,7 +284,8 @@ public class DialogueManager : MonoBehaviour
         PlayerManager.Instance.DialogCompleted(jsonReader.dialogueList.dialogueName);
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
-        SceneManager.LoadScene("Game");
+        loadingScreen.PlayTimeLine();
+        //SceneManager.LoadScene("Game");
     }
 
 

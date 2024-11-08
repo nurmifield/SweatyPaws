@@ -14,6 +14,7 @@ public class LevelButtonManagement : MonoBehaviour
     public UnityEngine.UI.Button[] buttons;
     public List<GameObject> groupedObjects;
     public LevelMapManager mapManager;
+    public LoadingScene loadingScreen;
     private JsonReader jsonReader;
 
 
@@ -72,7 +73,8 @@ public class LevelButtonManagement : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Game");
+            loadingScreen.PlayTimeLine();
+            //SceneManager.LoadScene("Game");
         }
         
         //SceneManager.LoadScene("Game");
