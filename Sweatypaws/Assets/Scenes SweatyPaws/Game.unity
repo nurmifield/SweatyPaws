@@ -1318,16 +1318,15 @@ GameObject:
   m_Component:
   - component: {fileID: 551772997}
   - component: {fileID: 551772996}
-  - component: {fileID: 551772994}
   - component: {fileID: 551772993}
-  - component: {fileID: 551772992}
   - component: {fileID: 551772998}
-  - component: {fileID: 551772999}
   - component: {fileID: 551773001}
   - component: {fileID: 551773002}
   - component: {fileID: 551773004}
   - component: {fileID: 551773003}
   - component: {fileID: 551773005}
+  - component: {fileID: 551773006}
+  - component: {fileID: 551773007}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -1335,23 +1334,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &551772992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551772991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c6910f4b2aeb14b96fa5762d379335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctOrder: 1
-  sectionsCleared: 0
-  MustBeCleared: 1
-  score: {fileID: 1252451382}
-  jsonReader: {fileID: 0}
 --- !u!114 &551772993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,24 +1347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 159272205}
---- !u!114 &551772994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551772991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a02564fc4543d346b701eeae70cb2e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctOrder: []
-  action: {fileID: 0}
-  correctTool: 0
-  actionCheck: {fileID: 0}
-  score: {fileID: 1252451382}
-  jsonReader: {fileID: 0}
 --- !u!114 &551772996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,22 +1392,6 @@ MonoBehaviour:
   guiObject: {fileID: 1252451376}
   timer: {fileID: 1252451377}
   score: {fileID: 1252451382}
---- !u!114 &551772999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551772991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6713aaacca54b5f40af5abce5ba0f8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: {fileID: 0}
-  correctTools: []
-  toolCorrect: 0
-  jsonReader: {fileID: 0}
 --- !u!114 &551773001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1698,6 +1646,42 @@ MonoBehaviour:
   - {fileID: 1231146856}
   nextButton: {fileID: 1951916609}
   firstBubbleToHide: {fileID: 1140247602}
+--- !u!114 &551773006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551772991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a566d2def5c17f44918236289ad30c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonReader: {fileID: 0}
+  levelStages: []
+  bombSetup:
+    current_stage: 0
+    win_points: 0
+    time: 0
+    win_condition: 0
+    bomb_name: 
+    stages: []
+  score: {fileID: 1252451382}
+  penaltyManager: {fileID: 551773007}
+--- !u!114 &551773007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551772991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f6e8e15435f7a40b3d3c528c3ff624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1252451382}
 --- !u!1 &575389022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6536,6 +6520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 0}
   jsonBombFile: {fileID: 4900000, guid: ed050c9fab5933b43b5d9a1a4f7ceec8, type: 3}
+  jsonBombLogicDataFile: {fileID: 4900000, guid: 37f98049f8cfe76498ba23280127fcaf, type: 3}
   dialogueList:
     dialogueName: 
     dialogues: []
@@ -6547,6 +6532,15 @@ MonoBehaviour:
       bomb_name: 
       correct_order: []
       tool_needed: []
+  bombLogicData:
+    level_name: 
+    level:
+      current_stage: 0
+      win_points: 0
+      time: 0
+      win_condition: 0
+      bomb_name: 
+      stages: []
 --- !u!4 &1760911954
 Transform:
   m_ObjectHideFlags: 0

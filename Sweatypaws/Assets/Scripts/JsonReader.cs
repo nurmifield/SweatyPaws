@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class JsonReader : MonoBehaviour
 {
     public TextAsset jsonFile;
-    public TextAsset jsonBombFile;
+    public TextAsset jsonBombLogicDataFile;
     public DialogueList dialogueList;
-    public BombData bombData;
+    public BombLogicData bombLogicData;
 
 
     [System.Serializable]
@@ -37,7 +37,7 @@ public class JsonReader : MonoBehaviour
         }
         else if(SceneManager.GetActiveScene().name == "Game")
         {
-            UpdateNewBombLevel();
+            UpdateNewBombLogicDataLevel();
             Debug.Log("Scene is Game");
         }
 
@@ -54,7 +54,9 @@ public class JsonReader : MonoBehaviour
         dialogueList.dialogueName = player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name;
     }
 
-    public void UpdateNewBombLevel()
+    /*
+     * Aikaisemmin käytössä ollut
+     * public void UpdateNewBombLevel()
     {
         var player = PlayerManager.Instance;
         //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
@@ -63,6 +65,18 @@ public class JsonReader : MonoBehaviour
         Debug.Log(selectLevel);
         bombData = JsonUtility.FromJson<BombData>(selectLevel);
         bombData.level_name = player.GetSelectedLevel();
+
+    }
+    */
+    public void UpdateNewBombLogicDataLevel()
+    {
+        var player = PlayerManager.Instance;
+        //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
+        string selectLevel = ExtractLevelSet(jsonBombLogicDataFile.text, player.GetSelectedLevel());
+        Debug.Log(player.GetSelectedLevel());
+        Debug.Log(selectLevel);
+        bombLogicData = JsonUtility.FromJson<BombLogicData>(selectLevel);
+        bombLogicData.level_name = player.GetSelectedLevel();
 
     }
     string ExtractDialogueSet(string jsonText, string dialogueSetName)

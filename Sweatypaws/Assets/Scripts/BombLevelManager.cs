@@ -15,7 +15,8 @@ public class BombLevelManager : MonoBehaviour
 
             if (jsonReader != null)
             {
-                GameObject bomb = Resources.Load<GameObject>(jsonReader.bombData.level.bomb_name);
+                //GameObject bomb = Resources.Load<GameObject>(jsonReader.bombData.level.bomb_name);
+                GameObject bomb = Resources.Load<GameObject>(jsonReader.bombLogicData.level.bomb_name);
                 GameObject instance=Instantiate(bomb);
                 Vector2 originalPostion=bomb.transform.position;
 
