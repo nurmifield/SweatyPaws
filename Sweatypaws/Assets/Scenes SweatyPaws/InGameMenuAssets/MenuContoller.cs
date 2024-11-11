@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;  // For handling UI components
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuController : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class MenuController : MonoBehaviour
     public GameObject optionsPanel;  // Reference to the Options Panel
     public GameObject menuPanel;     // Reference to the Main Menu Panel
     public Text soundButtonText;     // Reference to the Text component of the sound button
-    private bool isSoundOn = true;   // Variable to track the sound state
+    private bool isSoundOn = true;
+    private ToolSelector toolSelector;   // Variable to track the sound state
 
     void Start()
     {
+        toolSelector = FindObjectOfType<ToolSelector>();
         // Ensure the game starts unpaused and only the menu panel is active
         Time.timeScale = 1f;
         menuPanel.SetActive(false);   // Show the main menu at the start
@@ -22,6 +25,12 @@ public class MenuController : MonoBehaviour
     // Continue the game (hide the menu)
     public void ContinueGame()
     {
+        if (toolSelector != null && toolSelector.currentSelectedButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            toolSelector.currentSelectedButton = null;
+        }
+
         menuPanel.SetActive(false);    // Hide the main menu
         ToolButtons.SetActive(true);   // Show the tool buttons
         ManualButton.SetActive(true);  // Show the manual button 
@@ -39,11 +48,11 @@ public class MenuController : MonoBehaviour
         ToolButtons.SetActive(false);
         ManualButton.SetActive(false);
         optionsPanel.SetActive(false);
+
         if (SceneManager.GetActiveScene().name == "Game")
         {
             GetComponent<Player>().EquipTool("none");
         }
-        
     }
     // Go back to the main menu from options
     public void BackToMenu()

@@ -16,7 +16,7 @@ public class ToolSelector : MonoBehaviour
     public Button HandButton;
     public Button LiquidNitrogenButton;
     public Button ManualButton;
-    private Button currentSelectedButton;
+    public Button currentSelectedButton;
     public GameObject manualPanel;
     public bool Highlight = true;
 
@@ -57,7 +57,6 @@ public class ToolSelector : MonoBehaviour
                     Debug.Log("Paneeli on aktiivinen");
                     return;
                 }
-            
             }
             Debug.Log("Selected tool: " + toolName + " at " + timestamp);
 
@@ -86,9 +85,10 @@ public class ToolSelector : MonoBehaviour
         }
     }
 
-    private void HighlightButton(Button button)
+    public void HighlightButton(Button button)
     {
         currentSelectedButton = button;
         EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
+    
 }
