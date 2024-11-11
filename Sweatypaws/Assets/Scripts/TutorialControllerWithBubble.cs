@@ -85,7 +85,11 @@ public class HowToPlayManager : MonoBehaviour
         else
         {
             Debug.Log("All tool descriptions are shown!");
-            // Optionally, you can close the tutorial or reset the state here
+            // Hide all speech bubbles after the last one
+            foreach (GameObject bubble in speechBubbles)
+            {
+                bubble.SetActive(false);  // Hide all speech bubbles
+            }
         }
     }
 
