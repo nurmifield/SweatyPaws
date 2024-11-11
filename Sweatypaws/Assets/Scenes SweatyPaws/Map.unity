@@ -2685,18 +2685,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: e741a3f5a28549345b7c8b86a0d4feca, type: 3}
-  jsonBombFile: {fileID: 0}
+  jsonBombLogicDataFile: {fileID: 0}
   dialogueList:
     dialogueName: 
     dialogues: []
-  bombData:
+  bombLogicData:
     level_name: 
     level:
+      current_stage: 0
+      win_points: 0
       time: 0
-      must_be_cleared: 0
+      win_condition: 0
       bomb_name: 
-      correct_order: []
-      tool_needed: []
+      stages: []
 --- !u!1 &1258714926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +2980,30 @@ PrefabInstance:
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 1522902918}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -51
+      objectReference: {fileID: 0}
     - target: {fileID: 4447096876929758762, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -2987,6 +3012,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5476788312400206255, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53e7747b922529d4c985348e1cf024a5, type: 3}
     - target: {fileID: 6791656734319594500, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3066,6 +3095,18 @@ PrefabInstance:
     - target: {fileID: 6791656734319594500, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568391522213158503, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568391522213158503, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568391522213158503, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

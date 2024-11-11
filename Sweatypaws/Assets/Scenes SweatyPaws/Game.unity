@@ -2264,7 +2264,7 @@ PrefabInstance:
     - target: {fileID: 6707272171028167450, guid: bc2d28a5a683b43479c8e7be16e23802, type: 3}
       propertyPath: buttonSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 042411fb381a9c74bb3c167014786dfd, type: 3}
     - target: {fileID: 6707272171028167450, guid: bc2d28a5a683b43479c8e7be16e23802, type: 3}
       propertyPath: buttonSounds.Array.data[2]
       value: 
@@ -2383,7 +2383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609485526
 RectTransform:
   m_ObjectHideFlags: 0
