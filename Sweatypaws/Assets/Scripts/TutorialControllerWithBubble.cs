@@ -1,78 +1,113 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ToolDescriptionManager : MonoBehaviour
+public class HowToPlayManager : MonoBehaviour
 {
+    // The two panels: Introduction and Tools
+    public GameObject introductionPanel;  // The introduction panel
+    public GameObject toolsPanel;         // The tools panel
+
     // Array to hold the speech bubble images (which include text)
     public GameObject[] speechBubbles;  // Speech bubble images with Text as children
+
+    // The button to go to the next page (Introduction to Tools)
+    public Button nextPageButton;  // The next button to go from Introduction to Tools
 
     // The button that will trigger showing the next text bubble
     public Button nextButton;  // The next button to progress through bubbles
 
     private int currentBubbleIndex = 0;  // To track which bubble to show next
 
-    // Reference to the first bubble you want to hide after the first click
-    public GameObject firstBubbleToHide;
+    // Reference to Mr. Snuggles' bubble
+    public GameObject mrSnugglesBubble;  // Mr. Snuggles' speech bubble (should hide after first click)
 
     void Start()
     {
-        // Initially hide all speech bubbles except the first one
+        // Initially hide all speech bubbles except Mr. Snuggles' text
         foreach (GameObject bubble in speechBubbles)
         {
             bubble.SetActive(false);  // Hide all bubbles initially
         }
 
-        if (firstBubbleToHide != null)
+        // Ensure only the Introduction panel is active initially
+        if (introductionPanel != null)
         {
-            firstBubbleToHide.SetActive(true);  // Show the first extra bubble (if assigned)
+            introductionPanel.SetActive(true);  // Show Introduction
         }
 
-        // Set up the button to trigger showing the next text bubble
-        if (nextButton != null)
+        if (toolsPanel != null)
         {
-            nextButton.onClick.AddListener(ShowNextBubble);  // Register button click event
+            toolsPanel.SetActive(false);  // Hide Tools panel initially
+        }
+
+        // Set up the button to transition from Introduction to Tools
+        if (nextPageButton != null)
+        {
+            nextPageButton.onClick.AddListener(ShowToolsPanel);  // Register button click event for transition
         }
         else
         {
-            Debug.LogError("NextButton is not assigned in the Inspector.");
+            Debug.LogError("nextPageButton is not assigned in the Inspector.");
+        }
+
+        // Set up the button to trigger speech bubble progression
+        if (nextButton != null)
+        {
+            nextButton.onClick.AddListener(ShowNextBubble);  // Register button click event for speech bubbles
+        }
+        else
+        {
+            Debug.LogError("nextButton is not assigned in the Inspector.");
+        }
+
+        // Ensure Mr. Snuggles' bubble is visible at the start
+        if (mrSnugglesBubble != null)
+        {
+            mrSnugglesBubble.SetActive(true);  // Show Mr. Snuggles' text at the start
         }
     }
 
-    // Show the next speech bubble and its text
+    // This method is called when the 'Next' button is clicked to show speech bubbles
     void ShowNextBubble()
     {
-        // First, hide the extra bubble (only once, after the first click)
-        if (firstBubbleToHide != null)
+        // If it's the first click (after Mr. Snuggles' bubble), hide Mr. Snuggles' bubble
+        if (mrSnugglesBubble != null)
         {
-            firstBubbleToHide.SetActive(false);  // Hide the extra bubble after first click
-            firstBubbleToHide = null;  // Prevent further changes (only hide once)
+            mrSnugglesBubble.SetActive(false);  // Hide Mr. Snuggles' bubble
         }
 
-        // Check if there are more bubbles to show
+        // Show the next speech bubble if any are left
         if (currentBubbleIndex < speechBubbles.Length)
         {
-            // Show the next bubble
             speechBubbles[currentBubbleIndex].SetActive(true);  // Show the current speech bubble
-
-            // Increment the index to show the next bubble on the next click
-            currentBubbleIndex++;
+            currentBubbleIndex++;  // Increment the index to show the next bubble
         }
         else
         {
             Debug.Log("All tool descriptions are shown!");
-            // Optionally reset or close the description panel here if needed
-            // ResetText();  // If you want to hide all bubbles after they’ve been shown
+            // Optionally, you can close the tutorial or reset the state here
         }
     }
 
-    // (Optional) Reset all speech bubbles after all have been shown
-    void ResetText()
+    // This method is called when the 'NextPage' button is clicked to transition to the Tools panel
+    void ShowToolsPanel()
     {
-        foreach (GameObject bubble in speechBubbles)
+        // Hide the Introduction panel
+        if (introductionPanel != null)
         {
-            bubble.SetActive(false);  // Hide all speech bubbles
+            introductionPanel.SetActive(false);
         }
 
-        currentBubbleIndex = 0;  // Reset the index so you can show again from the start
+        // Show the Tools panel
+        if (toolsPanel != null)
+        {
+            toolsPanel.SetActive(true);
+
+            // Ensure all speech bubbles are hidden when transitioning to the Tools panel
+            foreach (GameObject bubble in speechBubbles)
+            {
+                bubble.SetActive(false);  // Hide all speech bubbles initially
+            }
+        }
     }
 }
