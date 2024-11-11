@@ -1,6 +1,7 @@
 {
         "version":1,  
         "level":0,
+        "tutorial_done":false,
         "dialogue_level":0,
         "dialogue_progress":
         [

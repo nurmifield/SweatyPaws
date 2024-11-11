@@ -149,5 +149,9 @@ public class PlayerManager : MonoBehaviour
         }
         SavePlayerData() ;
     }
+    public void TutorialDone()
+    {
+        playerData.tutorial_done=true;
+    }
  
 }
