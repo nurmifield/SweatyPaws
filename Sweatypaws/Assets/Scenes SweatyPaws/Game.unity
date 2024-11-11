@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1772248924558034173, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1772248924558034173, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
       propertyPath: m_TagString
@@ -732,18 +732,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347416937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2071673948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -282}
-  m_SizeDelta: {x: 973.7241, y: 156.56616}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 843.6}
+  m_SizeDelta: {x: 997.7303, y: 125.9265}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347416939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 21
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1109,8 +1109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272.04, y: -899.69}
-  m_SizeDelta: {x: 544.0865, y: 486.1622}
+  m_AnchoredPosition: {x: 361.0742, y: -957.6561}
+  m_SizeDelta: {x: 366.0116, y: 375.1818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429828676
 MonoBehaviour:
@@ -1717,6 +1717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094d450bc1c636048b3a15dd32b0daf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introductionPanel: {fileID: 2071673947}
+  toolsPanel: {fileID: 93069775}
   speechBubbles:
   - {fileID: 1001247077}
   - {fileID: 692078525}
@@ -1724,8 +1726,9 @@ MonoBehaviour:
   - {fileID: 901995072}
   - {fileID: 1344502850}
   - {fileID: 1231146856}
+  nextPageButton: {fileID: 885400390}
   nextButton: {fileID: 1951916609}
-  firstBubbleToHide: {fileID: 1140247602}
+  mrSnugglesBubble: {fileID: 1140247602}
 --- !u!114 &551773006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2376,7 +2379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &609485526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2471,8 +2474,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -92.86}
-  m_SizeDelta: {x: 1076.2, y: 1332.0593}
+  m_AnchoredPosition: {x: 0, y: -112.6}
+  m_SizeDelta: {x: 1024, y: 1329}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643396679
 MonoBehaviour:
@@ -2487,14 +2490,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7372549, g: 0.87843144, b: 0.9176471, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300044, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af7dff5d06f24b34099a9eeb97b95fa2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2524,7 +2527,7 @@ GameObject:
   - component: {fileID: 692078528}
   - component: {fileID: 692078527}
   m_Layer: 5
-  m_Name: PliersSB
+  m_Name: Pliers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2570,7 +2573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2791,7 +2794,7 @@ GameObject:
   - component: {fileID: 885400391}
   - component: {fileID: 885400390}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: NextPageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2806,7 +2809,7 @@ RectTransform:
   m_GameObject: {fileID: 885400388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 360272177}
@@ -2814,8 +2817,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -192, y: 27}
-  m_SizeDelta: {x: 164.0097, y: 272.86865}
+  m_AnchoredPosition: {x: -46, y: 46}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &885400390
 MonoBehaviour:
@@ -2860,7 +2863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885400391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 551772991}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &885400391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2881,7 +2896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53e7747b922529d4c985348e1cf024a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f3d322b9092ccf449ab8b5b3f2e5134, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2933,8 +2948,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 14.251}
-  m_SizeDelta: {x: 466.4025, y: 152.1962}
+  m_AnchoredPosition: {x: 1.4379, y: -7.899}
+  m_SizeDelta: {x: 709.2562, y: 169.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &897574608
 MonoBehaviour:
@@ -2957,11 +2972,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2969,7 +2984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Got a screw loose? Twist it away! Use this to unscrew bomb parts.
 --- !u!222 &897574609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3036,7 +3051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3233,8 +3248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: -10}
-  m_SizeDelta: {x: 387.9781, y: 139.4294}
+  m_AnchoredPosition: {x: 0.7847, y: -8.7422}
+  m_SizeDelta: {x: 701.5475, y: 167.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970212899
 MonoBehaviour:
@@ -3257,11 +3272,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3269,7 +3284,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Pliers, cut wires and hope for the best\u2014snip carefully, or you might
+    just make the bomb go boom!"
 --- !u!222 &970212900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3659,7 +3675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3711,8 +3727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 14.251}
-  m_SizeDelta: {x: 466.4025, y: 152.1962}
+  m_AnchoredPosition: {x: 1.0326, y: -8.7813}
+  m_SizeDelta: {x: 700.5735, y: 167.6773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015221548
 MonoBehaviour:
@@ -3735,11 +3751,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3747,7 +3763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Feeling hot under the collar? Freeze it down! Use this to chill bomb parts.
 --- !u!222 &1015221549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4198,8 +4214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 537.7732, y: 131.24438}
-  m_SizeDelta: {x: 531.4664, y: 431.6603}
+  m_AnchoredPosition: {x: 281, y: 303}
+  m_SizeDelta: {x: 716.9875, y: 562.2337}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140247604
 MonoBehaviour:
@@ -4221,7 +4237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300034, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcd096bec776cca45a777c12b8e87180, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4441,7 +4457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4522,7 +4538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4905,7 +4921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: e71d312ce01e68b4ab90d1c43c7d9599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d38a60c6190d0b442832295d1d2ae466, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6214,8 +6230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130.8738, y: 29.3157}
-  m_SizeDelta: {x: 421.7476, y: 88.6315}
+  m_AnchoredPosition: {x: 7.3898, y: -9.4946}
+  m_SizeDelta: {x: 698.2747, y: 166.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665375695
 MonoBehaviour:
@@ -6238,11 +6254,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 4
     m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -6250,7 +6266,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Got a sticky situation? Paw it away! This tool you can use to take bomb
+    parts away
 --- !u!222 &1665375696
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6886,8 +6903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 14.251}
-  m_SizeDelta: {x: 466.4025, y: 152.1962}
+  m_AnchoredPosition: {x: -5.7401, y: -11.054}
+  m_SizeDelta: {x: 701.6013, y: 163.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923006966
 MonoBehaviour:
@@ -6910,11 +6927,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -6922,7 +6939,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Magnet: Time to play detective! Hover it over the bomb to spot all the
+    sneaky metal parts!'
 --- !u!222 &1923006967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6965,11 +6983,11 @@ RectTransform:
   - {fileID: 193313656}
   m_Father: {fileID: 93069776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -397, y: -1020}
-  m_SizeDelta: {x: 219.2279, y: 190.2998}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 46, y: 46}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1951916609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7381,7 +7399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2071673948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7477,8 +7495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 14.251}
-  m_SizeDelta: {x: 466.4025, y: 152.1962}
+  m_AnchoredPosition: {x: 9.9666, y: -8.7807}
+  m_SizeDelta: {x: 722.5681, y: 167.6773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103179420
 MonoBehaviour:
@@ -7501,11 +7519,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 4
     m_MaxSize: 70
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -7513,7 +7531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Got tiny parts to handle? Use these to remove small parts with precision.
 --- !u!222 &2103179421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7556,8 +7574,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.3417, y: 33.5621}
-  m_SizeDelta: {x: 409.618, y: 130.6862}
+  m_AnchoredPosition: {x: -5.2547, y: 60.6944}
+  m_SizeDelta: {x: 594.5939, y: 347.2849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121883393
 MonoBehaviour:
@@ -7580,8 +7598,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 65
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7592,7 +7610,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: asdasdasdasda
+  m_Text: "Alright, here are the tools! \nIn the game, you can select a tool by tapping
+    it, and it'll light up when active. \nLet\u2019s dive into what each one does!"
 --- !u!222 &2121883394
 CanvasRenderer:
   m_ObjectHideFlags: 0
