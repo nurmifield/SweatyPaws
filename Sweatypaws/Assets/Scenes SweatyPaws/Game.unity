@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &93069776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 21
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1029,6 +1029,7 @@ RectTransform:
   - {fileID: 901995073}
   - {fileID: 1344502851}
   - {fileID: 1231146857}
+  - {fileID: 1140247603}
   m_Father: {fileID: 93069776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -1101,17 +1102,16 @@ RectTransform:
   m_GameObject: {fileID: 429828674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1140247603}
+  m_Children: []
   m_Father: {fileID: 93069776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 361.0742, y: -957.6561}
-  m_SizeDelta: {x: 366.0116, y: 375.1818}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 366.0116, y: 375.18176}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &429828676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2821,8 +2821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -46, y: 46}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 175, y: 315}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &885400390
 MonoBehaviour:
@@ -2900,7 +2900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f3d322b9092ccf449ab8b5b3f2e5134, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8abdd9befd3f2142b5ebc18621cd33f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3218,6 +3218,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936281884}
   m_CullTransparentMesh: 1
+--- !u!1 &956283339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956283340}
+  - component: {fileID: 956283342}
+  - component: {fileID: 956283341}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &956283340
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956283339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2071673948}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -43.87}
+  m_SizeDelta: {x: 1029, y: 355.0427}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &956283341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956283339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e2da8c3678e316f4495d494e452ac5fc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &956283342
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956283339}
+  m_CullTransparentMesh: 1
 --- !u!1 &970212897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7847, y: -8.7422}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 701.5475, y: 167.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970212899
@@ -3288,8 +3363,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pliers, cut wires and hope for the best\u2014snip carefully, or you might
-    just make the bomb go boom!"
+  m_Text: "Pliers, SWIPE to cut wires and hope for the best\u2014snip carefully,
+    or you might just make the bomb go boom!"
 --- !u!222 &970212900
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3731,7 +3806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0326, y: -8.7813}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700.5735, y: 167.6773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015221548
@@ -4100,13 +4175,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hello Mr.N\xF6nn\xF6nn\xF6\xF6\nTervetulotukset ja joku hauska letkautus
-    pelin aloittamisesta. \n\nYour goal is to defuse the bomb before it explodes!
-    You have several tools at your disposal, each with its own unique function. Mr.
-    Snuggles will later guide you on how each tool works.\n\nA bomb-defusal manual
-    is also available. The full version can be accessed through the map for additional
-    information, while the in-game manual gives level-specific hints. Remember to
-    check the manual\u2014it could be crucial!  \n\n\n\n\n"
+  m_text: "Hey there! I'm Mr. Snuggles, your guide through this explosive tutorial.
+    Don\u2019t worry, I\u2019ll help you defuse the situation... no pressure!\n\nYour
+    goal is to defuse the bomb before it explodes! You have several tools at your
+    disposal, each with its own unique function. I will later guide you on how each
+    tool works.\n\nA bomb-defusal manual is also available. The full version can
+    be accessed through the map for additional information, while the in-game manual
+    gives level-specific hints. Remember to check the manual\u2014it could be crucial! 
+    \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
@@ -4208,18 +4284,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140247602}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2121883392}
-  m_Father: {fileID: 429828675}
+  m_Father: {fileID: 397398556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281, y: 303}
-  m_SizeDelta: {x: 716.9875, y: 562.2337}
+  m_AnchoredPosition: {x: -57, y: -998.39}
+  m_SizeDelta: {x: 697.8867, y: 521.1185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140247604
 MonoBehaviour:
@@ -4241,7 +4317,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dcd096bec776cca45a777c12b8e87180, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af7dff5d06f24b34099a9eeb97b95fa2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6234,7 +6310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.3898, y: -9.4946}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 698.2747, y: 166.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665375695
@@ -6907,7 +6983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.7401, y: -11.054}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 701.6013, y: 163.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1923006966
@@ -6943,8 +7019,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Magnet: Time to play detective! Hover it over the bomb to spot all the
-    sneaky metal parts!'
+  m_Text: Magnet, Time to play detective! Hover it over the bomb to spot all the
+    sneaky metal parts!
 --- !u!222 &1923006967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6987,11 +7063,11 @@ RectTransform:
   - {fileID: 193313656}
   m_Father: {fileID: 93069776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 46, y: 46}
-  m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 175, y: 315}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &1951916609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7068,7 +7144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f3d322b9092ccf449ab8b5b3f2e5134, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8abdd9befd3f2142b5ebc18621cd33f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7417,6 +7493,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 238656503}
+  - {fileID: 956283340}
   - {fileID: 347416938}
   - {fileID: 885400389}
   - {fileID: 643396678}
@@ -7499,7 +7576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9666, y: -8.7807}
+  m_AnchoredPosition: {x: 9.9666, y: 0}
   m_SizeDelta: {x: 722.5681, y: 167.6773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103179420
@@ -7569,7 +7646,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121883391}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7578,7 +7655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.2547, y: 60.6944}
+  m_AnchoredPosition: {x: -5.2547607, y: 60.694458}
   m_SizeDelta: {x: 594.5939, y: 347.2849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121883393
