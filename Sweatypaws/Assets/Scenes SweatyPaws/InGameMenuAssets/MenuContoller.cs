@@ -39,6 +39,11 @@ public class MenuController : MonoBehaviour
         ToolButtons.SetActive(false);
         ManualButton.SetActive(false);
         optionsPanel.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Game")
+        {
+            GetComponent<Player>().EquipTool("none");
+        }
+        
     }
     // Go back to the main menu from options
     public void BackToMenu()

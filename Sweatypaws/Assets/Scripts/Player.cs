@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public string tool;
+    public string tool="none";
+
 
    
 

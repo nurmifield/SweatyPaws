@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,6 +10,11 @@ public class MouseClick : MonoBehaviour
 {
     public GameObject menuPanel;
     GameObject obj;
+    public Vector2 startPos;
+    public Vector2 endPos;
+    public Vector2 direction;
+    public bool swiping;
+    public bool tap;
     private void Start()
     {
         menuPanel.SetActive(false);
@@ -16,6 +22,69 @@ public class MouseClick : MonoBehaviour
     }
     void Update()
     {
+        if (Input.touchCount == 1 && !CheckUiPanel())
+        {
+
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                // Record initial touch position.
+                case TouchPhase.Began:
+                    startPos = touch.position;
+                    Debug.Log("Kosketus alkoi");
+                    break;
+                // Report that a direction has been chosen when the finger is lifted.
+                case TouchPhase.Ended:
+                    endPos = touch.position;
+                    Debug.Log("Kosketus loppui");
+                    if (startPos == endPos)
+                    {
+                        tap=true;
+                    }
+                    if (startPos != endPos)
+                    {
+                        swiping = true;
+                        direction = touch.position - startPos;
+                        
+                    }
+                   
+                    break;
+            }
+
+
+            if (swiping && GetComponent<Player>().tool == "pihdit")
+            {
+                swiping = false;
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(startPos);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, direction);
+
+                if (hit.collider != null)
+                {
+                    //GetComponent<CheckCorrectTool>().SetAction(hit.collider.gameObject);
+                    GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
+                    //Debug.Log(hit.collider.gameObject);
+
+                }
+
+
+            }
+            if (tap && GetComponent<Player>().tool != "pihdit")
+            {
+                tap = false;
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+                //If something was hit, the RaycastHit2D.collider will not be null.
+                if (hit.collider != null)
+                {
+                    //GetComponent<CheckCorrectTool>().SetAction(hit.collider.gameObject);
+                    GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
+
+                }
+            }
+
+        }
+    
+        /*
         //If the left mouse button is clicked.
         if (Input.GetMouseButtonDown(0))
         {
@@ -39,6 +108,21 @@ public class MouseClick : MonoBehaviour
                 GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
                 
             }
+        }*/
+    }
+    public bool CheckUiPanel()
+    {
+        bool uiPanelActive = false;
+        obj = GameObject.FindWithTag("MenuPanel");
+        if (obj != null)
+        {
+            if (obj.activeSelf)
+            {
+                Debug.Log("Paneeli on aktiivinen");
+
+                uiPanelActive = true;
+            }
         }
+        return uiPanelActive;
     }
 }
