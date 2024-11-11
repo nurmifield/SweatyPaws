@@ -52,6 +52,7 @@ public class PlayerManager : MonoBehaviour
    
     public void SavePlayerData()
     {
+        playerData.selectedLevel = selectedLevel;
         string jsonData = JsonUtility.ToJson(playerData);
         string encryptedData = EncryptionHelper.Encrypt(jsonData);
         File.WriteAllText(playerDataFilePath, encryptedData);

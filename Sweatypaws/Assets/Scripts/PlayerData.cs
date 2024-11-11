@@ -11,6 +11,7 @@ public class PlayerData
         public int dialogue_level;
         public List<DialogueProgress> dialogue_progress;
         public List<LevelProgress> level_progress;
+        public string selectedLevel = "none";
 
     public bool LevelExists(string levelName)
     {
