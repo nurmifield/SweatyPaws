@@ -8,6 +8,10 @@ public class StartButtonManager : MonoBehaviour
 {
     public Button ContinueButton;
     public Button NewGameButton;
+    public Button yesButton;
+    public Button noButton;
+    public MainMenuController mainMenuController;
+    public GameObject confirmationPanel;
     private PlayerManager playerManager;
 
     void Start()
@@ -22,8 +26,9 @@ public class StartButtonManager : MonoBehaviour
         {
             ContinueButton.interactable = false;
         }
+
         ContinueButton.onClick.AddListener(ContinueGame);
-        NewGameButton.onClick.AddListener(StartNewGame);
+        NewGameButton.onClick.AddListener(OpenConfirmationPanel);
     }
 
     public void ContinueGame()
@@ -37,8 +42,24 @@ public class StartButtonManager : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 
+    public void OpenConfirmationPanel()
+    {
+        confirmationPanel.SetActive(true);
+
+        yesButton.onClick.AddListener(() =>
+        {
+            StartNewGame();
+        });
+
+        noButton.onClick.AddListener(() =>
+        {
+            mainMenuController.BackToMainMenu();
+        });
+    }
+
     public void StartNewGame()
     {
+        confirmationPanel.SetActive(false);
         playerManager.NewGame();
     }
 }

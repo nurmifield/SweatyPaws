@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject settingsPanel;     // Reference to the Settings Panel
     public GameObject collectionPanel;   // Reference to the Collection Panel
     public GameObject creditsPanel;      // Reference to the Credits Panel
+    public GameObject confirmationPanel;
     public Text soundButtonText;         // Reference to the Text component of the Sound Button
 
     private bool isSoundOn = true;       // Variable to track the sound state
@@ -57,6 +58,7 @@ public class MainMenuController : MonoBehaviour
     // Go back to the Main Menu from any other panel
     public void BackToMainMenu()
     {
+        confirmationPanel.SetActive(false);
         settingsPanel.SetActive(false);
         collectionPanel.SetActive(false);
         creditsPanel.SetActive(false);
