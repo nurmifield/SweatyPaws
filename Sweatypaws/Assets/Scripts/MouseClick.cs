@@ -15,6 +15,7 @@ public class MouseClick : MonoBehaviour
     public Vector2 direction;
     public bool swiping;
     public bool tap;
+
     private void Start()
     {
         menuPanel.SetActive(false);
@@ -44,7 +45,7 @@ public class MouseClick : MonoBehaviour
                     if (startPos != endPos)
                     {
                         swiping = true;
-                        direction = touch.position - startPos;
+                        
                         
                     }
                    
@@ -55,8 +56,11 @@ public class MouseClick : MonoBehaviour
             if (swiping && GetComponent<Player>().tool == "pihdit")
             {
                 swiping = false;
-                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(startPos);
-                RaycastHit2D hit = Physics2D.Raycast(worldPoint, direction);
+                Vector2 worldPointStart = Camera.main.ScreenToWorldPoint(startPos);
+                Vector2 worldPointEnd = Camera.main.ScreenToWorldPoint(endPos);
+                float distance = Vector2.Distance(worldPointStart, worldPointEnd);
+                Vector2 direction = (worldPointEnd - worldPointStart).normalized;
+                RaycastHit2D hit = Physics2D.Raycast(worldPointStart, direction,distance);
 
                 if (hit.collider != null)
                 {
@@ -68,7 +72,7 @@ public class MouseClick : MonoBehaviour
 
 
             }
-            if (tap && GetComponent<Player>().tool != "pihdit")
+            if (tap && GetComponent<Player>().tool != "pihdit" && GetComponent<Player>().tool != "none")
             {
                 tap = false;
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);

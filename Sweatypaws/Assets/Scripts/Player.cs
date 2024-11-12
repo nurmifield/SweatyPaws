@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public string tool="none";
+    public string tool;
+
+    void Start()
+    {
+        tool = "none";
+    }
 
 
-   
+
 
     public void EquipTool(string newTool)
     {
