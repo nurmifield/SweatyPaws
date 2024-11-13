@@ -91,6 +91,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public bool PlayerDataFileExists()
+    {
+        return File.Exists(playerDataFilePath);
+    }
+
     public void NewGame()
     {
         playerData = JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);

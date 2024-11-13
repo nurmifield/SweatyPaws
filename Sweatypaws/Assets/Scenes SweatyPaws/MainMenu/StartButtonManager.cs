@@ -21,14 +21,16 @@ public class StartButtonManager : MonoBehaviour
         if (playerManager.GetExistingUser())
         {
             ContinueButton.interactable = true;
+            NewGameButton.onClick.AddListener(OpenConfirmationPanel);
         }
         else
         {
             ContinueButton.interactable = false;
+            NewGameButton.onClick.AddListener(ContinueGame);
         }
 
         ContinueButton.onClick.AddListener(ContinueGame);
-        NewGameButton.onClick.AddListener(OpenConfirmationPanel);
+        
     }
 
     public void ContinueGame()
@@ -44,6 +46,16 @@ public class StartButtonManager : MonoBehaviour
 
     public void OpenConfirmationPanel()
     {
+        yesButton.onClick.RemoveAllListeners();
+        noButton.onClick.RemoveAllListeners();
+        
+        if (!playerManager.GetExistingUser())
+        {
+            
+            StartNewGame();
+            return;
+        }
+
         confirmationPanel.SetActive(true);
 
         yesButton.onClick.AddListener(() =>
@@ -59,7 +71,6 @@ public class StartButtonManager : MonoBehaviour
 
     public void StartNewGame()
     {
-        confirmationPanel.SetActive(false);
         playerManager.NewGame();
     }
 }
