@@ -88,6 +88,8 @@ public class MenuController : MonoBehaviour
 
     public void MainMenuScene()
     {
+         var player = PlayerManager.Instance;
+        player.SetSelectedLevel("none");
         SceneManager.LoadScene("MainMenu");
     }
 

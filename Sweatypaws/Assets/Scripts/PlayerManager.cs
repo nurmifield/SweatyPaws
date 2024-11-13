@@ -157,6 +157,7 @@ public class PlayerManager : MonoBehaviour
     public void TutorialDone()
     {
         playerData.tutorial_done=true;
+        SavePlayerData() ;
     }
  
 }

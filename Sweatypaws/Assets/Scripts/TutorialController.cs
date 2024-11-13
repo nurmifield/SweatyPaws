@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HowToPlayManager : MonoBehaviour
 {
-    
+    public GameObject howToPlayPanel;
     public GameObject introductionPanel;
     public GameObject toolsPanel;
     public GameObject gameFlowPanel;
@@ -15,7 +15,7 @@ public class HowToPlayManager : MonoBehaviour
     public GameObject firstGameFlowBubble;  
     public GameObject finalGameFlowBubble;  
 
-    
+    public GameObject introBubble;
     public Button nextPageButton;  
     public Button nextButton;      // Button to progress through bubbles in toolsPanel
     public Button gameFlowNextButton;  // Button to progress through bubbles in gameFlowPanel
@@ -25,6 +25,14 @@ public class HowToPlayManager : MonoBehaviour
 
     void Start()
     {
+
+         var player = PlayerManager.Instance;
+         if (!player.playerData.tutorial_done){
+            howToPlayPanel.SetActive(true);
+         }else
+          {
+            return;
+        }
         // Ensure all speech bubbles and text are hidden at start
         foreach (GameObject bubble in speechBubbles)
         {
@@ -48,6 +56,9 @@ public class HowToPlayManager : MonoBehaviour
     // Show the next speech bubble in toolsPanel
     void ShowNextBubbleInToolsPanel()
     {
+        if(introBubble.activeSelf){
+            introBubble.SetActive(false);
+        }
         // Show the next bubble in the speechBubbles array for toolsPanel
         if (currentBubbleIndex < speechBubbles.Length)
         {
@@ -104,7 +115,9 @@ public class HowToPlayManager : MonoBehaviour
     // Skip button method to start the game immediately
     void StartGame()
     {
+         var player = PlayerManager.Instance;
         Debug.Log("Game Started!");
-        // Add logic here to load the main game scene or trigger game start
+        howToPlayPanel.SetActive(false);
+        player.TutorialDone();
     }
 }
