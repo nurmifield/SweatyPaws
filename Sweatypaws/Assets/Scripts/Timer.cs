@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public GameObject youWinObject;
     public GameObject GameOverScreen;
     public bool gameEnds = false;
+    public GameObject tutorialPanel;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +21,8 @@ public class Timer : MonoBehaviour
         {
             return;
         }
-
+        if (tutorialPanel.activeSelf) return;
+    
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
