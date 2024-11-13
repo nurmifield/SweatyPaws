@@ -19,6 +19,9 @@ public class ManualController : MonoBehaviour
     public GameObject toolsButtons;    // Reference to the tools buttons panel
     public GameObject settingsButton;  // Reference to the settings button
     public GameObject manualButton;    // Reference to the manual button
+    public float startTime;
+    public float endTime;
+    public ManualTimeUsed manualTimeUsed;
 
     void Start()
     {
@@ -37,7 +40,8 @@ public class ManualController : MonoBehaviour
         toolsButtons.SetActive(false);     // Hide tools buttons panel
         settingsButton.SetActive(false);   // Hide settings button
         manualButton.SetActive(false);     // Hide manual button
-
+        startTime = Time.time;
+        Debug.Log(Time.time);
 
     }
 
@@ -132,5 +136,8 @@ public class ManualController : MonoBehaviour
         settingsButton.SetActive(true);    // Show settings button
         manualButton.SetActive(true);      // Show manual button
         Time.timeScale = 1f;               // Resume the game
+        endTime = Time.time;
+        manualTimeUsed.CalculateTime(startTime,endTime);
+        Debug.Log(Time.time);
     }
 }
