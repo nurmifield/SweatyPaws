@@ -16,6 +16,7 @@ public class ToolSelector : MonoBehaviour
     public Button HandButton;
     public Button LiquidNitrogenButton;
     public Button ManualButton;
+    public Button MagnetButton;
     public Button currentSelectedButton;
     public GameObject manualPanel;
     public bool Highlight = true;
@@ -35,6 +36,7 @@ public class ToolSelector : MonoBehaviour
         TweezerButton.onClick.AddListener(() => SelectTool(TweezerButton, "Tweezer", 2));
         HandButton.onClick.AddListener(() => SelectTool(HandButton, "tassu", 3));
         LiquidNitrogenButton.onClick.AddListener(() => SelectTool(LiquidNitrogenButton, "Liquid Nitrogen", 4));
+        MagnetButton.onClick.AddListener(() => SelectTool(MagnetButton, "Magnet", 5));
     }   
 
     void Update()
