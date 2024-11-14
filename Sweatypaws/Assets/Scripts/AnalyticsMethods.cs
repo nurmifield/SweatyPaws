@@ -8,15 +8,12 @@ public class AnalyticsMethods : MonoBehaviour
 {
     public void LevelStartButtonPressEvent()
     {
-        var eventParameters = new Dictionary<string, object>
-        {
-            { "button_used", "example_button"},
-            { "timestamp2", Time.time }
-        };
+       var player = PlayerManager.Instance;
 
         LevelStart levelStart = new LevelStart
         {
-            Level = "level1"
+            level = player.GetSelectedLevel(),
+           
         };
 
 
@@ -25,6 +22,26 @@ public class AnalyticsMethods : MonoBehaviour
         //AnalyticsService.Instance.Flush(); // Immediate send for testing
 
         // Debug log to confirm
-        Debug.Log("Analytics event sent: button_used");
+        Debug.Log("Analytics event sent:" + player.GetSelectedLevel());
+    }
+
+    public void CheckLevelCompletion(bool completed, float time)
+    {
+        var player = PlayerManager.Instance;
+
+        LevelCompleted levelCompleted = new LevelCompleted
+        {
+            level = player.GetSelectedLevel(),
+            levelCompleted=completed,
+            timeUsedOnManual = time
+        };
+
+
+        // Send custom event to Unity Analytics
+        AnalyticsService.Instance.RecordEvent(levelCompleted);
+        //AnalyticsService.Instance.Flush(); // Immediate send for testing
+
+        // Debug log to confirm
+        Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + completed + " / " + time);
     }
 }
