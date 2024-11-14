@@ -12,6 +12,7 @@ TagManager:
   - charge
   - wire
   - MenuPanel
+  - BombCover
   layers:
   - Default
   - TransparentFX

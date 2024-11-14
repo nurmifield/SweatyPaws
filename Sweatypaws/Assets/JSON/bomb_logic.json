@@ -242,5 +242,67 @@
                     } 
             }
         ]
+    },
+    "Level_2":
+    {
+        "current_stage": 0,
+        "win_points":0,
+        "time": 300,
+        "win_condition":4,
+        "bomb_name": "level_2_bomb",
+        "stages": 
+        [
+            {
+               "stage_name": "stage1",
+                "current_stage_index": 0,
+                "failure_condition":
+                {
+                    "exception":false,
+                    "exception_condition":
+                    {
+                        "stage_index":null,
+                        "part":null,
+                        "tool":null,
+                        "penalty":null
+                    }
+                },
+                "section_cleared": false,
+                "increase_stage_by": 1,
+                "increase_win_points_by":1,
+                "stage_tools":
+                 [
+                    {
+                        "tool": "pihdit",
+                        "part": "BombCover",
+                        "wrong_tools": 
+                        [
+                            {
+                                "tool": "tassu",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool": "Screwdriver",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool": "Tweezer",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Liquid Nitrogen",
+                                "penalty": "time"
+                            }
+                        ]
+                    }
+                ],
+                "stage_parts":
+                    {
+                        "parts": 
+                        [
+                            "BombSkin"
+                        ]
+                    } 
+            }
+        ]
     }
 }
