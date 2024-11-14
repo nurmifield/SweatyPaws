@@ -77,7 +77,7 @@ public class MainMenuController : MonoBehaviour
     // Update the text on the Sound Toggle Button
     private void UpdateSoundButtonText()
     {
-        soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
+        soundButtonText.text = isSoundOn ? "On" : "Off";  // "X" for sound on, blank for sound off
     }
 
 // Method to exit the game

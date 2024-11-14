@@ -1204,7 +1204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7172486982211576703
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,7 +1308,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.29, y: 13.2}
+    oldSize: {x: 8.290001, y: 13.202115}
     newSize: {x: 8.29, y: 13.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1703,7 +1703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7039491923206931083
 Transform:
   m_ObjectHideFlags: 0
