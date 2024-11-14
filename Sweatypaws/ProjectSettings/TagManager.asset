@@ -19,6 +19,7 @@ TagManager:
   - Screw
   - Detonator
   - BrokenPart
+  - Failure
   layers:
   - Default
   - TransparentFX

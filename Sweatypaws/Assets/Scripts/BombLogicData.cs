@@ -75,9 +75,17 @@ public class BombLogicData
     public class CorrectToolAction
     {
         public string action;
-        public string animation;
+        public Animation animation;
+        public string failure_part;
         public string[] broken_parts;
     }
+    [System.Serializable]
+    public class Animation
+    {
+        public string set_trigger;
+        public string animation_part;
+    }
+
     [System.Serializable]
     public class WrongTools
     {

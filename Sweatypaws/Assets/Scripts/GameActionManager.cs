@@ -113,6 +113,7 @@ public class GameActionManager : MonoBehaviour
 
     public void CheckCorrectToolAction(BombLogicData.StageTools stageTools , GameObject action)
     {
+        
         if (stageTools.correct_tool_action.action == "remove")
         {
             if (stageTools.correct_tool_action.broken_parts.Length > 0)
@@ -124,7 +125,27 @@ public class GameActionManager : MonoBehaviour
                 }
             }
                 action.SetActive(false);
+        }else if (stageTools.correct_tool_action.action == "remove_extra")
+        {
+            if (stageTools.correct_tool_action.broken_parts.Length > 0)
+            {
+                for (int i = 0; i < stageTools.correct_tool_action.broken_parts.Length; i++)
+                {
+                    GameObject brokenPart = FindInactiveObjectByName(prefab.transform, stageTools.correct_tool_action.broken_parts[i]);
+                    brokenPart.SetActive(true);
+                }
+            }
+            GameObject failurePart = FindInactiveObjectByName(prefab.transform,stageTools.correct_tool_action.failure_part);
+            failurePart.SetActive(false);
+            action.SetActive(false);
         }
+        if (stageTools.correct_tool_action.animation.set_trigger != "none")
+        {
+            GameObject animationPart = FindInactiveObjectByName(prefab.transform, stageTools.correct_tool_action.animation.animation_part);
+            Animator animator = animationPart.GetComponent<Animator>();
+            animator.SetTrigger(stageTools.correct_tool_action.animation.set_trigger);
+        }
+
     }
     GameObject FindInactiveObjectByName(Transform parent, string name)
     {
@@ -188,7 +209,7 @@ public class GameActionManager : MonoBehaviour
         }
         else
         {
-            if (bombSetup.current_stage > stage.failure_condition.current_stage_index)
+            if (bombSetup.current_stage >= stage.failure_condition.current_stage_index)
             {
                 Debug.Log("current stage isompi pisteet pois exception false");
                 penaltyManager.CheckPenalty("points");
