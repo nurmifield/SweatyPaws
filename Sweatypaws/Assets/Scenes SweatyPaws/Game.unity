@@ -1919,6 +1919,7 @@ MonoBehaviour:
     stages: []
   score: {fileID: 1252451382}
   penaltyManager: {fileID: 551773007}
+  prefab: {fileID: 0}
 --- !u!114 &551773007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7770,7 +7771,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1760911954}
   - component: {fileID: 1760911953}
-  - component: {fileID: 1760911955}
   m_Layer: 0
   m_Name: Reader
   m_TagString: Untagged
@@ -7819,19 +7819,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 936281888}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1760911955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760911952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01bd46dba299884890902c3d82226be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jsonReader: {fileID: 0}
 --- !u!1 &1763218234
 GameObject:
   m_ObjectHideFlags: 0

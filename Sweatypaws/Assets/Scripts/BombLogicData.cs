@@ -66,8 +66,17 @@ public class BombLogicData
     {
         public string tool;
         public string part;
+        public string action_part_name;
+        public CorrectToolAction correct_tool_action;
         public List<WrongTools> wrong_tools;
         
+    }
+    [System.Serializable]
+    public class CorrectToolAction
+    {
+        public string action;
+        public string animation;
+        public string[] broken_parts;
     }
     [System.Serializable]
     public class WrongTools

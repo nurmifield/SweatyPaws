@@ -11,6 +11,7 @@ public class GameActionManager : MonoBehaviour
     public BombLogicData.BombSetup bombSetup;
     public Score score;
     public PenaltyManager penaltyManager;
+    public GameObject prefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,11 @@ public class GameActionManager : MonoBehaviour
                 jsonReader = reader.GetComponent<JsonReader>();
                 if (jsonReader != null)
                 {
+                    GameObject bomb = Resources.Load<GameObject>(jsonReader.bombLogicData.level.bomb_name);
+                    prefab = Instantiate(bomb);
+                    Vector2 originalPostion = bomb.transform.position;
+
+                    prefab.transform.position = originalPostion;
                     levelStages = jsonReader.bombLogicData.level.stages;
                     bombSetup = jsonReader.bombLogicData.level;
                 }
@@ -78,10 +84,11 @@ public class GameActionManager : MonoBehaviour
         string playerTool = GetComponent<Player>().tool;
         for (int i = 0; i < stage.stage_tools.Count; i++)
         {
-            if (action.tag == stage.stage_tools[i].part && playerTool == stage.stage_tools[i].tool)
+            if (action.tag == stage.stage_tools[i].part && playerTool == stage.stage_tools[i].tool && action.name == stage.stage_tools[i].action_part_name)
             {
                 //Tässä olisi oikea työkalu ja se johtaisi jatkoon
                 Debug.Log("Player is using: " + playerTool + " and part tag is: " + action.tag);
+                CheckCorrectToolAction(stage.stage_tools[i],action);
                 IncreasePoints(stage,action);
                 
                 break;
@@ -103,10 +110,37 @@ public class GameActionManager : MonoBehaviour
             
         }
     }
+
+    public void CheckCorrectToolAction(BombLogicData.StageTools stageTools , GameObject action)
+    {
+        if (stageTools.correct_tool_action.action == "remove")
+        {
+            if (stageTools.correct_tool_action.broken_parts.Length > 0)
+            {
+                for (int i = 0; i < stageTools.correct_tool_action.broken_parts.Length; i++)
+                {
+                    GameObject brokenPart = FindInactiveObjectByName(prefab.transform , stageTools.correct_tool_action.broken_parts[i]);
+                    brokenPart.SetActive(true);
+                }
+            }
+                action.SetActive(false);
+        }
+    }
+    GameObject FindInactiveObjectByName(Transform parent, string name)
+    {
+        if (parent.name == name) return parent.gameObject;
+
+        foreach (Transform child in parent)
+        {
+            GameObject result = FindInactiveObjectByName(child, name);
+            if (result != null) return result;
+        }
+        return null;
+    }
+
     public void IncreasePoints(BombLogicData.Stages stage, GameObject action)
     {
         stage.stage_parts.RemovePart(action.name);
-        action.SetActive(false);
         score.AddScore();
         if (stage.stage_parts.parts.Length == 0)
         {

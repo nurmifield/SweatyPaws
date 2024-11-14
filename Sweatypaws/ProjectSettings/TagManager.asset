@@ -13,6 +13,12 @@ TagManager:
   - wire
   - MenuPanel
   - BombCover
+  - Explosive
+  - Spring
+  - BombButton
+  - Screw
+  - Detonator
+  - BrokenPart
   layers:
   - Default
   - TransparentFX
