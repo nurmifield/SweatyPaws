@@ -498,7 +498,7 @@
         "current_stage": 0,
         "win_points":0,
         "time": 300,
-        "win_condition":4,
+        "win_condition":6,
         "bomb_name": "level_2_bomb",
         "stages": 
         [
@@ -525,7 +525,7 @@
                     {
                         "tool": "pihdit",
                         "part": "BombCover",
-                        "action_part_name":"BombSkin",
+                        "action_part_name":"BombCover",
                         "correct_tool_action":
                         {
                             "action":"remove",
@@ -561,7 +561,7 @@
                     {
                         "parts": 
                         [
-                            "BombSkin"
+                            "BombCover"
                         ]
                     } 
             },
@@ -721,7 +721,7 @@
                             "animation":
                             {
                                 "set_trigger":"ButtonPressed",
-                                "animation_part":"DetonatorGroup"
+                                "animation_part":"Detonator"
                             },
                             "broken_parts":[]
                         },
@@ -875,7 +875,7 @@
                     {
                         "tool": "tassu",
                         "part": "Detonator",
-                        "action_part_name":"Detonator",
+                        "action_part_name":"Nalli",
                         "correct_tool_action":
                         {
                             "action":"remove",
@@ -911,7 +911,7 @@
                     {
                         "parts": 
                         [
-                            "Detonator"
+                            "Nalli"
                         ]
                     } 
             }
