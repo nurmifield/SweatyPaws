@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
+    public AudioClip explosionClip;
+    public ManualController manualController;
     public GameObject gameOverObject;
     public GameObject youWinObject;
     public GameObject guiObject;
@@ -22,6 +24,7 @@ public class GameOverScreen : MonoBehaviour
     public void GameOverScreenManage()
     {
         timer.Stoptimer(true);
+        manualController.PlayAudio(explosionClip);
         guiObject.SetActive(false);
         gameOverObject.SetActive(true);
         analyticManager.GetComponent<AnalyticsMethods>().CheckLevelCompletion(false, manualTimeUsed.overAllTimeUsed);
