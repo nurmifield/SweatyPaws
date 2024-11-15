@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public AudioClip explosionClip;
+    public AudioClip WonkyWinClip;
     public ManualController manualController;
     public GameObject gameOverObject;
     public GameObject youWinObject;
@@ -33,6 +34,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void YouWinScreenManage()
     {
+        manualController.PlayAudio(WonkyWinClip);
         var player = PlayerManager.Instance;
         player.LevelCompleted(player.GetSelectedLevel(),score.GetScore());
         timer.Stoptimer(true);
