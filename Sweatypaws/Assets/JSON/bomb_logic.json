@@ -696,7 +696,7 @@
                 "current_stage_index": 3,
                 "failure_condition":
                 {
-                    "current_stage_index":2,
+                    "current_stage_index":3,
                     "exception":false,
                     "exception_condition":
                     {
