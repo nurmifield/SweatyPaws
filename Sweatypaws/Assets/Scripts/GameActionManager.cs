@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static BombLogicData;
 //using static BombLogicData;
 
 public class GameActionManager : MonoBehaviour
@@ -89,8 +90,8 @@ public class GameActionManager : MonoBehaviour
                 //Tässä olisi oikea työkalu ja se johtaisi jatkoon
                 Debug.Log("Player is using: " + playerTool + " and part tag is: " + action.tag);
                 CheckCorrectToolAction(stage.stage_tools[i],action);
-                IncreasePoints(stage,action);
-                
+                IncreasePoints(stage, action);
+
                 break;
             }
             else if (action.tag == stage.stage_tools[i].part && playerTool != stage.stage_tools[i].tool)
@@ -124,8 +125,10 @@ public class GameActionManager : MonoBehaviour
                     brokenPart.SetActive(true);
                 }
             }
-                action.SetActive(false);
-        }else if (stageTools.correct_tool_action.action == "remove_extra")
+            CheckAnimation(stageTools);
+            action.SetActive(false);
+        }
+        else if (stageTools.correct_tool_action.action == "remove_extra")
         {
             if (stageTools.correct_tool_action.broken_parts.Length > 0)
             {
@@ -137,15 +140,61 @@ public class GameActionManager : MonoBehaviour
             }
             GameObject failurePart = FindInactiveObjectByName(prefab.transform,stageTools.correct_tool_action.failure_part);
             failurePart.SetActive(false);
+            CheckAnimation(stageTools);
             action.SetActive(false);
         }
+        else if (stageTools.correct_tool_action.action == "activate")
+        {
+         CheckAnimation(stageTools);
+        }
+        else if (stageTools.correct_tool_action.action == "fail")
+        {
+            if (stageTools.correct_tool_action.broken_parts.Length > 0)
+            {
+                for (int i = 0; i < stageTools.correct_tool_action.broken_parts.Length; i++)
+                {
+                    GameObject brokenPart = FindInactiveObjectByName(prefab.transform, stageTools.correct_tool_action.broken_parts[i]);
+                    brokenPart.SetActive(true);
+                }
+            }
+            CheckFailureAnimation(stageTools);
+            action.SetActive(false);
+        }
+ 
+
+    }
+    IEnumerator PlayAnimationAndWait(Animator animator, string triggerName)
+    {
+        // Set the trigger to start the animation
+        animator.SetTrigger(triggerName);
+
+        // Wait until the Animator transitions to the animation state to get its length
+        yield return null; // Ensure a frame has passed so the animation state can update
+        // Wait for the animation length
+        yield return new WaitForSeconds(1f);
+        penaltyManager.CheckPenalty("fail");
+        Debug.Log("Animation has ended!");
+    }
+
+    public void CheckAnimation(BombLogicData.StageTools stageTools)
+    {
         if (stageTools.correct_tool_action.animation.set_trigger != "none")
         {
             GameObject animationPart = FindInactiveObjectByName(prefab.transform, stageTools.correct_tool_action.animation.animation_part);
             Animator animator = animationPart.GetComponent<Animator>();
             animator.SetTrigger(stageTools.correct_tool_action.animation.set_trigger);
+            
         }
+    }
+    public void CheckFailureAnimation(BombLogicData.StageTools stageTools)
+    {
+        if (stageTools.correct_tool_action.animation.set_trigger != "none")
+        {
+            GameObject animationPart = FindInactiveObjectByName(prefab.transform, stageTools.correct_tool_action.animation.animation_part);
+            Animator animator = animationPart.GetComponent<Animator>();
+            StartCoroutine(PlayAnimationAndWait(animator, stageTools.correct_tool_action.animation.set_trigger));
 
+        }
     }
     GameObject FindInactiveObjectByName(Transform parent, string name)
     {
