@@ -5,6 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {   
     [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] TextMeshProUGUI timerText_1;
     [SerializeField] float remainingTime;
     public GameObject menupanel;
     public GameObject manualPanel;
@@ -32,12 +33,14 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             // GameOver();
             timerText.color = Color.red;
+            timerText_1.color = Color.red;
             gameOverObject.GameOverScreenManage();
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText_1.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void Stoptimer(bool newgameEnds)
