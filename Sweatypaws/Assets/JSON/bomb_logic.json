@@ -914,6 +914,69 @@
                             "Nalli"
                         ]
                     } 
+            },
+            {
+                "stage_name":"stage7",
+                "current_stage_index": 2,
+                "failure_condition":
+                {
+                    "current_stage_index":2,
+                    "exception":false,
+                    "exception_condition":
+                    {
+                        "stage_index":null,
+                        "part":null,
+                        "tool":null,
+                        "penalty":null
+                    }
+                },
+                "section_cleared": false,
+                "increase_stage_by": 0,
+                "increase_win_points_by":0,
+                "stage_tools":
+                 [
+                    {
+                        "tool": "Screwdriver",
+                        "part": "Failure",
+                        "action_part_name":"FailureScrews",
+                        "correct_tool_action":
+                        {
+                            "action":"fail",
+                            "animation":
+                            {
+                                "set_trigger":"Failure",
+                                "animation_part":"Piikki"
+                            },
+                            "broken_parts":[]
+                        },
+                        "wrong_tools": 
+                        [
+                            {
+                                "tool": "pihdit",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "tassu",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Tweezer",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Liquid Nitrogen",
+                                "penalty": "time"
+                            }
+                        ]
+                    }
+                ],
+                "stage_parts":
+                    {
+                        "parts": 
+                        [
+                            "FailureScrews"
+                        ]
+                    } 
             }
         ]
     }
