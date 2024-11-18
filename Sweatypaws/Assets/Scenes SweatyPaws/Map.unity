@@ -3599,6 +3599,22 @@ PrefabInstance:
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 1522902918}
+    - target: {fileID: 1533060693362256176, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610343863443524295, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610343863443524295, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_margin.z
+      value: -342.627
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610343863443524295, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3614157491844593338, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 36
@@ -3634,6 +3650,14 @@ PrefabInstance:
     - target: {fileID: 4447096876929758762, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257031203606989142, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_fontSize
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257031203606989142, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5476788312400206255, guid: 0eabf07418d49e447a97ee732b266d2f, type: 3}
       propertyPath: m_Sprite
