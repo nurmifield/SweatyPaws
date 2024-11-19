@@ -22,3 +22,14 @@ public class LevelCompleted : Unity.Services.Analytics.Event
     public float timeUsedOnManual { set { SetParameter("timeUsedOnManual", value); } }
 
 }
+
+public class LevelAbandoned: Unity.Services.Analytics.Event
+{
+    public LevelAbandoned() : base("levelAbandoned")
+    {
+    }
+
+    public string level { set { SetParameter("level", value); } }
+    public float timeUsedOnManual { set { SetParameter("timeUsedOnManual", value); } }
+
+}

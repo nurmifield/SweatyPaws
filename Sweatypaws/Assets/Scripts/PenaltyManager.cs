@@ -5,6 +5,7 @@ using UnityEngine;
 public class PenaltyManager : MonoBehaviour
 {
     public Score score;
+    public Timer time;
     
     public void CheckPenalty(string penalty)
     {
@@ -21,11 +22,13 @@ public class PenaltyManager : MonoBehaviour
         else if (penalty == "time")
         {
             //Tehtävä: Aikaan liittyvä nopeennus
+            time.DecreaseTime();
             Debug.Log("Minus Time");
         }
         else if (penalty == "faster_time")
         {
             //Tehtävä: Ajan vähennys
+            time.SetTimerMultiplier();
             Debug.Log("Time goes faster");
         }
     }

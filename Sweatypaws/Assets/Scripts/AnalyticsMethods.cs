@@ -44,4 +44,22 @@ public class AnalyticsMethods : MonoBehaviour
         // Debug log to confirm
         Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + completed + " / " + time);
     }
+
+    public void PlayerQuitLevel()
+    {
+        var player = PlayerManager.Instance;
+        GameObject manualTimeObj = GameObject.Find("ManualTime");
+        if (manualTimeObj != null)
+        {
+            ManualTimeUsed manualTime = manualTimeObj.GetComponent<ManualTimeUsed>();
+
+            LevelAbandoned levelAbandoned = new LevelAbandoned
+            {
+                level = player.GetSelectedLevel(),
+                timeUsedOnManual = manualTime.overAllTimeUsed
+            };
+            AnalyticsService.Instance.RecordEvent(levelAbandoned);
+            Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + manualTime.overAllTimeUsed);
+        }
+    }
 }

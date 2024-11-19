@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     public GameObject GameOverScreen;
     public bool gameEnds = false;
     public GameObject tutorialPanel;
+    public float timeMultiplier = 1f;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +27,7 @@ public class Timer : MonoBehaviour
     
         if (remainingTime > 0)
         {
-            remainingTime -= Time.deltaTime;
+            remainingTime -= Time.deltaTime * timeMultiplier;
         }
         else if (remainingTime < 0)
         {
@@ -47,6 +48,14 @@ public class Timer : MonoBehaviour
     {
         gameEnds = newgameEnds;
     }
+    public void SetTimerMultiplier()
+    {
+        this.timeMultiplier = timeMultiplier * 2;
+    }
 
+    public void DecreaseTime()
+    {
+        this.remainingTime -= 20;
+    }
 
 }
