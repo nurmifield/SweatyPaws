@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using TMPro;
 using UnityEngine;
 public class Timer : MonoBehaviour
@@ -15,8 +16,10 @@ public class Timer : MonoBehaviour
     public bool gameEnds = false;
     public GameObject tutorialPanel;
     public float timeMultiplier = 1f;
+    public RectTransform timerUI;
+    public UnityEngine.Vector2 vector2;
+    public UnityEngine.Vector2 vector2_default;
 
-    // Update is called once per frame
     void Update()
     {
         if (menupanel.activeSelf || gameEnds)
@@ -58,4 +61,16 @@ public class Timer : MonoBehaviour
         this.remainingTime -= 20;
     }
 
+    public void UpdateTimerPosition(bool isManualOpen)
+    {
+        if (isManualOpen)
+        {
+            timerUI.anchoredPosition = vector2;
+        }
+
+        if (!isManualOpen)
+        {
+            timerUI.anchoredPosition = vector2_default;
+        }
+    }
 }

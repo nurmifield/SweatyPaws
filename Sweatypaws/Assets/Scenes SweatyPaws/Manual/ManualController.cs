@@ -15,13 +15,15 @@ public class ManualController : MonoBehaviour
     public GameObject bookCoverPanel;  // Reference to the book cover panel
 
     // References for UI elements to hide
-    public GameObject scoreText;       // Reference to the score text UI
+    public GameObject scoreText_A;
+    public GameObject scoreText_B;       // Reference to the score text UI
     public GameObject toolsButtons;    // Reference to the tools buttons panel
     public GameObject settingsButton;  // Reference to the settings button
     public GameObject manualButton;    // Reference to the manual button
     public float startTime;
     public float endTime;
     public ManualTimeUsed manualTimeUsed;
+    public Timer timer;
 
     void Start()
     {
@@ -35,26 +37,26 @@ public class ManualController : MonoBehaviour
     {
         Debug.Log("Opening book cover panel.");
         bookCoverPanel.SetActive(true);    // Show the book cover panel
-        manualPanel.SetActive(false);      // Hide the manual panel
-        scoreText.SetActive(false);        // Hide score text
+        manualPanel.SetActive(false);      // Hide the manual panel        
         toolsButtons.SetActive(false);     // Hide tools buttons panel
         settingsButton.SetActive(false);   // Hide settings button
-        manualButton.SetActive(false);     // Hide manual button
+        manualButton.SetActive(false);
+        timer.UpdateTimerPosition(true);     // Hide manual button
         startTime = Time.time;
         Debug.Log(Time.time);
-
     }
 
     // Continue the game (hide the book cover)
     public void ContinueGame()
     {
         Debug.Log("Continuing game from the book cover.");
-        bookCoverPanel.SetActive(false);   // Hide the book cover
-        scoreText.SetActive(true);         // Show score text
+        bookCoverPanel.SetActive(false);   // Hide the book cover          // Show score text
         toolsButtons.SetActive(true);      // Show tools buttons panel
         settingsButton.SetActive(true);    // Show settings button
         manualButton.SetActive(true);      // Show manual button
-        Time.timeScale = 1f;               // Resume the game
+        Time.timeScale = 1f;
+        
+        timer.UpdateTimerPosition(false);               // Resume the game
     }
 
     public void PlayAudio(AudioClip clip)
@@ -73,16 +75,17 @@ public class ManualController : MonoBehaviour
         currentPage = 0;                  // Reset to the first page
         bookCoverPanel.SetActive(false);    // Show the book cover panel
         manualPanel.SetActive(true);      // Hide the manual panel until book cover is closed
-        scoreText.SetActive(false);        // Hide score text
         toolsButtons.SetActive(false);     // Hide tools buttons panel
         settingsButton.SetActive(false);   // Hide settings button
-        manualButton.SetActive(false);     // Hide manual button
+        manualButton.SetActive(false);
+        timer.UpdateTimerPosition(true);     // Hide manual button
     }
 
     // Go to the first page of the manual from the book cover
     public void OpenFirstPageFromCover()
     {
         Debug.Log("Opening the first manual page.");
+
         PlayAudio(pageTurnClip);
         currentPage = 0;                   // Reset to the first page
         bookCoverPanel.SetActive(false);   // Hide the book cover
@@ -131,10 +134,10 @@ public class ManualController : MonoBehaviour
         PlayAudio(closeManualClip);
         manualPanel.SetActive(false);      // Hide the manual panel
         bookCoverPanel.SetActive(false);   // Hide the book cover
-        scoreText.SetActive(true);         // Show score text
         toolsButtons.SetActive(true);      // Show tools buttons panel
         settingsButton.SetActive(true);    // Show settings button
-        manualButton.SetActive(true);      // Show manual button
+        manualButton.SetActive(true);
+        timer.UpdateTimerPosition(false);      // Show manual button
         Time.timeScale = 1f;               // Resume the game
         endTime = Time.time;
         manualTimeUsed.CalculateTime(startTime,endTime);
