@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject collectionPanel;   // Reference to the Collection Panel
     public GameObject creditsPanel;      // Reference to the Credits Panel
     public GameObject confirmationPanel;
+    public GameObject achievementsPanel; 
     public Text soundButtonText;         // Reference to the Text component of the Sound Button
 
     private bool isSoundOn = true;       // Variable to track the sound state
@@ -46,6 +47,7 @@ public class MainMenuController : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         collectionPanel.SetActive(true);
+        achievementsPanel.SetActive(false);
     }
 
     // Show the Credits Panel
@@ -53,6 +55,12 @@ public class MainMenuController : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         creditsPanel.SetActive(true);
+    }
+
+    public void OpenAchievements()
+    {
+        collectionPanel.SetActive(false);
+        achievementsPanel.SetActive(true);
     }
 
     // Go back to the Main Menu from any other panel
