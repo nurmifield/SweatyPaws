@@ -41,7 +41,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"FailurePart",
-                            "broken_parts":["WireNegativeACBroken1","WireNegativeACBroken2"]
+                            "broken_parts":["WireNegativeACBroken1","WireNegativeACBroken2"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -109,7 +110,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":["WirePositiveACBroken1","WirePositiveACBroken2"]
+                            "broken_parts":["WirePositiveACBroken1","WirePositiveACBroken2"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -177,7 +179,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":[]
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -245,7 +248,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":[]
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -313,7 +317,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":["WirePositiveAPBroken1","WirePositiveAPBroken2"]
+                            "broken_parts":["WirePositiveAPBroken1","WirePositiveAPBroken2"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools":
                         [
@@ -352,7 +357,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":["WireNegativeAPBroken1","WireNegativeAPBroken1"]
+                            "broken_parts":["WireNegativeAPBroken1","WireNegativeAPBroken1"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools":
                         [
@@ -421,7 +427,8 @@
                                 "animation_part":null
                             },
                             "failure_part":"none",
-                            "broken_parts":[]
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -488,7 +495,9 @@
                                 "set_trigger":"none",
                                 "animation_part":null
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -560,13 +569,15 @@
                         "action_part_name":"BombCover",
                         "correct_tool_action":
                         {
-                            "action":"remove",
+                            "action":"remove_extra",
                             "animation":
                             {
                                 "set_trigger":"none",
                                 "animation_part":null
                             },
-                            "broken_parts":[]
+                            "failure_part":"BallShinerButton1",
+                            "broken_parts":["BallShinerButton2"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -627,13 +638,15 @@
                         "action_part_name":"ExplosiveFront",
                         "correct_tool_action":
                         {
-                            "action":"remove",
+                            "action":"remove_extra",
                             "animation":
                             {
                                 "set_trigger":"none",
                                 "animation_part":null
                             },
-                            "broken_parts":[]
+                            "failure_part":"BallShinerButton2",
+                            "broken_parts":["BallShinerButton3"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -700,7 +713,9 @@
                                 "set_trigger":"none",
                                 "animation_part":null
                             },
-                            "broken_parts":["BrokenSpring"]
+                            "failure_part":"none",
+                            "broken_parts":["BrokenSpring"],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -758,16 +773,18 @@
                     {
                         "tool": "tassu",
                         "part": "BombButton",
-                        "action_part_name":"BallShinerButton",
+                        "action_part_name":"BallShinerButton3",
                         "correct_tool_action":
                         {
                             "action":"activate",
                             "animation":
                             {
-                                "set_trigger":"ButtonPressed",
+                                "set_trigger":"ButtonPressed3",
                                 "animation_part":"Detonator"
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -798,7 +815,7 @@
                     {
                         "parts": 
                         [
-                            "BallShinerButton"
+                            "BallShinerButton3"
                         ]
                     } 
             },
@@ -834,7 +851,9 @@
                                 "set_trigger":"ScrewOff",
                                 "animation_part":"NalliPidike1"
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -872,7 +891,9 @@
                                 "set_trigger":"ScrewOff",
                                 "animation_part":"NalliPidike2"
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -940,7 +961,9 @@
                                 "set_trigger":"none",
                                 "animation_part":null
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -1007,7 +1030,9 @@
                                 "set_trigger":"Failure",
                                 "animation_part":"Piikki"
                             },
-                            "broken_parts":[]
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
                         },
                         "wrong_tools": 
                         [
@@ -1039,6 +1064,144 @@
                         "parts": 
                         [
                             "FailureScrews"
+                        ]
+                    } 
+            },
+            {
+                "stage_name":"stage8",
+                "current_stage_index": 0,
+                "failure_condition":
+                {
+                    "current_stage_index":0,
+                    "exception":false,
+                    "exception_condition":
+                    {
+                        "stage_index":null,
+                        "part":null,
+                        "tool":null,
+                        "penalty":null
+                    }
+                },
+                "section_cleared": false,
+                "increase_stage_by": 0,
+                "increase_win_points_by":0,
+                "stage_tools":
+                 [
+                    {
+                        "tool": "tassu",
+                        "part": "BombButton",
+                        "action_part_name":"BallShinerButton1",
+                        "correct_tool_action":
+                        {
+                            "action":"activate",
+                            "animation":
+                            {
+                                "set_trigger":"ButtonPressed",
+                                "animation_part":"Detonator"
+                            },
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"faster_time"
+                        },
+                        "wrong_tools": 
+                        [
+                            {
+                                "tool": "pihdit",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Screwdriver",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Tweezer",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Liquid Nitrogen",
+                                "penalty": "time"
+                            },
+                            {
+                                "tool":"Magnet",
+                                "penalty":"points"
+                            }
+                        ]
+                    }
+                ],
+                "stage_parts":
+                    {
+                        "parts": 
+                        [
+                            "BallShinerButton1"
+                        ]
+                    } 
+            },
+            {
+                "stage_name":"stage9",
+                "current_stage_index": 0,
+                "failure_condition":
+                {
+                    "current_stage_index":0,
+                    "exception":false,
+                    "exception_condition":
+                    {
+                        "stage_index":null,
+                        "part":null,
+                        "tool":null,
+                        "penalty":null
+                    }
+                },
+                "section_cleared": false,
+                "increase_stage_by": 0,
+                "increase_win_points_by":0,
+                "stage_tools":
+                 [
+                    {
+                        "tool": "tassu",
+                        "part": "BombButton",
+                        "action_part_name":"BallShinerButton2",
+                        "correct_tool_action":
+                        {
+                            "action":"activate",
+                            "animation":
+                            {
+                                "set_trigger":"ButtonPressed2",
+                                "animation_part":"Detonator"
+                            },
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"faster_time"
+                        },
+                        "wrong_tools": 
+                        [
+                            {
+                                "tool": "pihdit",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Screwdriver",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Tweezer",
+                                "penalty": "points"
+                            },
+                            {
+                                "tool": "Liquid Nitrogen",
+                                "penalty": "time"
+                            },
+                            {
+                                "tool":"Magnet",
+                                "penalty":"points"
+                            }
+                        ]
+                    }
+                ],
+                "stage_parts":
+                    {
+                        "parts": 
+                        [
+                            "BallShinerButton2"
                         ]
                     } 
             }

@@ -53,7 +53,7 @@ public class Timer : MonoBehaviour
     }
     public void SetTimerMultiplier()
     {
-        this.timeMultiplier = timeMultiplier * 2;
+        this.timeMultiplier = timeMultiplier * 5;
     }
 
     public void DecreaseTime()

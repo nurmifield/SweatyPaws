@@ -146,6 +146,10 @@ public class GameActionManager : MonoBehaviour
         else if (stageTools.correct_tool_action.action == "activate")
         {
          CheckAnimation(stageTools);
+            if (stageTools.correct_tool_action.penalty_type != "none")
+            {
+                penaltyManager.CheckPenalty(stageTools.correct_tool_action.penalty_type);
+            }
         }
         else if (stageTools.correct_tool_action.action == "fail")
         {

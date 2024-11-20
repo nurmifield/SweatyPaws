@@ -2165,7 +2165,7 @@ MonoBehaviour:
   gameOverObject: {fileID: 1598708019}
   youWinObject: {fileID: 607082879}
   guiObject: {fileID: 1252451376}
-  timer: {fileID: 0}
+  timer: {fileID: 479587922}
   score: {fileID: 1252451382}
   analyticManager: {fileID: 288956140}
   manualTimeUsed: {fileID: 1211632435}
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1252451382}
-  time: {fileID: 0}
+  time: {fileID: 479587922}
 --- !u!82 &551773008
 AudioSource:
   m_ObjectHideFlags: 0
