@@ -89,8 +89,7 @@ public class GameActionManager : MonoBehaviour
             {
                 //Tässä olisi oikea työkalu ja se johtaisi jatkoon
                 Debug.Log("Player is using: " + playerTool + " and part tag is: " + action.tag);
-                CheckCorrectToolAction(stage.stage_tools[i],action);
-                IncreasePoints(stage, action);
+                CheckCorrectToolAction(stage.stage_tools[i],action, stage);
 
                 break;
             }
@@ -112,7 +111,7 @@ public class GameActionManager : MonoBehaviour
         }
     }
 
-    public void CheckCorrectToolAction(BombLogicData.StageTools stageTools , GameObject action)
+    public void CheckCorrectToolAction(BombLogicData.StageTools stageTools , GameObject action, BombLogicData.Stages stage)
     {
         
         if (stageTools.correct_tool_action.action == "remove")
@@ -123,10 +122,13 @@ public class GameActionManager : MonoBehaviour
                 {
                     GameObject brokenPart = FindInactiveObjectByName(prefab.transform , stageTools.correct_tool_action.broken_parts[i]);
                     brokenPart.SetActive(true);
+                    
                 }
             }
+            
             CheckAnimation(stageTools);
             action.SetActive(false);
+            IncreasePoints(stage, action);
         }
         else if (stageTools.correct_tool_action.action == "remove_extra")
         {
@@ -142,13 +144,18 @@ public class GameActionManager : MonoBehaviour
             failurePart.SetActive(false);
             CheckAnimation(stageTools);
             action.SetActive(false);
+            IncreasePoints(stage, action);
         }
         else if (stageTools.correct_tool_action.action == "activate")
         {
-         CheckAnimation(stageTools);
+            CheckAnimation(stageTools);
             if (stageTools.correct_tool_action.penalty_type != "none")
             {
                 penaltyManager.CheckPenalty(stageTools.correct_tool_action.penalty_type);
+            }
+            else
+            {
+                IncreasePoints(stage, action);
             }
         }
         else if (stageTools.correct_tool_action.action == "fail")
