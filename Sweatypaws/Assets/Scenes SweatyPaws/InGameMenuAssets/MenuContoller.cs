@@ -18,12 +18,12 @@ public class MenuController : MonoBehaviour
         toolSelector = FindObjectOfType<ToolSelector>();
         // Ensure the game starts unpaused and only the menu panel is active
         Time.timeScale = 1f;
-        if (menuPanel != null && optionsPanel !=null)
+        if (menuPanel != null && optionsPanel != null)
         {
             menuPanel.SetActive(false);   // Show the main menu at the start
             optionsPanel.SetActive(false); // Hide the options panel at the start
         }
-      
+
     }
 
     // Continue the game (hide the menu)
@@ -88,7 +88,7 @@ public class MenuController : MonoBehaviour
 
     public void MainMenuScene()
     {
-         var player = PlayerManager.Instance;
+        var player = PlayerManager.Instance;
         player.SetSelectedLevel("none");
         SceneManager.LoadScene("MainMenu");
     }
