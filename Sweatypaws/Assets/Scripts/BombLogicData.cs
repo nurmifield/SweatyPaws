@@ -70,6 +70,7 @@ public class BombLogicData
         public CorrectToolAction correct_tool_action;
         public List<WrongTools> wrong_tools;
         
+        
     }
     [System.Serializable]
     public class CorrectToolAction
@@ -78,6 +79,7 @@ public class BombLogicData
         public Animation animation;
         public string failure_part;
         public string[] broken_parts;
+        public string penalty_type;
     }
     [System.Serializable]
     public class Animation
