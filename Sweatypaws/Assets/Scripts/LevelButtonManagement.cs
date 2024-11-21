@@ -12,6 +12,7 @@ using UnityEngine.EventSystems;
 public class LevelButtonManagement : MonoBehaviour
 {
     public UnityEngine.UI.Button[] buttons;
+    public GameObject[] perfectImage;
     public List<GameObject> groupedObjects;
     public LevelMapManager mapManager;
     public LoadingScene loadingScreen;
@@ -41,6 +42,11 @@ public class LevelButtonManagement : MonoBehaviour
                         {
                             buttonsImage.sprite = youWinImage;
                             buttonAnimator.enabled = false;
+                            if (player.playerData.level_progress[i].score == player.playerData.level_progress[i].max_score)
+                            {
+
+                                perfectImage[i].SetActive(true);
+                            }
                         }
                         else
                         {

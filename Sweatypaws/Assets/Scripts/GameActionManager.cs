@@ -206,6 +206,10 @@ public class GameActionManager : MonoBehaviour
             StartCoroutine(PlayAnimationAndWait(animator, stageTools.correct_tool_action.animation.set_trigger));
 
         }
+        else
+        {
+            penaltyManager.CheckPenalty("fail");
+        }
     }
     GameObject FindInactiveObjectByName(Transform parent, string name)
     {

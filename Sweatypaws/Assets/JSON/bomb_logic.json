@@ -1204,6 +1204,75 @@
                             "BallShinerButton2"
                         ]
                     } 
+            },
+            {
+                "stage_name":"stage10",
+                "current_stage_index": 2,
+                "failure_condition":
+                {
+                    "current_stage_index":2,
+                    "exception":false,
+                    "exception_condition":
+                    {
+                        "stage_index":null,
+                        "part":null,
+                        "tool":null,
+                        "penalty":null
+                    }
+                },
+                "section_cleared": false,
+                "increase_stage_by": 0,
+                "increase_win_points_by":0,
+                "stage_tools":
+                 [
+                    {
+                        "tool": "Screwdriver",
+                        "part": "Failure",
+                        "action_part_name":"ExplosiveSide",
+                        "correct_tool_action":
+                        {
+                            "action":"fail",
+                            "animation":
+                            {
+                                "set_trigger":"none",
+                                "animation_part":null
+                            },
+                            "failure_part":"none",
+                            "broken_parts":[],
+                            "penalty_type":"none"
+                        },
+                        "wrong_tools": 
+                        [
+                            {
+                                "tool": "pihdit",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool": "tassu",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool": "Tweezer",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool": "Liquid Nitrogen",
+                                "penalty": "fail"
+                            },
+                            {
+                                "tool":"Magnet",
+                                "penalty":"fail"
+                            }
+                        ]
+                    }
+                ],
+                "stage_parts":
+                    {
+                        "parts": 
+                        [
+                            "ExplosiveSide"
+                        ]
+                    } 
             }
         ]
     }

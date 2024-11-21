@@ -49,6 +49,7 @@ public class PlayerData
         public int level_index;
         public bool complete;
         public int score;
+        public int max_score;
 
         public LevelProgress(string levelName , int levelIndex)
         {
