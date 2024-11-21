@@ -11,14 +11,14 @@ using UnityEngine.EventSystems;
 
 public class LevelButtonManagement : MonoBehaviour
 {
-    public GameObject[] buttons;
+    public UnityEngine.UI.Button[] buttons;
+    public GameObject[] perfectImage;
     public List<GameObject> groupedObjects;
     public LevelMapManager mapManager;
     public LoadingScene loadingScreen;
     private JsonReader jsonReader;
     public Sprite levelImage;
     public Sprite youWinImage;
-    public Sprite perfectImage;
 
 
     // Start is called before the first frame update
@@ -36,36 +36,23 @@ public class LevelButtonManagement : MonoBehaviour
                 {
                     if (player.playerData.level >= i)
                     {
-                        if (!buttons[i].activeSelf)
-                        {
-                            buttons[i].SetActive(true);
-                        }
                         UnityEngine.UI.Image buttonsImage = buttons[i].GetComponent<UnityEngine.UI.Image>();
                         Animator buttonAnimator = buttons[i].GetComponent<Animator>();
                         if (player.playerData.level_progress[i].complete == true)
                         {
-                            
-                            
-                            
+                            buttonsImage.sprite = youWinImage;
+                            buttonAnimator.enabled = false;
                             if (player.playerData.level_progress[i].score == player.playerData.level_progress[i].max_score)
                             {
-                                buttonsImage.sprite = perfectImage;
 
-
+                                perfectImage[i].SetActive(true);
                             }
-                            else
-                            {
-                                buttonsImage.sprite = youWinImage;
-                            }
-                            buttonAnimator.enabled = false;
-
                         }
                         else
                         {
                             buttonsImage.sprite = levelImage;
-                            
                         }
-                     
+                        buttons[i].gameObject.SetActive(true);
                         Debug.Log("leveli: " + i);
                     }
                 }
