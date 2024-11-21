@@ -12,13 +12,13 @@ using UnityEngine.EventSystems;
 public class LevelButtonManagement : MonoBehaviour
 {
     public UnityEngine.UI.Button[] buttons;
-    public GameObject[] perfectImage;
     public List<GameObject> groupedObjects;
     public LevelMapManager mapManager;
     public LoadingScene loadingScreen;
     private JsonReader jsonReader;
     public Sprite levelImage;
     public Sprite youWinImage;
+    public Sprite perfectImage;
 
 
     // Start is called before the first frame update
@@ -40,13 +40,18 @@ public class LevelButtonManagement : MonoBehaviour
                         Animator buttonAnimator = buttons[i].GetComponent<Animator>();
                         if (player.playerData.level_progress[i].complete == true)
                         {
-                            buttonsImage.sprite = youWinImage;
-                            buttonAnimator.enabled = false;
+                            
+                            
                             if (player.playerData.level_progress[i].score == player.playerData.level_progress[i].max_score)
                             {
+                                buttonsImage.sprite = perfectImage;
 
-                                perfectImage[i].SetActive(true);
                             }
+                            else
+                            {
+                                buttonsImage.sprite = youWinImage;
+                            }
+                            buttonAnimator.enabled = false;
                         }
                         else
                         {
