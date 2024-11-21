@@ -422,8 +422,8 @@ MonoBehaviour:
   - {fileID: 1844812964}
   mapManager: {fileID: 1522902913}
   loadingScreen: {fileID: 1522902918}
-  levelImage: {fileID: 0}
-  youWinImage: {fileID: 0}
+  levelImage: {fileID: 21300000, guid: 57fdee18cfe3b1e49bf1b121b5b531f7, type: 3}
+  youWinImage: {fileID: 21300000, guid: e919c24fa6465b149b443ef5bc9dca6e, type: 3}
 --- !u!1 &48153361
 GameObject:
   m_ObjectHideFlags: 0
@@ -19043,7 +19043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1691002172
 MonoBehaviour:
   m_ObjectHideFlags: 0
