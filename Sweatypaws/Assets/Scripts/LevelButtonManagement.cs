@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 
 public class LevelButtonManagement : MonoBehaviour
 {
-    public UnityEngine.UI.Button[] buttons;
+    public GameObject[] buttons;
     public GameObject[] perfectImage;
     public List<GameObject> groupedObjects;
     public LevelMapManager mapManager;
@@ -36,6 +36,10 @@ public class LevelButtonManagement : MonoBehaviour
                 {
                     if (player.playerData.level >= i)
                     {
+                        if (!buttons[i].activeSelf)
+                        {
+                            buttons[i].SetActive(true);
+                        }
                         UnityEngine.UI.Image buttonsImage = buttons[i].GetComponent<UnityEngine.UI.Image>();
                         Animator buttonAnimator = buttons[i].GetComponent<Animator>();
                         if (player.playerData.level_progress[i].complete == true)
@@ -47,12 +51,14 @@ public class LevelButtonManagement : MonoBehaviour
 
                                 perfectImage[i].SetActive(true);
                             }
+                           
                         }
                         else
                         {
                             buttonsImage.sprite = levelImage;
+                            
                         }
-                        buttons[i].gameObject.SetActive(true);
+                     
                         Debug.Log("leveli: " + i);
                     }
                 }
