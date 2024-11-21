@@ -19,7 +19,8 @@ public class HowToPlayManager : MonoBehaviour
     public Button nextPageButton;  
     public Button nextButton;      // Button to progress through bubbles in toolsPanel
     public Button gameFlowNextButton;  // Button to progress through bubbles in gameFlowPanel
-    public Button skipButton;      // Button to skip the tutorial
+    public Button skipButton;
+    public Button startOverButton;      // Button to skip the tutorial
 
     private int currentBubbleIndex = 0;  // Track which bubble to show next
 
@@ -51,6 +52,7 @@ public class HowToPlayManager : MonoBehaviour
         if (nextButton != null) nextButton.onClick.AddListener(ShowNextBubbleInToolsPanel);
         if (gameFlowNextButton != null) gameFlowNextButton.onClick.AddListener(ShowNextBubbleInGameFlowPanel);
         if (skipButton != null) skipButton.onClick.AddListener(StartGame); // Start game if skipped
+        if (startOverButton != null) StartOver();
     }
 
     // Show the next speech bubble in toolsPanel
@@ -119,5 +121,27 @@ public class HowToPlayManager : MonoBehaviour
         Debug.Log("Game Started!");
         howToPlayPanel.SetActive(false);
         player.TutorialDone();
+    }
+
+    public void StartOver()
+    {
+        RestartTutorial();
+    }
+
+    public void RestartTutorial()
+    {
+        introductionPanel.SetActive(false);
+        toolsPanel.SetActive(false);
+        gameFlowPanel.SetActive(false);
+
+        foreach (GameObject bubble in speechBubbles)
+        {
+            bubble.SetActive(false);
+        }
+        if (firstGameFlowBubble != null) firstGameFlowBubble.SetActive(false);
+        if (finalGameFlowBubble != null) finalGameFlowBubble.SetActive(false);
+
+        currentBubbleIndex = 0;
+        introductionPanel.SetActive(true);
     }
 }
