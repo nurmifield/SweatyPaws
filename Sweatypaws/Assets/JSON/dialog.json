@@ -9,7 +9,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Finally, something! Steve, got getthe car ready. Sergeant pickles, atattention!",
+            "dialog":"Finally, something! Steve, got get the car ready. Sergeant pickles, atattention!",
            "character_image":"snuggles",
            "background_image":"sairaalatausta1"
         },
@@ -21,31 +21,31 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went titsup,you took one for the company have been in St.Hugbears for a fewweeks. At least you wore the suit, otherwise theywould have had to scrapeyou off the wall.",
+            "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went tits up,you took one for the company have been in St.Hugbears for a few weeks. At least you wore the suit, other wise they would have had to scrape you off the wall.",
             "character_image":"snuggles",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Whose wall?..weeks?..I can't..",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö3",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Harumph, Jelly brain, figures...",
-            "character_image":"snuggles",
+            "character_image":"snuggles2",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"The wha-",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö2",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"It's a form of short term amnesia,common in our profession.You'llremember it all once you get backon the horse.",
+            "dialog":"It's a form of short term amnesia,common in our profession.You'll remember it all once you get back on the horse.",
             "character_image":"snuggles",
             "background_image":"sairaalatausta1"
         },
@@ -57,8 +57,8 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted youto the force myself! You're in thebomb squad, and the city is up thecreek with no paddle in sight.",
-            "character_image":"snuggles",
+            "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted you to the force myself! You're in the bomb squad, and the city is up the creek with no paddle in sight.",
+            "character_image":"snuggles2",
             "background_image":"sairaalatausta1"
         },
         {
@@ -70,19 +70,19 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Shit's creek, concentrate man!First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti.Now,street div is finding bombs all across the city.The Mayor is shitting bricks and so is the commissioner.",
-            "character_image":"snuggles",
+            "character_image":"snuggles3",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Sounds bad, but why me? I'm sore all over and can remember hardly anything, where's the rest of the squad?",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö3",
             "background_image":"sairaalatausta1"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Well, about that.. Seemingly, that idiot Toby let them all on leave at the same time, and they all went on Admiral Walrus's Booze Cruise. They're useless. It's you, me and Steve from the motor pool. We're the bomb squad now.",
-            "character_image":"snuggles",
+            "character_image":"snuggles3",
             "background_image":"sairaalatausta1"
         },
         {
@@ -100,7 +100,7 @@
         {
             "character_name":"PICKLES",
             "dialog":"Its crunchy...",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö3",
             "background_image":"sairaalatausta1"
         },
         {
@@ -119,13 +119,13 @@
         {
             "character_name":"PICKLES",
             "dialog":"I guess..The van seems familiar..",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö2",
             "background_image":"sairaala-ulkoa-tausta1"
             
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Good, It's time to get down tobusiness. This here is Steve. Say hi, Steve",
+            "dialog":"Good, It's time to get down to business. This here is Steve. Say hi, Steve",
             "character_image":"snuggles",
             "background_image":"sairaala-ulkoa-tausta1"
             
@@ -140,7 +140,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Hrmph. Anyways, Van's ready, Just so, as there's already a situation on Sugarbear st.",
-            "character_image":"snuggles",
+            "character_image":"snuggles3",
             "background_image":"sairaala-ulkoa-tausta1"
             
         },
@@ -154,7 +154,7 @@
         {
             "character_name":"STEVE",
             "dialog":"Hell no...sir.",
-            "character_image":"steve",
+            "character_image":"steve2",
             "background_image":"sairaala-ulkoa-tausta1"
             
         },
@@ -168,7 +168,7 @@
         {
             "character_name":"PICKLES",
             "dialog":"Ow, what was that for?",
-            "character_image":"Päähenkilö-sairaala",
+            "character_image":"Päähenkilö4",
             "background_image":"sairaala-ulkoa-tausta1"
             
         },
@@ -188,7 +188,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"I can see your conflicted, Sergeant. I know it seems desperate, an amnesiac, a grease monkey and an retired old fart, trying to stop all this. But now, truly, is time to shit or get off the pot. Pawston is scared out of its wits, we must help. The game's afoot, gentlemen, you must be ready.",
-            "character_image":"snuggles",
+            "character_image":"snuggles2",
             "background_image":"sairaala-ulkoa-tausta1"
             
         },
@@ -213,13 +213,13 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Look at you, all whole. Cakewalk,right?",
-            "character_image":"",
+            "character_image":"snuggles",
             "background_image":""
         },
         {
             "character_name":"PICKLES",
             "dialog":"I guess so, sir.",
-            "character_image":"",
+            "character_image":"Päähenkilö2",
             "background_image":""
         }
     ],
@@ -228,13 +228,13 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"The perp, Biscuits, is being processed. I'll make him sweat in the box, for sure. But we've got no time to celebrate, a bomb has been found at the Stadium, you gotta head there now!",
-            "character_image":"",
+            "character_image":"snuggles2",
             "background_image":""
         },
         {
             "character_name":"PICKLES",
             "dialog":"Yes sir. Steve, to Participants stadium!",
-            "character_image":"",
+            "character_image":"Päähenkilö4",
             "background_image":""
         }
     ],
@@ -243,37 +243,37 @@
         {
             "character_name":"PICKLES",
             "dialog":"Whew, that was a doozy.",
-            "character_image":"",
+            "character_image":"Päähenkilö3",
             "background_image":""
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Bully for you, Sergeant. This Beauregard fellow makes me sick, all that money and no sense of proportion.The things these people get up to...",
-            "character_image":"",
+            "character_image":"snuggles3",
             "background_image":""
         },
         {
             "character_name":"PICKLES",
             "dialog":"Sir, there's something about those bombs. I can't put my finger on it, but it reminds me of something,I don't know what.",
-            "character_image":"",
+            "character_image":"Päähenkilö4",
             "background_image":""
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Does it now? I've checked the street div's scene photos and I think you're onto something. The construction of these devices, there's some common threads here. ",
-            "character_image":"",
+            "character_image":"snuggles",
             "background_image":""
         },
         {
             "character_name":"PICKLES",
             "dialog":"Might this be the work of an organisation?",
-            "character_image":"",
+            "character_image":"Päähenkilö2",
             "background_image":""
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"It was theorised, and this seems to corroborate it. I'll have a word with the tech boys, see what they can dig up. Meanwhile you've got a new site to head to, Lovebird hill. Printout to follow.",
-            "character_image":"",
+            "character_image":"snuggles",
             "background_image":""
         }
     ],

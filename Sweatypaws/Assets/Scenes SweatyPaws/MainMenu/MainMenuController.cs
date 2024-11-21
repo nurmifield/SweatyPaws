@@ -9,6 +9,11 @@ public class MainMenuController : MonoBehaviour
     public GameObject collectionPanel;   // Reference to the Collection Panel
     public GameObject creditsPanel;      // Reference to the Credits Panel
     public GameObject confirmationPanel;
+    public GameObject achievementsPanel;
+    public GameObject fredInfoCanvas;
+    public GameObject fredPage1;
+    public GameObject fredPage2;
+     
     public Text soundButtonText;         // Reference to the Text component of the Sound Button
 
     private bool isSoundOn = true;       // Variable to track the sound state
@@ -46,6 +51,7 @@ public class MainMenuController : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         collectionPanel.SetActive(true);
+        achievementsPanel.SetActive(false);
     }
 
     // Show the Credits Panel
@@ -53,6 +59,37 @@ public class MainMenuController : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         creditsPanel.SetActive(true);
+    }
+
+    public void OpenAchievements()
+    {
+        collectionPanel.SetActive(false);
+        achievementsPanel.SetActive(true);
+    }
+
+    public void OpenFredPanel()
+    {
+        collectionPanel.SetActive(false);
+        fredInfoCanvas.SetActive(true);
+        fredPage2.SetActive(false);
+    }
+
+    public void NextPage()
+    {
+        fredPage1.SetActive(false);
+        fredPage2.SetActive(true);
+    }
+
+    public void PreviousPage()
+    {
+        fredPage2.SetActive(false);
+        fredPage1.SetActive(true);
+    }
+
+    public void CloseFredPanel()
+    {
+        collectionPanel.SetActive(true);
+        fredInfoCanvas.SetActive(false);
     }
 
     // Go back to the Main Menu from any other panel
@@ -77,7 +114,7 @@ public class MainMenuController : MonoBehaviour
     // Update the text on the Sound Toggle Button
     private void UpdateSoundButtonText()
     {
-        soundButtonText.text = isSoundOn ? "On" : "Off";  // "X" for sound on, blank for sound off
+        soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
     }
 
 // Method to exit the game
