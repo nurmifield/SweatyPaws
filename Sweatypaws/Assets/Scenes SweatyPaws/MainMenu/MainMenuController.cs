@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject confirmationPanel;
     public GameObject achievementsPanel;
     public GameObject fredInfoCanvas;
+    public GameObject controlsPanel;
     public GameObject fredPage1;
     public GameObject fredPage2;
      
@@ -43,6 +44,18 @@ public class MainMenuController : MonoBehaviour
     public void OpenSettings()
     {
         mainMenuPanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void OpenControls()
+    {
+        settingsPanel.SetActive(false);
+        controlsPanel.SetActive(true);
+    }
+
+    public void CloseControls()
+    {
+        controlsPanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
