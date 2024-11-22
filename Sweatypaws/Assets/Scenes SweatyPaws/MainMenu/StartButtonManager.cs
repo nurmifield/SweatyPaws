@@ -42,6 +42,7 @@ public class StartButtonManager : MonoBehaviour
             levelToLoad = "Map";
         }
         SceneManager.LoadScene(levelToLoad);
+    
     }
 
     public void OpenConfirmationPanel()
