@@ -134,7 +134,7 @@
             "character_name":"STEVE",
             "dialog":"Hi Steve.",
             "character_image":"steve",
-            "animation_trigger":"PicklesTalk2"
+            "animation_trigger":"SteveTalk"
             
         },
         {
@@ -155,7 +155,7 @@
             "character_name":"STEVE",
             "dialog":"Hell no...sir.",
             "character_image":"steve2",
-            "animation_trigger":"PicklesTalk2"
+            "animation_trigger":"SteveTalk"
             
         },
         {
@@ -196,7 +196,7 @@
             "character_name":"PICKLES,STEVE",
             "dialog":"Yes sir!",
             "character_image":"Päähenkilö-sairaala",
-            "animation_trigger":"PicklesTalk2"
+            "animation_trigger":"StevePicklesTalk"
             
         },
         {
