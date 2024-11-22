@@ -162,7 +162,7 @@
             "character_name":"SNUGGLES",
             "dialog":"Think fast, Sergeant!",
             "character_image":"snuggles",
-            "animation_trigger":"SnugglesTalk2"
+            "animation_trigger":"SnugglesSpecial"
             
         },
         {
@@ -214,13 +214,13 @@
             "character_name":"SNUGGLES",
             "dialog":"Look at you, all whole. Cakewalk,right?",
             "character_image":"snuggles",
-            "background_image":""
+           "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"I guess so, sir.",
             "character_image":"Päähenkilö2",
-            "background_image":""
+            "animation_trigger":"PicklesTalk"
         }
     ],
     "scene_3":
@@ -229,13 +229,13 @@
             "character_name":"SNUGGLES",
             "dialog":"The perp, Biscuits, is being processed. I'll make him sweat in the box, for sure. But we've got no time to celebrate, a bomb has been found at the Stadium, you gotta head there now!",
             "character_image":"snuggles2",
-            "background_image":""
+            "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Yes sir. Steve, to Participants stadium!",
             "character_image":"Päähenkilö4",
-            "background_image":""
+            "animation_trigger":"PicklesTalk"
         }
     ],
     "scene_4":
@@ -244,37 +244,37 @@
             "character_name":"PICKLES",
             "dialog":"Whew, that was a doozy.",
             "character_image":"Päähenkilö3",
-            "background_image":""
+             "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Bully for you, Sergeant. This Beauregard fellow makes me sick, all that money and no sense of proportion.The things these people get up to...",
             "character_image":"snuggles3",
-            "background_image":""
+            "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Sir, there's something about those bombs. I can't put my finger on it, but it reminds me of something,I don't know what.",
             "character_image":"Päähenkilö4",
-            "background_image":""
+            "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"Does it now? I've checked the street div's scene photos and I think you're onto something. The construction of these devices, there's some common threads here. ",
             "character_image":"snuggles",
-            "background_image":""
+            "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Might this be the work of an organisation?",
             "character_image":"Päähenkilö2",
-            "background_image":""
+             "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"SNUGGLES",
             "dialog":"It was theorised, and this seems to corroborate it. I'll have a word with the tech boys, see what they can dig up. Meanwhile you've got a new site to head to, Lovebird hill. Printout to follow.",
             "character_image":"snuggles",
-            "background_image":""
+           "animation_trigger":"SnugglesTalk"
         }
     ],
     "scene_5":
