@@ -5458,7 +5458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -43.87}
+  m_AnchoredPosition: {x: 0, y: -43.870117}
   m_SizeDelta: {x: 1029, y: 355.0427}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &956283341
@@ -7498,7 +7498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52.52, y: -38.819946}
+  m_AnchoredPosition: {x: -52.52002, y: -38.819824}
   m_SizeDelta: {x: 212.77222, y: 84.82617}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1259469846
@@ -8815,6 +8815,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 904.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.4835
+      objectReference: {fileID: 0}
     - target: {fileID: 2269127182700130694, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9264,12 +9272,16 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8789061866439608805, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 942.8531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789061866439608805, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -4.8784
       objectReference: {fileID: 0}
     - target: {fileID: 8910498642869373758, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -9280,10 +9292,10 @@ PrefabInstance:
     - {fileID: 2737801403632100270, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6730225871556311438, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
-      insertIndex: 1
+      insertIndex: 3
       addedObject: {fileID: 516616905}
     - targetCorrespondingSourceObject: {fileID: 2885068882949065936, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
-      insertIndex: 2
+      insertIndex: -1
       addedObject: {fileID: 174491762}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1903969574615358645, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
