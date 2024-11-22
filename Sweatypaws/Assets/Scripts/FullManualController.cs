@@ -17,7 +17,7 @@ public class BombManualManager : MonoBehaviour
     void Start()
     {
         // Show the book cover at the start
-        ShowBookCover();
+        //ShowBookCover();
     }
 
     // Show the book cover
