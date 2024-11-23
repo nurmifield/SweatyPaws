@@ -60,14 +60,42 @@ public class MouseClick : MonoBehaviour
                 Vector2 worldPointEnd = Camera.main.ScreenToWorldPoint(endPos);
                 float distance = Vector2.Distance(worldPointStart, worldPointEnd);
                 Vector2 direction = (worldPointEnd - worldPointStart).normalized;
-                RaycastHit2D hit = Physics2D.Raycast(worldPointStart, direction,distance);
-
+                //RaycastHit2D hit = Physics2D.Raycast(worldPointStart, direction,distance);
+                /* VANHA MALLI
                 if (hit.collider != null)
                 {
                     //GetComponent<CheckCorrectTool>().SetAction(hit.collider.gameObject);
                     GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
                     //Debug.Log(hit.collider.gameObject);
 
+                }*/
+                string[] layerOrder = { "First", "Second", "Third" };
+
+                GameObject topObject = null;
+
+                // Iterate over the layers in order of priority
+                foreach (string layer in layerOrder)
+                {
+                    // Create a LayerMask for the current layer
+                    int layerMask = LayerMask.GetMask(layer);
+
+                    // Perform a raycast from the current world position, with the layerMask to filter layers
+                    RaycastHit2D hit = Physics2D.Raycast(worldPointStart, direction, distance,layerMask);
+
+                    if (hit.collider != null)
+                    {
+                        // If an object is hit, set the topObject and stop checking further layers
+                        topObject = hit.collider.gameObject;
+                        break; // Exit the loop as we found an object in the highest priority layer
+                    }
+                }
+
+                // If we found a top object, perform interaction logic
+                if (topObject != null)
+                {
+                    Debug.Log("Touched object: " + topObject.name);
+                    // Perform interaction logic here
+                    GetComponent<GameActionManager>().CheckStagePart(topObject);
                 }
 
 
@@ -76,6 +104,7 @@ public class MouseClick : MonoBehaviour
             {
                 tap = false;
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                /* VANHA MALLI
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
                 //If something was hit, the RaycastHit2D.collider will not be null.
                 if (hit.collider != null)
@@ -83,6 +112,34 @@ public class MouseClick : MonoBehaviour
                     //GetComponent<CheckCorrectTool>().SetAction(hit.collider.gameObject);
                     GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
 
+                }*/
+                string[] layerOrder = { "First", "Second", "Third" };
+
+                GameObject topObject = null;
+
+                // Iterate over the layers in order of priority
+                foreach (string layer in layerOrder)
+                {
+                    // Create a LayerMask for the current layer
+                    int layerMask = LayerMask.GetMask(layer);
+
+                    // Perform a raycast from the current world position, with the layerMask to filter layers
+                    RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero, Mathf.Infinity, layerMask);
+
+                    if (hit.collider != null)
+                    {
+                        // If an object is hit, set the topObject and stop checking further layers
+                        topObject = hit.collider.gameObject;
+                        break; // Exit the loop as we found an object in the highest priority layer
+                    }
+                }
+
+                // If we found a top object, perform interaction logic
+                if (topObject != null)
+                {
+                    Debug.Log("Touched object: " + topObject.name);
+                    // Perform interaction logic here
+                    GetComponent<GameActionManager>().CheckStagePart(topObject);
                 }
             }
 

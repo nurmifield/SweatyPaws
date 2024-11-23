@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3123449057525722912}
   - component: {fileID: 6475629432480387313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallShinerButton1
   m_TagString: BombButton
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7458708398689902157}
   - component: {fileID: 2792118226906763127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallShinerButton2
   m_TagString: BombButton
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 2686828083894401392}
   - component: {fileID: 5048138881025834608}
   - component: {fileID: 6551034776110012837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spring2
   m_TagString: Spring
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 6656621092659907055}
   - component: {fileID: 8231620712550479417}
   - component: {fileID: 8922353449069792563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FailureScrews
   m_TagString: Failure
   m_Icon: {fileID: 0}
@@ -1350,7 +1350,7 @@ GameObject:
   - component: {fileID: 3825177851357191588}
   - component: {fileID: 4366441398490742447}
   - component: {fileID: 7426332070748637979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExplosiveSide
   m_TagString: Failure
   m_Icon: {fileID: 0}
@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 6171571184285852521}
   - component: {fileID: 4475852835226282956}
   - component: {fileID: 948154260605383926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Screw2
   m_TagString: Screw
   m_Icon: {fileID: 0}
@@ -1971,7 +1971,7 @@ GameObject:
   - component: {fileID: 8471663637154955370}
   - component: {fileID: 5284672604486346123}
   - component: {fileID: 499022400337462534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BombCover
   m_TagString: BombCover
   m_Icon: {fileID: 0}
@@ -2277,8 +2277,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1178705135825517644}
   - component: {fileID: 4357598020416688006}
-  - component: {fileID: 7023050676404124261}
-  m_Layer: 0
+  - component: {fileID: 2066415582482574420}
+  m_Layer: 8
   m_Name: Nalli
   m_TagString: Detonator
   m_Icon: {fileID: 0}
@@ -2354,8 +2354,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7023050676404124261
-BoxCollider2D:
+--- !u!60 &2066415582482574420
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2386,7 +2386,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.91}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2396,9 +2396,67 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.63, y: 1.36}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.78, y: -1.04}
+      - {x: 0.81, y: -0.95}
+      - {x: 0.83, y: -0.85999995}
+      - {x: 0.84999996, y: -0.74}
+      - {x: 0.89, y: -0.57}
+      - {x: 0.94, y: -0.53999996}
+      - {x: 1.01, y: -0.48}
+      - {x: 1.04, y: -0.39}
+      - {x: 1.0799999, y: -0.26}
+      - {x: 1.14, y: -0.06}
+      - {x: 1.14, y: 0}
+      - {x: 1.12, y: 0.049999997}
+      - {x: 1.0699999, y: 0.099999994}
+      - {x: 1.13, y: 0.38}
+      - {x: 1.2099999, y: 0.51}
+      - {x: 1.24, y: 0.57}
+      - {x: 1.24, y: 0.61}
+      - {x: 1.2099999, y: 0.63}
+      - {x: 1.15, y: 0.65}
+      - {x: 1.02, y: 0.69}
+      - {x: 0.91999996, y: 0.71999997}
+      - {x: 0.65999997, y: 0.79999995}
+      - {x: 0.56, y: 0.83}
+      - {x: 0.29999998, y: 0.90999997}
+      - {x: 0.19999999, y: 0.94}
+      - {x: -0.19, y: 1.06}
+      - {x: -0.29, y: 1.09}
+      - {x: -0.55, y: 1.17}
+      - {x: -0.64, y: 1.1999999}
+      - {x: -0.71999997, y: 1.1999999}
+      - {x: -0.74, y: 1.17}
+      - {x: -0.77, y: 0.98999995}
+      - {x: -0.84, y: 0.74}
+      - {x: -0.89, y: 0.69}
+      - {x: -0.94, y: 0.66999996}
+      - {x: -1, y: 0.62}
+      - {x: -1.02, y: 0.57}
+      - {x: -1.0799999, y: 0.38}
+      - {x: -1.11, y: 0.28}
+      - {x: -1.13, y: 0.21}
+      - {x: -1.14, y: 0.11}
+      - {x: -1.1, y: 0.02}
+      - {x: -1.12, y: -0.06}
+      - {x: -1.1999999, y: -0.24}
+      - {x: -1.24, y: -0.35999998}
+      - {x: -1.24, y: -0.59}
+      - {x: -1.22, y: -0.63}
+      - {x: -1.11, y: -0.74}
+      - {x: -0.9, y: -0.87}
+      - {x: -0.7, y: -0.96999997}
+      - {x: -0.48, y: -1.06}
+      - {x: -0.32999998, y: -1.12}
+      - {x: -0.07, y: -1.17}
+      - {x: 0.049999997, y: -1.1899999}
+      - {x: 0.14, y: -1.1999999}
+      - {x: 0.64, y: -1.1999999}
+      - {x: 0.69, y: -1.17}
+      - {x: 0.74, y: -1.11}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5750900063023373647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2552,7 @@ GameObject:
   - component: {fileID: 7039491923206931083}
   - component: {fileID: 1495253870389822849}
   - component: {fileID: 4597807952509775669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExplosiveFront
   m_TagString: Explosive
   m_Icon: {fileID: 0}
@@ -2935,7 +2993,7 @@ GameObject:
   - component: {fileID: 6401998580766256113}
   - component: {fileID: 7617218172461573465}
   - component: {fileID: 7621703498702580505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Screw1
   m_TagString: Screw
   m_Icon: {fileID: 0}
@@ -3306,7 +3364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7263246751972423043}
   - component: {fileID: 8058107449017085304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BallShinerButton3
   m_TagString: BombButton
   m_Icon: {fileID: 0}

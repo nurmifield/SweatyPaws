@@ -671,7 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4691997208316094960}
   - component: {fileID: 3639672536208939242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WireNegativeAC
   m_TagString: wire
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3917454447009813843}
   - component: {fileID: 3851177536897172068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PowerSource
   m_TagString: power
   m_Icon: {fileID: 0}
@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 4086050362637371723}
   - component: {fileID: 4430809166180535033}
   - component: {fileID: 5016842150531108261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WireNegativeAP
   m_TagString: wire
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 5029180340398812904}
   - component: {fileID: 528842679348662778}
   - component: {fileID: 8112519449405619105}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WirePositiveAC
   m_TagString: wire
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8349572330016242825}
   - component: {fileID: 8713406001537505028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FailurePart
   m_TagString: Failure
   m_Icon: {fileID: 0}
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 5412386598588001161}
   - component: {fileID: 3377614304067616165}
   - component: {fileID: 4670227718987395246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WirePositiveAP
   m_TagString: wire
   m_Icon: {fileID: 0}
@@ -2225,7 +2225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3295537480453925906}
   - component: {fileID: 6256648418040886476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Alarm
   m_TagString: alarm
   m_Icon: {fileID: 0}
@@ -2297,7 +2297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8228566321565213909}
   - component: {fileID: 2867960856141233664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Charge
   m_TagString: charge
   m_Icon: {fileID: 0}
