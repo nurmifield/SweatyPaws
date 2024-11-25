@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;  // For handling UI components
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEditor.Timeline.Actions;
 
 public class MenuController : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class MenuController : MonoBehaviour
             menuPanel.SetActive(false);   // Show the main menu at the start
             optionsPanel.SetActive(false); // Hide the options panel at the start
         }
-
+        soundButtonText.text = isSoundOn ? "X" : ""; 
     }
 
     // Continue the game (hide the menu)
@@ -35,7 +36,8 @@ public class MenuController : MonoBehaviour
             toolSelector.currentSelectedButton = null;
         }
 
-        menuPanel.SetActive(false);    // Hide the main menu
+        menuPanel.SetActive(false);
+        optionsPanel.SetActive(false);    // Hide the main menu
         ToolButtons.SetActive(true);   // Show the tool buttons
         ManualButton.SetActive(true);  // Show the manual button 
         Time.timeScale = 1f;         // Resume the game
@@ -72,7 +74,7 @@ public class MenuController : MonoBehaviour
 
         // Enable or disable sound based on the current state
         AudioListener.volume = isSoundOn ? 1 : 0;
-
+        Debug.Log("Sound Toggled: " + (isSoundOn ? "On" : "Off"));
         // Update the button text based on the sound state
         soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
     }
@@ -91,6 +93,16 @@ public class MenuController : MonoBehaviour
         var player = PlayerManager.Instance;
         player.SetSelectedLevel("none");
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OpenSettingsMap()
+    {
+        menuPanel.SetActive(true);
+    }
+
+    public void CloseOptionsMap()
+    {
+        optionsPanel.SetActive(false);
     }
 
 }
