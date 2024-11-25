@@ -46,7 +46,8 @@ public class MenuController : MonoBehaviour
     // Open the options menu
     public void OpenOptions()
     {
-        optionsPanel.SetActive(true);  // Show the options menu
+        optionsPanel.SetActive(true);
+        menuPanel.SetActive(false);
     }
     public void OpenSettings()
     {
