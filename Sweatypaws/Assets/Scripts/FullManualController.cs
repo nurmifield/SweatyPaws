@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BombManualManager : MonoBehaviour
 {
@@ -8,9 +7,6 @@ public class BombManualManager : MonoBehaviour
     public GameObject[] pages;          // Array of page panels
     public GameObject TOCPanel;         // Table of Contents panel
     public GameObject MapPanel;         // Map panel
-
-    // Dropdown for section selection
-    public Dropdown sectionSelection;   // Dropdown for selecting sections
 
     private int currentPageIndex = 0;   // Tracks the current page
 
@@ -72,13 +68,6 @@ public class BombManualManager : MonoBehaviour
         {
             ShowPage(currentPageIndex - 1);
         }
-    }
-
-    // Jump to a specific section from the dropdown
-    public void JumpToSection()
-    {
-        int selectedIndex = sectionSelection.value;
-        ShowPage(selectedIndex);
     }
 
     // Hide all panels
