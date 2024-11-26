@@ -96,14 +96,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void OpenSettingsMap()
-    {
-        menuPanel.SetActive(true);
-    }
-
     public void CloseOptionsMap()
     {
         optionsPanel.SetActive(false);
+    }
+
+    public void OpenSettingsMap()
+    {
+        menuPanel.SetActive(true);
     }
 
 }
