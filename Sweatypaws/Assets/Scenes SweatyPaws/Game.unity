@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &93069776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2219,7 +2219,7 @@ MonoBehaviour:
     faster.\n\n<b>Points:</b> Careful, wrong moves or tools lose you points.\r\n\n<b>Achievements:</b>
     Earn these by tackling challenges! Check them in the main menu.\r\n\n<b>Tools
     Row:</b> You can find tools at the bottom? <b>Click</b></u> to select the tool
-    and it'll light up when ready!\r\n\n<b>Manual:</b> Top left. It's your bomb-defusing
+    and it'll light up when ready!\r\n\n<b>Manual:</b> Bottom left. It's your bomb-defusing
     guide. Don't skip it!\r\nFrom map you can access the full manual. \n\n<b>Menu:</b>
     Top right. Use it to pause and take a breather if you need.\r\n\r\n<b>Got it?
     Then let's get defusing!</b>"
@@ -2467,8 +2467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1.906, y: 288.6994}
-  m_SizeDelta: {x: 911, y: 315.0197}
+  m_AnchoredPosition: {x: 1.906, y: 319.53534}
+  m_SizeDelta: {x: 911, y: 284.1838}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &523263907
 MonoBehaviour:
@@ -2542,7 +2542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -360, y: -1285.3}
+  m_AnchoredPosition: {x: -360, y: -1310.6}
   m_SizeDelta: {x: 165, y: 165}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &550727041
@@ -4092,7 +4092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: 396.54}
+  m_AnchoredPosition: {x: 97, y: 413}
   m_SizeDelta: {x: 690, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692078527
@@ -4972,7 +4972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: -117.87}
+  m_AnchoredPosition: {x: 97, y: -117.869995}
   m_SizeDelta: {x: 690, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901995074
@@ -5033,7 +5033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &936281885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5810,7 +5810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -98, y: -26}
+  m_AnchoredPosition: {x: -98, y: 14}
   m_SizeDelta: {x: 690, y: 165}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1001247079
@@ -6376,7 +6376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1140247603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6740,7 +6740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: -629.99}
+  m_AnchoredPosition: {x: 97, y: -655.3}
   m_SizeDelta: {x: 690, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231146858
@@ -7704,7 +7704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -360, y: -26.06}
+  m_AnchoredPosition: {x: -360, y: 14}
   m_SizeDelta: {x: 165, y: 165}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1347011721
@@ -10076,7 +10076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1823725314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11581,7 +11581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -360, y: -258.76}
+  m_AnchoredPosition: {x: -360, y: -242.29997}
   m_SizeDelta: {x: 165, y: 165}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2131024825
