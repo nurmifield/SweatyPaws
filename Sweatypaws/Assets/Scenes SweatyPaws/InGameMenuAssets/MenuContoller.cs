@@ -3,13 +3,15 @@ using UnityEngine.UI;  // For handling UI components
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEditor.Timeline.Actions;
+using UnityEditor;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject ToolButtons;
     public GameObject ManualButton;
     public GameObject optionsPanel;  // Reference to the Options Panel
-    public GameObject menuPanel;     // Reference to the Main Menu Panel
+    public GameObject menuPanel;
+    public GameObject MainMenuButton;     // Reference to the Main Menu Panel
     public Text soundButtonText;     // Reference to the Text component of the sound button
     private bool isSoundOn = true;
     private ToolSelector toolSelector;   // Variable to track the sound state
@@ -46,8 +48,17 @@ public class MenuController : MonoBehaviour
     // Open the options menu
     public void OpenOptions()
     {
-        optionsPanel.SetActive(true);
         menuPanel.SetActive(false);
+        optionsPanel.SetActive(true);
+
+        if (optionsPanel.activeSelf)
+        {
+            MainMenuButton.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            MainMenuButton.GetComponent<Button>().interactable = true;
+        }
     }
     public void OpenSettings()
     {
@@ -65,7 +76,8 @@ public class MenuController : MonoBehaviour
     public void BackToMenu()
     {
         optionsPanel.SetActive(false); // Hide the options panel
-        menuPanel.SetActive(true);     // Show the main menu
+        menuPanel.SetActive(true);
+        MainMenuButton.GetComponent<Button>().interactable = true;
     }
 
     // Toggle sound (this toggles sound on/off and updates the button text)
@@ -96,14 +108,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void CloseOptionsMap()
-    {
-        optionsPanel.SetActive(false);
-    }
-
     public void OpenSettingsMap()
     {
         menuPanel.SetActive(true);
+    }
+
+    public void BackToMap()
+    {
+        menuPanel.SetActive(false);
     }
 
 }

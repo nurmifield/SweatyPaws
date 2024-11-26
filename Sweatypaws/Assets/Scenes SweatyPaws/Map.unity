@@ -716,7 +716,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1522902917}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: BackToMenu
+        m_MethodName: BackToMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1936,7 +1936,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 727181032}
+    m_TransformParent: {fileID: 1691002175}
     m_Modifications:
     - target: {fileID: 160011438632184215, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_Name
@@ -1964,7 +1964,7 @@ PrefabInstance:
       objectReference: {fileID: 1522902917}
     - target: {fileID: 2354774129534453621, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseOptionsMap
+      value: BackToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2886932825363333489, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_IsActive
@@ -2004,15 +2004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5625
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5625
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5625
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2044,11 +2044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.8865356
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -269.92896
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3321786125340382931, guid: 9ae2c98db51ad9749ac42e6d61d33ac7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8659,9 +8659,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6940383700841545871, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
       insertIndex: 0
       addedObject: {fileID: 79984717}
-    - targetCorrespondingSourceObject: {fileID: 6940383700841545871, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 195691930}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
 --- !u!1 &727181030 stripped
@@ -17564,6 +17561,7 @@ MonoBehaviour:
   ManualButton: {fileID: 0}
   optionsPanel: {fileID: 195691933}
   menuPanel: {fileID: 727181030}
+  MainMenuButton: {fileID: 1434787963}
   soundButtonText: {fileID: 195691932}
 --- !u!114 &1522902918
 MonoBehaviour:
@@ -19022,6 +19020,7 @@ RectTransform:
   - {fileID: 1130633473}
   - {fileID: 47887354}
   - {fileID: 727181031}
+  - {fileID: 195691930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
