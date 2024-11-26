@@ -2,25 +2,41 @@ using UnityEngine;
 
 public class BombManualManager : MonoBehaviour
 {
-    // Panels for book cover, pages, TOC, and map
-    public GameObject BookCoverPanel;    // Book cover panel
-    public GameObject[] pages;          // Array of page panels
-    public GameObject TOCPanel;         // Table of Contents panel
+    // Panels for full manual, pages, TOC, and map
+    public GameObject FullManualPanel;   // Parent panel for the full bomb manual
+    public GameObject BookCoverPanel;    // Book cover panel (child of FullManualPanel)
+    public GameObject[] pages;          // Array of page panels (children of FullManualPanel)
+    public GameObject TOCPanel;         // Table of Contents panel (child of FullManualPanel)
     public GameObject MapPanel;         // Map panel
 
     private int currentPageIndex = 0;   // Tracks the current page
 
-    void Start()
+    // Show the full manual starting at the book cover
+    public void OpenFullManual()
     {
-        // Show the book cover at the start
-        //ShowBookCover();
+        Debug.Log("Opening Full Manual...");
+        HideAllPanels();                  // Hide all other panels
+        FullManualPanel.SetActive(true);  // Activate the full manual panel
+        ShowBookCover();                  // Start with the book cover
+        Debug.Log("FullManualPanel activated with BookCoverPanel!");
     }
 
-    // Show the book cover
+    // Close the manual and return to the map
+    public void CloseManual()
+    {
+        Debug.Log("Closing Full Manual...");
+        HideAllPanels();               // Hide all panels
+        MapPanel.SetActive(true);      // Show the map panel
+        Debug.Log("MapPanel activated!");
+    }
+
+    // Show the book cover panel
     public void ShowBookCover()
     {
         HideAllPanels();
-        BookCoverPanel.SetActive(true);
+        FullManualPanel.SetActive(true); // Ensure the parent panel is active
+        BookCoverPanel.SetActive(true); // Activate the book cover panel
+        Debug.Log("BookCoverPanel activated!");
     }
 
     // Show the specified page
@@ -29,8 +45,10 @@ public class BombManualManager : MonoBehaviour
         HideAllPanels();
         if (pageIndex >= 0 && pageIndex < pages.Length)
         {
+            FullManualPanel.SetActive(true); // Ensure the parent panel is active
             pages[pageIndex].SetActive(true);
             currentPageIndex = pageIndex;
+            Debug.Log($"Page {pageIndex} activated!");
         }
         else
         {
@@ -42,14 +60,17 @@ public class BombManualManager : MonoBehaviour
     public void ShowTOC()
     {
         HideAllPanels();
+        FullManualPanel.SetActive(true); // Ensure the parent panel is active
         TOCPanel.SetActive(true);
+        Debug.Log("TOCPanel activated!");
     }
 
     // Show the map panel
     public void ShowMap()
     {
         HideAllPanels();
-        MapPanel.SetActive(true);
+        MapPanel.SetActive(true); // Activate the map panel
+        Debug.Log("MapPanel activated!");
     }
 
     // Go to the next page
@@ -73,12 +94,15 @@ public class BombManualManager : MonoBehaviour
     // Hide all panels
     private void HideAllPanels()
     {
-        BookCoverPanel.SetActive(false);
+        Debug.Log("Hiding all panels...");
+        FullManualPanel.SetActive(false);
         foreach (GameObject page in pages)
         {
             page.SetActive(false);
         }
+        BookCoverPanel.SetActive(false);
         TOCPanel.SetActive(false);
         MapPanel.SetActive(false);
+        Debug.Log("All panels hidden.");
     }
 }
