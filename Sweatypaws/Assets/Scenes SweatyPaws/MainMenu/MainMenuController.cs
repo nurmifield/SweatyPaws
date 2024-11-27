@@ -96,6 +96,7 @@ public class MainMenuController : MonoBehaviour
         collectionPanel.SetActive(false);
         pokaaliInfoCanvas.SetActive(true);
         pokaaliPage1.SetActive(true);
+        pokaaliPage2.SetActive(false);
     }
 
     public void NextPageFred()

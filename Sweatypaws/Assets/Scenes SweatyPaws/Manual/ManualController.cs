@@ -99,9 +99,9 @@ public class ManualController : MonoBehaviour
         if (currentPage < pages.Length - 1)
         {
             currentPage++;
+            PlayAudio(pageTurnClip);
             Debug.Log("Next page: " + currentPage);
             UpdatePage();
-            PlayAudio(pageTurnClip);
         }
     }
 
@@ -111,9 +111,9 @@ public class ManualController : MonoBehaviour
         if (currentPage > 0)
         {
             currentPage--;
+            PlayAudio(pageTurnClip);
             Debug.Log("Previous page: " + currentPage);
             UpdatePage();
-            PlayAudio(pageTurnClip);
         }
     }
 
