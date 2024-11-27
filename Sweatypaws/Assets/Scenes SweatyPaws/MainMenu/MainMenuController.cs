@@ -11,9 +11,12 @@ public class MainMenuController : MonoBehaviour
     public GameObject confirmationPanel;
     public GameObject achievementsPanel;
     public GameObject fredInfoCanvas;
+    public GameObject pokaaliInfoCanvas;
     public GameObject controlsPanel;
     public GameObject fredPage1;
     public GameObject fredPage2;
+    public GameObject pokaaliPage1;
+    public GameObject pokaaliPage2;
      
     public Text soundButtonText;         // Reference to the Text component of the Sound Button
 
@@ -84,25 +87,51 @@ public class MainMenuController : MonoBehaviour
     {
         collectionPanel.SetActive(false);
         fredInfoCanvas.SetActive(true);
+        fredPage1.SetActive(true);
         fredPage2.SetActive(false);
     }
 
-    public void NextPage()
+    public void OpenPokaaliInfoPanel()
+    {
+        collectionPanel.SetActive(false);
+        pokaaliInfoCanvas.SetActive(true);
+        pokaaliPage1.SetActive(true);
+    }
+
+    public void NextPageFred()
     {
         fredPage1.SetActive(false);
         fredPage2.SetActive(true);
     }
 
-    public void PreviousPage()
+    public void NextPagePokaali()
+    {
+        pokaaliPage1.SetActive(false);
+        pokaaliPage2.SetActive(true);
+    }
+
+    public void PreviousPageFred()
     {
         fredPage2.SetActive(false);
         fredPage1.SetActive(true);
+    }
+
+    public void PreviousPagePokaali()
+    {
+        pokaaliPage2.SetActive(false);
+        pokaaliPage1.SetActive(true);
     }
 
     public void CloseFredPanel()
     {
         collectionPanel.SetActive(true);
         fredInfoCanvas.SetActive(false);
+    }
+
+    public void ClosePokaaliInfoPanel()
+    {
+        collectionPanel.SetActive(true);
+        pokaaliInfoCanvas.SetActive(false);
     }
 
     // Go back to the Main Menu from any other panel
