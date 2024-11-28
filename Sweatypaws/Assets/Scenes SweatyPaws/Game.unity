@@ -950,6 +950,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1772248924558034173, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
   m_PrefabInstance: {fileID: 159272204}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &159272206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8525438506799885116, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
+  m_PrefabInstance: {fileID: 159272204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &159272209 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4009632902493536027, guid: 3999c1481cd3b124fa9f48e015bb0c5b, type: 3}
@@ -2695,7 +2700,7 @@ MonoBehaviour:
   ManualButton: {fileID: 1154879611}
   optionsPanel: {fileID: 849684123}
   menuPanel: {fileID: 159272205}
-  MainMenuButton: {fileID: 0}
+  MainMenuButton: {fileID: 159272206}
   soundButtonText: {fileID: 1160191270}
 --- !u!114 &551773002
 MonoBehaviour:
