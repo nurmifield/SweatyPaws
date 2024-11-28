@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 //using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ManualController : MonoBehaviour
 {
@@ -24,9 +26,11 @@ public class ManualController : MonoBehaviour
     public float endTime;
     public ManualTimeUsed manualTimeUsed;
     public Timer timer;
+    private ToolSelector toolSelector;
 
     void Start()
     {
+        toolSelector = FindObjectOfType<ToolSelector>();
         // Ensure the game starts on the book cover screen
         audioSource = GetComponent<AudioSource>();
         Debug.Log("ManualController started. Ensure the book cover shows when opening the manual.");
@@ -44,6 +48,11 @@ public class ManualController : MonoBehaviour
         timer.UpdateTimerPosition(true);     // Hide manual button
         startTime = Time.time;
         Debug.Log(Time.time);
+
+        if (SceneManager.GetActiveScene().name == "Game")
+        {
+            GetComponent<Player>().EquipTool("none");
+        }
     }
 
     // Continue the game (hide the book cover)
@@ -130,6 +139,12 @@ public class ManualController : MonoBehaviour
     // Close the manual and go back to the game
     public void CloseManual()
     {
+        if (toolSelector != null && toolSelector.currentSelectedButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            toolSelector.currentSelectedButton = null;
+        }
+
         Debug.Log("Closing manual and resuming game.");
         PlayAudio(closeManualClip);
         manualPanel.SetActive(false);      // Hide the manual panel
@@ -142,5 +157,7 @@ public class ManualController : MonoBehaviour
         endTime = Time.time;
         manualTimeUsed.CalculateTime(startTime,endTime);
         Debug.Log(Time.time);
+
+        
     }
 }
