@@ -12,6 +12,8 @@ public class Level_1_script : MonoBehaviour
     public AudioClip pageTurnClip;
     private int currentPage = 0;
     private AudioSource audioSource;
+    public UnityEngine.UI.Image firstPageImage;
+    public UnityEngine.UI.Image secondPageImage;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -37,6 +39,10 @@ public class Level_1_script : MonoBehaviour
             GameObject buttonObject = EventSystem.current.currentSelectedGameObject;
             var player = PlayerManager.Instance;
             player.SetSelectedLevel(buttonObject.name);
+            Sprite newFirstPageSprite = Resources.Load<Sprite>(buttonObject.name + "_FirstPage");
+            Sprite newSecondPageSprite = Resources.Load<Sprite>(buttonObject.name + "_SecondPage");
+            firstPageImage.sprite=newFirstPageSprite;
+            secondPageImage.sprite=newSecondPageSprite;
         }
         else
         {
