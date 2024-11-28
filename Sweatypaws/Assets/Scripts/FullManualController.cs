@@ -36,6 +36,10 @@ public class BombManualManager : MonoBehaviour
         HideAllPanels();
         FullManualPanel.SetActive(true); // Ensure the parent panel is active
         BookCoverPanel.SetActive(true); // Activate the book cover panel
+        if (currentPageIndex>0)
+        {
+            currentPageIndex = 0;
+        }
         Debug.Log("BookCoverPanel activated!");
     }
 
@@ -62,6 +66,7 @@ public class BombManualManager : MonoBehaviour
         HideAllPanels();
         FullManualPanel.SetActive(true); // Ensure the parent panel is active
         TOCPanel.SetActive(true);
+        currentPageIndex = 0;
         Debug.Log("TOCPanel activated!");
     }
 
