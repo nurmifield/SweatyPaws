@@ -47,6 +47,8 @@ public class PlayerManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            Instance.SetExistingUser(true);
+
         }
     }
    
