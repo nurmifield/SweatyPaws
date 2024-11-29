@@ -8,16 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes SweatyPaws/Ronintestinurkkaus.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes SweatyPaws/InGameMenu2.unity
+    guid: c25b9ebe20771ce4584b7e9ba9f9b25a
+  - enabled: 1
+    path: Assets/Scenes SweatyPaws/Intro.unity
+    guid: a4ab8d607c3e6e1439bf7f01f78dc477
   - enabled: 1
     path: Assets/Scenes SweatyPaws/MainMenu.unity
     guid: c470f471e1925514b9872766989c4bed
   - enabled: 1
-    path: Assets/Scenes SweatyPaws/InGameMenu2.unity
-    guid: c25b9ebe20771ce4584b7e9ba9f9b25a
+    path: Assets/Scenes SweatyPaws/Map.unity
+    guid: 3a3ce0a3f606aae44b7812b80b878734
   - enabled: 1
     path: Assets/Scenes SweatyPaws/Game.unity
     guid: 271a366514a830148b4766648071fbd4
-  - enabled: 1
-    path: Assets/Scenes SweatyPaws/Map.unity
-    guid: 3a3ce0a3f606aae44b7812b80b878734
   m_configObjects: {}
