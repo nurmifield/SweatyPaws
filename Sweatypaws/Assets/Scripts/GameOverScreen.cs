@@ -25,7 +25,7 @@ public class GameOverScreen : MonoBehaviour
     public void GameOverScreenManage()
     {
         timer.Stoptimer(true);
-        manualController.PlayAudio(explosionClip);
+        //manualController.PlayAudio(explosionClip);
         guiObject.SetActive(false);
         gameOverObject.SetActive(true);
         analyticManager.GetComponent<AnalyticsMethods>().CheckLevelCompletion(false, manualTimeUsed.overAllTimeUsed);
