@@ -15,6 +15,8 @@ public class MouseClick : MonoBehaviour
     public Vector2 direction;
     public bool swiping;
     public bool tap;
+    public AudioSource audioSource;
+    public AudioClip [] clips;
 
     private void Start()
     {
@@ -95,6 +97,7 @@ public class MouseClick : MonoBehaviour
                 {
                     Debug.Log("Touched object: " + topObject.name);
                     // Perform interaction logic here
+                    PlaySound(GetComponent<Player>().tool);
                     GetComponent<GameActionManager>().CheckStagePart(topObject);
                 }
 
@@ -139,6 +142,7 @@ public class MouseClick : MonoBehaviour
                 {
                     Debug.Log("Touched object: " + topObject.name);
                     // Perform interaction logic here
+                    PlaySound(GetComponent<Player>().tool);
                     GetComponent<GameActionManager>().CheckStagePart(topObject);
                 }
             }
@@ -170,6 +174,28 @@ public class MouseClick : MonoBehaviour
                 
             }
         }*/
+    }
+    public void PlaySound(string toolName)
+    {
+        int audioindex=-1;
+        if (toolName == "pihdit"){
+            audioindex = 0;
+        }
+        else if (toolName == "Screwdriver"){
+            audioindex = 1;
+        }
+        else if (toolName == "Tweezer"){
+            audioindex = 2;
+        }
+        else if (toolName == "Liquid Nitrogen"){
+            audioindex = 3;
+        }
+        else if (toolName == "Magnet"){
+            audioindex = 4;
+        }
+        if (audioindex != -1){
+            audioSource.PlayOneShot(clips[audioindex]);
+        }
     }
     public bool CheckUiPanel()
     {
