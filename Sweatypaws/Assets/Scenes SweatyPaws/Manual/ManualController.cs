@@ -128,12 +128,38 @@ public class ManualController : MonoBehaviour
 
     // Update the page display
     private void UpdatePage()
-    {
+    { var player=PlayerManager.Instance;
         Debug.Log("Updating page: " + currentPage);
-        for (int i = 0; i < pages.Length; i++)
-        {
-            pages[i].SetActive(i == currentPage);  // Only the current page is active
+        if (currentPage == 0) {
+            pages[0].SetActive(true);
+            for (int i = 0; i < pages.Length;i++)
+            {
+                if (i > 0  )
+                {
+                    pages[i].SetActive(false);
+                }
+            }
         }
+        else if (currentPage==1)
+        {
+            pages[0].SetActive(false);
+            for (int i = 0; i< pages.Length; i++)
+            {
+                if (player.GetSelectedLevel() == pages[i].name)
+                {
+                    pages[i].SetActive(true);
+                }
+                else
+                {
+                    pages[i].SetActive(false);
+                }
+            }
+        }
+        else
+        {
+            pages[0].SetActive(false);
+        }
+      
     }
 
     // Close the manual and go back to the game
