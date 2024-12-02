@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 97eb9d0d91ee32942a325355f4e2709f, type: 3}
-  WonkyWinClip: {fileID: 8300000, guid: 9e9911dd49707724aac4d855d4dc6f17, type: 3}
+  WonkyWinClip: {fileID: 8300000, guid: 08e9766bff9f11943a869af644dc5c6a, type: 3}
   manualController: {fileID: 551773002}
   gameOverObject: {fileID: 1598708019}
   youWinObject: {fileID: 607082879}
@@ -3314,7 +3314,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9e9911dd49707724aac4d855d4dc6f17, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 08e9766bff9f11943a869af644dc5c6a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
