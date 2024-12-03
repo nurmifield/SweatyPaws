@@ -2406,8 +2406,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00003695488, y: 231.67}
-  m_SizeDelta: {x: 758.9379, y: 1064.0518}
+  m_AnchoredPosition: {x: 0, y: 231}
+  m_SizeDelta: {x: 767.5793, y: 1077.7998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488650190
 MonoBehaviour:
@@ -2430,13 +2430,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>Timer:</b> Counts down the time left! Mess up, and it\u2019ll tick
-    faster.\n\n<b>Points:</b> Careful, wrong moves or tools lose you points.\r\n\n<b>Achievements:</b>
+    faster.\n\n<b>Points:</b> Careful, wrong moves or tools lose you points.\r\n\n<b>Collectables:</b>
     Earn these by tackling challenges! Check them in the main menu.\r\n\n<b>Tools
     Row:</b> You can find tools at the bottom? <b>Click</b></u> to select the tool
     and it'll light up when ready!\r\n\n<b>Manual:</b> Bottom left. It's your bomb-defusing
-    guide. Don't skip it!\r\nFrom map you can access the full manual. \n\n<b>Menu:</b>
-    Top right. Use it to pause and take a breather if you need.\r\n\r\n<b>Got it?
-    Then let's get defusing!</b>"
+    guide. Don't skip it, it's your most important tool!\r\nFrom map you can access
+    the full manual. \n\n<b>Menu:</b> Top right. Use it to pause and take a breather
+    if you need.\r\n\r\n<b>Got it? Then let's get defusing!</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
@@ -4339,7 +4339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &609485526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4767,7 +4767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &744539248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11475,6 +11475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 0}
   jsonBombLogicDataFile: {fileID: 4900000, guid: 37f98049f8cfe76498ba23280127fcaf, type: 3}
+  jsonCollectiblesDataFile: {fileID: 0}
   dialogueList:
     dialogueName: 
     dialogues: []
@@ -11487,6 +11488,8 @@ MonoBehaviour:
       win_condition: 0
       bomb_name: 
       stages: []
+  collectionsData:
+    collectibles: []
 --- !u!4 &1760911954
 Transform:
   m_ObjectHideFlags: 0
@@ -11598,7 +11601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1823725314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12496,7 +12499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2024845467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12514,8 +12517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9060364, y: -53.74469}
-  m_SizeDelta: {x: 911, y: 1667.5896}
+  m_AnchoredPosition: {x: 1.906, y: 0.000022888}
+  m_SizeDelta: {x: 930.3717, y: 1738.6189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024845468
 MonoBehaviour:
