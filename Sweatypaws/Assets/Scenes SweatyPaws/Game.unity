@@ -4435,8 +4435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.807, y: -109.6226}
-  m_SizeDelta: {x: 911, y: 1334.9546}
+  m_AnchoredPosition: {x: 3, y: -147}
+  m_SizeDelta: {x: 911, y: 1434.7493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643396679
 MonoBehaviour:
@@ -4458,7 +4458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af7dff5d06f24b34099a9eeb97b95fa2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf225f160a3ac5240bd10af56f0cf8ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6659,7 +6659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.45, y: 176.3539}
+  m_AnchoredPosition: {x: -0.000015259, y: 230}
   m_SizeDelta: {x: 800.6913, y: 854.1077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108715156
@@ -6682,14 +6682,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hey there! I'm Mr. Snuggles, your guide through this explosive tutorial.
-    Don\u2019t worry, I\u2019ll help you defuse the situation... no pressure!\n\nYour
-    goal is to defuse the bomb before it explodes! You have several tools at your
-    disposal, each with its own unique function. I will later guide you on how each
-    tool works.\n\nA bomb-defusal manual is also available. The full version can
-    be accessed through the map for additional information, while the in-game manual
-    gives level-specific hints. Remember to check the manual\u2014it could be crucial! 
-    \n\n\n\n\n"
+  m_text: "Hey there! I know things might feel a little fuzzy for you right now,
+    but don\u2019t worry\u2014I\u2019m here to help! Let\u2019s go over the basics
+    of bomb defusal, step by step. Stay calm, and remember: no pressure, we\u2019ve
+    got this together!\"\n\nYour mission is to defuse the bomb before it explodes!
+    You have several tools at your disposal, each with its own unique function. I
+    will later guide you on how each tool works.\n\nA bomb-defusal manual is also
+    available. The full version can be accessed through the map for additional information,
+    while the in-game manual gives level-specific hints. Remember to check the manual\u2014it
+    could be crucial!  \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
