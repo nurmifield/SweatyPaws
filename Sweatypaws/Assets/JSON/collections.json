@@ -1,21 +1,29 @@
 {
-    "Level_1_collectible":
-    {
-        "collectibles_image":"level_1_collectible",
-        "collectibles_text":
-        [
-            "It’s an LP by Frederik, titled “I’m Dracula”. 12 tracks of old timey, smutty Schlanger with disco effects and way too much synthesizer. Oh, the 80’s. Back in the day, dude was a menace to women, and of course everybody back then thought it was charming or something. Most of the songs are about hitting up girls or “being manly”. Title track’s a banger though.",
-            "Huh, guess Mom’s not the only fan of this guy. This isn’t one of her favorites, but it sure got plenty of spins. This seems new, maybe a reprint? Is the guy still around? Why did I even take this? It’s cringe and now my hands feel dirty."
-        ]
-    },
-    "Level_2_collectible":
-    {
-        "collectibles_image":"level_2_collectible",
-        "collectibles_text":
-        [
-           "A Pawston Participants Pee-Wee Participation Trophy, 90’s series. If you get in the team, you’ll get one. Guaranteed. Some parents buy extras, just to fill up the shelf. It’s cheap plastic for sure, but at least it was designed in pawston by Reggie C. Flippers, a local sculptor. Nice and shiny.",
-           "Wait, this guy was in the same Pee-wee team as me and Hackles? Why can’t I remember him? He would’ve certainly stuck out…I mean, the dude’s a greedy, mouth breathing Shitheel, but it’s kinda cute he kept the trophy. I guess it’s the gold finish."
-        ]
-    }
-
+    "collections": 
+    [
+        {
+            "level_name":"Level_1",
+            "level_collectible": 
+            {
+                "collectibles_image": "level_1_collectible",
+                "collectibles_text":
+                [
+                    "It’s an LP by Frederik, titled “I’m Dracula”. 12 tracks of old timey, smutty Schlanger with disco effects and way too much synthesizer. Oh, the 80’s. Back in the day, dude was a menace to women, and of course everybody back then thought it was charming or something. Most of the songs are about hitting up girls or “being manly”. Title track’s a banger though.",
+                    "Huh, guess Mom’s not the only fan of this guy. This isn’t one of her favorites, but it sure got plenty of spins. This seems new, maybe a reprint? Is the guy still around? Why did I even take this? It’s cringe and now my hands feel dirty."
+                ]
+            }
+        },
+        {
+            "level_name":"Level_2",
+            "level_collectible": 
+            {
+                "collectibles_image": "level_2_collectible",
+                "collectibles_text": 
+                [
+                    "A Pawston Participants Pee-Wee Participation Trophy, 90’s series. If you get in the team, you’ll get one. Guaranteed. Some parents buy extras, just to fill up the shelf. It’s cheap plastic for sure, but at least it was designed in pawston by Reggie C. Flippers, a local sculptor. Nice and shiny.",
+                    "Wait, this guy was in the same Pee-wee team as me and Hackles? Why can’t I remember him? He would’ve certainly stuck out…I mean, the dude’s a greedy, mouth breathing Shitheel, but it’s kinda cute he kept the trophy. I guess it’s the gold finish."
+                ]
+            }
+        }
+    ]
 }
