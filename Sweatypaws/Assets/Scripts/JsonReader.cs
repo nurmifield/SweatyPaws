@@ -7,8 +7,10 @@ public class JsonReader : MonoBehaviour
 {
     public TextAsset jsonFile;
     public TextAsset jsonBombLogicDataFile;
+    public TextAsset jsonCollectiblesDataFile;
     public DialogueList dialogueList;
     public BombLogicData bombLogicData;
+    public CollectionsData collectionsData;
 
 
     [System.Serializable]
@@ -39,6 +41,9 @@ public class JsonReader : MonoBehaviour
         {
             UpdateNewBombLogicDataLevel();
             Debug.Log("Scene is Game");
+        }else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            UpdateCollectionsData();
         }
 
 
@@ -77,6 +82,14 @@ public class JsonReader : MonoBehaviour
         Debug.Log(selectLevel);
         bombLogicData = JsonUtility.FromJson<BombLogicData>(selectLevel);
         bombLogicData.level_name = player.GetSelectedLevel();
+
+    }
+
+    public void UpdateCollectionsData()
+    {
+        string collections=ExtractCollectibles(jsonCollectiblesDataFile.text, "collections");
+        Debug.Log(collections);
+        collectionsData = JsonUtility.FromJson<CollectionsData>(collections);
 
     }
     string ExtractDialogueSet(string jsonText, string dialogueSetName)
@@ -129,6 +142,59 @@ public class JsonReader : MonoBehaviour
 
         // Log an error and return null if the level set was not found
         Debug.LogError("Level set not found: " + levelSetName);
+        return null;
+    }
+    /*
+    string ExtractCollectibles(string jsonText, string CollectiblesSetName)
+    {
+        int startIndex = jsonText.IndexOf($"\"{CollectiblesSetName}\"");
+        if (startIndex != -1)
+        {
+            int startArray = jsonText.IndexOf("[", startIndex);
+            int endArray = jsonText.IndexOf("]", startArray) + 1;
+            string dialogueJson = jsonText.Substring(startArray, endArray - startArray);
+            return "{\"collectibles\":" + dialogueJson + "}";
+        }
+        Debug.LogError("Dialogue set not found: " + CollectiblesSetName);
+        return null;
+    }
+    */
+    string ExtractCollectibles(string jsonText, string CollectiblesSetName)
+    {
+        // Find the index of the levelSetName
+        int startIndex = jsonText.IndexOf($"\"{CollectiblesSetName}\"");
+        if (startIndex != -1)
+        {
+            // Find the starting index of the object
+            int startArray = jsonText.IndexOf("[", startIndex);
+            if (startArray != -1)
+            {
+                // Use a counter to properly find the matching closing brace for nested objects
+                int braceCount = 1; // We found one '{' so we start counting from 1
+                int endArray = startArray + 1;
+
+                while (endArray < jsonText.Length && braceCount > 0)
+                {
+                    // Look for opening and closing braces
+                    if (jsonText[endArray] == '[')
+                    {
+                        braceCount++;
+                    }
+                    else if (jsonText[endArray] == ']')
+                    {
+                        braceCount--;
+                    }
+                    endArray++;
+                }
+
+                // Extract the level JSON
+                string levelJson = jsonText.Substring(startArray, endArray - startArray);
+                return "{\"collectibles\":" + levelJson + "}";
+            }
+        }
+
+        // Log an error and return null if the level set was not found
+        Debug.LogError("Level set not found: " + CollectiblesSetName);
         return null;
     }
 }
