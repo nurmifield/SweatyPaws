@@ -8,15 +8,16 @@ public class HowToPlayManager : MonoBehaviour
     public GameObject toolsPanel;
     public GameObject gameFlowPanel;
 
-  
-    public GameObject[] speechBubbles; 
+    public GameObject[] speechBubbles; // For toolsPanel
 
-    
-    public GameObject firstGameFlowBubble;  
-    public GameObject finalGameFlowBubble;  
+    public GameObject mrSnugglesImage;  // Mr. Snuggles' image
+    public GameObject doctorImage;      // Doctor's image
+    public GameObject speechBubble1;    // First speech bubble
+    public GameObject speechBubble2;    // Second speech bubble
+    public GameObject speechBubble3;    // Third speech bubble
 
-    public GameObject introBubble;
-    public Button nextPageButton;  
+    public GameObject introBubble; // Introduction bubble
+    public Button nextPageButton;
     public Button nextButton;      // Button to progress through bubbles in toolsPanel
     public Button gameFlowNextButton;  // Button to progress through bubbles in gameFlowPanel
     public Button skipButton;
@@ -26,21 +27,27 @@ public class HowToPlayManager : MonoBehaviour
 
     void Start()
     {
-
-         var player = PlayerManager.Instance;
-         if (!player.playerData.tutorial_done){
+        var player = PlayerManager.Instance;
+        if (!player.playerData.tutorial_done)
+        {
             howToPlayPanel.SetActive(true);
-         }else
-          {
+        }
+        else
+        {
             return;
         }
+
         // Ensure all speech bubbles and text are hidden at start
         foreach (GameObject bubble in speechBubbles)
         {
             bubble.SetActive(false);
         }
-        if (firstGameFlowBubble != null) firstGameFlowBubble.SetActive(false);
-        if (finalGameFlowBubble != null) finalGameFlowBubble.SetActive(false);
+
+        mrSnugglesImage.SetActive(false);
+        doctorImage.SetActive(false);
+        speechBubble1.SetActive(false);
+        speechBubble2.SetActive(false);
+        speechBubble3.SetActive(false);
 
         // Show only the Introduction panel at the start
         if (introductionPanel != null) introductionPanel.SetActive(true);
@@ -52,15 +59,17 @@ public class HowToPlayManager : MonoBehaviour
         if (nextButton != null) nextButton.onClick.AddListener(ShowNextBubbleInToolsPanel);
         if (gameFlowNextButton != null) gameFlowNextButton.onClick.AddListener(ShowNextBubbleInGameFlowPanel);
         if (skipButton != null) skipButton.onClick.AddListener(StartGame); // Start game if skipped
-        if (startOverButton != null) StartOver();
+        if (startOverButton != null) startOverButton.onClick.AddListener(RestartTutorial);
     }
 
     // Show the next speech bubble in toolsPanel
     void ShowNextBubbleInToolsPanel()
     {
-        if(introBubble.activeSelf){
+        if (introBubble.activeSelf)
+        {
             introBubble.SetActive(false);
         }
+
         // Show the next bubble in the speechBubbles array for toolsPanel
         if (currentBubbleIndex < speechBubbles.Length)
         {
@@ -76,26 +85,48 @@ public class HowToPlayManager : MonoBehaviour
             // Reset currentBubbleIndex for gameFlowPanel usage
             currentBubbleIndex = 0;
 
-            // Show the first gameFlow bubble
-            if (firstGameFlowBubble != null)
-            {
-                firstGameFlowBubble.SetActive(true);
-            }
+            // Show Mr. Snuggles with SpeechBubble1
+            mrSnugglesImage.SetActive(true);
+            speechBubble1.SetActive(true);
+
+            // Ensure the gameFlowNextButton is visible
+            gameFlowNextButton.gameObject.SetActive(true);
         }
     }
 
     // Show the next speech bubble in gameFlowPanel
     void ShowNextBubbleInGameFlowPanel()
     {
-        if (currentBubbleIndex == 0 && firstGameFlowBubble != null)
+        // Step 1: Show Mr. Snuggles with SpeechBubble2
+        if (currentBubbleIndex == 0)
         {
-            firstGameFlowBubble.SetActive(false);  // Hide the first gameFlow bubble
-            finalGameFlowBubble.SetActive(true);   // Show the final gameFlow bubble
+            speechBubble1.SetActive(false);
+            speechBubble2.SetActive(true);
+
+            // Keep Mr. Snuggles visible, hide others
+            mrSnugglesImage.SetActive(true);
+            doctorImage.SetActive(false);
+            speechBubble3.SetActive(false);
+
             currentBubbleIndex++;
         }
-        else if (currentBubbleIndex == 1) // After final bubble
+        // Step 2: Show Doctor with SpeechBubble3
+        else if (currentBubbleIndex == 1)
         {
-            StartGame();  // Start the game
+            speechBubble2.SetActive(false);
+
+            doctorImage.SetActive(true);
+            speechBubble3.SetActive(true);
+
+            // Hide Mr. Snuggles
+            mrSnugglesImage.SetActive(false);
+
+            currentBubbleIndex++;
+        }
+        // Step 3: Transition to the game/map
+        else if (currentBubbleIndex == 2)
+        {
+            StartGame();
         }
     }
 
@@ -112,20 +143,18 @@ public class HowToPlayManager : MonoBehaviour
         }
 
         currentBubbleIndex = 0;  // Reset index for the next panel's sequence
+
+        // Ensure the "nextButton" is visible
+        nextButton.gameObject.SetActive(true);
     }
 
     // Skip button method to start the game immediately
     void StartGame()
     {
-         var player = PlayerManager.Instance;
+        var player = PlayerManager.Instance;
         Debug.Log("Game Started!");
         howToPlayPanel.SetActive(false);
         player.TutorialDone();
-    }
-
-    public void StartOver()
-    {
-        RestartTutorial();
     }
 
     public void RestartTutorial()
@@ -138,10 +167,18 @@ public class HowToPlayManager : MonoBehaviour
         {
             bubble.SetActive(false);
         }
-        if (firstGameFlowBubble != null) firstGameFlowBubble.SetActive(false);
-        if (finalGameFlowBubble != null) finalGameFlowBubble.SetActive(false);
+
+        mrSnugglesImage.SetActive(false);
+        doctorImage.SetActive(false);
+        speechBubble1.SetActive(false);
+        speechBubble2.SetActive(false);
+        speechBubble3.SetActive(false);
 
         currentBubbleIndex = 0;
         introductionPanel.SetActive(true);
+
+        // Ensure the buttons are reset and visible
+        nextButton.gameObject.SetActive(true);
+        gameFlowNextButton.gameObject.SetActive(true);
     }
 }
