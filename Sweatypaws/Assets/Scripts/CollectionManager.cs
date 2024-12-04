@@ -1,12 +1,15 @@
 using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CollectionManager : MonoBehaviour
 {
     public JsonReader jsonReader;
     public Transform buttonContainer;
+    public GameObject collectionPanel;
     public List<GameObject> instatiatedPrefab;
     public GameObject prefab;
     public int indexNumber=0;
@@ -14,6 +17,8 @@ public class CollectionManager : MonoBehaviour
     public int increaseNumber = 4;
     public GameObject nextButton;
     public GameObject previousButton;
+    public CollectionPageManager collectionPageManager;
+    public CollectionPageData collectionPageData;
 
     public void IncreaseIndexAndCollections()
     {
@@ -75,6 +80,7 @@ public class CollectionManager : MonoBehaviour
         
         var player = PlayerManager.Instance;
         instatiatedPrefab[index].name = name;
+        UnityEngine.UI.Button button = instatiatedPrefab[index].GetComponent<UnityEngine.UI.Button>();
         Sprite newCharacterSprite = Resources.Load<Sprite>(image);
         UnityEngine.UI.Image buttonImage = instatiatedPrefab[index].GetComponent<UnityEngine.UI.Image>();
         buttonImage.sprite = newCharacterSprite;
@@ -84,7 +90,8 @@ public class CollectionManager : MonoBehaviour
             {
                 if (player.playerData.level_progress[i].complete)
                 {
-                    buttonImage.color = Color.white; 
+                    buttonImage.color = Color.white;
+                    button.onClick.AddListener(SelectCollection);
                     break;
                 }
                 else
@@ -166,5 +173,26 @@ public class CollectionManager : MonoBehaviour
             }
         
 
+    }
+
+    public void SelectCollection()
+    {
+        collectionPanel.SetActive(false);
+        collectionPageManager.collectionCanvas.SetActive(true);
+        GameObject buttonObject = EventSystem.current.currentSelectedGameObject;
+        string imageText="";
+        string[] collectionArray= new string[2];
+        for (int i = 0; i <  jsonReader.collectionsData.collectibles.Length;i++)
+        {
+            if (jsonReader.collectionsData.collectibles[i].level_name == buttonObject.name)
+            {
+                collectionArray[0] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[0];
+                collectionArray[1] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[1];
+                imageText = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_image;
+            }
+        }
+        
+        collectionPageManager.collectionPageData= new CollectionPageData(imageText, collectionArray);
+        collectionPageManager.UpdateCollectionPage();
     }
 }
