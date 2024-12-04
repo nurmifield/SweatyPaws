@@ -10,17 +10,8 @@ public class MainMenuController : MonoBehaviour
     public GameObject creditsPanel;      // Reference to the Credits Panel
     public GameObject confirmationPanel;
     public GameObject achievementsPanel;
-    public GameObject fredInfoCanvas;
-    public GameObject pokaaliInfoCanvas;
     public GameObject controlsPanel;
-    public GameObject fredPage1;
-    public GameObject fredPage2;
-    public GameObject pokaaliPage1;
-    public GameObject pokaaliPage2;
-     
     public Text soundButtonText;         // Reference to the Text component of the Sound Button
-
-    private bool isSoundOn = true;       // Variable to track the sound state
 
     void Start()
     {
@@ -29,12 +20,12 @@ public class MainMenuController : MonoBehaviour
         settingsPanel.SetActive(false);
         collectionPanel.SetActive(false);
         creditsPanel.SetActive(false);
-        
+
         var player = PlayerManager.Instance;
         player.GetExistingUser();
 
         // Initialize the sound button text based on the sound state
-        UpdateSoundButtonText();
+        soundButtonText.text = PlayerManager.Instance.IsSoundOn ? "X" : "";
     }
 
     // Load the game scene to start the game
@@ -86,53 +77,20 @@ public class MainMenuController : MonoBehaviour
     public void OpenFredPanel()
     {
         collectionPanel.SetActive(false);
-        fredInfoCanvas.SetActive(true);
-        fredPage1.SetActive(true);
-        fredPage2.SetActive(false);
     }
 
     public void OpenPokaaliInfoPanel()
     {
         collectionPanel.SetActive(false);
-        pokaaliInfoCanvas.SetActive(true);
-        pokaaliPage1.SetActive(true);
-        pokaaliPage2.SetActive(false);
-    }
-
-    public void NextPageFred()
-    {
-        fredPage1.SetActive(false);
-        fredPage2.SetActive(true);
-    }
-
-    public void NextPagePokaali()
-    {
-        pokaaliPage1.SetActive(false);
-        pokaaliPage2.SetActive(true);
-    }
-
-    public void PreviousPageFred()
-    {
-        fredPage2.SetActive(false);
-        fredPage1.SetActive(true);
-    }
-
-    public void PreviousPagePokaali()
-    {
-        pokaaliPage2.SetActive(false);
-        pokaaliPage1.SetActive(true);
     }
 
     public void CloseFredPanel()
     {
         collectionPanel.SetActive(true);
-        fredInfoCanvas.SetActive(false);
     }
-
     public void ClosePokaaliInfoPanel()
     {
         collectionPanel.SetActive(true);
-        pokaaliInfoCanvas.SetActive(false);
     }
 
     // Go back to the Main Menu from any other panel
@@ -148,18 +106,13 @@ public class MainMenuController : MonoBehaviour
     // Toggle sound on or off and update the button text
     public void ToggleSound()
     {
-        isSoundOn = !isSoundOn;
-        AudioListener.volume = isSoundOn ? 1 : 0;  // Set volume based on the sound state
-        soundButtonText.text = isSoundOn ? "X" : "";  // Update the button text
+        PlayerManager.Instance.ToggleSound();
+        soundButtonText.text = PlayerManager.Instance.IsSoundOn ? "X" : "";
     }
 
     // Update the text on the Sound Toggle Button
-    private void UpdateSoundButtonText()
-    {
-        soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
-    }
 
-// Method to exit the game
+    // Method to exit the game
     public void ExitGame()
     {
         Debug.Log("Game is exiting...");  // This will appear in the console for testing in the Unity Editor

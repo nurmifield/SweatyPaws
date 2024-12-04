@@ -8,6 +8,7 @@ public class PlayerData
 {
         public int version;
         public int level;
+        public bool isSoundOn = true;
         public bool tutorial_done;
         public int dialogue_level;
         public List<DialogueProgress> dialogue_progress;
