@@ -1169,6 +1169,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193313655}
   m_CullTransparentMesh: 1
+--- !u!1 &216725273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216725274}
+  - component: {fileID: 216725276}
+  - component: {fileID: 216725275}
+  m_Layer: 5
+  m_Name: introTxt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &216725274
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216725273}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393515370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 214}
+  m_SizeDelta: {x: 817.7716, y: 199.9612}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &216725275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216725273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0557e6aa02965d649a5ac7ba4b2abdca, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'In my experience You''ll get best results when you get a defusal done
+    perfectly.
+
+    Enough with this jibber-jabber, let''s mount up!'
+--- !u!222 &216725276
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216725273}
+  m_CullTransparentMesh: 1
 --- !u!1 &237857553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,6 +2132,82 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1273885932291883184, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
   m_PrefabInstance: {fileID: 1549029411}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &393515367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393515370}
+  - component: {fileID: 393515369}
+  - component: {fileID: 393515368}
+  m_Layer: 5
+  m_Name: GameflowBubble4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &393515368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393515367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 30e8b26facd92ae4db878b4acaa6248a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &393515369
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393515367}
+  m_CullTransparentMesh: 1
+--- !u!224 &393515370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393515367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 216725274}
+  m_Father: {fileID: 1823725314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 142.3}
+  m_SizeDelta: {x: 911, y: 722.5636}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &397398555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,6 +3326,7 @@ MonoBehaviour:
   speechBubble1: {fileID: 523263905}
   speechBubble2: {fileID: 2024845466}
   speechBubble3: {fileID: 1629577163}
+  speechBubble4: {fileID: 393515367}
   introBubble: {fileID: 1140247602}
   nextPageButton: {fileID: 885400390}
   nextButton: {fileID: 1951916609}
@@ -4767,7 +4926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &744539248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5495,7 +5654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &930492979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7783,8 +7942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7117643, y: 82.1926}
-  m_SizeDelta: {x: 816.2019, y: 303.1783}
+  m_AnchoredPosition: {x: 19, y: 177}
+  m_SizeDelta: {x: 805.1268, y: 777.5856}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247310847
 MonoBehaviour:
@@ -7806,8 +7965,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Not so quick Mr. Snuggles! I have one more important thing to say about
-    amnesia. teksti\xE4 colletctableista ja loppuun muistutus manuaalista. "
+  m_text: 'Excuse me! Mr. Snuggles, you can''t just go, it''s not seemly and violates
+    my patient''s policy!
+
+
+
+    Now, Mr. Pickles, your insurance requires that you''ll
+    be briefed on your condition before you can go.
+
+    You have a short term-amnesia.
+    Your memory will return totally over time, but finding specific objects may
+
+    "jumpstart"
+    parts of your memory and quicken the process.
+
+
+
+    Well, there it is! Carry
+    on Mr. Snuggles.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
@@ -10522,7 +10697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33, y: 128}
+  m_AnchoredPosition: {x: 16, y: 130}
   m_SizeDelta: {x: 759.7834, y: 100.8697}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589681962
@@ -10862,7 +11037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1629577164
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10880,8 +11055,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9060364, y: -502.7899}
-  m_SizeDelta: {x: 911, y: 592.2878}
+  m_AnchoredPosition: {x: 0, y: -243.56}
+  m_SizeDelta: {x: 911, y: 1251.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629577165
 MonoBehaviour:
@@ -11602,7 +11777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1823725314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11619,6 +11794,7 @@ RectTransform:
   - {fileID: 1629577164}
   - {fileID: 2024845467}
   - {fileID: 523263906}
+  - {fileID: 393515370}
   - {fileID: 744539248}
   - {fileID: 2052240522}
   - {fileID: 1121571996}
@@ -12500,7 +12676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2024845467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12519,7 +12695,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.906, y: 0.000022888}
-  m_SizeDelta: {x: 930.3717, y: 1738.6189}
+  m_SizeDelta: {x: 911, y: 1738.6189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024845468
 MonoBehaviour:

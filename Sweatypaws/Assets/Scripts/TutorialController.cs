@@ -15,13 +15,14 @@ public class HowToPlayManager : MonoBehaviour
     public GameObject speechBubble1;    // First speech bubble
     public GameObject speechBubble2;    // Second speech bubble
     public GameObject speechBubble3;    // Third speech bubble
+    public GameObject speechBubble4;    // Fourth speech bubble (Mr. Snuggles)
 
     public GameObject introBubble; // Introduction bubble
     public Button nextPageButton;
     public Button nextButton;      // Button to progress through bubbles in toolsPanel
     public Button gameFlowNextButton;  // Button to progress through bubbles in gameFlowPanel
     public Button skipButton;
-    public Button startOverButton;      // Button to skip the tutorial
+    public Button startOverButton;      // Button to restart the tutorial
 
     private int currentBubbleIndex = 0;  // Track which bubble to show next
 
@@ -48,6 +49,7 @@ public class HowToPlayManager : MonoBehaviour
         speechBubble1.SetActive(false);
         speechBubble2.SetActive(false);
         speechBubble3.SetActive(false);
+        speechBubble4.SetActive(false);
 
         // Show only the Introduction panel at the start
         if (introductionPanel != null) introductionPanel.SetActive(true);
@@ -123,8 +125,18 @@ public class HowToPlayManager : MonoBehaviour
 
             currentBubbleIndex++;
         }
-        // Step 3: Transition to the game/map
+        // Step 3: Show Mr. Snuggles with SpeechBubble4
         else if (currentBubbleIndex == 2)
+        {
+            speechBubble3.SetActive(false);
+
+            mrSnugglesImage.SetActive(true);
+            speechBubble4.SetActive(true);
+
+            currentBubbleIndex++;
+        }
+        // Step 4: Transition to the game/map
+        else if (currentBubbleIndex == 3)
         {
             StartGame();
         }
@@ -173,6 +185,7 @@ public class HowToPlayManager : MonoBehaviour
         speechBubble1.SetActive(false);
         speechBubble2.SetActive(false);
         speechBubble3.SetActive(false);
+        speechBubble4.SetActive(false);
 
         currentBubbleIndex = 0;
         introductionPanel.SetActive(true);
