@@ -2132,6 +2132,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1273885932291883184, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
   m_PrefabInstance: {fileID: 1549029411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &385887533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385887528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1356b431d0370d44d98540c226b56a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393515367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,10 +2717,10 @@ RectTransform:
   - {fileID: 76333055}
   m_Father: {fileID: 1549029413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: -84.5}
-  m_SizeDelta: {x: 72, y: 169}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -106, y: 106}
+  m_SizeDelta: {x: 104, y: 190}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &516616906
 MonoBehaviour:
@@ -5018,8 +5030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -211}
-  m_SizeDelta: {x: 815, y: 1363.3479}
+  m_AnchoredPosition: {x: 0, y: -128.43}
+  m_SizeDelta: {x: 911, y: 665.3693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781568643
 MonoBehaviour:
@@ -5041,16 +5053,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " There are many layers in a bomb, think carefully about which tools you
-    use. By rushing, the risks increase, and time may run out unexpectedly. The choice
-    of tool is essential. \r\n\r\nLook at each layer and the possible consequences
-    that your actions cause. Inaccuracy can jeopardize the entire operation in an
-    instant. \r\n\r\n Explosives must be handled with care because they react easily
-    to external force. \r\n\r\nBefore you go forward, think about whether you have
-    done everything necessary before you start thinking about your next move. \r\n\r\nThe
-    spring is an important part. Notice it at the right moment and don't ignore it.
-    \r\n\r\nThe Bomb system is brutal and immediately punishes careless behavior.
-    Be systematic and anticipate the consequences "
+  m_text: "Well beat me and call it police brutality, I haven\u2019t seen a thing
+    like this since I left the army. \r\nOur boy has rigged himself a two-stage trigger,
+    apparently the device arms itself during the opening kick. \nThe thing is , Army 
+    grenades come from a factory, with quality control and all that good stuff, not
+    to mention sober assemblers. \nWatch out for that striker mechanism, it seems
+    really unstable. Key to victory is to render safe the initiator. Get to it.  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
   m_sharedMaterial: {fileID: -742395149822115394, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
@@ -9224,8 +9232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -420}
-  m_SizeDelta: {x: 815, y: 74.05005}
+  m_AnchoredPosition: {x: 14.962, y: -450}
+  m_SizeDelta: {x: 911, y: 177.985}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1413903223
 MonoBehaviour:
@@ -9247,7 +9255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bomb manual
+  m_text: Preliminary Information
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
   m_sharedMaterial: {fileID: -742395149822115394, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
@@ -9426,11 +9434,11 @@ RectTransform:
   - {fileID: 260818581}
   m_Father: {fileID: 1666424244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -906, y: -84.5}
-  m_SizeDelta: {x: 72, y: 169}
-  m_Pivot: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 105}
+  m_SizeDelta: {x: 104, y: 190}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1430669285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9880,6 +9888,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextPage
       objectReference: {fileID: 0}
+    - target: {fileID: 1044856635011444511, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044856635011444511, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_margin.w
+      value: 1.2431694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044856635011444511, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260975188930148454, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260975188930148454, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1273885932291883184, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9982,7 +10010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1413273778468709851, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_text
-      value: Bomb manual
+      value: Preliminary Information
       objectReference: {fileID: 0}
     - target: {fileID: 1413273778468709851, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontSize
@@ -10002,19 +10030,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 815
+      value: 822.5
       objectReference: {fileID: 0}
     - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1008.6189
+      value: 1058.7749
       objectReference: {fileID: 0}
     - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -12.517008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2029597633465126703, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89.86464
+      value: -230
+      objectReference: {fileID: 0}
+    - target: {fileID: 2186786470261731369, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2269127182700130694, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10142,15 +10174,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3277463939106102758, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_text
-      value: "Wires are sensitive; though all may look the same, starting from the
-        correct end is key. Avoid contact with other components until wiring is fully
-        addressed. Cut carefully, in sequence, and do not rush.\n\nTweezers? Screwdrivers?
-        Tempting, but they\u2019ll just stir up trouble. Start with the obvious.
-        Maybe give those wires a swipe with the pliers to kick things off. The wrong
-        move might just speed up the countdown...\n\nOnce the wires are safe, the
-        bomb itself is ready for closer handling. But go about it in the wrong order,
-        and things get messy. Think layers: wires, then the bomb, then perhaps the
-        clock. "
+      value: "Hah, didn\u2019t I call it? Mope has plastic tat for brains. This is
+        a good opportunity get your feet wet again. The thing does not anything in
+        the way of any \u201Cspecial features\u201D that the perps normally shove
+        into these things. \n\nYou read the manual from the map view, right? Think
+        back on PIES and you should be okay. Where\u2019s the power source? which
+        one is the explosive? and what component is the Switch?\n\nRemember your
+        training, Identify components, render them safe, and remove them. I\u2019ll
+        even give you hint on the correct order of dissassembly. EP, baby!    "
       objectReference: {fileID: 0}
     - target: {fileID: 3277463939106102758, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontSize
@@ -10206,7 +10237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313315450931920475, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4313315450931920475, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_TagString
@@ -10281,48 +10312,56 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5110831178757176020, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 885
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110831178757176020, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 248.23938
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110831178757176020, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8.345
       objectReference: {fileID: 0}
     - target: {fileID: 5110831178757176020, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -484
+      value: -450
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Pivot.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 72
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 169
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -906
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5292153144855852194, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -84.5
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 5364423107180892850, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Pivot.y
@@ -10384,6 +10423,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -84.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5685922081299437599, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685922081299437599, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5979853687318936170, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5
@@ -10421,16 +10468,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6462049254807963842, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 911
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462049254807963842, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 195.61938
+      value: 144.35
       objectReference: {fileID: 0}
     - target: {fileID: 6462049254807963842, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.519
       objectReference: {fileID: 0}
     - target: {fileID: 6462049254807963842, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 450.59
+      value: 579.1
       objectReference: {fileID: 0}
     - target: {fileID: 6534626301774520075, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_text
@@ -10477,9 +10528,17 @@ PrefabInstance:
       value: X
       objectReference: {fileID: 0}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
+    - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10534,11 +10593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7369973115943877840, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420
+      value: -450
       objectReference: {fileID: 0}
     - target: {fileID: 7593472005629074709, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796712327483504213, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10630,11 +10689,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8789061866439608805, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 942.8531
+      value: 911
       objectReference: {fileID: 0}
     - target: {fileID: 8789061866439608805, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.8784
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8789061866439608805, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103.7
       objectReference: {fileID: 0}
     - target: {fileID: 8910498642869373758, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_IsActive
@@ -10656,7 +10719,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6730225871556311438, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       insertIndex: 3
       addedObject: {fileID: 516616905}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4313315450931920475, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 385887533}
   m_SourcePrefab: {fileID: 100100000, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
 --- !u!224 &1549029413 stripped
 RectTransform:
@@ -11346,7 +11412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1666424244
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11383,7 +11449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
