@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         toolSelector = FindObjectOfType<ToolSelector>();
+        
         // Ensure the game starts unpaused and only the menu panel is active
         Time.timeScale = 1f;
         if (menuPanel != null && optionsPanel != null)
@@ -26,7 +27,7 @@ public class MenuController : MonoBehaviour
             menuPanel.SetActive(false);   // Show the main menu at the start
             optionsPanel.SetActive(false); // Hide the options panel at the start
         }
-        soundButtonText.text = isSoundOn ? "X" : ""; 
+        soundButtonText.text = PlayerManager.Instance.IsSoundOn ? "X" : "";
     }
 
     // Continue the game (hide the menu)
@@ -83,13 +84,8 @@ public class MenuController : MonoBehaviour
     // Toggle sound (this toggles sound on/off and updates the button text)
     public void ToggleSound()
     {
-        isSoundOn = !isSoundOn;  // Toggle the sound state
-
-        // Enable or disable sound based on the current state
-        AudioListener.volume = isSoundOn ? 1 : 0;
-        Debug.Log("Sound Toggled: " + (isSoundOn ? "On" : "Off"));
-        // Update the button text based on the sound state
-        soundButtonText.text = isSoundOn ? "X" : "";  // "X" for sound on, blank for sound off
+        PlayerManager.Instance.ToggleSound();
+        soundButtonText.text = PlayerManager.Instance.IsSoundOn ? "X" : "";
     }
 
 

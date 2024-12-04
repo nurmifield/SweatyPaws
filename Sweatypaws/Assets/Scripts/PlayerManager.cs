@@ -13,7 +13,24 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private string selectedLevel = "none";
     private bool existingUser = false;
+    private bool isSoundOn = true;
+    
+    public bool IsSoundOn
+    {
+        get => isSoundOn;
+        set
+        {
+            isSoundOn = value;
+            AudioListener.volume = isSoundOn ? 1 : 0;
+        }
+    }
 
+    public void ToggleSound()
+{
+    IsSoundOn = !IsSoundOn;
+    Debug.Log("Sound toggled: " + (IsSoundOn ? "On" : "Off"));
+    SavePlayerData();
+}
     public bool GetExistingUser()
     {
         return existingUser;
@@ -55,6 +72,7 @@ public class PlayerManager : MonoBehaviour
     public void SavePlayerData()
     {
         playerData.selectedLevel = selectedLevel;
+        playerData.isSoundOn = isSoundOn;
         string jsonData = JsonUtility.ToJson(playerData);
         string encryptedData = EncryptionHelper.Encrypt(jsonData);
         File.WriteAllText(playerDataFilePath, encryptedData);
@@ -70,6 +88,7 @@ public class PlayerManager : MonoBehaviour
             playerData = JsonUtility.FromJson<PlayerData>(decryptedData);
             PlayerData newPlayerData= JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
             SetExistingUser(true);
+            IsSoundOn = playerData.isSoundOn;
             Debug.Log("Player data from:"+playerDataFilePath);
 
             if (playerData.version < latestVersion)
