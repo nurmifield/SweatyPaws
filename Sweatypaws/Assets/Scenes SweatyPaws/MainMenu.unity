@@ -854,7 +854,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -3768,13 +3768,7 @@ MonoBehaviour:
   creditsPanel: {fileID: 520085230}
   confirmationPanel: {fileID: 1253044636}
   achievementsPanel: {fileID: 1823642097}
-  fredInfoCanvas: {fileID: 0}
-  pokaaliInfoCanvas: {fileID: 0}
   controlsPanel: {fileID: 1200723165}
-  fredPage1: {fileID: 0}
-  fredPage2: {fileID: 0}
-  pokaaliPage1: {fileID: 0}
-  pokaaliPage2: {fileID: 0}
   soundButtonText: {fileID: 1692865740}
 --- !u!4 &731865492
 Transform:
@@ -7742,6 +7736,7 @@ MonoBehaviour:
   playerData:
     version: 0
     level: 0
+    isSoundOn: 1
     tutorial_done: 0
     dialogue_level: 0
     dialogue_progress: []
@@ -8217,7 +8212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1520706826
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8483,7 +8478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637233341
 RectTransform:
   m_ObjectHideFlags: 0
