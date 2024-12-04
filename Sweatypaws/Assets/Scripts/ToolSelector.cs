@@ -20,9 +20,8 @@ public class ToolSelector : MonoBehaviour
     public Button currentSelectedButton;
     public GameObject manualPanel;
     public bool Highlight = true;
-
+    public AudioSource audioSource;
     public AudioClip [] buttonSounds;
-    private AudioSource audioSource;
 
     private Player player;
 
