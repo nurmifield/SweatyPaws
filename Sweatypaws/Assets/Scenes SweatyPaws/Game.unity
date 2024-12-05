@@ -7761,7 +7761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_AnchorMin.x
@@ -7769,15 +7769,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 72
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 169
+      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_LocalScale.x
@@ -7797,11 +7797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -65
+      value: -106
       objectReference: {fileID: 0}
     - target: {fileID: 3314093075601773618, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -84.5
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 3657082418445278379, guid: 19e1a2b248447114b806ad27c50f5dae, type: 3}
       propertyPath: m_Name
@@ -9605,8 +9605,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10069,9 +10069,17 @@ PrefabInstance:
       value: X
       objectReference: {fileID: 0}
     - target: {fileID: 2478327663574623248, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSize
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478327663574623248, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
+    - target: {fileID: 2478327663574623248, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 2478327663574623248, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10529,7 +10537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontAsset
@@ -10537,7 +10545,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 85eb555f2ca62a241b9e8396a26a8afa, type: 2}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_fontSizeBase
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6803731260141183660, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_sharedMaterial
@@ -10705,7 +10713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8910498642869373758, guid: de61ae5c4a5249f4fb6374af41018edd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -11413,7 +11421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1666424244
 RectTransform:
   m_ObjectHideFlags: 0
