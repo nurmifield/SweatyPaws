@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour
     public GameObject ManualButton;
     public GameObject optionsPanel;  // Reference to the Options Panel
     public GameObject menuPanel;
-    public GameObject MainMenuButton;     // Reference to the Main Menu Panel
+    public GameObject mainMenuButton;     // Reference to the Main Menu Panel
     public Text soundButtonText;     // Reference to the Text component of the sound button
     //private bool isSoundOn = true;
     private ToolSelector toolSelector;   // Variable to track the sound state
@@ -54,11 +54,12 @@ public class MenuController : MonoBehaviour
 
         if (optionsPanel.activeSelf)
         {
-            MainMenuButton.GetComponent<Button>().interactable = false;
+            mainMenuButton.GetComponent<Button>().interactable = false;
+            
         }
         else
         {
-            MainMenuButton.GetComponent<Button>().interactable = true;
+            mainMenuButton.GetComponent<Button>().interactable = true;
         }
     }
     public void OpenSettings()
@@ -78,7 +79,7 @@ public class MenuController : MonoBehaviour
     {
         optionsPanel.SetActive(false); // Hide the options panel
         menuPanel.SetActive(true);
-        MainMenuButton.GetComponent<Button>().interactable = true;
+        mainMenuButton.GetComponent<Button>().interactable = true;
     }
 
     // Toggle sound (this toggles sound on/off and updates the button text)

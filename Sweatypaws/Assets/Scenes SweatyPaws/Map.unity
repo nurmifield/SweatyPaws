@@ -18010,7 +18010,7 @@ MonoBehaviour:
   ManualButton: {fileID: 0}
   optionsPanel: {fileID: 195691933}
   menuPanel: {fileID: 727181030}
-  MainMenuButton: {fileID: 1434787963}
+  mainMenuButton: {fileID: 1434787963}
   soundButtonText: {fileID: 195691932}
 --- !u!114 &1522902918
 MonoBehaviour:
