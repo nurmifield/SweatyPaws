@@ -56,5 +56,7 @@ public class CollectionPageManager : MonoBehaviour
     {
         collectionCanvas.SetActive(false);
         collectionPanel.SetActive(true);
+        previousButton.SetActive(false);
+        nextButton.SetActive(false);
     }
 }

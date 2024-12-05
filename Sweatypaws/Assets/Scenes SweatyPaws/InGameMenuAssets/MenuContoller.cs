@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour
     public GameObject menuPanel;
     public GameObject MainMenuButton;     // Reference to the Main Menu Panel
     public Text soundButtonText;     // Reference to the Text component of the sound button
-    private bool isSoundOn = true;
+    //private bool isSoundOn = true;
     private ToolSelector toolSelector;   // Variable to track the sound state
 
     void Start()
