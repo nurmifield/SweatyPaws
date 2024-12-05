@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &93069776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13094,7 +13094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2071673948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13228,7 +13228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Use tweeers to remove small parts with precision.
+  m_Text: Use tweezers to remove small parts with precision.
 --- !u!222 &2103179421
 CanvasRenderer:
   m_ObjectHideFlags: 0
