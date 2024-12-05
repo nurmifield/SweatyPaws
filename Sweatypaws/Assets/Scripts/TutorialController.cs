@@ -129,7 +129,7 @@ public class HowToPlayManager : MonoBehaviour
         else if (currentBubbleIndex == 2)
         {
             speechBubble3.SetActive(false);
-
+            doctorImage.SetActive(false);
             mrSnugglesImage.SetActive(true);
             speechBubble4.SetActive(true);
 
