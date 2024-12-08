@@ -1,5 +1,5 @@
 {
-        "version":1,  
+        "version":2,  
         "level":0,
         "tutorial_done":false,
         "dialogue_level":0,
@@ -55,28 +55,32 @@
                     "level_index":0,
                     "complete":false,
                     "score":0,
-                    "max_score":70
+                    "max_score":70,
+                    "collection":false
                 },
                 {
                     "level_name":"Level_2",
                     "level_index":1,
                     "complete":false,
                     "score":0,
-                    "max_score":70
+                    "max_score":70,
+                    "collection":false
                 },
                 {
                     "level_name":"Level_3",
                     "level_index":2,
                     "complete":false,
                     "score":0,
-                    "max_score":70
+                    "max_score":70,
+                    "collection":false
                 },
                 {
                     "level_name":"Level_4",
                     "level_index":3,
                     "complete":false,
                     "score":0,
-                    "max_score":70
+                    "max_score":70,
+                    "collection":false
                 }
             
         ]

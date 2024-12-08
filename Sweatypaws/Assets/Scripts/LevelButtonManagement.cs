@@ -42,7 +42,7 @@ public class LevelButtonManagement : MonoBehaviour
                         {
                             
                             
-                            if (player.playerData.level_progress[i].score == player.playerData.level_progress[i].max_score)
+                            if (player.playerData.level_progress[i].collection)
                             {
                                 buttonsImage.sprite = perfectImage;
 

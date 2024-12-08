@@ -51,13 +51,16 @@ public class PlayerData
         public bool complete;
         public int score;
         public int max_score;
+        public bool collection;
 
-        public LevelProgress(string levelName , int levelIndex)
+        public LevelProgress(string levelName , int levelIndex , int maxScore)
         {
             this.level_name = levelName;
             this.level_index = levelIndex;
             this.score = 0;
             this.complete = false;
-        }
+            this.max_score = maxScore;
+            this.collection = false;
+    }
     }
 }

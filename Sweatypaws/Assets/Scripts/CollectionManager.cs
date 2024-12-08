@@ -87,7 +87,7 @@ public class CollectionManager : MonoBehaviour
         {
             if (player.playerData.level_progress[i].level_name == name)
             {
-                if (player.playerData.level_progress[i].score == player.playerData.level_progress[i].max_score && player.playerData.level_progress[i].complete)
+                if (player.playerData.level_progress[i].collection)
                 {
                     buttonImage.color = Color.white;
                     button.onClick.AddListener(SelectCollection);

@@ -9,7 +9,6 @@ public class PlayerManager : MonoBehaviour
 
     public PlayerData playerData;
     public TextAsset jsonPlayerFile;
-    private int latestVersion = 1;
     [SerializeField]
     private string selectedLevel = "none";
     private bool existingUser = false;
@@ -91,10 +90,18 @@ public class PlayerManager : MonoBehaviour
             IsSoundOn = playerData.isSoundOn;
             Debug.Log("Player data from:"+playerDataFilePath);
 
-            if (playerData.version < latestVersion)
+            if (playerData.version < newPlayerData.version)
             {
                 UpdatePlayerData(newPlayerData);
                 playerData.version = newPlayerData.version;
+                for (int i=0; i< playerData.level_progress.Count;i++)
+                {
+                    if (playerData.level_progress[i].collection == default)
+                    {
+                        Debug.Log("Adding Collection default value false");
+                        playerData.level_progress[i].collection = false;
+                    }
+                }
                 SavePlayerData();
                 Debug.Log("Player data updated");
 
@@ -128,7 +135,8 @@ public class PlayerManager : MonoBehaviour
         {
             if (!playerData.LevelExists(newLevel.level_name))
             {
-                playerData.level_progress.Add(new PlayerData.LevelProgress(newLevel.level_name,newLevel.level_index));
+                Debug.Log("adding new level information");
+                playerData.level_progress.Add(new PlayerData.LevelProgress(newLevel.level_name,newLevel.level_index,newLevel.max_score));
             }
         }
 
@@ -136,6 +144,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (!playerData.DialogueExist(newDialogue.dialogue_name))
             {
+                Debug.Log("adding new dialogue information");
                 playerData.dialogue_progress.Add(new PlayerData.DialogueProgress(newDialogue.dialogue_name, newDialogue.dialogue_index, newDialogue.level_index ,newDialogue.selected_level));
             }
         }
@@ -174,6 +183,22 @@ public class PlayerManager : MonoBehaviour
             }
         }
         SavePlayerData() ;
+    }
+
+    public void LevelCollection(string levelName, int score)
+    {
+        foreach (var level in playerData.level_progress)
+        {
+            if (level.level_name == levelName)
+            {
+                if (score == level.max_score && !level.collection)
+                {
+                    level.collection = true;
+                }
+                break;
+            }
+        }
+        SavePlayerData();
     }
     public void TutorialDone()
     {
