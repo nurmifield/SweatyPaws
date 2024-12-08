@@ -71,7 +71,7 @@ public class MouseClick : MonoBehaviour
                     //Debug.Log(hit.collider.gameObject);
 
                 }*/
-                string[] layerOrder = { "First", "Second", "Third" };
+                string[] layerOrder = { "First", "Second", "Third","Fourth", "Fifth" };
 
                 GameObject topObject = null;
 
@@ -116,7 +116,7 @@ public class MouseClick : MonoBehaviour
                     GetComponent<GameActionManager>().CheckStagePart(hit.collider.gameObject);
 
                 }*/
-                string[] layerOrder = { "First", "Second", "Third" };
+                string[] layerOrder = { "First", "Second", "Third", "Fourth", "Fifth" };
 
                 GameObject topObject = null;
 
