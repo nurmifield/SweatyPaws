@@ -23,8 +23,10 @@ public class CollectionPageManager : MonoBehaviour
     public GameObject previousButton;
     public TextMeshProUGUI collectionText;
     public UnityEngine.UI.Image collectionImage;
+    public UnityEngine.UI.Image collectionImageBig;
     public CollectionPageData collectionPageData;
     public GameObject collectionPanel;
+    public GameObject collectionPageBig;
 
     public void UpdateCollectionPage()
     {
@@ -58,5 +60,17 @@ public class CollectionPageManager : MonoBehaviour
         collectionPanel.SetActive(true);
         previousButton.SetActive(false);
         nextButton.SetActive(false);
+    }
+
+    public void OpenPicture()
+    {
+        collectionPageBig.SetActive(true);
+        Sprite newCollectiblesImage = Resources.Load<Sprite>(collectionPageData.collectibles_image);
+        collectionImageBig.sprite = newCollectiblesImage;
+    }
+
+    public void ClosePicture()
+    {
+        collectionPageBig.SetActive(false);
     }
 }
