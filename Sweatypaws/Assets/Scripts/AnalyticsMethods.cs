@@ -3,10 +3,19 @@ using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class AnalyticsMethods : MonoBehaviour
 {
-    public void LevelStartButtonPressEvent()
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Game")
+        {
+            LevelStartEvent();
+        }
+    }
+    public void LevelStartEvent()
     {
        var player = PlayerManager.Instance;
 
