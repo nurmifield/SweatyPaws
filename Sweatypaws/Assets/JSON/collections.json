@@ -6,6 +6,7 @@
             "level_collectible": 
             {
                 "collectibles_image": "level_1_collectible",
+                "collectibles_image_big":"Level_1_big",
                 "collectibles_text":
                 [
                     "It’s an LP by Frederik, titled “I’m Dracula”. 12 tracks of old timey, smutty Schlanger with disco effects and way too much synthesizer. Oh, the 80’s. Back in the day, dude was a menace to women, and of course everybody back then thought it was charming or something. Most of the songs are about hitting up girls or “being manly”. Title track’s a banger though.",
@@ -18,6 +19,7 @@
             "level_collectible": 
             {
                 "collectibles_image": "level_2_collectible",
+                "collectibles_image_big":"Level_2_big",
                 "collectibles_text": 
                 [
                     "A Pawston Participants Pee-Wee Participation Trophy, 90’s series. If you get in the team, you’ll get one. Guaranteed. Some parents buy extras, just to fill up the shelf. It’s cheap plastic for sure, but at least it was designed in pawston by Reggie C. Flippers, a local sculptor. Nice and shiny.",

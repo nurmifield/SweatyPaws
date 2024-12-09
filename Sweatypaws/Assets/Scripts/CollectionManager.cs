@@ -64,7 +64,7 @@ public class CollectionManager : MonoBehaviour
                         string name = jsonReader.collectionsData.collectibles[i].level_name;
                         ButtonImageAndName(i, name, imageName);
                         instatiatedPrefab[i].SetActive(true);
-                        // buttonin näkyviin laitto tänne next
+                        // buttonin nï¿½kyviin laitto tï¿½nne next
                         nextButton.SetActive(true);
                     }
                 }
@@ -109,7 +109,7 @@ public class CollectionManager : MonoBehaviour
 
         if (indexNumber >= 4)
         {
-            // buttonin laitto tänne previous
+            // buttonin laitto tï¿½nne previous
             previousButton.SetActive(true);
         }
         int counter = 0;
@@ -132,7 +132,7 @@ public class CollectionManager : MonoBehaviour
                 string name = jsonReader.collectionsData.collectibles[i].level_name;
                 ButtonImageAndName(counter, name, imageName);
                 counter++ ;
-                // buttonin kadotus tänne next 
+                // buttonin kadotus tï¿½nne next 
                 nextButton.SetActive(false);
             }
             if (counter < 4)
@@ -151,7 +151,7 @@ public class CollectionManager : MonoBehaviour
         DecreaseIndexAndCollections();
         if (indexNumber == 0)
         {
-            // buttonin kadotus tänne previous
+            // buttonin kadotus tï¿½nne previous
             previousButton.SetActive(false);
         }
         if (!nextButton.activeSelf)
@@ -180,6 +180,7 @@ public class CollectionManager : MonoBehaviour
         collectionPageManager.collectionCanvas.SetActive(true);
         GameObject buttonObject = EventSystem.current.currentSelectedGameObject;
         string imageText="";
+        string imageTextBig ="";
         string[] collectionArray= new string[2];
         for (int i = 0; i <  jsonReader.collectionsData.collectibles.Length;i++)
         {
@@ -188,10 +189,11 @@ public class CollectionManager : MonoBehaviour
                 collectionArray[0] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[0];
                 collectionArray[1] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[1];
                 imageText = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_image;
+                imageTextBig=jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_image_big;
             }
         }
         
-        collectionPageManager.collectionPageData= new CollectionPageData(imageText, collectionArray);
+        collectionPageManager.collectionPageData= new CollectionPageData(imageText, collectionArray,imageTextBig);
         collectionPageManager.UpdateCollectionPage();
     }
 }

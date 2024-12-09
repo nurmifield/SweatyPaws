@@ -1777,6 +1777,7 @@ MonoBehaviour:
   collectionImageBig: {fileID: 1841322794}
   collectionPageData:
     collectibles_image: 
+    collectibles_image_big: 
     collectibles_text: []
   collectionPanel: {fileID: 902914749}
   collectionPageBig: {fileID: 463204911}
@@ -7369,6 +7370,7 @@ MonoBehaviour:
   collectionPageManager: {fileID: 306700386}
   collectionPageData:
     collectibles_image: 
+    collectibles_image_big: 
     collectibles_text: []
 --- !u!1 &1395340892
 GameObject:
@@ -9317,8 +9319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.266}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000000009313226, y: 0.15}
-  m_SizeDelta: {x: 3.6317, y: 3.2778}
+  m_AnchoredPosition: {x: 0.0504, y: 0.1033}
+  m_SizeDelta: {x: 3.7218, y: 3.3591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841322793
 MonoBehaviour:

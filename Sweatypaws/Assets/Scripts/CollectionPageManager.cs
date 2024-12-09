@@ -8,11 +8,13 @@ using UnityEngine;
 public class CollectionPageData
 {
     public string collectibles_image;
+    public string collectibles_image_big;
     public string[] collectibles_text;
 
-    public CollectionPageData(string imageName , string[] collectiblesText)
+    public CollectionPageData(string imageName , string[] collectiblesText,string imageNameBig)
     {
         this.collectibles_image = imageName;
+        this.collectibles_image_big = imageNameBig;
         this.collectibles_text = collectiblesText;
     }
 }
@@ -65,7 +67,7 @@ public class CollectionPageManager : MonoBehaviour
     public void OpenPicture()
     {
         collectionPageBig.SetActive(true);
-        Sprite newCollectiblesImage = Resources.Load<Sprite>(collectionPageData.collectibles_image);
+        Sprite newCollectiblesImage = Resources.Load<Sprite>(collectionPageData.collectibles_image_big);
         collectionImageBig.sprite = newCollectiblesImage;
     }
 

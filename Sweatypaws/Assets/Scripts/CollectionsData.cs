@@ -17,6 +17,7 @@ public class CollectionsData
     public class CollectionData
     {
         public string collectibles_image;
+        public string collectibles_image_big;
         public string[] collectibles_text;
     }
 }
