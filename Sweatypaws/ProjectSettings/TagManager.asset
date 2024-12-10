@@ -20,6 +20,7 @@ TagManager:
   - Detonator
   - BrokenPart
   - Failure
+  - Monitor
   layers:
   - Default
   - TransparentFX

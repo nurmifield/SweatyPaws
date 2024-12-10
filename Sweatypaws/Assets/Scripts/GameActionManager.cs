@@ -170,6 +170,10 @@ public class GameActionManager : MonoBehaviour
             }
             CheckFailureAnimation(stageTools);
             action.SetActive(false);
+        }else if (stageTools.correct_tool_action.action == "open_monitor")
+        {
+            GameObject monitor = FindInactiveObjectByName(prefab.transform, stageTools.action_part_name);
+            monitor.SetActive(true);
         }
  
 
