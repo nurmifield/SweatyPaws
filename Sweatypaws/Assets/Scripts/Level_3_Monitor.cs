@@ -26,8 +26,14 @@ public class Level_3_Monitor : MonoBehaviour
     public GameObject[] mainMenuSection;
     public GameObject[] settingsSection;
     public GameObject[] bootOrderSection;
+    public GameObject[] newBootOrderSection;
+    public GameObject[] currentBootOrderSection;
+    public GameObject[] selectableBootOrderSection;
+    public GameObject passwordInfo;
     public string[] newBootOrder;
     public string[] currentBootOrder;
+    public string[] correctBootOrder;
+    public string[] selectableBootOrder;
     public string correctPassword="000000";
     public string userTypedPassword = "";
     public int monitorLevel=0;
@@ -38,6 +44,12 @@ public class Level_3_Monitor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        newBootOrder= new string[3] {"Select","Select","Select"};
+        currentBootOrder = new string[3] { "Failsafe.mdl", "Sec.mdl", "Os.mdl" };
+        correctBootOrder = new string[3] { "Os.mdl" , "Sec.mdl", "Failsafe.mdl" };
+        selectableBootOrder = new string[3] {  "Sec.mdl", "Failsafe.mdl", "Os.mdl" };
+        UpdateCurrentBootOrder(currentBootOrderSection,currentBootOrder);
+        UpdateCurrentBootOrder(selectableBootOrderSection, selectableBootOrder);
         for (int i = 0; i < monitorPanels.Length; i++)
         {
             if (monitorPanels[i].name == "LockScreen")
@@ -54,6 +66,14 @@ public class Level_3_Monitor : MonoBehaviour
             else if (monitorPanels[i].name == "BootOrderScreen")
             {
                 monitorData.Add(new MonitorData(monitorPanels[i], bootOrderSection));
+            }
+            else if (monitorPanels[i].name == "NewBootOrderScreen")
+            {
+                monitorData.Add(new MonitorData(monitorPanels[i], newBootOrderSection));
+            }
+            else if (monitorPanels[i].name == "BootOrderSelection")
+            {
+                monitorData.Add(new MonitorData(monitorPanels[i], selectableBootOrderSection));
             }
             else
             {
@@ -77,6 +97,19 @@ public class Level_3_Monitor : MonoBehaviour
                 }
 
             }
+         else if (moduleSelected)
+        {
+            moduleSelected= false;
+            TextMeshProUGUI selectText = monitorData[monitorLevel].fields[selectIndex].GetComponent<TextMeshProUGUI>();
+            string currentSelectText = selectText.text;
+            selectText.text = RemoveSelectMarkers(currentSelectText);
+            selectIndex = 0;
+
+        }
+         else if (!moduleSelected)
+        {
+            ReturnUpdateMonitorLevel(monitorData[monitorLevel].monitorPanel.name , monitorLevel);
+        }
         
 
         
@@ -86,6 +119,7 @@ public class Level_3_Monitor : MonoBehaviour
         if (monitorData[0].monitorPanel.activeSelf)
         {
             TextMeshProUGUI passwordText = monitorData[0].fields[0].GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI passwordInfoText = passwordInfo.GetComponent<TextMeshProUGUI>();
             if (userTypedPassword == correctPassword)
             {
                 monitorData[0].monitorPanel.SetActive(false);
@@ -93,6 +127,14 @@ public class Level_3_Monitor : MonoBehaviour
                 monitorLevel = 1;
                 userTypedPassword ="";
                 passwordText.text = userTypedPassword;
+                passwordInfoText.text = "";
+            }
+            else
+            {
+                userTypedPassword = "";
+                passwordText.text = userTypedPassword;
+                passwordInfoText.text = "Incorrect";
+
             } 
         }else if (!moduleSelected)
         {
@@ -103,11 +145,15 @@ public class Level_3_Monitor : MonoBehaviour
                 monitorData[1].monitorPanel.SetActive(true);
                 monitorLevel = 1;
             }
-            moduleSelected = true;
-            selectIndex = 0;
-            TextMeshProUGUI selectText = monitorData[monitorLevel].fields[selectIndex].GetComponent<TextMeshProUGUI>();
-            string currentSelectText = selectText.text;
-            selectText.text = AddSelectMarkers(currentSelectText, '-');
+            else
+            {
+                moduleSelected = true;
+                selectIndex = 0;
+                TextMeshProUGUI selectText = monitorData[monitorLevel].fields[selectIndex].GetComponent<TextMeshProUGUI>();
+                string currentSelectText = selectText.text;
+                selectText.text = AddSelectMarkers(currentSelectText, '-');
+            }
+            
 
         }else if (moduleSelected)
         {
@@ -165,7 +211,8 @@ public class Level_3_Monitor : MonoBehaviour
             if (userTypedPasswordLenght < 6)
             {
                 userTypedPassword += "0";
-                passwordText.text = userTypedPassword;
+                passwordText.text += "*";
+                 
             }
 
         }
@@ -181,7 +228,7 @@ public class Level_3_Monitor : MonoBehaviour
             if (userTypedPasswordLenght < 6)
             {
                 userTypedPassword += "1";
-                passwordText.text = userTypedPassword;
+                passwordText.text += "*";
             }
 
         }
@@ -234,6 +281,35 @@ public class Level_3_Monitor : MonoBehaviour
             this.monitorLevel = 8;
         }
     }
+    public void ReturnUpdateMonitorLevel(string monitorPanelName , int monitorLevel)
+    {
+        if (monitorPanelName == "ExecuteScreen" || monitorPanelName == "StatusScreen" || monitorPanelName == "SettingMenuScreen" || monitorPanelName == "AboutScreen")
+        {
+            monitorData[monitorLevel].monitorPanel.SetActive(false);
+            monitorData[1].monitorPanel.SetActive(true);
+            this.monitorLevel = 1;
+        }
+        else if (monitorPanelName == "BootOrderScreen")
+        {
+            monitorData[monitorLevel].monitorPanel.SetActive(false);
+            monitorData[4].monitorPanel.SetActive(true);
+            this.monitorLevel = 4;
+        }
+        else if (monitorPanelName == "NewBootOrderScreen" || monitorPanelName == "CurrentBootOrderScreen")
+        {
+            monitorData[monitorLevel].monitorPanel.SetActive(false);
+            monitorData[6].monitorPanel.SetActive(true);
+            this.monitorLevel = 6;
+        }
+    }
+    public void UpdateCurrentBootOrder(GameObject[] currentBootOrderObject, string[] currentBootOrder)
+    {
+        for (int i = 0; i < currentBootOrder.Length;i++)
+        {
+            TextMeshProUGUI currentBootOrderText = currentBootOrderObject[i].GetComponent<TextMeshProUGUI>();
+            currentBootOrderText.text = currentBootOrder[i];
+        }
+    }
 
     public void CloseScreenButton()
     {
@@ -241,7 +317,9 @@ public class Level_3_Monitor : MonoBehaviour
         monitorData[monitorLevel].monitorPanel.SetActive(false);
         monitorData[0].monitorPanel.SetActive(true);
         monitorLevel = 0;
-        
+        TextMeshProUGUI passwordInfoText = passwordInfo.GetComponent<TextMeshProUGUI>();
+        passwordInfoText.text = "";
+
     }
 
     public string AddSelectMarkers(string selectText , char marker)
