@@ -1309,7 +1309,7 @@
                     {
                         "tool": "tassu",
                         "part": "Monitor",
-                        "action_part_name":"ScreenObject",
+                        "action_part_name":"Cover",
                         "correct_tool_action":
                         {
                             "action":"open_monitor",
@@ -1351,7 +1351,7 @@
                     {
                         "parts": 
                         [
-                            "ScreenObject"
+                            "Cover"
                         ]
                     } 
             }

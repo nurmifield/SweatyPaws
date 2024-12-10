@@ -3746,6 +3746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a566d2def5c17f44918236289ad30c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 551772996}
   levelStages: []
   bombSetup:
     current_stage: 0

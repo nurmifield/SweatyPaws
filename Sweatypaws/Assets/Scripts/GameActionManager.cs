@@ -8,6 +8,7 @@ using static BombLogicData;
 public class GameActionManager : MonoBehaviour
 {
     private JsonReader jsonReader;
+    public Player playerScript;
     public List<BombLogicData.Stages> levelStages;
     public BombLogicData.BombSetup bombSetup;
     public Score score;
@@ -172,8 +173,10 @@ public class GameActionManager : MonoBehaviour
             action.SetActive(false);
         }else if (stageTools.correct_tool_action.action == "open_monitor")
         {
-            GameObject monitor = FindInactiveObjectByName(prefab.transform, stageTools.action_part_name);
+            GameObject monitor = FindInactiveObjectByName(prefab.transform, "ScreenObject");
             monitor.SetActive(true);
+            playerScript.EquipTool("none");
+            
         }
  
 
