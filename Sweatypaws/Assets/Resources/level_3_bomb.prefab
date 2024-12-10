@@ -1389,6 +1389,9 @@ MonoBehaviour:
   - {fileID: 3860704559525549865}
   - {fileID: 7233181428564373900}
   - {fileID: 5137303397734110544}
+  bootOrderSection:
+  - {fileID: 6675067768293631756}
+  - {fileID: 211741874608018106}
   newBootOrder: []
   currentBootOrder: []
   correctPassword: 000000
@@ -2019,7 +2022,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5456398875590012808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5501133822354732222}
+        m_TargetAssemblyTypeName: Level_3_Monitor, Assembly-CSharp
+        m_MethodName: DownButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1572481820304158969
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,7 +9955,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 176764553859613967}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5501133822354732222}
+        m_TargetAssemblyTypeName: Level_3_Monitor, Assembly-CSharp
+        m_MethodName: UpButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8603155704376168864
 GameObject:
   m_ObjectHideFlags: 0
