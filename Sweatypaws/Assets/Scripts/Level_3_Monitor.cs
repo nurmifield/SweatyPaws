@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class  MonitorData
@@ -29,6 +30,8 @@ public class Level_3_Monitor : MonoBehaviour
     public GameObject[] currentBootOrderSection;
     public GameObject[] selectableBootOrderSection;
     public GameObject passwordInfo;
+    public GameObject bootOrderInfo;
+    public GameObject settingsInfo;
     public GameObject failSafeStatus;
     public GameObject lockStatus;
     public GameObject clockStatus;
@@ -49,6 +52,7 @@ public class Level_3_Monitor : MonoBehaviour
     public bool unlocked = false;
     public bool clockRemoved = false;
     public int failSafeTurnedOff = 0;
+    public ScrollRect scrollRect;
 
 
     // Start is called before the first frame update
@@ -146,7 +150,7 @@ public class Level_3_Monitor : MonoBehaviour
             {
                 userTypedPassword = "";
                 passwordText.text = userTypedPassword;
-                passwordInfoText.text = "Incorrect";
+                StartCoroutine(ResponseText(passwordInfoText, "Incorrect"));
 
             } 
         }else if (!moduleSelected)
@@ -196,6 +200,11 @@ public class Level_3_Monitor : MonoBehaviour
 
 
         }
+        if (monitorData[5].monitorPanel.activeSelf)
+        {
+            float scrollSpeed = 0.1f;
+            scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition - scrollSpeed);
+        }
     }
 
     public void UpButton()
@@ -213,6 +222,11 @@ public class Level_3_Monitor : MonoBehaviour
             selectText.text = AddSelectMarkers(currentSelectText, '-');
 
 
+        }
+        if (monitorData[5].monitorPanel.activeSelf)
+        {
+            float scrollSpeed = 0.1f;
+            scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition + scrollSpeed);
         }
     }
     public void ZeroButton()
@@ -310,9 +324,11 @@ public class Level_3_Monitor : MonoBehaviour
         }
         else if (selectedName == "Save")
         {
+            TextMeshProUGUI bootOrderText = bootOrderInfo.GetComponent<TextMeshProUGUI>();
             bool containsSelect = Array.Exists(newBootOrder, element => element == "Select");
             if (containsSelect)
             {
+                StartCoroutine(ResponseText(bootOrderText, "ERROR, MISSING FILE"));
                 Debug.Log("Ei ole valittuna kaikki kohdat");
             }
             else
@@ -321,25 +337,39 @@ public class Level_3_Monitor : MonoBehaviour
                 UpdateCurrentBootOrder(currentBootOrderSection, currentBootOrder);
                 newBootOrder = new string[3] { "Select", "Select", "Select" };
                 UpdateCurrentBootOrder(newBootOrderSection, newBootOrder);
+                StartCoroutine(ResponseText(bootOrderText, "SAVED SUCCESSFULLY"));
                 Debug.Log("Päivitetty uudet ohjeet boottiin");
             }
             
 
         }else if (selectedName == "SystemBoot")
         {
+            TextMeshProUGUI settingsText = settingsInfo.GetComponent<TextMeshProUGUI>();
             if (AreArraySame(currentBootOrder,correctBootOrder))
             {
-                StartCoroutine(FailSafe()); 
+                StartCoroutine(FailSafe());
+                StartCoroutine(ResponseText(settingsText, "SYSTEM BOOT STARTED"));
             }
         }
         else if (selectedName == "OpenLock")
         {
+            TextMeshProUGUI settingsText = settingsInfo.GetComponent<TextMeshProUGUI>();
             if (systemBoot && !unlocked)
             {
                 unlocked=true;
                 TextMeshProUGUI lockStatusText = lockStatus.GetComponent<TextMeshProUGUI>();
                 lockStatusText.text = "OFF";
                 gameActionManager.IncreasePointsAndCurrentStage(1, 20);
+                StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
+            }
+            else if (!systemBoot)
+            {
+                
+                StartCoroutine (ResponseText(settingsText, "FAIL SAFE IS ON"));
+            }
+            else if (systemBoot && unlocked)
+            {
+                StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
             }
         }
     }
@@ -363,6 +393,13 @@ public class Level_3_Monitor : MonoBehaviour
         systemBoot = false;
         failSafeStatusText.text = "ON";
         gameActionManager.DecreaseStage(1);
+    }
+
+    IEnumerator ResponseText(TextMeshProUGUI errorText,string errorTextContent)
+    {
+        errorText.text = errorTextContent;
+        yield return new WaitForSeconds(2f);
+        errorText.text = "";
     }
     public bool AreArraySame(string[] array1 , string[] array2)
     {
