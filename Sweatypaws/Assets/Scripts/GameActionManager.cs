@@ -293,4 +293,13 @@ public class GameActionManager : MonoBehaviour
         }
     }
 
+    public void IncreasePointsAndCurrentStage(int stageLevel , int points)
+    {
+        bombSetup.IncreaseCurrentStageAndPoints(stageLevel, points);
+    }
+    public void DecreaseStage(int stageLevel)
+    {
+        bombSetup.DecreaseCurrentStage(stageLevel);
+    }
+
 }

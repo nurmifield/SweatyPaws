@@ -1,9 +1,7 @@
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -31,6 +29,9 @@ public class Level_3_Monitor : MonoBehaviour
     public GameObject[] currentBootOrderSection;
     public GameObject[] selectableBootOrderSection;
     public GameObject passwordInfo;
+    public GameObject failSafeStatus;
+    public GameObject lockStatus;
+    public GameObject clockStatus;
     public string[] newBootOrder;
     public string[] currentBootOrder;
     public string[] correctBootOrder;
@@ -43,10 +44,18 @@ public class Level_3_Monitor : MonoBehaviour
     public int newBootOrderIndex;
     public int selectedBootOrderIndex;
     public List<MonitorData> monitorData;
+    public GameActionManager gameActionManager;
+    public bool systemBoot=false;
+    public bool unlocked = false;
+    public bool clockRemoved = false;
+    public int failSafeTurnedOff = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject gameActionObject = GameObject.Find("GameSystem");
+        gameActionManager = gameActionObject.GetComponent<GameActionManager>();
         newBootOrder= new string[3] {"Select","Select","Select"};
         currentBootOrder = new string[3] { "Failsafe.mdl", "Sec.mdl", "Os.mdl" };
         correctBootOrder = new string[3] { "Os.mdl" , "Sec.mdl", "Failsafe.mdl" };
@@ -316,7 +325,60 @@ public class Level_3_Monitor : MonoBehaviour
             }
             
 
+        }else if (selectedName == "SystemBoot")
+        {
+            if (AreArraySame(currentBootOrder,correctBootOrder))
+            {
+                StartCoroutine(FailSafe()); 
+            }
         }
+        else if (selectedName == "OpenLock")
+        {
+            if (systemBoot && !unlocked)
+            {
+                unlocked=true;
+                TextMeshProUGUI lockStatusText = lockStatus.GetComponent<TextMeshProUGUI>();
+                lockStatusText.text = "OFF";
+                gameActionManager.IncreasePointsAndCurrentStage(1, 20);
+            }
+        }
+    }
+
+    IEnumerator FailSafe()
+    {
+        systemBoot = true;
+        TextMeshProUGUI failSafeStatusText = failSafeStatus.GetComponent<TextMeshProUGUI>();
+        failSafeStatusText.text = "OFF";
+        if (failSafeTurnedOff < 2)
+        {
+            gameActionManager.IncreasePointsAndCurrentStage(1, 20);
+            failSafeTurnedOff++;
+        }
+        else
+        {
+            gameActionManager.IncreasePointsAndCurrentStage(1,0);
+        }
+        
+        yield return new WaitForSeconds(60f);
+        systemBoot = false;
+        failSafeStatusText.text = "ON";
+        gameActionManager.DecreaseStage(1);
+    }
+    public bool AreArraySame(string[] array1 , string[] array2)
+    {
+        if (array1.Length != array2.Length)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < array1.Length;i++)
+        {
+            if (array1[i] != array2[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
     public void ReturnUpdateMonitorLevel(string monitorPanelName , int monitorLevel)
     {
