@@ -27,6 +27,17 @@ public class BombLogicData
         {
             win_points += stages.increase_win_points_by;
         }
+
+        public void IncreaseCurrentStageAndPoints(int stageNumber, int winPoints)
+        {
+            current_stage += stageNumber;
+            win_points += winPoints;
+        }
+
+        public void DecreaseCurrentStage(int stageNumber)
+        {
+            current_stage -= stageNumber;
+        }
     }
     [System.Serializable]
     public class Stages
