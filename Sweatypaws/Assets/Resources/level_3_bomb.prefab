@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 312.5, y: -337.5}
-  m_SizeDelta: {x: 650, y: 125}
+  m_SizeDelta: {x: 750, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1517734881345884175
 CanvasRenderer:
@@ -168,8 +168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -125}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4843495986585786389
 CanvasRenderer:
@@ -1089,8 +1089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -375}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -375}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6449167418862948886
 CanvasRenderer:
@@ -1416,6 +1416,8 @@ MonoBehaviour:
   monitorLevel: 0
   selectIndex: 0
   moduleSelected: 0
+  newBootOrderIndex: 0
+  selectedBootOrderIndex: 0
   monitorData: []
 --- !u!1 &1156365974751323304
 GameObject:
@@ -1690,14 +1692,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: -120
+    m_Left: -180
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 125}
+  m_CellSize: {x: 600, y: 125}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -1847,7 +1849,7 @@ GameObject:
   - component: {fileID: 6157548833036367312}
   - component: {fileID: 3314613941720930607}
   m_Layer: 0
-  m_Name: ThirdOrder
+  m_Name: SelectThird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1870,7 +1872,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 312.5, y: -400.59}
-  m_SizeDelta: {x: 400, y: 125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6157548833036367312
 CanvasRenderer:
@@ -2598,8 +2600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -250}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -250}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7438876101118047794
 CanvasRenderer:
@@ -3372,8 +3374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -125}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &139718403554885818
 CanvasRenderer:
@@ -3644,7 +3646,7 @@ GameObject:
   - component: {fileID: 930567707807764624}
   - component: {fileID: 4127016307479534186}
   m_Layer: 0
-  m_Name: SecondOrder
+  m_Name: SelectSecond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3667,7 +3669,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 312.5, y: -250}
-  m_SizeDelta: {x: 400, y: 125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &930567707807764624
 CanvasRenderer:
@@ -4096,8 +4098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -250}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -250}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8680543240734863591
 CanvasRenderer:
@@ -4899,14 +4901,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: -120
+    m_Left: -180
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 125}
+  m_CellSize: {x: 600, y: 125}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
@@ -4968,7 +4970,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 650, y: 125}
+  m_CellSize: {x: 750, y: 125}
   m_Spacing: {x: 0, y: 50}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -5661,8 +5663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -125}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1967184971959340019
 CanvasRenderer:
@@ -6688,7 +6690,7 @@ GameObject:
   - component: {fileID: 1585842485104610880}
   - component: {fileID: 7126205843856497191}
   m_Layer: 0
-  m_Name: FirstOrder
+  m_Name: SelectFirst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6711,7 +6713,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 312.5, y: -99.41}
-  m_SizeDelta: {x: 400, y: 125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1585842485104610880
 CanvasRenderer:
@@ -6844,8 +6846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -250}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -250}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7069625789621940407
 CanvasRenderer:
@@ -6978,8 +6980,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -375}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -375}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3698651509180996375
 CanvasRenderer:
@@ -7934,7 +7936,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 312.5, y: -162.5}
-  m_SizeDelta: {x: 650, y: 125}
+  m_SizeDelta: {x: 750, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4576649424267322332
 CanvasRenderer:
@@ -8698,7 +8700,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 125}
+  m_CellSize: {x: 600, y: 125}
   m_Spacing: {x: 0, y: 25.59}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -8736,8 +8738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -250}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -250}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6843888760513293698
 CanvasRenderer:
@@ -9292,8 +9294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -125}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -125}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8484316313212062067
 CanvasRenderer:
@@ -9842,8 +9844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.5, y: -375}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: -77.5, y: -375}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2280222673717149066
 CanvasRenderer:
@@ -11296,8 +11298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.5, y: -375}
-  m_SizeDelta: {x: 400, y: 125}
+  m_AnchoredPosition: {x: 522.5, y: -375}
+  m_SizeDelta: {x: 600, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7775951773308951280
 CanvasRenderer:

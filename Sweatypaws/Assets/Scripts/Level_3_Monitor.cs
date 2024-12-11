@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -39,6 +40,8 @@ public class Level_3_Monitor : MonoBehaviour
     public int monitorLevel=0;
     public int selectIndex;
     public bool moduleSelected = false;
+    public int newBootOrderIndex;
+    public int selectedBootOrderIndex;
     public List<MonitorData> monitorData;
 
     // Start is called before the first frame update
@@ -48,6 +51,7 @@ public class Level_3_Monitor : MonoBehaviour
         currentBootOrder = new string[3] { "Failsafe.mdl", "Sec.mdl", "Os.mdl" };
         correctBootOrder = new string[3] { "Os.mdl" , "Sec.mdl", "Failsafe.mdl" };
         selectableBootOrder = new string[3] {  "Sec.mdl", "Failsafe.mdl", "Os.mdl" };
+        UpdateCurrentBootOrder(newBootOrderSection,newBootOrder);
         UpdateCurrentBootOrder(currentBootOrderSection,currentBootOrder);
         UpdateCurrentBootOrder(selectableBootOrderSection, selectableBootOrder);
         for (int i = 0; i < monitorPanels.Length; i++)
@@ -93,7 +97,7 @@ public class Level_3_Monitor : MonoBehaviour
                 if (userTypedPasswordLenght > 0)
                 {
                     userTypedPassword= userTypedPassword.Substring(0, userTypedPasswordLenght-1);
-                    passwordText.text = userTypedPassword;
+                    passwordText.text = passwordText.text.Substring(0,passwordText.text.Length - 1);
                 }
 
             }
@@ -161,7 +165,7 @@ public class Level_3_Monitor : MonoBehaviour
             TextMeshProUGUI selectText = monitorData[monitorLevel].fields[selectIndex].GetComponent<TextMeshProUGUI>();
             string currentSelectText = selectText.text;
             selectText.text = RemoveSelectMarkers(currentSelectText);
-            UpdateMonitorLevel(monitorData[monitorLevel].fields[selectIndex].name,monitorLevel);
+            UpdateMonitorLevel(monitorData[monitorLevel].fields[selectIndex].name,monitorLevel,selectIndex);
             selectIndex =0;
 
 
@@ -235,7 +239,7 @@ public class Level_3_Monitor : MonoBehaviour
 
     }
 
-    public void UpdateMonitorLevel(string selectedName, int monitorLevel)
+    public void UpdateMonitorLevel(string selectedName, int monitorLevel, int selectIndex)
     {
         if (selectedName== "EXECUTE")
         {
@@ -279,6 +283,39 @@ public class Level_3_Monitor : MonoBehaviour
             monitorData[monitorLevel].monitorPanel.SetActive(false);
             monitorData[8].monitorPanel.SetActive(true);
             this.monitorLevel = 8;
+        }else if (selectedName == "FirstOrder" || selectedName == "SecondOrder" || selectedName == "ThirdOrder")
+        {
+            monitorData[monitorLevel].monitorPanel.SetActive(false);
+            monitorData[9].monitorPanel.SetActive(true);
+            this.monitorLevel = 9;
+            this.newBootOrderIndex = selectIndex;
+        }else if (selectedName == "SelectFirst" || selectedName == "SelectSecond" || selectedName == "SelectThird")
+        {
+            this.selectedBootOrderIndex = selectIndex;
+            newBootOrder[newBootOrderIndex] = selectableBootOrder[selectedBootOrderIndex];
+            UpdateCurrentBootOrder(newBootOrderSection, newBootOrder);
+            monitorData[monitorLevel].monitorPanel.SetActive(false);
+            monitorData[7].monitorPanel.SetActive(true);
+            this.monitorLevel = 7;
+
+        }
+        else if (selectedName == "Save")
+        {
+            bool containsSelect = Array.Exists(newBootOrder, element => element == "Select");
+            if (containsSelect)
+            {
+                Debug.Log("Ei ole valittuna kaikki kohdat");
+            }
+            else
+            {
+                currentBootOrder = newBootOrder;
+                UpdateCurrentBootOrder(currentBootOrderSection, currentBootOrder);
+                newBootOrder = new string[3] { "Select", "Select", "Select" };
+                UpdateCurrentBootOrder(newBootOrderSection, newBootOrder);
+                Debug.Log("Päivitetty uudet ohjeet boottiin");
+            }
+            
+
         }
     }
     public void ReturnUpdateMonitorLevel(string monitorPanelName , int monitorLevel)
