@@ -100,7 +100,12 @@ public class Level_3_Monitor : MonoBehaviour
         }
         monitorData[0].monitorPanel.SetActive(true);
     }
-
+    public void SetClockRemoved() 
+    {
+        this.clockRemoved = true;
+        TextMeshProUGUI clockStatusText = clockStatus.GetComponent<TextMeshProUGUI>();
+        clockStatusText.text = "OFF";
+    }
     public void ReturnButton()
     {
          if (monitorData[0].monitorPanel.activeSelf)
@@ -397,6 +402,12 @@ public class Level_3_Monitor : MonoBehaviour
             gameActionManager.ActivateObject("UpperFlapWireSetup3");
             gameActionManager.DeactivateObject("FailureSetup2");
         }
+        if (gameActionManager.FindGameObject("Wire2Failure").activeSelf)
+        {
+            gameActionManager.ActivateObject("Wire2");
+            gameActionManager.DeactivateObject("Wire2Failure");
+        }
+
         yield return new WaitForSeconds(60f);
         systemBoot = false;
         failSafeStatusText.text = "ON";
@@ -414,6 +425,12 @@ public class Level_3_Monitor : MonoBehaviour
         {
             gameActionManager.DeactivateObject("UpperFlapWireSetup3");
             gameActionManager.ActivateObject("FailureSetup3");
+        }
+
+        if (gameActionManager.FindGameObject("Wire2").activeSelf)
+        {
+            gameActionManager.ActivateObject("Wire2Failure");
+            gameActionManager.DeactivateObject("Wire2");
         }
     }
 

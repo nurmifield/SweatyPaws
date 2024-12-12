@@ -410,7 +410,7 @@
                     }
                 },
                 "section_cleared": false,
-                "increase_stage_by": 1,
+                "increase_stage_by": 0,
                 "increase_win_points_by":1,
                 "stage_tools": 
                 [
@@ -479,7 +479,7 @@
                     }
                 },
                 "section_cleared": false,
-                "increase_stage_by": 1,
+                "increase_stage_by": 0,
                 "increase_win_points_by":1,
                 "stage_tools": 
                 [
@@ -2042,6 +2042,213 @@
                          "parts": 
                          [
                              "Uranium"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage12",
+                 "current_stage_index": 0,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Failure",
+                         "action_part_name":"UraniumHolder",
+                         "correct_tool_action":
+                         {
+                             "action":"fail",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "UraniumHolder"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage13",
+                 "current_stage_index": 0,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Failure",
+                         "action_part_name":"Wire2Failure",
+                         "correct_tool_action":
+                         {
+                             "action":"fail",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Wire2Failure"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage14",
+                 "current_stage_index": 2,
+                 "failure_condition":
+                 {
+                     "current_stage_index":2,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "pihdit",
+                         "part": "wire",
+                         "action_part_name":"Wire1",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"Stop",
+                                 "animation_part":"ClockGroup"
+                             },
+                             "failure_part":"none",
+                             "broken_parts":["Wire1Broken"],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Wire1"
                          ]
                      }
              }

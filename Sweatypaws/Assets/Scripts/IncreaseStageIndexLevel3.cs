@@ -5,6 +5,7 @@ using UnityEngine;
 public class IncreaseStageIndexLevel3 : MonoBehaviour
 {
     public GameActionManager actionManager;
+    public Level_3_Monitor monitor;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +16,10 @@ public class IncreaseStageIndexLevel3 : MonoBehaviour
    public void IncreaseStageLevel()
     {
         actionManager.IncreaseOnlyStage(1);
+    }
+
+    public void StopClock()
+    {
+        monitor.SetClockRemoved();
     }
 }
