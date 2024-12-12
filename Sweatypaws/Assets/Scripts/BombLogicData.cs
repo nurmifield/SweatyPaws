@@ -33,7 +33,11 @@ public class BombLogicData
             current_stage += stageNumber;
             win_points += winPoints;
         }
-
+        public void IncreaseCurrentStageOnly(int stageNumber)
+        {
+            current_stage += stageNumber;
+            
+        }
         public void DecreaseCurrentStage(int stageNumber)
         {
             current_stage -= stageNumber;

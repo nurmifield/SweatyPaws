@@ -25,7 +25,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -94,7 +94,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -232,7 +232,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools": 
                 [
                     {
@@ -301,7 +301,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -411,7 +411,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools": 
                 [
                     {
@@ -480,7 +480,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools": 
                 [
                     {
@@ -560,7 +560,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -629,7 +629,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -698,7 +698,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -767,7 +767,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -836,7 +836,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -946,7 +946,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":1,
+                "increase_win_points_by":10,
                 "stage_tools":
                  [
                     {
@@ -1325,7 +1325,7 @@
                         "wrong_tools": 
                         [
                             {
-                                "tool": "tassu",
+                                "tool": "pihdit",
                                 "penalty": "points"
                             },
                             {
@@ -1354,7 +1354,490 @@
                             "Cover"
                         ]
                     } 
-            }
+            },
+            {
+                "stage_name": "stage2",
+                 "current_stage_index": 1,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 1,
+                 "increase_win_points_by":10,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "BombCover",
+                         "action_part_name":"BottomFlap",
+                         "correct_tool_action":
+                         {
+                             "action":"activate",
+                             "animation":
+                             {
+                                 "set_trigger":"Open",
+                                 "animation_part":"BombCover"
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "BottomFlap"
+                         ]
+                     } 
+             },
+             {
+                 "stage_name": "stage3",
+                 "current_stage_index": 0,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Failure",
+                         "action_part_name":"FailureSetup1",
+                         "correct_tool_action":
+                         {
+                             "action":"fail",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "FailureSetup1"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage4",
+                 "current_stage_index": 0,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Failure",
+                         "action_part_name":"FailureSetup2",
+                         "correct_tool_action":
+                         {
+                             "action":"fail",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "FailureSetup2"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage5",
+                 "current_stage_index": 0,
+                 "failure_condition":
+                 {
+                     "current_stage_index":0,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":0,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Failure",
+                         "action_part_name":"FailureSetup3",
+                         "correct_tool_action":
+                         {
+                             "action":"fail",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "fail"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "FailureSetup3"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage6",
+                 "current_stage_index": 1,
+                 "failure_condition":
+                 {
+                     "current_stage_index":1,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":10,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "Tweezer",
+                         "part": "wire",
+                         "action_part_name":"UpperFlapWireSetup1",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":["UpperFlapWireSetup2"],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "UpperFlapWireSetup1"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage7",
+                 "current_stage_index": 1,
+                 "failure_condition":
+                 {
+                     "current_stage_index":1,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 1,
+                 "increase_win_points_by":10,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "Tweezer",
+                         "part": "wire",
+                         "action_part_name":"UpperFlapWireSetup2",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":["UpperFlapWireSetup3"],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "UpperFlapWireSetup2"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage8",
+                 "current_stage_index": 2,
+                 "failure_condition":
+                 {
+                     "current_stage_index":2,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 0,
+                 "increase_win_points_by":10,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "pihdit",
+                         "part": "wire",
+                         "action_part_name":"Wire3",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"Empty",
+                                 "animation_part":"Battery"
+                             },
+                             "failure_part":"none",
+                             "broken_parts":["Wire3Broken"],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Wire3"
+                         ]
+                     }
+             }
         ]
     }        
 }

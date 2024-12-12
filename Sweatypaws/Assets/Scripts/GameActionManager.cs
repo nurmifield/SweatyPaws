@@ -296,10 +296,32 @@ public class GameActionManager : MonoBehaviour
     public void IncreasePointsAndCurrentStage(int stageLevel , int points)
     {
         bombSetup.IncreaseCurrentStageAndPoints(stageLevel, points);
+        score.AddScore();
+    }
+
+    public void IncreaseOnlyStage(int stageLevel)
+    {
+        bombSetup.IncreaseCurrentStageOnly(stageLevel);
     }
     public void DecreaseStage(int stageLevel)
     {
         bombSetup.DecreaseCurrentStage(stageLevel);
     }
 
+    public void ActivateObject(string objectName)
+    {
+        GameObject gameObject = FindInactiveObjectByName(prefab.transform , objectName);
+        gameObject.SetActive(true);
+    }
+
+    public void DeactivateObject(string objectName)
+    {
+        GameObject gameObject = FindInactiveObjectByName(prefab.transform, objectName);
+        gameObject.SetActive(false);
+    }
+
+    public GameObject FindGameObject(string objectName)
+    {
+        return FindInactiveObjectByName(prefab.transform,objectName);
+    }
 }

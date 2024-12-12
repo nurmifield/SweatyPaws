@@ -359,7 +359,9 @@ public class Level_3_Monitor : MonoBehaviour
                 unlocked=true;
                 TextMeshProUGUI lockStatusText = lockStatus.GetComponent<TextMeshProUGUI>();
                 lockStatusText.text = "OFF";
-                gameActionManager.IncreasePointsAndCurrentStage(1, 20);
+                gameActionManager.IncreasePointsAndCurrentStage(1, 10);
+                gameActionManager.ActivateObject("BottomFlap");
+                gameActionManager.DeactivateObject("Kansi2");
                 StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
             }
             else if (!systemBoot)
@@ -381,7 +383,7 @@ public class Level_3_Monitor : MonoBehaviour
         failSafeStatusText.text = "OFF";
         if (failSafeTurnedOff < 2)
         {
-            gameActionManager.IncreasePointsAndCurrentStage(1, 20);
+            gameActionManager.IncreasePointsAndCurrentStage(1, 10);
             failSafeTurnedOff++;
         }
         else
@@ -389,10 +391,39 @@ public class Level_3_Monitor : MonoBehaviour
             gameActionManager.IncreasePointsAndCurrentStage(1,0);
         }
         
+        if (gameActionManager.FindGameObject("FailureSetup1").activeSelf)
+        {
+            gameActionManager.ActivateObject("UpperFlapWireSetup1");
+            gameActionManager.DeactivateObject("FailureSetup1");
+        }else if (gameActionManager.FindGameObject("FailureSetup2").activeSelf)
+        {
+            gameActionManager.ActivateObject("UpperFlapWireSetup2");
+            gameActionManager.DeactivateObject("FailureSetup2");
+        }
+        else if (gameActionManager.FindGameObject("FailureSetup3").activeSelf)
+        {
+            gameActionManager.ActivateObject("UpperFlapWireSetup3");
+            gameActionManager.DeactivateObject("FailureSetup2");
+        }
         yield return new WaitForSeconds(60f);
         systemBoot = false;
         failSafeStatusText.text = "ON";
         gameActionManager.DecreaseStage(1);
+        if (gameActionManager.FindGameObject("UpperFlapWireSetup1").activeSelf)
+        {
+            gameActionManager.DeactivateObject("UpperFlapWireSetup1");
+            gameActionManager.ActivateObject("FailureSetup1");
+        }
+        else if (gameActionManager.FindGameObject("UpperFlapWireSetup2").activeSelf)
+        {
+            gameActionManager.DeactivateObject("UpperFlapWireSetup2");
+            gameActionManager.ActivateObject("FailureSetup2");
+        }
+        else if (gameActionManager.FindGameObject("UpperFlapWireSetup3").activeSelf)
+        {
+            gameActionManager.DeactivateObject("UpperFlapWireSetup3");
+            gameActionManager.ActivateObject("FailureSetup3");
+        }
     }
 
     IEnumerator ResponseText(TextMeshProUGUI errorText,string errorTextContent)
