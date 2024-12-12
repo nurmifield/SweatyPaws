@@ -15,15 +15,35 @@ public class GameOverScreen : MonoBehaviour
     public Score score;
     public GameObject analyticManager;
     public ManualTimeUsed manualTimeUsed;
+    public AudioClip backgroundMusic;
+    private AudioSource backgroundMusicSource;
+    public float backgroundMusicVolume = 0.2f;
 
     void Start()
     {
         gameOverObject.SetActive(false);
         youWinObject.SetActive(false);
+
+        if (backgroundMusic != null)
+        {
+            backgroundMusicSource = gameObject.AddComponent<AudioSource>();
+            backgroundMusicSource.clip = backgroundMusic;
+            backgroundMusicSource.loop = true;
+            backgroundMusicSource.playOnAwake = false;
+            backgroundMusicSource.volume = Mathf.Clamp(backgroundMusicVolume, 0f, 1f);
+            backgroundMusicSource.Play();
+            
+        }
     }
+
 
     public void GameOverScreenManage()
     {
+        if (backgroundMusicSource != null && backgroundMusicSource.isPlaying)
+        {
+            backgroundMusicSource.Stop();
+        }
+
         timer.Stoptimer(true);
         //manualController.PlayAudio(explosionClip);
         guiObject.SetActive(false);
@@ -34,6 +54,11 @@ public class GameOverScreen : MonoBehaviour
 
     public void YouWinScreenManage()
     {
+        if (backgroundMusicSource != null && backgroundMusicSource.isPlaying)
+        {
+            backgroundMusicSource.Stop();
+        }
+
         manualController.PlayAudio(WonkyWinClip);
         var player = PlayerManager.Instance;
         player.LevelCompleted(player.GetSelectedLevel(),score.GetScore());
