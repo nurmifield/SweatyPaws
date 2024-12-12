@@ -25,7 +25,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -94,7 +94,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -232,7 +232,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools": 
                 [
                     {
@@ -301,7 +301,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -410,8 +410,8 @@
                     }
                 },
                 "section_cleared": false,
-                "increase_stage_by": 0,
-                "increase_win_points_by":10,
+                "increase_stage_by": 1,
+                "increase_win_points_by":1,
                 "stage_tools": 
                 [
                     {
@@ -479,8 +479,8 @@
                     }
                 },
                 "section_cleared": false,
-                "increase_stage_by": 0,
-                "increase_win_points_by":10,
+                "increase_stage_by": 1,
+                "increase_win_points_by":1,
                 "stage_tools": 
                 [
                     {
@@ -560,7 +560,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -629,7 +629,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -698,7 +698,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -767,7 +767,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -836,7 +836,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 1,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -946,7 +946,7 @@
                 },
                 "section_cleared": false,
                 "increase_stage_by": 0,
-                "increase_win_points_by":10,
+                "increase_win_points_by":1,
                 "stage_tools":
                  [
                     {
@@ -1282,7 +1282,7 @@
         "current_stage": 0,
         "win_points":0,
         "time": 300,
-        "win_condition":6,
+        "win_condition":8,
         "bomb_name": "level_3_bomb",
         "stages": 
         [
@@ -1360,7 +1360,7 @@
                  "current_stage_index": 1,
                  "failure_condition":
                  {
-                     "current_stage_index":0,
+                     "current_stage_index":1,
                      "exception":false,
                      "exception_condition":
                      {
@@ -1372,7 +1372,7 @@
                  },
                  "section_cleared": false,
                  "increase_stage_by": 1,
-                 "increase_win_points_by":10,
+                 "increase_win_points_by":1,
                  "stage_tools":
                   [
                      {
@@ -1633,10 +1633,10 @@
              },
              {
                  "stage_name": "stage6",
-                 "current_stage_index": 1,
+                 "current_stage_index": 0,
                  "failure_condition":
                  {
-                     "current_stage_index":1,
+                     "current_stage_index":0,
                      "exception":false,
                      "exception_condition":
                      {
@@ -1648,7 +1648,7 @@
                  },
                  "section_cleared": false,
                  "increase_stage_by": 0,
-                 "increase_win_points_by":10,
+                 "increase_win_points_by":1,
                  "stage_tools":
                   [
                      {
@@ -1702,10 +1702,10 @@
              },
              {
                  "stage_name": "stage7",
-                 "current_stage_index": 1,
+                 "current_stage_index": 0,
                  "failure_condition":
                  {
-                     "current_stage_index":1,
+                     "current_stage_index":0,
                      "exception":false,
                      "exception_condition":
                      {
@@ -1717,7 +1717,7 @@
                  },
                  "section_cleared": false,
                  "increase_stage_by": 1,
-                 "increase_win_points_by":10,
+                 "increase_win_points_by":1,
                  "stage_tools":
                   [
                      {
@@ -1786,7 +1786,7 @@
                  },
                  "section_cleared": false,
                  "increase_stage_by": 0,
-                 "increase_win_points_by":10,
+                 "increase_win_points_by":1,
                  "stage_tools":
                   [
                      {
@@ -1835,6 +1835,213 @@
                          "parts": 
                          [
                              "Wire3"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage9",
+                 "current_stage_index": 3,
+                 "failure_condition":
+                 {
+                     "current_stage_index":3,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 1,
+                 "increase_win_points_by":1,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "pihdit",
+                         "part": "wire",
+                         "action_part_name":"Wire4",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":["Wire4Broken"],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Wire4"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage10",
+                 "current_stage_index": 5,
+                 "failure_condition":
+                 {
+                     "current_stage_index":5,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 1,
+                 "increase_win_points_by":1,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "tassu",
+                         "part": "Detonator",
+                         "action_part_name":"Detonator",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Tweezer",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Detonator"
+                         ]
+                     }
+             },
+             {
+                 "stage_name": "stage11",
+                 "current_stage_index": 6,
+                 "failure_condition":
+                 {
+                     "current_stage_index":6,
+                     "exception":false,
+                     "exception_condition":
+                     {
+                         "stage_index":null,
+                         "part":null,
+                         "tool":null,
+                         "penalty":null
+                     }
+                 },
+                 "section_cleared": false,
+                 "increase_stage_by": 1,
+                 "increase_win_points_by":1,
+                 "stage_tools":
+                  [
+                     {
+                         "tool": "Tweezer",
+                         "part": "Explosive",
+                         "action_part_name":"Uranium",
+                         "correct_tool_action":
+                         {
+                             "action":"remove",
+                             "animation":
+                             {
+                                 "set_trigger":"none",
+                                 "animation_part":null
+                             },
+                             "failure_part":"none",
+                             "broken_parts":[],
+                             "penalty_type":"none"
+                         },
+                         "wrong_tools": 
+                         [
+                             {
+                                 "tool": "pihdit",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Screwdriver",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "tassu",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool": "Liquid Nitrogen",
+                                 "penalty": "points"
+                             },
+                             {
+                                 "tool":"Magnet",
+                                 "penalty":"points"
+                             }
+                         ]
+                     }
+                 ],
+                 "stage_parts":
+                     {
+                         "parts": 
+                         [
+                             "Uranium"
                          ]
                      }
              }

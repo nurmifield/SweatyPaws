@@ -359,7 +359,7 @@ public class Level_3_Monitor : MonoBehaviour
                 unlocked=true;
                 TextMeshProUGUI lockStatusText = lockStatus.GetComponent<TextMeshProUGUI>();
                 lockStatusText.text = "OFF";
-                gameActionManager.IncreasePointsAndCurrentStage(1, 10);
+                gameActionManager.IncreasePointsAndCurrentStage(1, 1);
                 gameActionManager.ActivateObject("BottomFlap");
                 gameActionManager.DeactivateObject("Kansi2");
                 StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
@@ -381,15 +381,7 @@ public class Level_3_Monitor : MonoBehaviour
         systemBoot = true;
         TextMeshProUGUI failSafeStatusText = failSafeStatus.GetComponent<TextMeshProUGUI>();
         failSafeStatusText.text = "OFF";
-        if (failSafeTurnedOff < 2)
-        {
-            gameActionManager.IncreasePointsAndCurrentStage(1, 10);
             failSafeTurnedOff++;
-        }
-        else
-        {
-            gameActionManager.IncreasePointsAndCurrentStage(1,0);
-        }
         
         if (gameActionManager.FindGameObject("FailureSetup1").activeSelf)
         {
@@ -408,7 +400,6 @@ public class Level_3_Monitor : MonoBehaviour
         yield return new WaitForSeconds(60f);
         systemBoot = false;
         failSafeStatusText.text = "ON";
-        gameActionManager.DecreaseStage(1);
         if (gameActionManager.FindGameObject("UpperFlapWireSetup1").activeSelf)
         {
             gameActionManager.DeactivateObject("UpperFlapWireSetup1");
