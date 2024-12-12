@@ -3460,6 +3460,8 @@ MonoBehaviour:
   score: {fileID: 1252451382}
   analyticManager: {fileID: 288956140}
   manualTimeUsed: {fileID: 1211632435}
+  backgroundMusic: {fileID: 8300000, guid: 5ac43813e5eda95499519f2f64506429, type: 3}
+  backgroundMusicVolume: 0.1
 --- !u!114 &551773001
 MonoBehaviour:
   m_ObjectHideFlags: 0
