@@ -61,6 +61,11 @@ public class Timer : MonoBehaviour
         this.remainingTime -= 20;
     }
 
+    public void SetTimer(int time)
+    {
+        this.remainingTime += time;
+    }
+
     public void UpdateTimerPosition(bool isManualOpen)
     {
         if (isManualOpen)

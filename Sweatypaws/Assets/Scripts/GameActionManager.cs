@@ -324,4 +324,9 @@ public class GameActionManager : MonoBehaviour
     {
         return FindInactiveObjectByName(prefab.transform,objectName);
     }
+
+    public void GiveUp()
+    {
+        penaltyManager.CheckPenalty("fail");
+    }
 }

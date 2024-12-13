@@ -29,6 +29,7 @@ public class Level_3_Monitor : MonoBehaviour
     public GameObject[] newBootOrderSection;
     public GameObject[] currentBootOrderSection;
     public GameObject[] selectableBootOrderSection;
+    public GameObject[] executeProgramSection;
     public GameObject passwordInfo;
     public GameObject bootOrderInfo;
     public GameObject settingsInfo;
@@ -53,6 +54,8 @@ public class Level_3_Monitor : MonoBehaviour
     public bool clockRemoved = false;
     public int failSafeTurnedOff = 0;
     public ScrollRect scrollRect;
+    public Timer timer;
+    public bool addTime = false;
 
 
     // Start is called before the first frame update
@@ -60,6 +63,10 @@ public class Level_3_Monitor : MonoBehaviour
     {
         GameObject gameActionObject = GameObject.Find("GameSystem");
         gameActionManager = gameActionObject.GetComponent<GameActionManager>();
+
+        GameObject timerObject = GameObject.Find("Timertausta");
+        timer=timerObject.GetComponent<Timer>();
+
         newBootOrder= new string[3] {"Select","Select","Select"};
         currentBootOrder = new string[3] { "Failsafe.mdl", "Sec.mdl", "Os.mdl" };
         correctBootOrder = new string[3] { "Os.mdl" , "Sec.mdl", "Failsafe.mdl" };
@@ -91,6 +98,10 @@ public class Level_3_Monitor : MonoBehaviour
             else if (monitorPanels[i].name == "BootOrderSelection")
             {
                 monitorData.Add(new MonitorData(monitorPanels[i], selectableBootOrderSection));
+            }
+            else if (monitorPanels[i].name == "ExecuteScreen")
+            {
+                monitorData.Add(new MonitorData(monitorPanels[i], executeProgramSection));
             }
             else
             {
@@ -354,6 +365,11 @@ public class Level_3_Monitor : MonoBehaviour
             {
                 StartCoroutine(FailSafe());
                 StartCoroutine(ResponseText(settingsText, "SYSTEM BOOT STARTED"));
+                if (clockRemoved && !addTime)
+                {
+                    timer.SetTimer(90);
+                    addTime = true;
+                }
             }
         }
         else if (selectedName == "OpenLock")
@@ -378,6 +394,10 @@ public class Level_3_Monitor : MonoBehaviour
             {
                 StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
             }
+        }else if (selectedName == "ExecuteProgram")
+        {
+            gameActionManager.GiveUp();
+            CloseScreenButton();
         }
     }
 
