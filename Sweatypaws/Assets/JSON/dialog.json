@@ -213,7 +213,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Look at you, all whole. Cakewalk,right?",
-            "character_image":"snuggles",
+            "character_image":"snuggles1k",
            "animation_trigger":"SnugglesTalk"
         },
         {
@@ -228,7 +228,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"The perp, Biscuits, is being processed. I'll make him sweat in the box, for sure. But we've got no time to celebrate, a bomb has been found at the Stadium, you gotta head there now!",
-            "character_image":"snuggles2",
+            "character_image":"snuggles3k",
             "animation_trigger":"SnugglesTalk"
         },
         {
@@ -249,7 +249,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Bully for you, Sergeant. This Beauregard fellow makes me sick, all that money and no sense of proportion.The things these people get up to...",
-            "character_image":"snuggles3",
+            "character_image":"snuggles3k",
             "animation_trigger":"SnugglesTalk"
         },
         {
@@ -261,7 +261,7 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"Does it now? I've checked the street div's scene photos and I think you're onto something. The construction of these devices, there's some common threads here. ",
-            "character_image":"snuggles",
+            "character_image":"snuggles1k",
             "animation_trigger":"SnugglesTalk"
         },
         {
@@ -273,80 +273,59 @@
         {
             "character_name":"SNUGGLES",
             "dialog":"It was theorised, and this seems to corroborate it. I'll have a word with the tech boys, see what they can dig up. Meanwhile you've got a new site to head to, Lovebird hill. Printout to follow.",
-            "character_image":"snuggles",
+            "character_image":"snuggles1k",
            "animation_trigger":"SnugglesTalk"
         }
     ],
     "scene_5":
     [
         {
-            "character_name":"SNUGGLES",
-            "dialog":"Now this creep's far worse than the last.The lip he gives,the smell, and the hair... So lemme get this straight,your generation spends their free time watching someone else playing video games? What's wrong with flyfishing? Good Dog...",
-            "character_image":"",
-            "background_image":""
-        },
-        {
-            "character_name":"PICKLES",
-            "dialog":"It's an established form of entertainment sir, I'm not one to judge.",
-            "character_image":"",
-            "background_image":""
-        },
-        {
-            "character_name":"SNUGGLES",
-            "dialog":"Be that as it may, Tech div cracked the shitheel's phone, turns out he's on a Harmony server called \"Edgy Demo Boizz\", we've cross-refenced the other creep's devices and they're members of the same group. Server host, \"BabyVomitCannon\" last used his phone at Friendship Tower's scenic restaurant, only a few minutes ago. You must get there immediately, the threat to the public is off the charts!",
-            "character_image":"",
-            "background_image":""
-        }
-    ],
-    "scene_6":
-    [
-        {
             "character_name":"HACKLES",
             "dialog":"Curse your eyes, brother mine!",
-            "character_image":"",
-            "background_image":""
+            "character_image":"hackles2",
+            "animation_trigger":"Intro"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Hackles! What are you doing here? You're supposed to be at Camp Manners! Are you off your meds?",
-            "character_image":"",
-            "background_image":""
+            "character_image":"Päähenkilö3",
+            "animation_trigger":"Reveal"
         },
         {
             "character_name":"HACKLES",
             "dialog":"Of course I am! Have you any idea how much of them I must eat every day? And the taste, cinnamon roll, I'm so sick of it! It's the fault of that disgusting cinnamon roll factory, everything in this town tastes like a baked good of somesort! TIME TO END IT, AND YOU!",
-            "character_image":"",
-            "background_image":""
+            "character_image":"hackles3",
+            "animation_trigger":"HacklesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"But brother, you're not acting like yourself, can't you see? Your Evil Twin Syndrome is acting up again.",
-            "character_image":"",
-            "background_image":""
+            "character_image":"Päähenkilö-sairaala",
+            "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"HACKLES",
             "dialog":"Of course I know, better than you! Which one of us was always dragged to the doctor, to listen to those sermons on morality and \"how to just let him life his own life\" I didn't get to choose any of this, and I just want it to stop.",
-            "character_image":"",
-            "background_image":""
+            "character_image":"hackles",
+            "animation_trigger":"HacklesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"I'll get you the help you need, I promise. But this time you went way too far, Im going to tell Mom and Dad.",
-            "character_image":"",
-            "background_image":""
+            "character_image":"Päähenkilö5",
+            "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"HACKLES",
             "dialog":"You wouldn't dare!",
-            "character_image":"",
-            "background_image":""
+            "character_image":"hackles4",
+            "animation_trigger":"HacklesTalk"
         },
         {
             "character_name":"PICKLES",
             "dialog":"Just watch me, brother mine...",
-            "character_image":"",
-            "background_image":""
+            "character_image":"Päähenkilö4",
+            "animation_trigger":"PicklesTalk"
         }
     ]
 }

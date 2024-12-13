@@ -92,18 +92,30 @@ public class PlayerManager : MonoBehaviour
 
             if (playerData.version < newPlayerData.version)
             {
-                UpdatePlayerData(newPlayerData);
-                playerData.version = newPlayerData.version;
-                for (int i=0; i< playerData.level_progress.Count;i++)
+
+                if (playerData.version < 3)
                 {
-                    if (playerData.level_progress[i].collection == default)
-                    {
-                        Debug.Log("Adding Collection default value false");
-                        playerData.level_progress[i].collection = false;
-                    }
+                    NewGame();
+                    SetExistingUser(false);
+                    Debug.Log("Versio number is smaller than 3 , newGame activated");
+
                 }
-                SavePlayerData();
-                Debug.Log("Player data updated");
+                else
+                {
+                    UpdatePlayerData(newPlayerData);
+                    playerData.version = newPlayerData.version;
+                    for (int i = 0; i < playerData.level_progress.Count; i++)
+                    {
+                        if (playerData.level_progress[i].collection == default)
+                        {
+                            Debug.Log("Adding Collection default value false");
+                            playerData.level_progress[i].collection = false;
+                        }
+                    }
+                    SavePlayerData();
+                    Debug.Log("Player data updated");
+                }
+                
 
             }
             else

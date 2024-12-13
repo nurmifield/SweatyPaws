@@ -54,9 +54,13 @@ public class JsonReader : MonoBehaviour
     {
         var player = PlayerManager.Instance;
         //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
-        string selectedDialogue = ExtractDialogueSet(jsonFile.text, player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name);
-        dialogueList = JsonUtility.FromJson<DialogueList>(selectedDialogue);
-        dialogueList.dialogueName = player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name;
+        if (player.playerData.dialogue_level < player.playerData.dialogue_progress.Count)
+        {
+            string selectedDialogue = ExtractDialogueSet(jsonFile.text, player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name);
+            dialogueList = JsonUtility.FromJson<DialogueList>(selectedDialogue);
+            dialogueList.dialogueName = player.playerData.dialogue_progress[player.playerData.dialogue_level].dialogue_name;
+        }
+        
     }
 
     /*

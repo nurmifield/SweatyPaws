@@ -1,5 +1,5 @@
 {
-        "version":2,  
+        "version":3,  
         "level":0,
         "tutorial_done":false,
         "dialogue_level":0,
@@ -36,15 +36,8 @@
             {
                 "dialogue_name":"scene_5",
                 "dialogue_index":4,
-                "level_index":3,
-                "selected_level":"none",
-                "watched":false
-            },
-            {
-                "dialogue_name":"scene_6",
-                "dialogue_index":5,
-                "level_index":4,
-                "selected_level":"none",
+                "level_index":2,
+                "selected_level":"Level_3",
                 "watched":false
             }
         ],
@@ -71,15 +64,7 @@
                     "level_index":2,
                     "complete":false,
                     "score":0,
-                    "max_score":70,
-                    "collection":false
-                },
-                {
-                    "level_name":"Level_4",
-                    "level_index":3,
-                    "complete":false,
-                    "score":0,
-                    "max_score":70,
+                    "max_score":90,
                     "collection":false
                 }
             
