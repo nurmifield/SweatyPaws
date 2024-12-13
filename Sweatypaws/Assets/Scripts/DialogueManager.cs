@@ -284,6 +284,7 @@ public class DialogueManager : MonoBehaviour
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
         loadingScreen.PlayTimeLine();
+        Destroy(prefab);
         //SceneManager.LoadScene("Game");
     }
 
@@ -296,5 +297,6 @@ public class DialogueManager : MonoBehaviour
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
         Debug.Log("End of dialogue.");
+        Destroy(prefab);
     }
 }
