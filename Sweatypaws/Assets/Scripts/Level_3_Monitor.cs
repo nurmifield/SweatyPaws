@@ -56,6 +56,7 @@ public class Level_3_Monitor : MonoBehaviour
     public ScrollRect scrollRect;
     public Timer timer;
     public bool addTime = false;
+    IEnumerator coroutineInstance;
 
 
     // Start is called before the first frame update
@@ -164,9 +165,15 @@ public class Level_3_Monitor : MonoBehaviour
             }
             else
             {
+                if (coroutineInstance != null)
+                {
+                    StopCoroutine(coroutineInstance);
+
+                }
                 userTypedPassword = "";
                 passwordText.text = userTypedPassword;
-                StartCoroutine(ResponseText(passwordInfoText, "Incorrect"));
+                coroutineInstance = ResponseText(passwordInfoText, "Incorrect");
+                StartCoroutine(coroutineInstance);
 
             } 
         }else if (!moduleSelected)
@@ -342,9 +349,18 @@ public class Level_3_Monitor : MonoBehaviour
         {
             TextMeshProUGUI bootOrderText = bootOrderInfo.GetComponent<TextMeshProUGUI>();
             bool containsSelect = Array.Exists(newBootOrder, element => element == "Select");
+            if (coroutineInstance != null)
+            {
+                StopCoroutine(coroutineInstance);
+
+            }
             if (containsSelect)
             {
-                StartCoroutine(ResponseText(bootOrderText, "ERROR, MISSING FILE"));
+                
+
+                    coroutineInstance = ResponseText(bootOrderText, "ERROR, MISSING FILE");
+                    StartCoroutine(coroutineInstance);
+                
                 Debug.Log("Ei ole valittuna kaikki kohdat");
             }
             else
@@ -353,7 +369,9 @@ public class Level_3_Monitor : MonoBehaviour
                 UpdateCurrentBootOrder(currentBootOrderSection, currentBootOrder);
                 newBootOrder = new string[3] { "Select", "Select", "Select" };
                 UpdateCurrentBootOrder(newBootOrderSection, newBootOrder);
-                StartCoroutine(ResponseText(bootOrderText, "SAVED SUCCESSFULLY"));
+
+                coroutineInstance = ResponseText(bootOrderText, "SAVED SUCCESSFULLY");
+                StartCoroutine(coroutineInstance);
                 Debug.Log("Päivitetty uudet ohjeet boottiin");
             }
             
@@ -361,20 +379,36 @@ public class Level_3_Monitor : MonoBehaviour
         }else if (selectedName == "SystemBoot")
         {
             TextMeshProUGUI settingsText = settingsInfo.GetComponent<TextMeshProUGUI>();
+            if (coroutineInstance != null)
+            {
+                StopCoroutine(coroutineInstance);
+
+            }
             if (AreArraySame(currentBootOrder,correctBootOrder))
             {
                 StartCoroutine(FailSafe());
-                StartCoroutine(ResponseText(settingsText, "SYSTEM BOOT STARTED"));
+                coroutineInstance = ResponseText(settingsText, "SYSTEM BOOT STARTED");
+                StartCoroutine(coroutineInstance);
                 if (clockRemoved && !addTime)
                 {
                     timer.SetTimer(90);
                     addTime = true;
                 }
             }
+            else
+            {
+                coroutineInstance = ResponseText(settingsText, "SYSTEM ERROR WRONG ORDER");
+                StartCoroutine(coroutineInstance);
+            }
         }
         else if (selectedName == "OpenLock")
         {
             TextMeshProUGUI settingsText = settingsInfo.GetComponent<TextMeshProUGUI>();
+            if (coroutineInstance != null)
+            {
+                StopCoroutine(coroutineInstance);
+
+            }
             if (systemBoot && !unlocked)
             {
                 unlocked=true;
@@ -383,16 +417,18 @@ public class Level_3_Monitor : MonoBehaviour
                 gameActionManager.IncreasePointsAndCurrentStage(1, 1);
                 gameActionManager.ActivateObject("BottomFlap");
                 gameActionManager.DeactivateObject("Kansi2");
-                StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
+                coroutineInstance = ResponseText(settingsText, "LOCK IS OPEN");
+                StartCoroutine(coroutineInstance);
             }
             else if (!systemBoot)
             {
-                
-                StartCoroutine (ResponseText(settingsText, "FAIL SAFE IS ON"));
+                coroutineInstance = ResponseText(settingsText, "FAIL SAFE IS ON");
+                StartCoroutine (coroutineInstance);
             }
             else if (systemBoot && unlocked)
             {
-                StartCoroutine(ResponseText(settingsText, "LOCK IS OPEN"));
+                coroutineInstance = ResponseText(settingsText, "LOCK IS OPEN");
+                StartCoroutine(coroutineInstance);
             }
         }else if (selectedName == "ExecuteProgram")
         {
