@@ -29,11 +29,12 @@ public class CollectionPageManager : MonoBehaviour
     public CollectionPageData collectionPageData;
     public GameObject collectionPanel;
     public GameObject collectionPageBig;
+    public int indexNumber = 0;
 
     public void UpdateCollectionPage()
     {
         collectionCanvas.SetActive(true);
-        collectionText.text = collectionPageData.collectibles_text[0];
+        collectionText.text = collectionPageData.collectibles_text[indexNumber];
         Sprite newCollectiblesImage = Resources.Load<Sprite>(collectionPageData.collectibles_image);
         collectionImage.sprite = newCollectiblesImage;
         if (collectionPageData.collectibles_text.Length > 0)
@@ -44,16 +45,26 @@ public class CollectionPageManager : MonoBehaviour
 
     public void NextCollectionText()
     {
-        collectionText.text = collectionPageData.collectibles_text[1];
-        nextButton.SetActive(false);
+        indexNumber++;
+        collectionText.text = collectionPageData.collectibles_text[indexNumber];
         previousButton.SetActive(true);
+        Debug.Log(indexNumber);
+        if (indexNumber == collectionPageData.collectibles_text.Length -1)
+        {
+            nextButton.SetActive(false);
+        }
     }
 
     public void PreviousCollectionText()
     {
-        collectionText.text = collectionPageData.collectibles_text[0];
+        indexNumber--;
+        collectionText.text = collectionPageData.collectibles_text[indexNumber];
         nextButton.SetActive(true);
-        previousButton.SetActive(false);
+        Debug.Log(indexNumber);
+        if (indexNumber == 0)
+        {
+            previousButton.SetActive(false);
+        }
     }
 
     public void CloseCollection()
@@ -62,6 +73,7 @@ public class CollectionPageManager : MonoBehaviour
         collectionPanel.SetActive(true);
         previousButton.SetActive(false);
         nextButton.SetActive(false);
+        indexNumber = 0;
     }
 
     public void OpenPicture()

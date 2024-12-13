@@ -32,8 +32,15 @@
             "level_collectible":
             {
                 "collectibles_image": "level_3_collectible",
-                "collectibles_image_big": "Level_3_big"
-            }
+                "collectibles_image_big": "Level_3_big",
+                "collectibles_text":
+                [
+                    "A Pawston Participants Pee-Wee Participation Trophy, 90’s series. If you get in the team, you’ll get one. Guaranteed. Some parents buy extras, just to fill up the shelf. It’s cheap plastic for sure, but at least it was designed in pawston by Reggie C. Flippers, a local sculptor. Nice and shiny.",
+                    "Wait, this guy was in the same Pee-wee team as me and Hackles? Why can’t I remember him? He would’ve certainly stuck out…I mean, the dude’s a greedy, mouth breathing Shitheel, but it’s kinda cute he kept the trophy. I guess it’s the gold finish.",
+                    "A Pawston Participants Pee-Wee Participation Trophy, 90’s series. If you get in the team, you’ll get one. Guaranteed. Some parents buy extras, just to fill up the shelf. It’s cheap plastic for sure, but at least it was designed in pawston by Reggie C. Flippers, a local sculptor. Nice and shiny.",
+                    "Wait, this guy was in the same Pee-wee team as me and Hackles? Why can’t I remember him? He would’ve certainly stuck out…I mean, the dude’s a greedy, mouth breathing Shitheel, but it’s kinda cute he kept the trophy. I guess it’s the gold finish."
+                ]
+            }  
         }
     ]
 }

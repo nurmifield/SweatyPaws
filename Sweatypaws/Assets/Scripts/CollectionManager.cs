@@ -181,16 +181,20 @@ public class CollectionManager : MonoBehaviour
         GameObject buttonObject = EventSystem.current.currentSelectedGameObject;
         string imageText="";
         string imageTextBig ="";
-        string[] collectionArray= new string[2];
+        string[] collectionArray= new string[0];
         for (int i = 0; i <  jsonReader.collectionsData.collectibles.Length;i++)
         {
             if (jsonReader.collectionsData.collectibles[i].level_name == buttonObject.name)
             {
-                collectionArray[0] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[0];
-                collectionArray[1] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[1];
+                collectionArray = new string[jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text.Length];
+                for (int ii = 0; ii< jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text.Length;ii++)
+                {
+                    collectionArray[ii] = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_text[ii];
+                }
                 imageText = jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_image;
                 imageTextBig=jsonReader.collectionsData.collectibles[i].level_collectible.collectibles_image_big;
             }
+
         }
         
         collectionPageManager.collectionPageData= new CollectionPageData(imageText, collectionArray,imageTextBig);
