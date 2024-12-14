@@ -19,6 +19,7 @@ public class LevelButtonManagement : MonoBehaviour
     public Sprite levelImage;
     public Sprite youWinImage;
     public Sprite perfectImage;
+    public Level_1_script levelScript;
 
 
     // Start is called before the first frame update
@@ -82,6 +83,7 @@ public class LevelButtonManagement : MonoBehaviour
         if (canvas != null)
         {
             canvas.SetActive(false);
+            levelScript.SetCurrentPageZero();
         }
        
 

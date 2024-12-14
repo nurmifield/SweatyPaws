@@ -14,6 +14,7 @@ public class Level_1_script : MonoBehaviour
     private AudioSource audioSource;
     public UnityEngine.UI.Image firstPageImage;
     public UnityEngine.UI.Image secondPageImage;
+    public bool onePageOnly = false;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,7 +29,10 @@ public class Level_1_script : MonoBehaviour
         }
             UpdateButtonVisibility();
     }
-
+    public void SetCurrentPageZero() 
+    {
+        this.currentPage = 0;
+    }
     public void OpenCanvas()
     {
         if (EpäiltykansioCanvas != null)
@@ -41,8 +45,24 @@ public class Level_1_script : MonoBehaviour
             player.SetSelectedLevel(buttonObject.name);
             Sprite newFirstPageSprite = Resources.Load<Sprite>(buttonObject.name + "_FirstPage");
             Sprite newSecondPageSprite = Resources.Load<Sprite>(buttonObject.name + "_SecondPage");
+            Debug.Log(newSecondPageSprite);
+            if (newSecondPageSprite != null)
+            {
+                secondPageImage.sprite = newSecondPageSprite;
+                
+                onePageOnly = false;
+            }
+            else
+            {
+                NextPageButton.SetActive(false);
+                onePageOnly = true;
+               
+            }
             firstPageImage.sprite=newFirstPageSprite;
-            secondPageImage.sprite=newSecondPageSprite;
+            pages[0].SetActive(true);
+            pages[1].SetActive(false);
+            UpdateButtonVisibility();
+
         }
         else
         {
@@ -100,7 +120,7 @@ public class Level_1_script : MonoBehaviour
             PreviousPageButton.SetActive(currentPage > 0);
         }
 
-        if (NextPageButton != null)
+        if (NextPageButton != null && !onePageOnly)
         {
             NextPageButton.SetActive(currentPage < pages.Length - 1);
         }

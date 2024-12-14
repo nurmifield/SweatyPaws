@@ -518,6 +518,7 @@ RectTransform:
   - {fileID: 1018495722}
   - {fileID: 967426035}
   - {fileID: 560855243}
+  - {fileID: 127382346}
   m_Father: {fileID: 1691002175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -548,6 +549,7 @@ MonoBehaviour:
   levelImage: {fileID: 21300000, guid: 57fdee18cfe3b1e49bf1b121b5b531f7, type: 3}
   youWinImage: {fileID: 21300000, guid: e919c24fa6465b149b443ef5bc9dca6e, type: 3}
   perfectImage: {fileID: 21300000, guid: 92427557dd0b7664da620e12768156ac, type: 3}
+  levelScript: {fileID: 1522902915}
 --- !u!1 &79838681
 GameObject:
   m_ObjectHideFlags: 0
