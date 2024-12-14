@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,6 +11,7 @@ using static JsonReader;
 
 public class DialogueManager : MonoBehaviour
 {
+ 
     private JsonReader jsonReader;
     private TextMeshProUGUI characterName;
     private TextMeshProUGUI dialogue;
@@ -77,14 +79,14 @@ public class DialogueManager : MonoBehaviour
         GameObject continueButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
 
         //Asetetaan arvot ja onclick sekä kutsutaan functiota
-        continueButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
+        previousButton = continueButtonObject.GetComponent<UnityEngine.UI.Button>();
         if (!loadScene)
         {
-            continueButton.onClick.AddListener(DisplayPreviousDialogue);
+            previousButton.onClick.AddListener(DisplayPreviousDialogue);
         }
         else
         {
-            continueButton.onClick.AddListener(DisplayPreviousDialogue);
+            previousButton.onClick.AddListener(DisplayPreviousDialogue);
         }
 
     }
@@ -284,6 +286,8 @@ public class DialogueManager : MonoBehaviour
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
         loadingScreen.PlayTimeLine();
+        continueButton.onClick.RemoveListener(DisplayNextDialogueChangeScene);
+        previousButton.onClick.RemoveListener(DisplayPreviousDialogue);
         Destroy(prefab);
         //SceneManager.LoadScene("Game");
     }
@@ -296,6 +300,8 @@ public class DialogueManager : MonoBehaviour
         PlayerManager.Instance.DialogCompleted(jsonReader.dialogueList.dialogueName);
         SetDialogueIndex(0);
         dialogueCanvas.SetActive(false);
+        continueButton.onClick.RemoveListener(DisplayNextDialogue);
+        previousButton.onClick.RemoveListener(DisplayPreviousDialogue);
         Debug.Log("End of dialogue.");
         Destroy(prefab);
     }
