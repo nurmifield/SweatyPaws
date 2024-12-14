@@ -11,6 +11,7 @@ public class PenaltyManager : MonoBehaviour
     {
         if (penalty == "fail")
         {
+
             GetComponent<GameOverScreen>().GameOverScreenManage();
             Debug.Log("Failure");
         }

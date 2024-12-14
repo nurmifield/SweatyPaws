@@ -38,6 +38,13 @@ public class Timer : MonoBehaviour
             // GameOver();
             timerText.color = Color.red;
             timerText_1.color = Color.red;
+
+            GameObject monitorScreen = GameObject.Find("ScreenObject");
+            if (monitorScreen != null && monitorScreen.activeSelf)
+            {
+                monitorScreen.SetActive(false);
+            }
+
             gameOverObject.GameOverScreenManage();
         }
 
