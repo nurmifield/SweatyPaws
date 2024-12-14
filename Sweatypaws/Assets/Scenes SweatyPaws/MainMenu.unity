@@ -154,10 +154,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 520085233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 840.1492, y: 1312.1381}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1029}
+  m_SizeDelta: {x: 840.1492, y: 1312.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7294383
 MonoBehaviour:
@@ -184,8 +184,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c4d8a459ccb714841bb018976838c381, type: 2}
-  m_sharedMaterial: {fileID: -6738509764110555290, guid: c4d8a459ccb714841bb018976838c381, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
+  m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -563,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.834, y: -461}
+  m_AnchoredPosition: {x: 12.834, y: -552}
   m_SizeDelta: {x: 794.2599, y: 170.0092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88635429
@@ -6213,7 +6213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.834, y: -44}
+  m_AnchoredPosition: {x: 12.834, y: 34}
   m_SizeDelta: {x: 840.15, y: 925.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159007616
@@ -6236,12 +6236,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tomi Valtanen (Programming)\n\nRoni Kilpinen (Programming)\n\nJoona Nurminen
-    (Programming)\n\nNoora Heikkinen (Artwork)\n\nPetri Piirainen (Art, sounds &
-    writing)  \n\n"
+  m_text: "Gameplay Programming and Animation  \nTomi Valtanen\n\nUI and UX \nJoona
+    Nurminen and Roni Kilpinen\n\nGraphics and Game idea \nNoora Heikkinen\n\nLevel
+    design and Audio \nPetri Piirainen\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c4d8a459ccb714841bb018976838c381, type: 2}
-  m_sharedMaterial: {fileID: -6738509764110555290, guid: c4d8a459ccb714841bb018976838c381, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
+  m_sharedMaterial: {fileID: 6488064444299746733, guid: 23983887dd85ed848a5765dcdb9b2eb8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6265,14 +6265,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 53
+  m_fontSizeBase: 53
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
