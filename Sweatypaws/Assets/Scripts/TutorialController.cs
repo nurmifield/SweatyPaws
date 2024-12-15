@@ -164,7 +164,7 @@ public class HowToPlayManager : MonoBehaviour
     void StartGame()
     {
         var player = PlayerManager.Instance;
-        Debug.Log("Game Started!");
+        //Debug.Log("Game Started!");
         howToPlayPanel.SetActive(false);
         player.TutorialDone();
     }

@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             characterImage.sprite = newCharacterSprite;
             dialogue.text = currentDialogue.dialog;
-            Debug.Log(newCharacterSprite);
+            //Debug.Log(newCharacterSprite);
 
     }
 
@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour
         int currentDialogueIndexNew=GetDialogueIndex();
         currentDialogueIndexNew++;
         SetDialogueIndex(currentDialogueIndexNew);
-        Debug.Log(currentDialogueIndexNew);
+        //Debug.Log(currentDialogueIndexNew);
         if (currentDialogueIndexNew>0)
         {    
             GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
@@ -156,13 +156,13 @@ public class DialogueManager : MonoBehaviour
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             characterImage.sprite = newCharacterSprite;
             dialogue.text = currentDialogue.dialog;
-            Debug.Log(newCharacterSprite);
+            //Debug.Log(newCharacterSprite);
             
         }
         else
         {
 
-            Debug.Log("Ei dialogueita jäljellä");
+            //Debug.Log("Ei dialogueita jäljellä");
             EndDialogue();
         }
     }
@@ -183,7 +183,7 @@ public class DialogueManager : MonoBehaviour
 
         int currentDialogueIndexNew = GetPreviousDialogueIndex();
         SetDialogueIndex(currentDialogueIndexNew);
-        Debug.Log(currentDialogueIndexNew);
+        //Debug.Log(currentDialogueIndexNew);
         if (currentDialogueIndexNew<=0)
         {
             GameObject previousButtonObject = dialogueWindow.Find("PreviousButton").gameObject;
@@ -197,13 +197,13 @@ public class DialogueManager : MonoBehaviour
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             characterImage.sprite = newCharacterSprite;
             dialogue.text = currentDialogue.dialog;
-            Debug.Log(newCharacterSprite);
+            //Debug.Log(newCharacterSprite);
 
            
         }
         else
         {
-            Debug.Log("Ei dialogueita jäljellä");
+            //Debug.Log("Ei dialogueita jäljellä");
             dialogueCanvas.SetActive(false);
         }
     }
@@ -241,13 +241,13 @@ public class DialogueManager : MonoBehaviour
             Sprite newCharacterSprite = Resources.Load<Sprite>(currentDialogue.character_image);
             characterImage.sprite = newCharacterSprite;
             dialogue.text = currentDialogue.dialog;
-            Debug.Log(newCharacterSprite);
+            //Debug.Log(newCharacterSprite);
 
             
         }
         else
         {
-            Debug.Log("Ei dialogueita jäljellä");
+            //Debug.Log("Ei dialogueita jäljellä");
             EndDialogueLoadScene();
         }
     }
@@ -302,7 +302,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
         continueButton.onClick.RemoveListener(DisplayNextDialogue);
         previousButton.onClick.RemoveListener(DisplayPreviousDialogue);
-        Debug.Log("End of dialogue.");
+        //Debug.Log("End of dialogue.");
         Destroy(prefab);
     }
 }

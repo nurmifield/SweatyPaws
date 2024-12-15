@@ -59,7 +59,7 @@ public class LevelButtonManagement : MonoBehaviour
                             buttonsImage.sprite = levelImage;
                         }
                         buttons[i].gameObject.SetActive(true);
-                        Debug.Log("leveli: " + i);
+                        //Debug.Log("leveli: " + i);
                     }
                 }
             }

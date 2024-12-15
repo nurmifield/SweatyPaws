@@ -35,12 +35,12 @@ public class JsonReader : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Map")
         {
             UpdateNewDialogueList();
-            Debug.Log("Scene is Map");
+            //Debug.Log("Scene is Map");
         }
         else if(SceneManager.GetActiveScene().name == "Game")
         {
             UpdateNewBombLogicDataLevel();
-            Debug.Log("Scene is Game");
+            //Debug.Log("Scene is Game");
         }else if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             UpdateCollectionsData();
@@ -82,8 +82,8 @@ public class JsonReader : MonoBehaviour
         var player = PlayerManager.Instance;
         //dialogueList = JsonUtility.FromJson<DialogueList>(jsonFile.text);
         string selectLevel = ExtractLevelSet(jsonBombLogicDataFile.text, player.GetSelectedLevel());
-        Debug.Log(player.GetSelectedLevel());
-        Debug.Log(selectLevel);
+        //Debug.Log(player.GetSelectedLevel());
+        //Debug.Log(selectLevel);
         bombLogicData = JsonUtility.FromJson<BombLogicData>(selectLevel);
         bombLogicData.level_name = player.GetSelectedLevel();
 
@@ -92,7 +92,7 @@ public class JsonReader : MonoBehaviour
     public void UpdateCollectionsData()
     {
         string collections=ExtractCollectibles(jsonCollectiblesDataFile.text, "collections");
-        Debug.Log(collections);
+        //Debug.Log(collections);
         collectionsData = JsonUtility.FromJson<CollectionsData>(collections);
 
     }
@@ -106,7 +106,7 @@ public class JsonReader : MonoBehaviour
             string dialogueJson = jsonText.Substring(startArray, endArray - startArray);
             return "{\"dialogues\":" + dialogueJson + "}";
         }
-        Debug.LogError("Dialogue set not found: " + dialogueSetName);
+        //Debug.LogError("Dialogue set not found: " + dialogueSetName);
         return null;
     }
 
@@ -145,7 +145,7 @@ public class JsonReader : MonoBehaviour
         }
 
         // Log an error and return null if the level set was not found
-        Debug.LogError("Level set not found: " + levelSetName);
+        //Debug.LogError("Level set not found: " + levelSetName);
         return null;
     }
     /*
@@ -198,7 +198,7 @@ public class JsonReader : MonoBehaviour
         }
 
         // Log an error and return null if the level set was not found
-        Debug.LogError("Level set not found: " + CollectiblesSetName);
+        //Debug.LogError("Level set not found: " + CollectiblesSetName);
         return null;
     }
 }

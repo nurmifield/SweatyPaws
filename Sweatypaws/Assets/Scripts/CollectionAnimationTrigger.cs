@@ -21,7 +21,7 @@ public void CollectionAnimationCheck()
                 }
                 else
                 {
-                    Debug.Log("Collection on jo saatu tai ei riittävästi pisteitä");  
+                    //Debug.Log("Collection on jo saatu tai ei riittävästi pisteitä");  
                     break;
                 }
                 

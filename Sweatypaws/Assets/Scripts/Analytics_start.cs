@@ -10,11 +10,11 @@ public class UnityServicesInitializer : MonoBehaviour
         {
             // Initialize Unity Services
             await UnityServices.InitializeAsync();
-            Debug.Log("Unity Services Initialized Successfully");
+            //Debug.Log("Unity Services Initialized Successfully");
 
             // Start Analytics data collection
             AnalyticsService.Instance.StartDataCollection();
-            Debug.Log("Analytics data collection started");
+            //Debug.Log("Analytics data collection started");
         }
         catch (System.Exception e)
         {

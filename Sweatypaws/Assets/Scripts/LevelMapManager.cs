@@ -66,7 +66,7 @@ public class LevelMapManager : MonoBehaviour
 
             }
         }
-        Debug.Log("Dialogue ready: " + dialogueReady);
+        //Debug.Log("Dialogue ready: " + dialogueReady);
         return dialogueReady;
     }
 }

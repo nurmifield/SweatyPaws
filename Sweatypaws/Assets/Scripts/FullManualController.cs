@@ -21,20 +21,20 @@ public class BombManualManager : MonoBehaviour
     }
     public void OpenFullManual()
     {
-        Debug.Log("Opening Full Manual...");
+        //Debug.Log("Opening Full Manual...");
         HideAllPanels();                  // Hide all other panels
         FullManualPanel.SetActive(true);  // Activate the full manual panel
         ShowBookCover();                  // Start with the book cover
-        Debug.Log("FullManualPanel activated with BookCoverPanel!");
+        //Debug.Log("FullManualPanel activated with BookCoverPanel!");
     }
 
     // Close the manual and return to the map
     public void CloseManual()
     {
-        Debug.Log("Closing Full Manual...");
+        //Debug.Log("Closing Full Manual...");
         HideAllPanels();               // Hide all panels
         MapPanel.SetActive(true);      // Show the map panel
-        Debug.Log("MapPanel activated!");
+        //Debug.Log("MapPanel activated!");
     }
 
     // Show the book cover panel
@@ -47,7 +47,7 @@ public class BombManualManager : MonoBehaviour
         {
             currentPageIndex = 0;
         }
-        Debug.Log("BookCoverPanel activated!");
+        //Debug.Log("BookCoverPanel activated!");
     }
 
     // Show the specified page
@@ -59,11 +59,11 @@ public class BombManualManager : MonoBehaviour
             FullManualPanel.SetActive(true); // Ensure the parent panel is active
             pages[pageIndex].SetActive(true);
             currentPageIndex = pageIndex;
-            Debug.Log($"Page {pageIndex} activated!");
+            //Debug.Log($"Page {pageIndex} activated!");
         }
         else
         {
-            Debug.LogError("Page index out of range: " + pageIndex);
+            //Debug.LogError("Page index out of range: " + pageIndex);
         }
     }
 
@@ -75,7 +75,7 @@ public class BombManualManager : MonoBehaviour
         FullManualPanel.SetActive(true); // Ensure the parent panel is active
         TOCPanel.SetActive(true);
         currentPageIndex = 0;
-        Debug.Log("TOCPanel activated!");
+        //Debug.Log("TOCPanel activated!");
     }
 
     // Show the map panel
@@ -84,7 +84,7 @@ public class BombManualManager : MonoBehaviour
         PlayAudio(closeManualClip);
         HideAllPanels();
         MapPanel.SetActive(true); // Activate the map panel
-        Debug.Log("MapPanel activated!");
+        //Debug.Log("MapPanel activated!");
     }
 
     // Go to the next page
@@ -110,7 +110,7 @@ public class BombManualManager : MonoBehaviour
     // Hide all panels
     private void HideAllPanels()
     {
-        Debug.Log("Hiding all panels...");
+        //Debug.Log("Hiding all panels...");
         FullManualPanel.SetActive(false);
         foreach (GameObject page in pages)
         {
@@ -119,7 +119,7 @@ public class BombManualManager : MonoBehaviour
         BookCoverPanel.SetActive(false);
         TOCPanel.SetActive(false);
         MapPanel.SetActive(false);
-        Debug.Log("All panels hidden.");
+        //Debug.Log("All panels hidden.");
     }
 
     public void PlayAudio(AudioClip clip)

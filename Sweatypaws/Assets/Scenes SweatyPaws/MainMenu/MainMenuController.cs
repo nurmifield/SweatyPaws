@@ -115,7 +115,7 @@ public class MainMenuController : MonoBehaviour
     // Method to exit the game
     public void ExitGame()
     {
-        Debug.Log("Game is exiting...");  // This will appear in the console for testing in the Unity Editor
+        //Debug.Log("Game is exiting...");  // This will appear in the console for testing in the Unity Editor
 
         Application.Quit();  // Quit the game (this works in the build, not in the editor)
     }

@@ -180,7 +180,7 @@ public class Level_3_Monitor : MonoBehaviour
         {
             if (monitorData[monitorLevel].fields.Length == 0)
             {
-                Debug.Log("Takaisin main menu ei tutkittavaa");
+                //Debug.Log("Takaisin main menu ei tutkittavaa");
                 monitorData[monitorLevel].monitorPanel.SetActive(false);
                 monitorData[1].monitorPanel.SetActive(true);
                 monitorLevel = 1;
@@ -232,10 +232,10 @@ public class Level_3_Monitor : MonoBehaviour
 
     public void UpButton()
     {
-        Debug.Log("Up button tapahtuu");
+        //Debug.Log("Up button tapahtuu");
         if (moduleSelected && selectIndex > 0)
         {
-            Debug.Log("Up button tapahtuu IF sisällä");
+            //Debug.Log("Up button tapahtuu IF sisällä");
             TextMeshProUGUI selectText = monitorData[monitorLevel].fields[selectIndex].GetComponent<TextMeshProUGUI>();
             string currentSelectText = selectText.text;
             selectText.text = RemoveSelectMarkers(currentSelectText);
@@ -361,7 +361,7 @@ public class Level_3_Monitor : MonoBehaviour
                     coroutineInstance = ResponseText(bootOrderText, "ERROR, MISSING FILE");
                     StartCoroutine(coroutineInstance);
                 
-                Debug.Log("Ei ole valittuna kaikki kohdat");
+                //Debug.Log("Ei ole valittuna kaikki kohdat");
             }
             else
             {
@@ -372,7 +372,7 @@ public class Level_3_Monitor : MonoBehaviour
 
                 coroutineInstance = ResponseText(bootOrderText, "SAVED SUCCESSFULLY");
                 StartCoroutine(coroutineInstance);
-                Debug.Log("Päivitetty uudet ohjeet boottiin");
+                //Debug.Log("Päivitetty uudet ohjeet boottiin");
             }
             
 

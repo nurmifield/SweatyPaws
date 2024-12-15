@@ -48,7 +48,7 @@ public class CollectionPageManager : MonoBehaviour
         indexNumber++;
         collectionText.text = collectionPageData.collectibles_text[indexNumber];
         previousButton.SetActive(true);
-        Debug.Log(indexNumber);
+        //Debug.Log(indexNumber);
         if (indexNumber == collectionPageData.collectibles_text.Length -1)
         {
             nextButton.SetActive(false);
@@ -60,7 +60,7 @@ public class CollectionPageManager : MonoBehaviour
         indexNumber--;
         collectionText.text = collectionPageData.collectibles_text[indexNumber];
         nextButton.SetActive(true);
-        Debug.Log(indexNumber);
+        //Debug.Log(indexNumber);
         if (indexNumber == 0)
         {
             previousButton.SetActive(false);

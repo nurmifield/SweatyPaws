@@ -33,13 +33,13 @@ public class ManualController : MonoBehaviour
         toolSelector = FindObjectOfType<ToolSelector>();
         
         audioSource = GetComponent<AudioSource>();
-        Debug.Log("ManualController started. Ensure the book cover shows when opening the manual.");
+        //Debug.Log("ManualController started. Ensure the book cover shows when opening the manual.");
     }
 
     
     public void ShowBookCover()
     {
-        Debug.Log("Opening book cover panel.");
+        //Debug.Log("Opening book cover panel.");
         bookCoverPanel.SetActive(true);    
         manualPanel.SetActive(false);              
         toolsButtons.SetActive(false);     
@@ -47,7 +47,7 @@ public class ManualController : MonoBehaviour
         manualButton.SetActive(false);
         timer.UpdateTimerPosition(true);     
         startTime = Time.time;
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
 
         if (SceneManager.GetActiveScene().name == "Game")
         {
@@ -58,7 +58,7 @@ public class ManualController : MonoBehaviour
     
     public void ContinueGame()
     {
-        Debug.Log("Continuing game from the book cover.");
+        //Debug.Log("Continuing game from the book cover.");
         bookCoverPanel.SetActive(false);   
         toolsButtons.SetActive(true);      
         settingsButton.SetActive(true);    
@@ -80,7 +80,7 @@ public class ManualController : MonoBehaviour
     
     public void OpenManual()
     {
-        Debug.Log("Opening manual (book cover panel first).");
+        //Debug.Log("Opening manual (book cover panel first).");
         currentPage = 0;                  
         bookCoverPanel.SetActive(false);    
         manualPanel.SetActive(true);     
@@ -93,7 +93,7 @@ public class ManualController : MonoBehaviour
     
     public void OpenFirstPageFromCover()
     {
-        Debug.Log("Opening the first manual page.");
+        //Debug.Log("Opening the first manual page.");
 
         PlayAudio(pageTurnClip);
         currentPage = 0;                   
@@ -109,7 +109,7 @@ public class ManualController : MonoBehaviour
         {
             currentPage++;
             PlayAudio(pageTurnClip);
-            Debug.Log("Next page: " + currentPage);
+            //Debug.Log("Next page: " + currentPage);
             UpdatePage();
         }
     }
@@ -121,7 +121,7 @@ public class ManualController : MonoBehaviour
         {
             currentPage--;
             PlayAudio(pageTurnClip);
-            Debug.Log("Previous page: " + currentPage);
+            //Debug.Log("Previous page: " + currentPage);
             UpdatePage();
         }
     }
@@ -129,7 +129,7 @@ public class ManualController : MonoBehaviour
     
     private void UpdatePage()
     { var player=PlayerManager.Instance;
-        Debug.Log("Updating page: " + currentPage);
+        //Debug.Log("Updating page: " + currentPage);
         if (currentPage == 0) {
             pages[0].SetActive(true);
             for (int i = 0; i < pages.Length;i++)
@@ -171,7 +171,7 @@ public class ManualController : MonoBehaviour
             toolSelector.currentSelectedButton = null;
         }
 
-        Debug.Log("Closing manual and resuming game.");
+        //Debug.Log("Closing manual and resuming game.");
         PlayAudio(closeManualClip);
         manualPanel.SetActive(false);      
         bookCoverPanel.SetActive(false);   
@@ -182,7 +182,7 @@ public class ManualController : MonoBehaviour
         Time.timeScale = 1f;               
         endTime = Time.time;
         manualTimeUsed.CalculateTime(startTime,endTime);
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
 
         
     }

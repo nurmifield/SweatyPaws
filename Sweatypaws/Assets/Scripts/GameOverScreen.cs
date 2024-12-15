@@ -49,7 +49,7 @@ public class GameOverScreen : MonoBehaviour
         guiObject.SetActive(false);
         gameOverObject.SetActive(true);
         analyticManager.GetComponent<AnalyticsMethods>().CheckLevelCompletion(false, manualTimeUsed.overAllTimeUsed);
-        Debug.Log(manualTimeUsed.overAllTimeUsed);
+        //Debug.Log(manualTimeUsed.overAllTimeUsed);
     }
 
     public void YouWinScreenManage()
@@ -66,7 +66,7 @@ public class GameOverScreen : MonoBehaviour
         guiObject.SetActive(false);
         youWinObject.SetActive(true);
         analyticManager.GetComponent<AnalyticsMethods>().CheckLevelCompletion(true,manualTimeUsed.overAllTimeUsed);
-        Debug.Log(manualTimeUsed.overAllTimeUsed);
+        //Debug.Log(manualTimeUsed.overAllTimeUsed);
     }
     public void RestartButton()
     {

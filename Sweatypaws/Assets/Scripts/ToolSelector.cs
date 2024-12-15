@@ -55,11 +55,11 @@ public class ToolSelector : MonoBehaviour
             {
                 if (obj.activeSelf)
                 {
-                    Debug.Log("Paneeli on aktiivinen");
+                    //Debug.Log("Paneeli on aktiivinen");
                     return;
                 }
             }
-            Debug.Log("Selected tool: " + toolName + " at " + timestamp);
+            //Debug.Log("Selected tool: " + toolName + " at " + timestamp);
 
         if (player != null)
         {
@@ -67,7 +67,7 @@ public class ToolSelector : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Player Not Found!");
+            //Debug.LogError("Player Not Found!");
         }
 
         HighlightButton(button);
@@ -82,7 +82,7 @@ public class ToolSelector : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Sound index " + index + " is out of range or not assigned.");
+            //Debug.LogWarning("Sound index " + index + " is out of range or not assigned.");
         }
     }
 

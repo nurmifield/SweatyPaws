@@ -94,7 +94,7 @@ public class MenuController : MonoBehaviour
     // Toggle music (replace with your actual music management code)
     public void ToggleMusic()
     {
-        Debug.Log("Music toggled");
+        //Debug.Log("Music toggled");
     }
 
 

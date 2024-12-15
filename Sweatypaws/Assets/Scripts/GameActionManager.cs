@@ -47,7 +47,7 @@ public class GameActionManager : MonoBehaviour
                 if (action.name == levelStages[i].stage_parts.parts[ii])
                 {
                     //Lähetetään tieto missä stagella kyseinen osa on
-                    Debug.Log("Stage" + levelStages[i].stage_name + " Contains " + action.name + " part");
+                    //Debug.Log("Stage" + levelStages[i].stage_name + " Contains " + action.name + " part");
                     ChekcCurrentStageIndex(levelStages[i].stage_name, action);
                     
                     break;
@@ -66,7 +66,7 @@ public class GameActionManager : MonoBehaviour
                     //Tarkistus onko current index sama tai isompi, kuin stagessa oleva index
                     //Tässä kohtaa isompi tai sama voidaan edetä tarkistamaan mikä työ kalu kyseessä, koska ei suoraan ole fail
                     //Tarkistetaan onko oikea työkalu käytössä.
-                    Debug.Log("Current stage index is " + bombSetup.current_stage + "levels stage current index is " + levelStages[i].current_stage_index);
+                    //Debug.Log("Current stage index is " + bombSetup.current_stage + "levels stage current index is " + levelStages[i].current_stage_index);
                     CheckCorrectPartTool(action , levelStages[i]);
                     
                     break;
@@ -74,7 +74,7 @@ public class GameActionManager : MonoBehaviour
                 else
                 {
                     // Tänne tehdä functio , joka huolehtii siitä, että current index oli pienempi eli johtaa siihen ,että fail ellei poikkeusta tilanteeseen ole
-                    Debug.Log("Current stage index is  smaller than level stage current indec");
+                    //Debug.Log("Current stage index is  smaller than level stage current indec");
                     CheckExecptionCondition(levelStages[i],action);
                     
                 }
@@ -90,7 +90,7 @@ public class GameActionManager : MonoBehaviour
             if (action.tag == stage.stage_tools[i].part && playerTool == stage.stage_tools[i].tool && action.name == stage.stage_tools[i].action_part_name)
             {
                 //Tässä olisi oikea työkalu ja se johtaisi jatkoon
-                Debug.Log("Player is using: " + playerTool + " and part tag is: " + action.tag);
+                //Debug.Log("Player is using: " + playerTool + " and part tag is: " + action.tag);
                 CheckCorrectToolAction(stage.stage_tools[i],action, stage);
 
                 break;
@@ -102,7 +102,7 @@ public class GameActionManager : MonoBehaviour
                     if (playerTool == stage.stage_tools[i].wrong_tools[ii].tool)
                     {
                         //Täällä tarkastellaan millainen penalty tulee väärin käytetystä työkalusta
-                        Debug.Log("Player is using wrong tool, penalty check must happen");
+                        //Debug.Log("Player is using wrong tool, penalty check must happen");
                         penaltyManager.CheckPenalty(stage.stage_tools[i].wrong_tools[ii].penalty);
                         
                         break;
@@ -193,7 +193,7 @@ public class GameActionManager : MonoBehaviour
         // Wait for the animation length
         yield return new WaitForSeconds(1f);
         penaltyManager.CheckPenalty("fail");
-        Debug.Log("Animation has ended!");
+        //Debug.Log("Animation has ended!");
     }
 
     public void CheckAnimation(BombLogicData.StageTools stageTools)
@@ -244,7 +244,7 @@ public class GameActionManager : MonoBehaviour
         if (bombSetup.win_condition == bombSetup.win_points)
         {
             GetComponent<GameOverScreen>().YouWinScreenManage();
-            Debug.Log("VOITIT PELIN!");
+            //Debug.Log("VOITIT PELIN!");
         }
 
     }
@@ -265,18 +265,18 @@ public class GameActionManager : MonoBehaviour
             if ( exectionStageIndex == currentStageIndex && actionPartName == exeptionPartName && playerTool == exeptionTool )
             {
                 // Laitetaan tähän sitten penalty asia
-                Debug.Log("Penaltyä failuren alla tietty työkalu execption true");
+                //Debug.Log("Penaltyä failuren alla tietty työkalu execption true");
                 penaltyManager.CheckPenalty(penalty);
 
             }
             else if (bombSetup.current_stage > stage.failure_condition.current_stage_index)
             {
-                Debug.Log("current stage isompi pisteet pois execption true");
+                //Debug.Log("current stage isompi pisteet pois execption true");
                 penaltyManager.CheckPenalty("points");
             }
             else
             {
-                Debug.Log("Failure tuli penaltystä exeption true");
+                //Debug.Log("Failure tuli penaltystä exeption true");
                 penaltyManager.CheckPenalty("fail"); 
             }
         }
@@ -284,12 +284,12 @@ public class GameActionManager : MonoBehaviour
         {
             if (bombSetup.current_stage >= stage.failure_condition.current_stage_index)
             {
-                Debug.Log("current stage isompi pisteet pois exception false");
+                //Debug.Log("current stage isompi pisteet pois exception false");
                 penaltyManager.CheckPenalty("points");
             }
             else
             {
-                Debug.Log("current stage pienempi failure execption false");
+                //Debug.Log("current stage pienempi failure execption false");
                 penaltyManager.CheckPenalty("fail");
             }
         }

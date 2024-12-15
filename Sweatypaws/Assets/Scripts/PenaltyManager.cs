@@ -13,24 +13,24 @@ public class PenaltyManager : MonoBehaviour
         {
 
             GetComponent<GameOverScreen>().GameOverScreenManage();
-            Debug.Log("Failure");
+            //Debug.Log("Failure");
         }
         else if (penalty == "points")
         {
             score.MinusScore();
-            Debug.Log("Minus points");
+            //Debug.Log("Minus points");
         }
         else if (penalty == "time")
         {
             //Tehtävä: Aikaan liittyvä nopeennus
             time.DecreaseTime();
-            Debug.Log("Minus Time");
+            //Debug.Log("Minus Time");
         }
         else if (penalty == "faster_time")
         {
             //Tehtävä: Ajan vähennys
             time.SetTimerMultiplier();
-            Debug.Log("Time goes faster");
+            //Debug.Log("Time goes faster");
         }
     }
 }

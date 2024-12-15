@@ -31,7 +31,7 @@ public class AnalyticsMethods : MonoBehaviour
         //AnalyticsService.Instance.Flush(); // Immediate send for testing
 
         // Debug log to confirm
-        Debug.Log("Analytics event sent:" + player.GetSelectedLevel());
+        //Debug.Log("Analytics event sent:" + player.GetSelectedLevel());
     }
 
     public void CheckLevelCompletion(bool completed, float time)
@@ -51,7 +51,7 @@ public class AnalyticsMethods : MonoBehaviour
         //AnalyticsService.Instance.Flush(); // Immediate send for testing
 
         // Debug log to confirm
-        Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + completed + " / " + time);
+        //Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + completed + " / " + time);
     }
 
     public void PlayerQuitLevel()
@@ -68,7 +68,7 @@ public class AnalyticsMethods : MonoBehaviour
                 timeUsedOnManual = manualTime.overAllTimeUsed
             };
             AnalyticsService.Instance.RecordEvent(levelAbandoned);
-            Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + manualTime.overAllTimeUsed);
+            //Debug.Log("Analytics event sent:" + player.GetSelectedLevel() + " / " + manualTime.overAllTimeUsed);
         }
     }
 }

@@ -45,7 +45,7 @@ public class Level_1_script : MonoBehaviour
             player.SetSelectedLevel(buttonObject.name);
             Sprite newFirstPageSprite = Resources.Load<Sprite>(buttonObject.name + "_FirstPage");
             Sprite newSecondPageSprite = Resources.Load<Sprite>(buttonObject.name + "_SecondPage");
-            Debug.Log(newSecondPageSprite);
+            //Debug.Log(newSecondPageSprite);
             if (newSecondPageSprite != null)
             {
                 secondPageImage.sprite = newSecondPageSprite;
@@ -66,7 +66,7 @@ public class Level_1_script : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("EpäiltykansioCanvas is not assigned in the inspector.");
+            //Debug.LogWarning("EpäiltykansioCanvas is not assigned in the inspector.");
         }
     }
 
@@ -77,13 +77,13 @@ public class Level_1_script : MonoBehaviour
             pages[currentPage].SetActive(false);
             currentPage++;
             pages[currentPage].SetActive(true);
-            Debug.Log("Next page: " + currentPage);
+            //Debug.Log("Next page: " + currentPage);
             PlayAudio(pageTurnClip);
             UpdateButtonVisibility();
         }
         else
         {
-            Debug.Log("Already at the last page.");
+            //Debug.Log("Already at the last page.");
         }
     }
 
@@ -94,13 +94,13 @@ public class Level_1_script : MonoBehaviour
             pages[currentPage].SetActive(false);  // Hide current page
             currentPage--;
             pages[currentPage].SetActive(true);   // Show previous page
-            Debug.Log("Previous page: " + currentPage);
+            //Debug.Log("Previous page: " + currentPage);
             PlayAudio(pageTurnClip);
             UpdateButtonVisibility();
         }
         else
         {
-            Debug.Log("Already at the first page.");
+            //Debug.Log("Already at the first page.");
         }
     }
 

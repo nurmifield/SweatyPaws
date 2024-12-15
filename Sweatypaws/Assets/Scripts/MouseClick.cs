@@ -34,12 +34,12 @@ public class MouseClick : MonoBehaviour
                 // Record initial touch position.
                 case TouchPhase.Began:
                     startPos = touch.position;
-                    Debug.Log("Kosketus alkoi");
+                    //Debug.Log("Kosketus alkoi");
                     break;
                 // Report that a direction has been chosen when the finger is lifted.
                 case TouchPhase.Ended:
                     endPos = touch.position;
-                    Debug.Log("Kosketus loppui");
+                    //Debug.Log("Kosketus loppui");
                     if (startPos == endPos)
                     {
                         tap=true;
@@ -95,7 +95,7 @@ public class MouseClick : MonoBehaviour
                 // If we found a top object, perform interaction logic
                 if (topObject != null)
                 {
-                    Debug.Log("Touched object: " + topObject.name);
+                    //Debug.Log("Touched object: " + topObject.name);
                     // Perform interaction logic here
                     PlaySound(GetComponent<Player>().tool);
                     GetComponent<GameActionManager>().CheckStagePart(topObject);
@@ -140,7 +140,7 @@ public class MouseClick : MonoBehaviour
                 // If we found a top object, perform interaction logic
                 if (topObject != null)
                 {
-                    Debug.Log("Touched object: " + topObject.name);
+                    //Debug.Log("Touched object: " + topObject.name);
                     // Perform interaction logic here
                     PlaySound(GetComponent<Player>().tool);
                     GetComponent<GameActionManager>().CheckStagePart(topObject);
@@ -205,7 +205,7 @@ public class MouseClick : MonoBehaviour
         {
             if (obj.activeSelf)
             {
-                Debug.Log("Paneeli on aktiivinen");
+                //Debug.Log("Paneeli on aktiivinen");
 
                 uiPanelActive = true;
             }

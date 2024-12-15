@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     public void ToggleSound()
 {
     IsSoundOn = !IsSoundOn;
-    Debug.Log("Sound toggled: " + (IsSoundOn ? "On" : "Off"));
+    //Debug.Log("Sound toggled: " + (IsSoundOn ? "On" : "Off"));
     SavePlayerData();
 }
     public bool GetExistingUser()
@@ -75,7 +75,7 @@ public class PlayerManager : MonoBehaviour
         string jsonData = JsonUtility.ToJson(playerData);
         string encryptedData = EncryptionHelper.Encrypt(jsonData);
         File.WriteAllText(playerDataFilePath, encryptedData);
-        Debug.Log("Player Data Saved");
+        //Debug.Log("Player Data Saved");
     }
 
     public void LoadPlayerData()
@@ -88,7 +88,7 @@ public class PlayerManager : MonoBehaviour
             PlayerData newPlayerData= JsonUtility.FromJson<PlayerData>(jsonPlayerFile.text);
             SetExistingUser(true);
             IsSoundOn = playerData.isSoundOn;
-            Debug.Log("Player data from:"+playerDataFilePath);
+            //Debug.Log("Player data from:"+playerDataFilePath);
 
             if (playerData.version < newPlayerData.version)
             {
@@ -97,7 +97,7 @@ public class PlayerManager : MonoBehaviour
                 {
                     NewGame();
                     SetExistingUser(false);
-                    Debug.Log("Versio number is smaller than 3 , newGame activated");
+                    //Debug.Log("Versio number is smaller than 3 , newGame activated");
 
                 }
                 else
@@ -113,20 +113,20 @@ public class PlayerManager : MonoBehaviour
                         }
                     }
                     SavePlayerData();
-                    Debug.Log("Player data updated");
+                    //Debug.Log("Player data updated");
                 }
                 
 
             }
             else
             {
-                Debug.Log("Player data doesn't need update");
+                //Debug.Log("Player data doesn't need update");
             }
            
         }
         else
         {
-            Debug.Log("No player data, Creating new player data");
+            //Debug.Log("No player data, Creating new player data");
             NewGame();
         }
     }
@@ -147,7 +147,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (!playerData.LevelExists(newLevel.level_name))
             {
-                Debug.Log("adding new level information");
+                //Debug.Log("adding new level information");
                 playerData.level_progress.Add(new PlayerData.LevelProgress(newLevel.level_name,newLevel.level_index,newLevel.max_score));
             }
         }
@@ -156,7 +156,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (!playerData.DialogueExist(newDialogue.dialogue_name))
             {
-                Debug.Log("adding new dialogue information");
+                //Debug.Log("adding new dialogue information");
                 playerData.dialogue_progress.Add(new PlayerData.DialogueProgress(newDialogue.dialogue_name, newDialogue.dialogue_index, newDialogue.level_index ,newDialogue.selected_level));
             }
         }
