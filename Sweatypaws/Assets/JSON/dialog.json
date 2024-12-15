@@ -9,7 +9,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Finally, something! Steve, got get the car ready. Sergeant pickles, atattention!",
+            "dialog":"Finally, something! Steve go get the car ready. Sergeant pickles, at attention!",
            "character_image":"snuggles",
            "animation_trigger":"SnugglesTalk"
         },
@@ -21,13 +21,13 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"At ease, sergeant. I'll cut to the quick of it,your disposal went tits up,you took one for the company have been in St.Hugbears for a few weeks. At least you wore the suit, other wise they would have had to scrape you off the wall.",
+            "dialog":"At ease, sergeant. I'll cut to the quick of it, your disposal went tits up, you took one for the company have been in St.Hugbears for a few weeks.",
             "character_image":"snuggles",
             "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Whose wall?..weeks?..I can't..",
+            "dialog":"Weeks?..I can't..",
             "character_image":"Päähenkilö3",
             "animation_trigger":"PicklesTalk"
         },
@@ -40,43 +40,19 @@
         {
             "character_name":"PICKLES",
             "dialog":"The wha-",
-            "character_image":"Päähenkilö2",
+            "character_image":"Päähenkilö3",
             "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"It's a form of short term amnesia,common in our profession.You'll remember it all once you get back on the horse.",
-            "character_image":"snuggles",
-            "animation_trigger":"SnugglesTalk"
-        },
-        {
-            "character_name":"PICKLES",
-            "dialog":"Our profession?...",
-            "character_image":"Päähenkilö-sairaala",
-            "animation_trigger":"PicklesTalk"
-        },
-        {
-            "character_name":"SNUGGLES",
-            "dialog":"You're a police officer, at Pawston PD, read the badge! I inducted you to the force myself! You're in the bomb squad, and the city is up the creek with no paddle in sight.",
-            "character_image":"snuggles2",
-            "animation_trigger":"SnugglesTalk"
-        },
-        {
-            "character_name":"PICKLES",
-            "dialog":"The what creek?",
-            "character_image":"Päähenkilö-sairaala",
-            "animation_trigger":"PicklesTalk"
-        },
-        {
-            "character_name":"SNUGGLES",
-            "dialog":"Shit's creek, concentrate man!First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti.Now,street div is finding bombs all across the city.The Mayor is shitting bricks and so is the commissioner.",
+            "dialog":"It's a form of short-term amnesia, common in our profession. You'll get it all back, I promise. You're a police officer, at Pawston PD, see the badge? You're in the bomb squad, and the city is going down the tubes.First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti. Now, street div is finding bombs all across the city. I told you, the tubes.",
             "character_image":"snuggles3",
             "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"Sounds bad, but why me? I'm sore all over and can remember hardly anything, where's the rest of the squad?",
-            "character_image":"Päähenkilö3",
+            "dialog":"Oh no..But sir, Im bedridden and sore all over, why isn't the rest of the squad doing anything?",
+            "character_image":"Päähenkilö-sairaala",
             "animation_trigger":"PicklesTalk"
         },
         {
@@ -87,13 +63,13 @@
         },
         {
             "character_name":"PICKLES",
-            "dialog":"But sir, Im sore all over..",
-            "character_image":"Päähenkilö-sairaala",
+            "dialog":"But sir, it really hurts.",
+            "character_image":"Päähenkilö2",
             "animation_trigger":"PicklesTalk"
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"I've thought about that, here, have this cinnamon roll",
+            "dialog":"About your pains. Here, have this cinnamon roll.",
             "character_image":"snuggles",
             "animation_trigger":"SnugglesTalk"
         },
@@ -111,21 +87,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Look at you, walking it off",
-            "character_image":"snuggles",
-            "animation_trigger":"SnugglesTalk2"
-            
-        },
-        {
-            "character_name":"PICKLES",
-            "dialog":"I guess..The van seems familiar..",
-            "character_image":"Päähenkilö2",
-            "animation_trigger":"PicklesTalk2"
-            
-        },
-        {
-            "character_name":"SNUGGLES",
-            "dialog":"Good, It's time to get down to business. This here is Steve. Say hi, Steve",
+            "dialog":"Look at you, walking it off. It's time to get down to business. This here is Steve. Say hi, Steve",
             "character_image":"snuggles",
             "animation_trigger":"SnugglesTalk2"
             
@@ -139,7 +101,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Hrmph. Anyways, Van's ready, Just so, as there's already a situation on Sugarbear st.",
+            "dialog":"why did I even.... Anyways, Van's ready, just so, as there's already a situation on Sugarbear st.",
             "character_image":"snuggles3",
             "animation_trigger":"SnugglesTalk2"
             
@@ -160,7 +122,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Think fast, Sergeant!",
+            "dialog":"Think fast, Sergeant! (Manual is thrown at Pickles, its hits him in the head.)",
             "character_image":"snuggles",
             "animation_trigger":"SnugglesSpecial"
             
@@ -187,7 +149,7 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"I can see your conflicted, Sergeant. I know it seems desperate, an amnesiac, a grease monkey and an retired old fart, trying to stop all this. But now, truly, is time to shit or get off the pot. Pawston is scared out of its wits, we must help. The game's afoot, gentlemen, you must be ready.",
+            "dialog":"I can see your conflicted, Sergeant. I know it seems desperate, an amnesiac, a grease monkey and a retired old fart, trying to stop all this. But now, truly, it's time to shit or get off the pot. Pawston is scared out of its wits, we must help. The game's afoot, gentlemen, you must be ready.",
             "character_image":"snuggles2",
             "animation_trigger":"SnugglesTalk2"
             
@@ -212,13 +174,13 @@
     [
         {
             "character_name":"SNUGGLES",
-            "dialog":"Look at you, all whole. Cakewalk,right?",
+            "dialog":"Look at you, all whole. Just anothert day at the offfice eh?",
             "character_image":"snuggles1k",
            "animation_trigger":"SnugglesTalk"
         },
         {
             "character_name":"PICKLES",
-            "dialog":"I guess so, sir.",
+            "dialog":"I guess so, sir. Something about that bomb reminded me of someone",
             "character_image":"Päähenkilö2",
             "animation_trigger":"PicklesTalk"
         }
@@ -227,7 +189,7 @@
     [
         {
             "character_name":"SNUGGLES",
-            "dialog":"The perp, Biscuits, is being processed. I'll make him sweat in the box, for sure. But we've got no time to celebrate, a bomb has been found at the Stadium, you gotta head there now!",
+            "dialog":"The perp, Bisbcuits, is being processed. I'll make him sweat in the box, for sure. But we've got no time to celebrate, a bomb has been found at the Stadium, you gotta head there now!",
             "character_image":"snuggles3k",
             "animation_trigger":"SnugglesTalk"
         },
@@ -260,28 +222,16 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Does it now? I've checked the street div's scene photos and I think you're onto something. The construction of these devices, there's some common threads here. ",
+            "dialog":"Does it now? I've checked the street div's scene photos, and I think you're onto something. Tech div cracked the shitheel's phone, turns out he's on a Harmony server called \"Edgy Demo Boizz\", we've cross-refenced with the other creep's devices and they're members of the same group. Server host, \"BabyVomitCannon\" last used his phone at Friendship Tower's scenic restaurant, only a few minutes ago. You must get there immediately, the threat to the public is off the charts!",
             "character_image":"snuggles1k",
             "animation_trigger":"SnugglesTalk"
-        },
-        {
-            "character_name":"PICKLES",
-            "dialog":"Might this be the work of an organisation?",
-            "character_image":"Päähenkilö2",
-             "animation_trigger":"PicklesTalk"
-        },
-        {
-            "character_name":"SNUGGLES",
-            "dialog":"It was theorised, and this seems to corroborate it. I'll have a word with the tech boys, see what they can dig up. Meanwhile you've got a new site to head to, Lovebird hill. Printout to follow.",
-            "character_image":"snuggles1k",
-           "animation_trigger":"SnugglesTalk"
         }
     ],
     "scene_5":
     [
         {
             "character_name":"HACKLES",
-            "dialog":"Curse your eyes, brother mine!",
+            "dialog":"Curse your eyes, brother mine! ",
             "character_image":"hackles2",
             "animation_trigger":"Intro"
         },
