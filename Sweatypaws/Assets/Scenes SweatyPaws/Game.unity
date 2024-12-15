@@ -4171,6 +4171,7 @@ MonoBehaviour:
   score: {fileID: 1252451382}
   penaltyManager: {fileID: 551773007}
   prefab: {fileID: 0}
+  toolSelector: {fileID: 2049877569}
 --- !u!114 &551773007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12119,8 +12120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.71990967, y: 2.4545898}
+  m_SizeDelta: {x: 1.4397993, y: 4.9092283}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598708021
 MonoBehaviour:

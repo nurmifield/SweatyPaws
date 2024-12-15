@@ -45,9 +45,15 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"It's a form of short-term amnesia, common in our profession. You'll get it all back, I promise. You're a police officer, at Pawston PD, see the badge? You're in the bomb squad, and the city is going down the tubes.First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti. Now, street div is finding bombs all across the city. I told you, the tubes.",
+            "dialog":"It's a form of short-term amnesia, common in our profession. You'll get it all back, I promise. You're a police officer, at Pawston PD, see the badge? You're in the bomb squad, and the city is going down the tubes.",
             "character_image":"snuggles3",
             "animation_trigger":"SnugglesTalk"
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"First it was a wave of theft, appliance stores, demolition sites, after that came the death threats to city workers, small fires and really nasty graffiti. Now, street div is finding bombs all across the city. I told you, the tubes.",
+            "character_image":"snuggles3",
+            "animation_trigger":"SnugglesTalk1"
         },
         {
             "character_name":"PICKLES",
@@ -222,9 +228,15 @@
         },
         {
             "character_name":"SNUGGLES",
-            "dialog":"Does it now? I've checked the street div's scene photos, and I think you're onto something. Tech div cracked the shitheel's phone, turns out he's on a Harmony server called \"Edgy Demo Boizz\", we've cross-refenced with the other creep's devices and they're members of the same group. Server host, \"BabyVomitCannon\" last used his phone at Friendship Tower's scenic restaurant, only a few minutes ago. You must get there immediately, the threat to the public is off the charts!",
+            "dialog":"Does it now? I've checked the street div's scene photos, and I think you're onto something. Tech div cracked the shitheel's phone, turns out he's on a Harmony server called \"Edgy Demo Boizz\", we've cross-refenced with the other creep's devices and they're members of the same group.",
             "character_image":"snuggles1k",
             "animation_trigger":"SnugglesTalk"
+        },
+        {
+            "character_name":"SNUGGLES",
+            "dialog":"Server host, \"BabyVomitCannon\" last used his phone at Friendship Tower's scenic restaurant, only a few minutes ago. You must get there immediately, the threat to the public is off the charts!",
+            "character_image":"snuggles1k",
+            "animation_trigger":"SnugglesTalk1"
         }
     ],
     "scene_5":

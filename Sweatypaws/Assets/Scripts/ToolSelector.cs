@@ -91,5 +91,10 @@ public class ToolSelector : MonoBehaviour
         currentSelectedButton = button;
         EventSystem.current.SetSelectedGameObject(button.gameObject);
     }
+
+    public void SetCurrentSelectedButtonNone()
+    {
+        currentSelectedButton = null;
+    }
     
 }

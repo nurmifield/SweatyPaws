@@ -14,6 +14,7 @@ public class GameActionManager : MonoBehaviour
     public Score score;
     public PenaltyManager penaltyManager;
     public GameObject prefab;
+    public ToolSelector toolSelector;
     // Start is called before the first frame update
     void Start()
     {
@@ -175,6 +176,7 @@ public class GameActionManager : MonoBehaviour
         {
             GameObject monitor = FindInactiveObjectByName(prefab.transform, "ScreenObject");
             monitor.SetActive(true);
+            toolSelector.SetCurrentSelectedButtonNone();
             playerScript.EquipTool("none");
             
         }
